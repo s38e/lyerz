@@ -1,0 +1,206 @@
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.section {
+  padding: 0 10%;
+}
+/* ------------------ Hero Section ------------------ */
+.heroSection {
+}
+/* ------------------ Section 1 ------------------ */
+.section_1 {
+  width: 100%;
+  position: relative;
+  margin-bottom: 100px;
+  margin-top: 150px;
+}
+.section_1 .heading {
+  padding: 20px 30px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  z-index: 2;
+  border-radius: 33px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.11);
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.section_1 .heading img {
+  height: 40px;
+  width: 40px;
+  vertical-align: top;
+}
+.section_1 .heading h1 {
+  font-size: 50px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.section_1 .sliders {
+  /* overflow: hidden; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.section_1 .sliders::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  z-index: 1;
+  background: linear-gradient(#f9f7f5, rgba(255, 255, 255, 0));
+}
+.section_1 .sliders .recentWork {
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+}
+.section_1 .sliders .recentWork .recentWork_slide {
+  white-space: nowrap;
+  display: inline-block;
+  gap: 2rem;
+  animation: 70s SlideAnimation1 infinite linear;
+  gap: 1rem;
+}
+.section_1 .sliders .recentWork:nth-child(2) .recentWork_slide {
+  white-space: nowrap;
+  display: inline-block;
+  animation: 90s SlideAnimation2 infinite linear;
+}
+.section_1 .sliders .recentWork .recentWork_slide img {
+  vertical-align: top;
+  height: 350px;
+  width: auto;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+/*  */
+@keyframes SlideAnimation1 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes SlideAnimation2 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* ------------------ Section 2 ------------------ */
+.section_2 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+.section_2 .heading {
+  font-size: 52px;
+  text-align: center;
+}
+.section_2 .sliderServices {
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.section_2 .sliderServices .sliderServices_slide {
+  position: relative;
+  /* left: 0; */
+  width: 60%;
+  /* transform: translate(-50%); */
+}
+.section_2 .sliderServices .sliderServices_slide .logo {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.section_2 .sliderServices .sliderServices_slide .logo img {
+  width: 120px;
+  height: 120px;
+}
+.section_2 .sliderServices .sliderServices_slide .backGround {
+  overflow: hidden;
+  position: relative;
+  background-color: #f5f1ee;
+  padding: 2.8rem 0;
+  border-bottom-left-radius: 240px;
+  border-top-left-radius: 240px;
+  z-index: -1;
+}
+.section_2 .sliderServices .sliderServices_slide .backGround .slide {
+  white-space: nowrap;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.section_2
+  .sliderServices
+  .sliderServices_slide
+  .backGround
+  .slide:nth-child(1) {
+  animation: 50s SlideAnimation infinite linear;
+}
+.section_2
+  .sliderServices
+  .sliderServices_slide
+  .backGround
+  .slide:nth-child(2) {
+  animation: 30s SlideAnimation infinite linear;
+}
+.section_2
+  .sliderServices
+  .sliderServices_slide
+  .backGround
+  .slide:nth-child(3) {
+  animation: 20s SlideAnimation infinite linear;
+}
+.section_2
+  .sliderServices
+  .sliderServices_slide
+  .backGround
+  .slide:nth-child(4) {
+  animation: 40s SlideAnimation infinite linear;
+}
+.section_2 .sliderServices .sliderServices_slide .backGround .slide .dot {
+  color: #4807ea;
+  font-size: 120px;
+  line-height: 0;
+}
+.section_2 .sliderServices .sliderServices_slide .backGround .slide p {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  font-size: 50px;
+}
+@keyframes SlideAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
