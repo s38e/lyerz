@@ -361,7 +361,7 @@ export default function Home() {
               </div>
               <div className={styles.line}></div>
               <div className={styles.bottom}>
-                <h5>What's included /</h5>
+                <h5>What&apos;s included /</h5>
                 <div className={styles.advantages}>
                   <p>▪ one request at a time</p>
                   <p>▪ average 3 days delivery</p>
