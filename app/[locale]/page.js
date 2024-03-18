@@ -19,7 +19,8 @@ import Footer from "./components/Footer";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import anime from "animejs/lib/anime.es.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,7 +64,83 @@ export default function Home() {
         // markers: true,
       },
     });
+    // ----------- Active Panel ----------- //
+    const tab_1 = document.querySelector(`.${styles.switch}:nth-child(1)`);
+    const tab_2 = document.querySelector(`.${styles.switch}:nth-child(2)`);
+    const tab_3 = document.querySelector(`.${styles.switch}:nth-child(3)`);
+    const panel_1 = document.querySelector(`.${styles.body}:nth-child(2)`);
+    const panel_2 = document.querySelector(`.${styles.body}:nth-child(3)`);
+    const panel_3 = document.querySelector(`.${styles.body}:nth-child(4)`);
+
+    const fadeIn = anime({
+      targets: [panel_1, panel_2, panel_3],
+      opacity: [0, 1],
+      duration: 500,
+      easing: "easeInOutQuad",
+      autoplay: false,
+    });
+
+    const fadeOut = anime({
+      targets: [panel_1, panel_2, panel_3],
+      opacity: 0,
+      duration: 500,
+      easing: "easeInOutQuad",
+      autoplay: false,
+      complete: function (anim) {
+        if (anim.targets) {
+          anim.targets.forEach((target) => {
+            target.style.display = "none";
+          });
+        }
+      },
+    });
+
+    panel_1.style.display = "flex";
+    fadeIn.play();
+
+    tab_1.addEventListener("click", () => {
+      fadeOut.play();
+      panel_1.style.display = "flex";
+      panel_2.style.display = "none";
+      panel_3.style.display = "none";
+      fadeIn.play();
+    });
+
+    tab_2.addEventListener("click", () => {
+      fadeOut.play();
+      panel_1.style.display = "none";
+      panel_2.style.display = "flex";
+      panel_3.style.display = "none";
+      fadeIn.play();
+    });
+
+    tab_3.addEventListener("click", () => {
+      fadeOut.play();
+      panel_1.style.display = "none";
+      panel_2.style.display = "none";
+      panel_3.style.display = "flex";
+      fadeIn.play();
+    });
   }, []);
+  // ----------- Active Tab ----------- //
+
+  const [activeTab, setActiveTab] = useState(1);
+
+  const handleTabClick = (tabIndex) => {
+    setActiveTab(tabIndex);
+    updateButtonStyles(tabIndex);
+  };
+
+  const updateButtonStyles = (activeIndex) => {
+    const buttons = document.querySelectorAll(`.${styles.switch}`);
+    buttons.forEach((button, index) => {
+      if (index + 1 === activeIndex) {
+        button.classList.add(styles.active);
+      } else {
+        button.classList.remove(styles.active);
+      }
+    });
+  };
 
   // const t = useTranslations("Heading");
   return (
@@ -345,33 +422,125 @@ export default function Home() {
           </div>
           <div className={styles.right}>
             <div className={styles.plan}>
-              <h4>Membership</h4>
-              <div className={styles.switchs}>
-                <div className={styles.switch}>Go</div>
-                <div className={styles.switch}>Startup</div>
-                <div className={styles.switch}>Pro</div>
-              </div>
-              <div className={styles.saliry}>
-                <h5>
-                  $XXXX<span>/m</span>
-                </h5>
-                <p>
-                  <span>one request at a time.</span> pause or cancel anytime.
-                </p>
-              </div>
-              <div className={styles.line}></div>
-              <div className={styles.bottom}>
-                <h5>What&apos;s included /</h5>
-                <div className={styles.advantages}>
-                  <p>▪ one request at a time</p>
-                  <p>▪ average 3 days delivery</p>
-                  <p>▪ unlimited brands</p>
-                  <p>▪ unlimited users</p>
-                  <p>▪ dashboard or slack</p>
-                  <p>▪ easy credit-card payments</p>
-                  <p>▪ pause or cancel anytime</p>
+              <div className={styles.head}>
+                <h4>Membership</h4>
+                <div
+                  className={styles.switchs}
+                  role="taplist"
+                  aria-label="tabs"
+                >
+                  <button
+                    role="tab"
+                    aria-selected={activeTab === 1 ? "true" : "false"}
+                    aria-controls="panel-1"
+                    id="tab-1"
+                    tabIndex="0"
+                    className={`${styles.switch} ${
+                      activeTab === 1 ? styles.active : ""
+                    }`}
+                    onClick={() => handleTabClick(1)}
+                  >
+                    Go
+                  </button>
+                  <button
+                    role="tab"
+                    aria-selected={activeTab === 2 ? "true" : "false"}
+                    aria-controls="panel-2"
+                    id="tab-2"
+                    tabIndex="-1"
+                    className={`${styles.switch} ${
+                      activeTab === 2 ? styles.active : ""
+                    }`}
+                    onClick={() => handleTabClick(2)}
+                  >
+                    Startup
+                  </button>
+                  <button
+                    role="tab"
+                    aria-selected={activeTab === 3 ? "true" : "false"}
+                    aria-controls="panel-3"
+                    id="tab-3"
+                    tabIndex="-1"
+                    className={`${styles.switch} ${
+                      activeTab === 3 ? styles.active : ""
+                    }`}
+                    onClick={() => handleTabClick(3)}
+                  >
+                    Pro
+                  </button>
                 </div>
-                <button className={styles.btn}>Get started</button>
+              </div>
+              <div className={styles.body} role="tabpanel" id={styles.panel_1}>
+                <div className={styles.saliry}>
+                  <h5>
+                    $XXXX<span>/m</span>
+                  </h5>
+                  <p>
+                    <span>one request at a time.</span> pause or cancel anytime.
+                  </p>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.bottom}>
+                  <h5>What&apos;s included /</h5>
+                  <div className={styles.advantages}>
+                    <p>▪ one request at a time</p>
+                    <p>▪ average 3 days delivery</p>
+                    <p>▪ unlimited brands</p>
+                    <p>▪ unlimited users</p>
+                    <p>▪ dashboard or slack</p>
+                    <p>▪ easy credit-card payments</p>
+                    <p>▪ pause or cancel anytime</p>
+                  </div>
+                  <button className={styles.btn}>Get started</button>
+                </div>
+              </div>
+              <div className={styles.body} role="tabpanel" id={styles.panel_2}>
+                <div className={styles.saliry}>
+                  <h5>
+                    $XXXX<span>/m</span>
+                  </h5>
+                  <p>
+                    <span>2 requests at a time.</span> pause or cancel anytime.
+                  </p>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.bottom}>
+                  <h5>What&apos;s included /</h5>
+                  <div className={styles.advantages}>
+                    <p>▪ two requests at a time</p>
+                    <p>▪ average 48 hour delivery</p>
+                    <p>▪ unlimited brands</p>
+                    <p>▪ unlimited users</p>
+                    <p>▪ dashboard or slack</p>
+                    <p>▪ easy credit-card payments</p>
+                    <p>▪ pause or cancel anytime</p>
+                  </div>
+                  <button className={styles.btn}>Get started</button>
+                </div>
+              </div>
+              <div className={styles.body} role="tabpanel" id={styles.panel_3}>
+                <div className={styles.saliry}>
+                  <h5>
+                    $XXXX<span>/m</span>
+                  </h5>
+                  <p>
+                    <span>3 requests at a time.</span> pause or cancel anytime.
+                  </p>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.bottom}>
+                  <h5>What&apos;s included /</h5>
+                  <div className={styles.advantages}>
+                    <p>▪ 3 requests at a time</p>
+                    <p>▪ average 48 hour delivery</p>
+                    <p>▪ unlimited brands</p>
+                    <p>▪ unlimited users</p>
+                    <p>▪ dashboard or slack</p>
+                    <p>▪ easy credit-card payments</p>
+                    <p>▪ pause or cancel anytime</p>
+                  </div>
+                  <button className={styles.btn}>Get started</button>
+                </div>
               </div>
             </div>
           </div>
