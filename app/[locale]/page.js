@@ -147,26 +147,30 @@ export default function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
   const questions = [
     {
-      question: "Why wouldn't I just hire a full-time designer?",
+      question: <>Why wouldn&apos;t I just hire a full-time designer?</>,
       answer: (
         <>
           Good question! For starters, the annual cost of a full-time
           senior-level designer now exceeds $100,000, plus benefits (and good
           luck finding one available). Aside from that, you may not always have
-          enough work to keep them busy at all times, so you're stuck paying for
-          time you aren't able to utilize.
+          enough work to keep them busy at all times, so you&apos;re stuck
+          paying for time you aren&apos;t able to utilize.
           <br />
           <br />
           With the monthly plan, you can pause and resume your subscription as
-          often as you need to ensure you're only paying your designer when you
-          have work available for them.
+          often as you need to ensure you&apos;re only paying your designer when
+          you have work available for them.
         </>
       ),
     },
     {
       question: "Is there a limit to how many requests I can have?",
-      answer:
-        "Once subscribed, you're able to add as many design requests to your queue as you'd like, and they will be delivered one by one.",
+      answer: (
+        <>
+          Once subscribed, you&apos;re able to add as many design requests to
+          your queue as you&apos;d like, and they will be delivered one by one.
+        </>
+      ),
     },
     {
       question: "How fast will I receive my designs?",
@@ -175,8 +179,14 @@ export default function Home() {
     },
     {
       question: "Who are the designers?",
-      answer:
-        "You might be surprised to hear this, but Designjoy is actually an agency of one. This means you'll work directly with me, founder of Designjoy. However, power-ups requests such as animations or custom illustrations are provided by partner designers.",
+      answer: (
+        <>
+          You might be surprised to hear this, but Designjoy is actually an
+          agency of one. This means you&apos;ll work directly with me, founder
+          of Designjoy. However, power-ups requests such as animations or custom
+          illustrations are provided by partner designers.
+        </>
+      ),
     },
     {
       question: "How does the pause feature work?",
@@ -184,14 +194,14 @@ export default function Home() {
         <>
           We understand you may not have enough design work to fill up entire
           month. Perhaps you only have one or two design requests at the moment.
-          That's where pausing your subscription comes in handy.
+          That&apos;s where pausing your subscription comes in handy.
           <br />
           <br />
-          Billing cycles are based on 31 day period. Let's say you sign up and
-          use the service for 21 days, and then decide to pause your
+          Billing cycles are based on 31 day period. Let&apos;s say you sign up
+          and use the service for 21 days, and then decide to pause your
           subscription. This means that the billing cycle will be paused and
-          you'll have 10 days of service remaining to be used anytime in the
-          future.
+          you&apos;ll have 10 days of service remaining to be used anytime in
+          the future.
         </>
       ),
     },
