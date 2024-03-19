@@ -11,16 +11,16 @@ function NavBar() {
       </div>
       <div className={styles.links}>
         <Link href="/" className={styles.link}>
-          Home
+          About
         </Link>
         <Link href="/" className={styles.link}>
-          Home
+          Portfolio
         </Link>
         <Link href="/" className={styles.link}>
-          Home
+          Content
         </Link>
         <Link href="/" className={styles.btn}>
-          Demo
+          Book a demo
         </Link>
       </div>
     </nav>

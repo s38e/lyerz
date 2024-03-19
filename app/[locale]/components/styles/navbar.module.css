@@ -2,21 +2,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
-  overflow: hidden;
+  /* height: 70px; */
+  /* overflow: hidden; */
   width: 100%;
   position: fixed;
-  top: 0;
-  padding: 0 10%;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
-  backdrop-filter: blur(20px);
+  top: 20px;
+  padding: 0 15%;
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  /* border-radius: 0 0 var(--border-radius) var(--border-radius); */
+  /* backdrop-filter: blur(20px); */
   color: black;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.11);
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.11); */
   z-index: 111111111;
 }
 .navbar .logo {
+  padding: 18px 20px;
+  border-radius: var(--border-radius);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
   cursor: pointer;
+  transition: 0.25s;
+}
+.navbar .logo:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 .navbar .logo img {
   width: 35px;
@@ -31,8 +40,18 @@
 }
 .navbar .links .link {
   position: relative;
+  padding: 25px;
+  font-size: 18px;
+  border-radius: var(--border-radius);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  /* aspect-ratio: 1/1; */
+  display: flex;
+  align-items: center;
+  transition: 0.25s;
+  justify-content: center;
 }
-.navbar .links .link::before {
+/* .navbar .links .link::before {
   content: "";
   position: absolute;
   left: 0;
@@ -49,13 +68,19 @@
   transform: scaleX(1);
   transition: transform 0.25s;
   transform-origin: left;
+} */
+.navbar .links .link:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 .navbar .links .btn {
   position: relative;
   padding: 10px 20px;
   color: white;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   transition: 0.25s;
+  padding: 25px;
+  font-size: 18px;
 }
 .navbar .links .btn::after {
   content: "";
@@ -66,10 +91,10 @@
   left: 0;
   z-index: -1;
   transition: 0.25s;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
 }
 .navbar .links .btn:hover::after {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(20px);
 }
 .navbar .links .btn::before {
@@ -80,13 +105,10 @@
   top: 0;
   left: 0;
   z-index: -2;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   background-color: #f86e68;
   transition: 0.25s;
 }
 .navbar .links .btn:hover::before {
   transform: translate(-5px, -5px) rotate(-10deg);
-}
-.navbar .links .btn:hover {
-  color: #000;
 }

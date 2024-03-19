@@ -15,6 +15,8 @@ import img06 from "@/public/assets/img06.jpg";
 import img07 from "@/public/assets/img07.png";
 import img08 from "@/public/assets/img08.webp";
 import img09 from "@/public/assets/img09.webp";
+import ImageCallCard from "@/public/assets/ImageCallCard.png";
+import section_2ImageBall from "@/public/assets/section_2ImageBall.png";
 import Footer from "./components/Footer";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -141,7 +143,220 @@ export default function Home() {
       }
     });
   };
-
+  // ----------- handleQuestionClick ----------- //
+  const [activeIndex, setActiveIndex] = useState(null);
+  const questions = [
+    {
+      question: "Why wouldn't I just hire a full-time designer?",
+      answer: (
+        <>
+          Good question! For starters, the annual cost of a full-time
+          senior-level designer now exceeds $100,000, plus benefits (and good
+          luck finding one available). Aside from that, you may not always have
+          enough work to keep them busy at all times, so you're stuck paying for
+          time you aren't able to utilize.
+          <br />
+          <br />
+          With the monthly plan, you can pause and resume your subscription as
+          often as you need to ensure you're only paying your designer when you
+          have work available for them.
+        </>
+      ),
+    },
+    {
+      question: "Is there a limit to how many requests I can have?",
+      answer:
+        "Once subscribed, you're able to add as many design requests to your queue as you'd like, and they will be delivered one by one.",
+    },
+    {
+      question: "How fast will I receive my designs?",
+      answer:
+        "On average, most requests are completed in just two days or less. However, more complex requests can take longer.",
+    },
+    {
+      question: "Who are the designers?",
+      answer:
+        "You might be surprised to hear this, but Designjoy is actually an agency of one. This means you'll work directly with me, founder of Designjoy. However, power-ups requests such as animations or custom illustrations are provided by partner designers.",
+    },
+    {
+      question: "How does the pause feature work?",
+      answer: (
+        <>
+          We understand you may not have enough design work to fill up entire
+          month. Perhaps you only have one or two design requests at the moment.
+          That's where pausing your subscription comes in handy.
+          <br />
+          <br />
+          Billing cycles are based on 31 day period. Let's say you sign up and
+          use the service for 21 days, and then decide to pause your
+          subscription. This means that the billing cycle will be paused and
+          you'll have 10 days of service remaining to be used anytime in the
+          future.
+        </>
+      ),
+    },
+    {
+      question: "What programs do you design in?",
+      answer: "Most requests are designed using Figma.",
+    },
+  ];
+  const handleQuestionClick = (index) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
+  const Points = (
+    <>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+    </>
+  );
   // const t = useTranslations("Heading");
   return (
     <>
@@ -234,9 +449,16 @@ export default function Home() {
             <br /> and ... you name it
           </h1>
           <div className={styles.sliderServices}>
-            {/*  */}
-            <div></div>
-            {/*  */}
+            <div className={styles.your_business}>
+              <div className={styles.Image}>
+                <Image src={section_2ImageBall} alt="section_2ImageBall" />
+                <p>Your business</p>
+              </div>
+              <div className={styles.slider_your_business}>
+                <div className={styles.slide}>{Points}</div>
+                <div className={styles.slide}>{Points}</div>
+              </div>
+            </div>
             <div className={styles.sliderServices_slide}>
               <div className={styles.logo}>
                 <Image src={Logo} alt="logo" />
@@ -481,7 +703,7 @@ export default function Home() {
                 </div>
                 <div className={styles.line}></div>
                 <div className={styles.bottom}>
-                  <h5>What&apos;s included /</h5>
+                  <h5>What&apos;s included</h5>
                   <div className={styles.advantages}>
                     <p>▪ one request at a time</p>
                     <p>▪ average 3 days delivery</p>
@@ -505,7 +727,7 @@ export default function Home() {
                 </div>
                 <div className={styles.line}></div>
                 <div className={styles.bottom}>
-                  <h5>What&apos;s included /</h5>
+                  <h5>What&apos;s included</h5>
                   <div className={styles.advantages}>
                     <p>▪ two requests at a time</p>
                     <p>▪ average 48 hour delivery</p>
@@ -529,7 +751,7 @@ export default function Home() {
                 </div>
                 <div className={styles.line}></div>
                 <div className={styles.bottom}>
-                  <h5>What&apos;s included /</h5>
+                  <h5>What&apos;s included</h5>
                   <div className={styles.advantages}>
                     <p>▪ 3 requests at a time</p>
                     <p>▪ average 48 hour delivery</p>
@@ -543,6 +765,59 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section className={`${styles.section_4} ${styles.section}`}>
+          <div className={styles.left}>
+            <h1 className={styles.head}>Commonly asked questions</h1>
+            <div className={styles.questions}>
+              {questions.map((item, index) => (
+                <button
+                  key={index}
+                  className={`${styles.question_item} ${
+                    activeIndex === index ? styles.active : ""
+                  }`}
+                  onClick={() => handleQuestionClick(index)}
+                >
+                  <div className={styles.question_head}>
+                    <h5 className={styles.question}>{item.question}</h5>
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_18_34026)">
+                        <path
+                          d="M6 9.75017C5.65 9.75017 5.35 9.60017 5.15 9.35017L0.200001 3.75017C-0.15 3.35017 -0.0999985 2.75017 0.300001 2.45017C0.700001 2.15017 1.25 2.15017 1.6 2.55017L5.9 7.45017C5.95 7.50017 6 7.50017 6.1 7.45017L10.4 2.55017C10.75 2.15017 11.35 2.15017 11.7 2.50017C12.05 2.85017 12.1 3.40017 11.8 3.80017L6.9 9.40017C6.65 9.60017 6.35 9.75017 6 9.75017Z"
+                          fill="black"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_18_34026">
+                          <rect
+                            width="12"
+                            height="12"
+                            fill="white"
+                            transform="translate(12) rotate(90)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div className={styles.question_answer}>
+                    <p>{item.answer}</p>
+                  </div>
+                  {/* <div className={styles.line}></div> */}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className={styles.right}>
+            <Image src={ImageCallCard} alt="ImageCallCard" />
+            <h4>Book a 15-minute intro call</h4>
+            <button className={styles.btn}>Schedule now</button>
           </div>
         </section>
       </page>
