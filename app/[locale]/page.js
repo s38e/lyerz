@@ -383,32 +383,38 @@ export default function Home() {
           <div className={styles.sliders}>
             <div className={styles.recentWork}>
               <div className={styles.recentWork_slide}>
-                <Image src={img01} alt="img01" />
-                <Image src={img02} alt="img02" />
-                <Image src={img03} alt="img03" />
-                <Image src={img04} alt="img04" />
-                <Image src={img05} alt="img05" />
-                <Image src={img06} alt="img06" />
-                <Image src={img07} alt="img07" />
-                <Image src={img08} alt="img08" />
                 <Image src={img09} alt="img09" />
-              </div>
-              <div className={styles.recentWork_slide}>
-                <Image src={img01} alt="img01" />
                 <Image src={img02} alt="img02" />
-                <Image src={img03} alt="img03" />
-                <Image src={img04} alt="img04" />
-                <Image src={img05} alt="img05" />
-                <Image src={img06} alt="img06" />
-                <Image src={img07} alt="img07" />
                 <Image src={img08} alt="img08" />
+                <Image src={img07} alt="img07" />
+                <Image src={img06} alt="img06" />
                 <Image src={img09} alt="img09" />
+                <Image src={img05} alt="img05" />
+                <Image src={img04} alt="img04" />
+                <Image src={img03} alt="img03" />
+                <Image src={img02} alt="img02" />
+                <Image src={img01} alt="img01" />
               </div>
               <div className={styles.recentWork_slide}>
                 <Image src={img09} alt="img09" />
+                <Image src={img02} alt="img02" />
                 <Image src={img08} alt="img08" />
                 <Image src={img07} alt="img07" />
                 <Image src={img06} alt="img06" />
+                <Image src={img09} alt="img09" />
+                <Image src={img05} alt="img05" />
+                <Image src={img04} alt="img04" />
+                <Image src={img03} alt="img03" />
+                <Image src={img02} alt="img02" />
+                <Image src={img01} alt="img01" />
+              </div>
+              <div className={styles.recentWork_slide}>
+                <Image src={img09} alt="img09" />
+                <Image src={img02} alt="img02" />
+                <Image src={img08} alt="img08" />
+                <Image src={img07} alt="img07" />
+                <Image src={img06} alt="img06" />
+                <Image src={img09} alt="img09" />
                 <Image src={img05} alt="img05" />
                 <Image src={img04} alt="img04" />
                 <Image src={img03} alt="img03" />
@@ -419,9 +425,11 @@ export default function Home() {
             <div className={styles.recentWork}>
               <div className={styles.recentWork_slide}>
                 <Image src={img09} alt="img09" />
+                <Image src={img02} alt="img02" />
                 <Image src={img08} alt="img08" />
                 <Image src={img07} alt="img07" />
                 <Image src={img06} alt="img06" />
+                <Image src={img09} alt="img09" />
                 <Image src={img05} alt="img05" />
                 <Image src={img04} alt="img04" />
                 <Image src={img03} alt="img03" />
@@ -430,9 +438,11 @@ export default function Home() {
               </div>
               <div className={styles.recentWork_slide}>
                 <Image src={img09} alt="img09" />
+                <Image src={img02} alt="img02" />
                 <Image src={img08} alt="img08" />
                 <Image src={img07} alt="img07" />
                 <Image src={img06} alt="img06" />
+                <Image src={img09} alt="img09" />
                 <Image src={img05} alt="img05" />
                 <Image src={img04} alt="img04" />
                 <Image src={img03} alt="img03" />
@@ -441,9 +451,11 @@ export default function Home() {
               </div>
               <div className={styles.recentWork_slide}>
                 <Image src={img09} alt="img09" />
+                <Image src={img02} alt="img02" />
                 <Image src={img08} alt="img08" />
                 <Image src={img07} alt="img07" />
                 <Image src={img06} alt="img06" />
+                <Image src={img09} alt="img09" />
                 <Image src={img05} alt="img05" />
                 <Image src={img04} alt="img04" />
                 <Image src={img03} alt="img03" />
