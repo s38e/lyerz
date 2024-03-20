@@ -24,7 +24,8 @@
 }
 .section_1 .heading {
   padding: 20px 30px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
   position: absolute;
   z-index: 2;
   border-radius: 33px;
@@ -38,8 +39,8 @@
   gap: 1rem;
 }
 .section_1 .heading img {
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
   vertical-align: top;
 }
 .section_1 .heading h1 {
@@ -75,13 +76,13 @@
   white-space: nowrap;
   display: inline-block;
   gap: 2rem;
-  animation: 70s SlideAnimation1 infinite linear;
+  animation: 70s SlideAnimationSection1 infinite linear;
   gap: 1rem;
 }
 .section_1 .sliders .recentWork:nth-child(2) .recentWork_slide {
   white-space: nowrap;
   display: inline-block;
-  animation: 90s SlideAnimation2 infinite linear;
+  animation: 90s SlideAnimationSection1 infinite linear;
 }
 .section_1 .sliders .recentWork .recentWork_slide img {
   vertical-align: top;
@@ -91,15 +92,15 @@
   border-radius: 20px;
 }
 /*  */
-@keyframes SlideAnimation1 {
+/* @keyframes SlideAnimationSection1 {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
   }
-}
-@keyframes SlideAnimation2 {
+} */
+@keyframes SlideAnimationSection1 {
   from {
     transform: translateX(-100%);
   }
