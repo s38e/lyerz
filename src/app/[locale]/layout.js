@@ -12,6 +12,7 @@ import "../globals.css";
 /**
  * @param {LocaleLayoutProps} props
  */
+
 export default async function LocaleLayout(props) {
   const {
     children,
