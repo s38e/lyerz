@@ -20,4 +20,6 @@ button {
   cursor: pointer;
   color: inherit;
   text-decoration: none;
+  outline: none;
+  border: none;
 }

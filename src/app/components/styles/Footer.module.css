@@ -1,0 +1,62 @@
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+}
+.Footer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  background-color: #ebebeb;
+  color: black;
+  border-radius: 100rem;
+  line-height: 1;
+  position: relative;
+  height: 66px;
+  overflow: hidden;
+}
+.Footer button .image {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1;
+}
+.Footer button:hover .image {
+  transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%) rotate(45deg);
+  left: 50%;
+}
+.Footer button .image img {
+  height: 100%;
+  width: 100%;
+}
+.Footer button span {
+  margin-left: calc(50px + 1.5rem);
+  margin-right: 1.5rem;
+  font-size: 2rem;
+  line-height: 1;
+  transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.Footer button:hover span {
+  position: relative;
+  transform: translateX(-25px);
+  opacity: 0;
+}
+.Footer p {
+  text-align: center;
+  font-weight: 600;
+  line-height: 1rem;
+  color: rgba(34, 34, 34, 0.6);
+  font-size: 0.75rem;
+}

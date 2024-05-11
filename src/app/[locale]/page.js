@@ -17,6 +17,7 @@ export default function Home() {
         for (let i = 0; i < cards.length; i++) {
           if (i !== index) {
             cards[i].style.filter = "grayscale(100%)";
+            cards[i].style.opacity = "0.5";
           }
         }
       });
@@ -24,6 +25,7 @@ export default function Home() {
       card.addEventListener("mouseout", () => {
         cards.forEach((card) => {
           card.style.filter = "none";
+          card.style.opacity = "1";
         });
       });
     });

@@ -40,7 +40,7 @@
   background-color: #f7f7f7;
   border-radius: 20px;
   flex: 1 1 0;
-  transition: all 0.7s;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   padding: 1rem;
   display: flex;
   align-items: center;
