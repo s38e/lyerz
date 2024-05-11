@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Lyerz - Dev Agency",
+  title: "Lyerz - Desgin Studio",
   description: "Dev with Lyerz",
 };
 
