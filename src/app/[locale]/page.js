@@ -11,5 +11,5 @@ import { useEffect } from "react";
 export default function Home() {
   useEffect(() => {});
   const t = useTranslations("Index");
-  return <main className={styles.page}></main>;
+  return <main className={styles.page}>تيستتتتتتتتتتتتتتتتت</main>;
 }
