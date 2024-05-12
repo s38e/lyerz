@@ -10,6 +10,7 @@ import img_4_work from "../../../public/assets/img_4_work.png";
 import img_1_services from "../../../public/assets/img_1_services.png";
 import img_2_services from "../../../public/assets/img_2_services.png";
 import img_3_services from "../../../public/assets/img_3_services.png";
+import webflowIcon from "../../../public/assets/webflow-icon.png";
 import card_work from "../../../public/assets/card_work.png";
 import card_services from "../../../public/assets/card_services.png";
 import card_about from "../../../public/assets/card_about.png";
@@ -155,7 +156,7 @@ export default function Home() {
                 <br />
                 desktop design
               </p>
-              <Image src={img_1_services} alt="Image Work Card" />
+              <Image src={img_1_services} alt="Image Services Card" />
             </div>
             <div className={styles.card}>
               <p>
@@ -163,7 +164,7 @@ export default function Home() {
                 <br />
                 landing page design
               </p>
-              <Image src={img_2_services} alt="Image Work Card" />
+              <Image src={img_2_services} alt="Image Services Card" />
             </div>
             <div className={styles.card}>
               <p>
@@ -171,7 +172,8 @@ export default function Home() {
                 <br />
                 development
               </p>
-              <Image src={img_3_services} alt="Image Work Card" />
+              <Image src={img_3_services} alt="Image Services Card" />
+              <Image src={webflowIcon} alt="webflowIcon" />
             </div>
           </div>
         </section>
