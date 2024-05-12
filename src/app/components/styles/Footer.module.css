@@ -5,6 +5,8 @@
   flex-direction: column;
   width: 100%;
   gap: 1.5rem;
+  position: relative;
+  z-index: 99;
 }
 .Footer button {
   display: flex;

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import logo_2 from "../../../public/assets/logo_2.svg";
 import styles from "./styles/Footer.module.css";
 
 function Footer() {
@@ -7,12 +8,7 @@ function Footer() {
     <footer className={styles.Footer}>
       <button>
         <div className={styles.image}>
-          <Image
-            src="/assets/logo.png"
-            alt="Lyerz Logo"
-            width={100}
-            height={100}
-          />
+          <Image src={logo_2} alt="Lyerz Logo" width={100} height={100} />
         </div>
         <span>Menu</span>
       </button>

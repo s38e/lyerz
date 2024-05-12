@@ -1,3 +1,4 @@
+/* ---------------- HeroSection ---------------- */
 .HeroSection {
   height: calc(100vh - 2rem);
   width: calc(100vw - 2rem);
@@ -11,6 +12,7 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  position: relative;
 }
 .HeroSection .hero_content {
   display: flex;
@@ -34,6 +36,7 @@
   height: 13rem;
   display: flex;
   position: relative;
+  z-index: 99;
 }
 .HeroSection .hero_content .hero_cards .card {
   border: 2px solid #f1f1f1;
@@ -53,10 +56,158 @@
   flex: 1.3 1.3 0;
 }
 .HeroSection .hero_content .hero_cards .card img {
+  pointer-events: none;
   height: 100%;
   object-fit: contain;
 }
 .HeroSection .hero_content .hero_cards .card p {
   font-size: 17px;
   font-weight: 500;
+}
+/* ---------------- imagesWorkCard ---------------- */
+.HeroSection .imagesWorkCard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  transition: visibility 0s 0.52s linear;
+}
+.HeroSection .imagesWorkCard.active {
+  visibility: visible;
+  transition: visibility 0s;
+}
+.HeroSection .imagesWorkCard .image:nth-child(1) {
+  width: 25vw;
+  height: auto;
+  position: absolute;
+  top: 9%;
+  bottom: auto;
+  left: 6%;
+  right: auto;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+.HeroSection .imagesWorkCard .image:nth-child(2) {
+  position: absolute;
+  width: 20vw;
+  height: auto;
+  top: 8%;
+  bottom: auto;
+  left: auto;
+  right: 5%;
+  opacity: 0;
+  transition: opacity 0.3s 0.05s linear;
+}
+.HeroSection .imagesWorkCard .image:nth-child(3) {
+  width: 30vw;
+  position: absolute;
+  height: auto;
+  top: auto;
+  bottom: -3%;
+  left: 4%;
+  right: auto;
+  opacity: 0;
+  transition: opacity 0.3s 0.1s linear;
+}
+.HeroSection .imagesWorkCard .image:nth-child(4) {
+  width: 20vw;
+  position: absolute;
+  height: auto;
+  top: auto;
+  bottom: 6%;
+  left: auto;
+  right: 7%;
+  transform: rotate(4deg);
+  opacity: 0;
+  transition: opacity 0.3s 0.15s linear;
+}
+.HeroSection .imagesWorkCard.active .image:nth-child(1),
+.HeroSection .imagesWorkCard.active .image:nth-child(2),
+.HeroSection .imagesWorkCard.active .image:nth-child(3),
+.HeroSection .imagesWorkCard.active .image:nth-child(4) {
+  opacity: 1;
+}
+.HeroSection .imagesWorkCard .image img {
+  width: 100%;
+  height: 100%;
+}
+.HeroSection .imagesWorkCard .image {
+  position: absolute;
+}
+.HeroSection .imagesWorkCard .image .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 15%, #fff);
+}
+/* ---------------- cardsServicesCard ---------------- */
+.HeroSection .cardsServicesCard {
+  gap: 0.5rem;
+  /* background-color: white; */
+  width: 53rem;
+  height: 13rem;
+  position: absolute;
+  top: auto;
+  bottom: 3%;
+  left: auto;
+  right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  visibility: hidden;
+  transition: visibility 0s 0.5s linear;
+}
+.HeroSection .cardsServicesCard.active {
+  visibility: visible;
+  transition: visibility 0s linear;
+}
+.HeroSection .cardsServicesCard .card {
+  gap: 1.5rem;
+  background-image: linear-gradient(52deg, #f1f1f1, #f7f7f7);
+  border-radius: 20px;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-top: 3.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 0.3s linear;
+  opacity: 0;
+  transform: translateY(40px);
+}
+.HeroSection .cardsServicesCard .card p {
+  line-height: 1.25;
+}
+.HeroSection .cardsServicesCard .card img {
+  border-radius: 12px;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  height: auto;
+}
+.HeroSection .cardsServicesCard .card:nth-child(1) {
+  transition: transform 0.3s 0.05s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 0.3s 0.05s linear;
+}
+.HeroSection .cardsServicesCard .card:nth-child(2) {
+  transition: transform 0.3s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 0.3s 0.1s linear;
+}
+.HeroSection .cardsServicesCard .card:nth-child(3) {
+  transition: transform 0.3s 0.15s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 0.3s 0.15s linear;
+}
+.HeroSection .cardsServicesCard.active .card {
+  transform: translateY(0);
+  opacity: 1;
 }
