@@ -54,38 +54,50 @@ export default function Home() {
     });
     // ---------------- WorkCard ---------------- //
     const WorkCard = document.querySelector(
-      `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(1)`
-    );
-
-    WorkCard.addEventListener("mouseover", () => {
-      setIsCardWorkHovered(true); // الماوس فوق البطاقة
-    });
-
-    WorkCard.addEventListener("mouseout", () => {
-      setIsCardWorkHovered(false); // الماوس لم يعد فوق البطاقة
-    }); // ---------------- ServicesCard ---------------- //
-    const ServicesCard = document.querySelector(
       `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(2)`
     );
 
-    ServicesCard.addEventListener("mouseover", () => {
-      setIsCardServicesHovered(true); // الماوس فوق البطاقة
+    WorkCard.addEventListener("mouseover", () => {
+      setIsCardWorkHovered(true);
     });
 
-    ServicesCard.addEventListener("mouseout", () => {
-      setIsCardServicesHovered(false); // الماوس لم يعد فوق البطاقة
-    });
-    // ---------------- ServicesCard ---------------- //
-    const AboutCard = document.querySelector(
+    WorkCard.addEventListener("mouseout", () => {
+      setIsCardWorkHovered(false);
+    }); // ---------------- ServicesCard ---------------- //
+    const ServicesCard = document.querySelector(
       `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(3)`
     );
 
+    ServicesCard.addEventListener("mouseover", () => {
+      setIsCardServicesHovered(true);
+    });
+
+    ServicesCard.addEventListener("mouseout", () => {
+      setIsCardServicesHovered(false);
+    });
+    // ---------------- AboutCard ---------------- //
+    const AboutCard = document.querySelector(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(4)`
+    );
+
     AboutCard.addEventListener("mouseover", () => {
-      setIsCardAboutHovered(true); // الماوس فوق البطاقة
+      setIsCardAboutHovered(true);
     });
 
     AboutCard.addEventListener("mouseout", () => {
-      setIsCardAboutHovered(false); // الماوس لم يعد فوق البطاقة
+      setIsCardAboutHovered(false);
+    });
+    // ---------------- PlansCard ---------------- //
+    const PlansCard = document.querySelector(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(5)`
+    );
+
+    PlansCard.addEventListener("mouseover", () => {
+      setIsCardPlansHovered(true);
+    });
+
+    PlansCard.addEventListener("mouseout", () => {
+      setIsCardPlansHovered(false);
     });
   });
   const t = useTranslations("Index");
@@ -101,6 +113,24 @@ export default function Home() {
               <span>product-led founders</span>
             </h2>
             <div className={styles.hero_cards}>
+              <div
+                className={`${styles.cardsPlansCard} ${
+                  isCardPlansHovered ? styles.active : ""
+                }`}
+              >
+                <div className={styles.plan_tag}>
+                  <p>Project Based</p>
+                </div>
+                <div className={styles.plan_tag}>
+                  <p>Webflow development: $2.990</p>
+                </div>
+                <div className={styles.plan_tag}>
+                  <p>Flat monthly fee: $6.990</p>
+                </div>
+                <div className={styles.plan_tag}>
+                  <p>Flat monthly fee: $6.990</p>
+                </div>
+              </div>
               <div className={styles.card}>
                 <Image
                   src={card_work}

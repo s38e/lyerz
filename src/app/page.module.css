@@ -20,6 +20,7 @@
   justify-content: space-between;
   flex-direction: column;
   gap: 3rem;
+  position: relative;
 }
 .HeroSection .hero_content h2 {
   font-size: 2rem;
@@ -233,7 +234,7 @@
   right: auto;
   z-index: 100;
   visibility: hidden;
-  transition: visibility 0s 0.4s linear;
+  transition: visibility 0s linear;
 }
 .HeroSection .cardsAboutCard.active {
   visibility: visible;
@@ -322,4 +323,71 @@
 .HeroSection .cardsAboutCard.active .image:nth-child(5) {
   transform: translateY(0);
   opacity: 1;
+}
+/* ---------------- cardsPlansCard ---------------- */
+.HeroSection .hero_content .hero_cards .cardsPlansCard {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  position: absolute;
+  top: 30%;
+  bottom: auto;
+  left: auto;
+  right: -32%;
+  visibility: hidden;
+  transition: visibility 0s 0.3s linear;
+}
+.HeroSection .hero_content .hero_cards .cardsPlansCard.active {
+  visibility: visible;
+  transition: visibility 0s linear;
+}
+.HeroSection .hero_content .hero_cards .cardsPlansCard .plan_tag {
+  border-radius: 20px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  position: relative;
+  width: 100%;
+  opacity: 0;
+}
+.HeroSection .hero_content .hero_cards .cardsPlansCard.active .plan_tag {
+  opacity: 1;
+}
+.HeroSection .hero_content .hero_cards .cardsPlansCard .plan_tag:nth-child(1) {
+  z-index: 3;
+  background-color: #f1f1f1;
+  left: 10%;
+  transition: 0.5s 0.05s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.HeroSection .hero_content .hero_cards .cardsPlansCard .plan_tag:nth-child(2) {
+  z-index: 2;
+  background-color: #ffe2c3;
+  transition: 0.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.HeroSection .hero_content .hero_cards .cardsPlansCard .plan_tag:nth-child(3) {
+  z-index: 1;
+  background-color: #dfd2fd;
+  transition: 0.5s 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+  left: 5%;
+}
+.HeroSection .hero_content .hero_cards .cardsPlansCard .plan_tag:nth-child(4) {
+  left: 10%;
+  z-index: 1;
+  background-color: #d9fce0;
+  transition: 0.5s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.HeroSection
+  .hero_content
+  .hero_cards
+  .cardsPlansCard.active
+  .plan_tag:nth-child(1) {
+  transform: rotate(-2deg);
+}
+.HeroSection
+  .hero_content
+  .hero_cards
+  .cardsPlansCard.active
+  .plan_tag:nth-child(4) {
+  transform: rotate(2deg);
 }
