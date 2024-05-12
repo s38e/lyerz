@@ -11,6 +11,11 @@ import img_1_services from "../../../public/assets/img_1_services.png";
 import img_2_services from "../../../public/assets/img_2_services.png";
 import img_3_services from "../../../public/assets/img_3_services.png";
 import webflowIcon from "../../../public/assets/webflow-icon.png";
+import img_1_about from "../../../public/assets/img_1_about.png";
+import img_2_about from "../../../public/assets/img_2_about.png";
+import img_3_about from "../../../public/assets/img_3_about.png";
+import img_4_about from "../../../public/assets/img_4_about.png";
+import img_5_about from "../../../public/assets/img_5_about.png";
 import card_work from "../../../public/assets/card_work.png";
 import card_services from "../../../public/assets/card_services.png";
 import card_about from "../../../public/assets/card_about.png";
@@ -58,7 +63,7 @@ export default function Home() {
 
     WorkCard.addEventListener("mouseout", () => {
       setIsCardWorkHovered(false); // الماوس لم يعد فوق البطاقة
-    }); // ---------------- WorkCard ---------------- //
+    }); // ---------------- ServicesCard ---------------- //
     const ServicesCard = document.querySelector(
       `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(2)`
     );
@@ -69,6 +74,18 @@ export default function Home() {
 
     ServicesCard.addEventListener("mouseout", () => {
       setIsCardServicesHovered(false); // الماوس لم يعد فوق البطاقة
+    });
+    // ---------------- ServicesCard ---------------- //
+    const AboutCard = document.querySelector(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(3)`
+    );
+
+    AboutCard.addEventListener("mouseover", () => {
+      setIsCardAboutHovered(true); // الماوس فوق البطاقة
+    });
+
+    AboutCard.addEventListener("mouseout", () => {
+      setIsCardAboutHovered(false); // الماوس لم يعد فوق البطاقة
     });
   });
   const t = useTranslations("Index");
@@ -174,6 +191,27 @@ export default function Home() {
               </p>
               <Image src={img_3_services} alt="Image Services Card" />
               <Image src={webflowIcon} alt="webflowIcon" />
+            </div>
+          </div>
+          <div
+            className={`${styles.cardsAboutCard} ${
+              isCardAboutHovered ? styles.active : ""
+            }`}
+          >
+            <div className={styles.image}>
+              <Image src={img_1_about} alt="Image About Card" />
+            </div>
+            <div className={styles.image}>
+              <Image src={img_2_about} alt="Image About Card" />
+            </div>
+            <div className={styles.image}>
+              <Image src={img_3_about} alt="Image About Card" />
+            </div>
+            <div className={styles.image}>
+              <Image src={img_4_about} alt="Image About Card" />
+            </div>
+            <div className={styles.image}>
+              <Image src={img_5_about} alt="Image About Card" />
             </div>
           </div>
         </section>
