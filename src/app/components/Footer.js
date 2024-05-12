@@ -86,7 +86,7 @@ function Footer() {
             onMouseEnter={() => handleLinkHover(4)}
             onMouseLeave={handleLinkLeave}
           >
-            LogIn
+            Login
           </Link>
         </menu>
         <div className={styles.image}>
