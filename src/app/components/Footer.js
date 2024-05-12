@@ -50,7 +50,7 @@ function Footer() {
           ></div>
           <Link
             className={styles.link}
-            href=" sssssssssss.ss"
+            href=""
             onMouseEnter={() => handleLinkHover(0)}
             onMouseLeave={handleLinkLeave}
           >
