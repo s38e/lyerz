@@ -141,6 +141,10 @@ export default function Home() {
   const handleOverlayPlansClick = () => {
     setIsCardPlansClicked(false);
   };
+  // -----------------------------------------------
+  const handleContainerClick = (e) => {
+    e.stopPropagation();
+  };
 
   const t = useTranslations("Index");
   return (
@@ -298,7 +302,10 @@ export default function Home() {
             }`}
           >
             <CircleOverlayWorkCard />
-            <div className={styles.contanier}></div>
+            <div
+              className={styles.contanier}
+              onClick={handleContainerClick}
+            ></div>
           </div>
           {/* ---------------- Overlay Services Card ---------------- */}
           <div
@@ -308,7 +315,10 @@ export default function Home() {
             }`}
           >
             <CircleOverlayServicesCard />
-            <div className={styles.contanier}></div>
+            <div
+              className={styles.contanier}
+              onClick={handleContainerClick}
+            ></div>
           </div>
           {/* ---------------- Overlay About Card ---------------- */}
           <div
@@ -318,7 +328,10 @@ export default function Home() {
             }`}
           >
             <CircleOverlayAboutCard />
-            <div className={styles.contanier}></div>
+            <div
+              className={styles.contanier}
+              onClick={handleContainerClick}
+            ></div>
           </div>
           {/* ---------------- Overlay Plans Card ---------------- */}
           <div
@@ -328,7 +341,10 @@ export default function Home() {
             }`}
           >
             <CircleOverlayPlansCard />
-            <div className={styles.contanier}></div>
+            <div
+              className={styles.contanier}
+              onClick={handleContainerClick}
+            ></div>
           </div>
         </section>
       </main>
