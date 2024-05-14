@@ -16,6 +16,19 @@ import img_2_about from "../../../public/assets/img_2_about.png";
 import img_3_about from "../../../public/assets/img_3_about.png";
 import img_4_about from "../../../public/assets/img_4_about.png";
 import img_5_about from "../../../public/assets/img_5_about.png";
+import img_1_overlayWork from "../../../public/assets/img_1_overlayWork.png";
+import img_2_overlayWork from "../../../public/assets/img_2_overlayWork.png";
+import img_3_overlayWork from "../../../public/assets/img_3_overlayWork.png";
+import img_4_overlayWork from "../../../public/assets/img_4_overlayWork.png";
+import img_5_overlayWork from "../../../public/assets/img_5_overlayWork.png";
+import img_6_overlayWork from "../../../public/assets/img_6_overlayWork.png";
+import img_7_overlayWork from "../../../public/assets/img_7_overlayWork.png";
+import img_8_overlayWork from "../../../public/assets/img_8_overlayWork.png";
+import img_9_overlayWork from "../../../public/assets/img_9_overlayWork.png";
+import img_10_overlayWork from "../../../public/assets/img_10_overlayWork.png";
+import img_11_overlayWork from "../../../public/assets/img_11_overlayWork.png";
+import img_12_overlayWork from "../../../public/assets/img_12_overlayWork.png";
+import img_13_overlayWork from "../../../public/assets/img_13_overlayWork.png";
 import card_work from "../../../public/assets/card_work.png";
 import card_services from "../../../public/assets/card_services.png";
 import card_about from "../../../public/assets/card_about.png";
@@ -308,10 +321,21 @@ export default function Home() {
             }`}
           >
             <CircleOverlayWorkCard />
-            <div
-              className={styles.contanier}
-              onClick={handleContainerClick}
-            ></div>
+            <div className={styles.contanier} onClick={handleContainerClick}>
+              <Image src={img_1_overlayWork} alt="img_1_overlayWork" />
+              <Image src={img_2_overlayWork} alt="img_2_overlayWork" />
+              <Image src={img_3_overlayWork} alt="img_3_overlayWork" />
+              <Image src={img_4_overlayWork} alt="img_4_overlayWork" />
+              <Image src={img_5_overlayWork} alt="img_5_overlayWork" />
+              <Image src={img_6_overlayWork} alt="img_6_overlayWork" />
+              <Image src={img_7_overlayWork} alt="img_7_overlayWork" />
+              <Image src={img_8_overlayWork} alt="img_8_overlayWork" />
+              <Image src={img_9_overlayWork} alt="img_9_overlayWork" />
+              <Image src={img_10_overlayWork} alt="img_10_overlayWork" />
+              <Image src={img_11_overlayWork} alt="img_11_overlayWork" />
+              <Image src={img_12_overlayWork} alt="img_12_overlayWork" />
+              <Image src={img_13_overlayWork} alt="img_13_overlayWork" />
+            </div>
           </div>
           {/* ---------------- Overlay Services Card ---------------- */}
           <div

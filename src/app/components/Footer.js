@@ -118,9 +118,9 @@ function Footer() {
         <span>{t("btnMenu")}</span>
       </button>
       <p>
-        <span>{t("notePart1")}</span>
+        {t("notePart1")}
         <br />
-        <span>{t("notePart2")}</span>
+        {t("notePart2")}
       </p>
     </footer>
   );
