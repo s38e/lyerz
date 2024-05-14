@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Lyerz - Desgin Studio",
-  description: "Dev with Lyerz",
+  description: "Dev with Lyerz by Saeed Khaled",
 };
 
 export default function RootLayout({ children }) {

@@ -1,5 +1,38 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "Home": {
+    "header_1": "Design partner for",
+    "header_2": "product-led founders",
+    "card_1": "Work",
+    "card_2": "Services",
+    "card_3": "About",
+    "card_4": "Plans"
+  },
+  "servicesCards": {
+    "card_1_part1": "Mobile &",
+    "card_1_part2": "desktop design",
+    "card_2_part1": "Website &",
+    "card_2_part2": "landing page design",
+    "card_3_part1": "Webflow",
+    "card_3_part2": "development"
+  },
+  "plan_tag": {
+    "tag_1": "Project Based",
+    "tag_2": "Webflow development: $2.990",
+    "tag_3": "Flat monthly fee: $6.990",
+    "tag_4": "Flat monthly fee: $6.990"
+  },
+  "Footer": {
+    "btnMenu": "Menu",
+    "btn_1": "Work",
+    "btn_2": "Services",
+    "btn_3": "About",
+    "btn_4": "Plans",
+    "btn_5": "Login",
+    "language": "Arabic",
+    "notePart1": "*Disclaimer: We design for your users,",
+    "notePart2": "not just for you."
+  },
+  "movingCircle": {
+    "title": "Close"
   }
 }

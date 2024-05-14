@@ -3,6 +3,7 @@ import stylesPage from "../page.module.css";
 import { useEffect, useRef } from "react";
 import { isMobile } from "react-device-detect";
 import gsap from "gsap";
+import { useTranslations } from "next-intl";
 
 const CircleOverlayPlansCard = () => {
   const circleRef = useRef(null);
@@ -89,11 +90,13 @@ const CircleOverlayPlansCard = () => {
     }
   }, []);
 
+  const t = useTranslations("movingCircle");
+
   return (
     <>
       <div ref={circleRef} className={styles.circle}></div>
       <div ref={textRef} className={styles.textInCircle}>
-        Close
+        {t("title")}
       </div>
     </>
   );

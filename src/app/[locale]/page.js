@@ -145,18 +145,25 @@ export default function Home() {
   const handleContainerClick = (e) => {
     e.stopPropagation();
   };
+  // ---------------- Check the language to determine the style ---------------- //
+  const pathName = window.location.pathname;
+  const isArabic = pathName.includes("/ar");
 
-  const t = useTranslations("Index");
+  const t = useTranslations("Home");
+  const tags = useTranslations("plan_tag");
+  const ServicesCards = useTranslations("servicesCards");
   return (
     <>
       <main className={styles.page}>
-        <section className={styles.HeroSection}>
+        <section
+          className={`${styles.HeroSection} ${isArabic ? styles["ar"] : ""}`}
+        >
           <NavBar />
           <div className={styles.hero_content}>
             <h2>
-              Design partner for
+              {t("header_1")}
               <br />
-              <span>product-led founders</span>
+              <span>{t("header_2")}</span>
             </h2>
             <div className={styles.hero_cards}>
               {/* ---------------- cardsPlansCard ---------------- */}
@@ -166,16 +173,16 @@ export default function Home() {
                 }`}
               >
                 <div className={styles.plan_tag}>
-                  <p>Project Based</p>
+                  <p>{tags("tag_1")}</p>
                 </div>
                 <div className={styles.plan_tag}>
-                  <p>Webflow development: $2.990</p>
+                  <p>{tags("tag_2")}</p>
                 </div>
                 <div className={styles.plan_tag}>
-                  <p>Flat monthly fee: $6.990</p>
+                  <p>{tags("tag_3")}</p>
                 </div>
                 <div className={styles.plan_tag}>
-                  <p>Flat monthly fee: $6.990</p>
+                  <p>{tags("tag_3")}</p>
                 </div>
               </div>
               <button onClick={handleCardWorkClick} className={styles.card}>
@@ -185,7 +192,7 @@ export default function Home() {
                   width={100}
                   height={100}
                 />
-                <p>Work</p>
+                <p>{t("card_1")}</p>
               </button>
               <button onClick={handleCardServicesClick} className={styles.card}>
                 <Image
@@ -194,7 +201,7 @@ export default function Home() {
                   width={100}
                   height={100}
                 />
-                <p>Services</p>
+                <p>{t("card_2")}</p>
               </button>
               <button onClick={handleCardAboutClick} className={styles.card}>
                 <Image
@@ -203,7 +210,7 @@ export default function Home() {
                   width={100}
                   height={100}
                 />
-                <p>About</p>
+                <p>{t("card_3")}</p>
               </button>
               <button onClick={handleCardPlansClick} className={styles.card}>
                 <Image
@@ -212,7 +219,7 @@ export default function Home() {
                   width={100}
                   height={100}
                 />
-                <p>Plans</p>
+                <p>{t("card_4")}</p>
               </button>
             </div>
           </div>
@@ -248,25 +255,24 @@ export default function Home() {
           >
             <div className={styles.card}>
               <p>
-                Mobile &
+                {ServicesCards("card_1_part1")}
                 <br />
-                desktop design
+                {ServicesCards("card_1_part2")}
               </p>
               <Image src={img_1_services} alt="Image Services Card" />
             </div>
             <div className={styles.card}>
               <p>
-                Website &
+                {ServicesCards("card_2_part1")}
                 <br />
-                landing page design
+                {ServicesCards("card_2_part2")}
               </p>
               <Image src={img_2_services} alt="Image Services Card" />
             </div>
             <div className={styles.card}>
               <p>
-                Webflow
-                <br />
-                development
+                {ServicesCards("card_3_part1")} <br />
+                {ServicesCards("card_3_part2")}
               </p>
               <Image src={img_3_services} alt="Image Services Card" />
               <Image src={webflowIcon} alt="webflowIcon" />
