@@ -22,12 +22,22 @@ import card_about from "../../../public/assets/card_about.png";
 import card_plans from "../../../public/assets/card_plans.png";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
+import CircleOverlayWorkCard from "../components/CircleOverlayWorkCard";
+import CircleOverlayServicesCard from "../components/CircleOverlayServicesCard";
+import CircleOverlayAboutCard from "../components/CircleOverlayAboutCard";
+import CircleOverlayPlansCard from "../components/CircleOverlayPlansCard";
 
 export default function Home() {
+  // ---------------- Hovered ---------------- //
   const [isCardWorkHovered, setIsCardWorkHovered] = useState(false);
   const [isCardServicesHovered, setIsCardServicesHovered] = useState(false);
   const [isCardAboutHovered, setIsCardAboutHovered] = useState(false);
   const [isCardPlansHovered, setIsCardPlansHovered] = useState(false);
+  // ---------------- Clicked ---------------- //
+  const [isCardWorkClicked, setIsCardWorkClicked] = useState(false);
+  const [isCardServicesClicked, setIsCardServicesClicked] = useState(false);
+  const [isCardAboutClicked, setIsCardAboutClicked] = useState(false);
+  const [isCardPlansClicked, setIsCardPlansClicked] = useState(false);
 
   useEffect(() => {
     // ---------------- hover effect on cards ---------------- //
@@ -63,7 +73,8 @@ export default function Home() {
 
     WorkCard.addEventListener("mouseout", () => {
       setIsCardWorkHovered(false);
-    }); // ---------------- ServicesCard ---------------- //
+    });
+    // ---------------- ServicesCard ---------------- //
     const ServicesCard = document.querySelector(
       `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(3)`
     );
@@ -100,6 +111,37 @@ export default function Home() {
       setIsCardPlansHovered(false);
     });
   });
+  // ---------------- Click Work Card ---------------- //
+  const handleCardWorkClick = () => {
+    setIsCardWorkClicked(true);
+  };
+  const handleOverlayWorkClick = () => {
+    setIsCardWorkClicked(false);
+  };
+  // ---------------- Click Services Card ---------------- //
+  const handleCardServicesClick = () => {
+    setIsCardServicesClicked(true);
+  };
+  const handleOverlayServicesClick = () => {
+    setIsCardServicesClicked(false);
+  };
+
+  // ---------------- Click About Card ---------------- //
+  const handleCardAboutClick = () => {
+    setIsCardAboutClicked(true);
+  };
+  const handleOverlayAboutClick = () => {
+    setIsCardAboutClicked(false);
+  };
+
+  // ---------------- Click Plans Card ---------------- //
+  const handleCardPlansClick = () => {
+    setIsCardPlansClicked(true);
+  };
+  const handleOverlayPlansClick = () => {
+    setIsCardPlansClicked(false);
+  };
+
   const t = useTranslations("Index");
   return (
     <>
@@ -113,6 +155,7 @@ export default function Home() {
               <span>product-led founders</span>
             </h2>
             <div className={styles.hero_cards}>
+              {/* ---------------- cardsPlansCard ---------------- */}
               <div
                 className={`${styles.cardsPlansCard} ${
                   isCardPlansHovered ? styles.active : ""
@@ -131,7 +174,7 @@ export default function Home() {
                   <p>Flat monthly fee: $6.990</p>
                 </div>
               </div>
-              <div className={styles.card}>
+              <button onClick={handleCardWorkClick} className={styles.card}>
                 <Image
                   src={card_work}
                   alt="Image Card Work"
@@ -139,8 +182,8 @@ export default function Home() {
                   height={100}
                 />
                 <p>Work</p>
-              </div>
-              <div className={styles.card}>
+              </button>
+              <button onClick={handleCardServicesClick} className={styles.card}>
                 <Image
                   src={card_services}
                   alt="Image Card Services"
@@ -148,8 +191,8 @@ export default function Home() {
                   height={100}
                 />
                 <p>Services</p>
-              </div>
-              <div className={styles.card}>
+              </button>
+              <button onClick={handleCardAboutClick} className={styles.card}>
                 <Image
                   src={card_about}
                   alt="Image Card About"
@@ -157,8 +200,8 @@ export default function Home() {
                   height={100}
                 />
                 <p>About</p>
-              </div>
-              <div className={styles.card}>
+              </button>
+              <button onClick={handleCardPlansClick} className={styles.card}>
                 <Image
                   src={card_plans}
                   alt="Image Card Plans"
@@ -166,10 +209,11 @@ export default function Home() {
                   height={100}
                 />
                 <p>Plans</p>
-              </div>
+              </button>
             </div>
           </div>
           <Footer />
+          {/* ---------------- Images Work Card ---------------- */}
           <div
             className={`${styles.imagesWorkCard} ${
               isCardWorkHovered ? styles.active : ""
@@ -192,6 +236,7 @@ export default function Home() {
               <Image src={img_4_work} alt="Image Work Card" />
             </div>
           </div>
+          {/* ---------------- Cards Services Card ---------------- */}
           <div
             className={`${styles.cardsServicesCard} ${
               isCardServicesHovered ? styles.active : ""
@@ -223,6 +268,7 @@ export default function Home() {
               <Image src={webflowIcon} alt="webflowIcon" />
             </div>
           </div>
+          {/* ---------------- Cards About Card ---------------- */}
           <div
             className={`${styles.cardsAboutCard} ${
               isCardAboutHovered ? styles.active : ""
@@ -243,6 +289,46 @@ export default function Home() {
             <div className={styles.image}>
               <Image src={img_5_about} alt="Image About Card" />
             </div>
+          </div>
+          {/* ---------------- Overlay Work Card ---------------- */}
+          <div
+            onClick={handleOverlayWorkClick}
+            className={`${styles.overlayWorkCard} ${
+              isCardWorkClicked ? styles.active : ""
+            }`}
+          >
+            <CircleOverlayWorkCard />
+            <div className={styles.contanier}></div>
+          </div>
+          {/* ---------------- Overlay Services Card ---------------- */}
+          <div
+            onClick={handleOverlayServicesClick}
+            className={`${styles.overlayServicesCard} ${
+              isCardServicesClicked ? styles.active : ""
+            }`}
+          >
+            <CircleOverlayServicesCard />
+            <div className={styles.contanier}></div>
+          </div>
+          {/* ---------------- Overlay About Card ---------------- */}
+          <div
+            onClick={handleOverlayAboutClick}
+            className={`${styles.overlayAboutCard} ${
+              isCardAboutClicked ? styles.active : ""
+            }`}
+          >
+            <CircleOverlayAboutCard />
+            <div className={styles.contanier}></div>
+          </div>
+          {/* ---------------- Overlay Plans Card ---------------- */}
+          <div
+            onClick={handleOverlayPlansClick}
+            className={`${styles.overlayPlansCard} ${
+              isCardPlansClicked ? styles.active : ""
+            }`}
+          >
+            <CircleOverlayPlansCard />
+            <div className={styles.contanier}></div>
           </div>
         </section>
       </main>

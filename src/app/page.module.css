@@ -1,3 +1,9 @@
+/* ---------------- Page ---------------- */
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 /* ---------------- HeroSection ---------------- */
 .HeroSection {
   height: calc(100vh - 2rem);
@@ -62,8 +68,9 @@
   object-fit: contain;
 }
 .HeroSection .hero_content .hero_cards .card p {
+  color: #3a3a3a;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 600;
 }
 /* ---------------- imagesWorkCard ---------------- */
 .HeroSection .imagesWorkCard {
@@ -390,4 +397,212 @@
   .cardsPlansCard.active
   .plan_tag:nth-child(4) {
   transform: rotate(2deg);
+}
+/* ---------------- Overlay Work Card ---------------- */
+.HeroSection .overlayWorkCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(0);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: visibility 0s 0.7s linear,
+    backdrop-filter 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-color 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+.HeroSection .overlayWorkCard.active {
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  visibility: visible;
+  transition: visibility 0s linear,
+    backdrop-filter 1s cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.HeroSection .overlayWorkCard .contanier {
+  cursor: default;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 20px;
+  overflow: auto;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: transform 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.HeroSection .overlayWorkCard.active .contanier {
+  opacity: 1;
+  transform: translateY(0);
+}
+.HeroSection .overlayWorkCard .contanier::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.HeroSection .overlayWorkCard .contanier::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+}
+/* ---------------- Overlay Services Card ---------------- */
+.HeroSection .overlayServicesCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(0);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: visibility 0s 0.7s linear,
+    backdrop-filter 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-color 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+.HeroSection .overlayServicesCard.active {
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  visibility: visible;
+  transition: visibility 0s linear,
+    backdrop-filter 1s cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.HeroSection .overlayServicesCard .contanier {
+  cursor: default;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 20px;
+  overflow: auto;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: transform 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.HeroSection .overlayServicesCard.active .contanier {
+  opacity: 1;
+  transform: translateY(0);
+}
+.HeroSection .overlayServicesCard .contanier::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.HeroSection .overlayServicesCard .contanier::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+}
+/* ---------------- Overlay About Card ---------------- */
+.HeroSection .overlayAboutCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(0);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: visibility 0s 0.7s linear,
+    backdrop-filter 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-color 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+.HeroSection .overlayAboutCard.active {
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  visibility: visible;
+  transition: visibility 0s linear,
+    backdrop-filter 1s cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.HeroSection .overlayAboutCard .contanier {
+  cursor: default;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 20px;
+  overflow: auto;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: transform 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.HeroSection .overlayAboutCard.active .contanier {
+  opacity: 1;
+  transform: translateY(0);
+}
+.HeroSection .overlayAboutCard .contanier::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.HeroSection .overlayAboutCard .contanier::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+}
+/* ---------------- Overlay Plans Card ---------------- */
+.HeroSection .overlayPlansCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(0);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: visibility 0s 0.7s linear,
+    backdrop-filter 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-color 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+.HeroSection .overlayPlansCard.active {
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  visibility: visible;
+  transition: visibility 0s linear,
+    backdrop-filter 1s cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.HeroSection .overlayPlansCard .contanier {
+  cursor: default;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 20px;
+  overflow: auto;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: transform 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.HeroSection .overlayPlansCard.active .contanier {
+  opacity: 1;
+  transform: translateY(0);
+}
+.HeroSection .overlayPlansCard .contanier::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.HeroSection .overlayPlansCard .contanier::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
 }
