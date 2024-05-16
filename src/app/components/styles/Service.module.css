@@ -47,7 +47,7 @@
 .service .bottom .image {
   height: 10rem;
 }
-.HeroSection .overlayServicesCard .contanier .service .bottom .image img {
+.service .bottom .image img {
   object-fit: cover;
   object-position: 50% 0%;
   width: 100%;

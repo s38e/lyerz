@@ -380,13 +380,13 @@ export default function Home() {
                 <Service
                   title="Mobile & desktop app design"
                   description="Whether it&#39;s starting fresh or brushing up what you already have. We&#39;ve worked on simple habit trackers to full-scale trading platforms."
-                  image={img_1_services}
+                  image={img_2_services}
                   initialActiveState={false}
                 />
                 <Service
                   title="Mobile & desktop app design"
                   description="Whether it&#39;s starting fresh or brushing up what you already have. We&#39;ve worked on simple habit trackers to full-scale trading platforms."
-                  image={img_1_services}
+                  image={img_3_services}
                   initialActiveState={false}
                 />
               </div>
