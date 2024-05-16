@@ -88,7 +88,7 @@
   justify-content: space-between;
   flex-direction: column;
   gap: 1rem;
-  font-family: "TerminaTest-bold";
+  font-family: "TerminaTest-bold" !important;
   cursor: pointer;
 }
 .HeroSection .hero_content .hero_cards .card:hover {
@@ -100,6 +100,7 @@
   object-fit: contain;
 }
 .HeroSection .hero_content .hero_cards .card p {
+  font-family: "TerminaTest-bold" !important;
   color: #3a3a3a;
   font-size: 17px;
   font-weight: 600;
@@ -230,9 +231,9 @@
   align-self: stretch;
   text-align: start;
 }
-.HeroSection .cardsServicesCard .card:nth-child(3) p br {
-  /* display: none; */
-}
+/* .HeroSection .cardsServicesCard .card:nth-child(3) p br {
+  display: none;
+} */
 .HeroSection.ar .cardsServicesCard .card p {
   text-align: end;
 }
