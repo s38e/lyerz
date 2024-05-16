@@ -34,11 +34,12 @@ import card_services from "../../../public/assets/card_services.png";
 import card_about from "../../../public/assets/card_about.png";
 import card_plans from "../../../public/assets/card_plans.png";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import CircleOverlayWorkCard from "../components/CircleOverlayWorkCard";
 import CircleOverlayServicesCard from "../components/CircleOverlayServicesCard";
 import CircleOverlayAboutCard from "../components/CircleOverlayAboutCard";
 import CircleOverlayPlansCard from "../components/CircleOverlayPlansCard";
+import Service from "../components/Service";
 
 export default function Home() {
   // ---------------- Hovered ---------------- //
@@ -51,6 +52,8 @@ export default function Home() {
   const [isCardServicesClicked, setIsCardServicesClicked] = useState(false);
   const [isCardAboutClicked, setIsCardAboutClicked] = useState(false);
   const [isCardPlansClicked, setIsCardPlansClicked] = useState(false);
+  // ---------------- Services States ---------------- //
+  const [isServiceActive, setIsServiceActive] = useState(false);
 
   useEffect(() => {
     // ---------------- hover effect on cards ---------------- //
@@ -146,6 +149,10 @@ export default function Home() {
   const handleOverlayAboutClick = () => {
     setIsCardAboutClicked(false);
   };
+  //
+  const handleActiveService_1 = () => {
+    setisService_1_Active(true);
+  };
 
   // ---------------- Click Plans Card ---------------- //
   const handleCardPlansClick = () => {
@@ -158,6 +165,7 @@ export default function Home() {
   const handleContainerClick = (e) => {
     e.stopPropagation();
   };
+
   // ---------------- Check the language to determine the style ---------------- //
   const pathName = window.location.pathname;
   const isArabic = pathName.includes("/ar");
@@ -165,19 +173,23 @@ export default function Home() {
   const t = useTranslations("Home");
   const tags = useTranslations("plan_tag");
   const ServicesCards = useTranslations("servicesCards");
+
   return (
     <>
       <main className={styles.page}>
         <section
-          className={`${styles.HeroSection} ${isArabic ? styles["ar"] : ""}`}
+          className={`${styles.HeroSection} ${isArabic ? styles.ar : ""}`}
         >
           <NavBar />
           <div className={styles.hero_content}>
-            <h2>
-              {t("header_1")}
-              <br />
-              <span>{t("header_2")}</span>
-            </h2>
+            <div className={styles.headTexts}>
+              <h2>
+                {t("header_1")}
+                <br />
+                <span>{t("header_2")}</span>
+              </h2>
+              <p>{t("header_3")}</p>
+            </div>
             <div className={styles.hero_cards}>
               {/* ---------------- cardsPlansCard ---------------- */}
               <div
@@ -345,10 +357,40 @@ export default function Home() {
             }`}
           >
             <CircleOverlayServicesCard />
-            <div
-              className={styles.contanier}
-              onClick={handleContainerClick}
-            ></div>
+            <div className={styles.contanier} onClick={handleContainerClick}>
+              <div className={styles.head}>
+                <h2>Services</h2>
+                <p>
+                  We team up with founders and startups to bring their ideas to
+                  life—whether it's a simple landing page, a complete website,
+                  or mobile and web apps.
+                </p>
+                <ul role="list" class="list">
+                  <li>No template work</li>
+                  <li>Deep-dive into your product and ideas</li>
+                </ul>
+              </div>
+              <div className={styles.services}>
+                <Service
+                  title="Mobile & desktop app design"
+                  description="Whether it’s starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
+                  image={img_1_services}
+                  initialActiveState={true}
+                />
+                <Service
+                  title="Mobile & desktop app design"
+                  description="Whether it’s starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
+                  image={img_1_services}
+                  initialActiveState={false}
+                />
+                <Service
+                  title="Mobile & desktop app design"
+                  description="Whether it’s starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
+                  image={img_1_services}
+                  initialActiveState={false}
+                />
+              </div>
+            </div>
           </div>
           {/* ---------------- Overlay About Card ---------------- */}
           <div

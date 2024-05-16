@@ -1,6 +1,12 @@
 /* ---------------- Font ---------------- */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
-
+@font-face {
+  font-family: "LufgaMedium";
+  src: url(/fonts/Lufga/LufgaMedium.ttf);
+}
+@font-face {
+  font-family: "TerminaTest-Demi";
+  src: url(/fonts/TerminaTest/TerminaTest-Demi.otf);
+}
 /* ---------------- Footer ---------------- */
 .Footer {
   display: flex;
@@ -11,7 +17,7 @@
   gap: 1.5rem;
   position: relative;
   z-index: 99;
-  font-family: "Tajawal", sans-serif !important;
+  font-family: "LufgaMedium" !important;
 }
 .Footer.footer-ar {
   /* background-color: green; */
@@ -27,11 +33,11 @@
   border-radius: 2rem;
   line-height: 1;
   position: relative;
-  font-family: "Tajawal", sans-serif !important;
+  font-family: "TerminaTest-Demi" !important;
   font-weight: 400;
   height: calc(40px + 1rem);
 }
-.Footer button .image {
+.Footer button .menuIcon {
   height: 40px;
   width: 40px;
   padding: 10px;
@@ -42,15 +48,22 @@
   top: 0.5rem;
   left: 0.5rem;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
 }
-.Footer button:hover .image {
+.Footer button:hover .menuIcon {
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(90deg);
   left: 50%;
 }
-.Footer button .image img {
-  height: 100%;
-  width: 100%;
+.Footer button .menuIcon div {
+  display: inline-block;
+  height: 3px;
+  width: 80%;
+  background-color: black;
 }
 .Footer button span {
   margin-left: calc(40px + 1.5rem);
@@ -66,7 +79,7 @@
 }
 .Footer p {
   text-align: center;
-  font-weight: 600;
+  /* font-weight: 600; */
   line-height: 1rem;
   color: rgba(34, 34, 34, 0.6);
   font-size: 0.75rem;
@@ -88,7 +101,7 @@
   visibility: hidden;
   transition: height 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
     visibility 0.3s 0.3s linear;
-  font-family: "Tajawal", sans-serif !important;
+  font-family: "TerminaTest-Demi" !important;
   padding: 0.5rem 0;
 }
 .Footer button.active .menu {
@@ -103,7 +116,7 @@
   font-size: 1.3rem;
   transform: translateY(100%);
   opacity: 0;
-  font-family: "Tajawal", sans-serif !important;
+  font-family: "TerminaTest-Demi" !important;
   width: 100%;
 }
 .Footer button .menu .link.link:nth-child(2) {

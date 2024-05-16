@@ -1,5 +1,16 @@
 /* ---------------- Font ---------------- */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "TerminaTest-Demi";
+  src: url(/fonts/TerminaTest/TerminaTest-Demi.otf);
+}
+@font-face {
+  font-family: "TerminaTest-bold";
+  src: url(/fonts/TerminaTest/TerminaTest-bold.otf);
+}
+@font-face {
+  font-family: "LufgaRegular";
+  src: url(/fonts/Lufga/LufgaRegular.ttf);
+}
 /* ---------------- Page ---------------- */
 .page {
   position: relative;
@@ -23,6 +34,10 @@
   flex-direction: column;
   font-family: "Tajawal", sans-serif !important;
   position: relative;
+  direction: ltr;
+}
+.HeroSection.ar {
+  direction: rtl;
 }
 .HeroSection .hero_content {
   display: flex;
@@ -32,13 +47,25 @@
   gap: 3rem;
   position: relative;
 }
-.HeroSection .hero_content h2 {
+.HeroSection .hero_content .headTexts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.HeroSection .hero_content .headTexts h2 {
+  font-family: "TerminaTest-Demi";
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 100;
   line-height: 1;
   text-align: center;
 }
-.HeroSection .hero_content h2 span {
+.HeroSection .hero_content .headTexts h2 span {
+  color: #a7a7a7;
+}
+.HeroSection .hero_content .headTexts p {
+  font-family: "LufgaRegular";
   color: #a7a7a7;
 }
 .HeroSection .hero_content .hero_cards {
@@ -54,14 +81,14 @@
   background-color: #f7f7f7;
   border-radius: 20px;
   flex: 1 1 0;
-  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   gap: 1rem;
-  font-family: "Tajawal", sans-serif !important;
+  font-family: "TerminaTest-bold";
   cursor: pointer;
 }
 .HeroSection .hero_content .hero_cards .card:hover {
@@ -353,7 +380,7 @@
   top: 30%;
   bottom: auto;
   left: auto;
-  right: -32%;
+  right: -28%;
   visibility: hidden;
   transition: visibility 0s 0.3s linear;
 }
@@ -364,7 +391,7 @@
 .HeroSection .hero_content .hero_cards .cardsPlansCard .plan_tag {
   border-radius: 20px;
   padding: 0.25rem 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: 500;
   position: relative;
   width: 100%;
@@ -502,7 +529,7 @@
 }
 .HeroSection .overlayServicesCard .contanier {
   cursor: default;
-  width: 60%;
+  width: 35%;
   height: 80%;
   background-color: white;
   border-radius: 20px;
@@ -511,6 +538,10 @@
   opacity: 0;
   transition: transform 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
     opacity 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  padding: 4rem;
+  gap: 2.5rem;
+  flex-direction: column;
+  display: flex;
 }
 .HeroSection .overlayServicesCard.active .contanier {
   opacity: 1;
@@ -524,6 +555,36 @@
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(15px);
   border-radius: 20px;
+}
+.HeroSection .overlayServicesCard .contanier .head {
+  gap: 0.5rem;
+  flex-direction: column;
+  display: flex;
+}
+.HeroSection .overlayServicesCard .contanier .head h2 {
+  text-align: left;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.HeroSection .overlayServicesCard .contanier .head p {
+  color: #727272;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.HeroSection .overlayServicesCard .contanier .head ul {
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+.HeroSection .overlayServicesCard .contanier .head ul li {
+  color: #727272;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+.HeroSection .overlayServicesCard .contanier .services {
+  gap: 0.5rem;
+  flex-direction: column;
+  display: flex;
 }
 /* ---------------- Overlay About Card ---------------- */
 .HeroSection .overlayAboutCard {

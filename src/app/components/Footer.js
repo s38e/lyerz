@@ -112,8 +112,9 @@ function Footer() {
             {t("btn_5")}
           </Link>
         </menu>
-        <div className={styles.image}>
-          <Image src={logo_2} alt="Lyerz Logo" width={100} height={100} />
+        <div className={styles.menuIcon}>
+          <div></div>
+          <div></div>
         </div>
         <span>{t("btnMenu")}</span>
       </button>
