@@ -96,7 +96,7 @@
   justify-content: center;
   flex-direction: column;
   z-index: -1;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   overflow: hidden;
   visibility: hidden;
   transition: height 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
@@ -153,7 +153,7 @@
   margin: 0;
   width: calc(100% - 1rem);
   margin: 0 0.5rem;
-  border-radius: 1rem;
+  border-radius: 1.3rem;
   visibility: hidden;
   transform: translateY(0);
   transition: transform 0.25s cubic-bezier(0.075, 0.82, 0.165, 1),
