@@ -362,8 +362,8 @@ export default function Home() {
                 <h2>Services</h2>
                 <p>
                   We team up with founders and startups to bring their ideas to
-                  life—whether it's a simple landing page, a complete website,
-                  or mobile and web apps.
+                  life—whether it&#39;s a simple landing page, a complete
+                  website, or mobile and web apps.
                 </p>
                 <ul role="list" class="list">
                   <li>No template work</li>
@@ -373,19 +373,19 @@ export default function Home() {
               <div className={styles.services}>
                 <Service
                   title="Mobile & desktop app design"
-                  description="Whether it's starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
+                  description="Whether it&#39;s starting fresh or brushing up what you already have. We&#39;ve worked on simple habit trackers to full-scale trading platforms."
                   image={img_1_services}
                   initialActiveState={true}
                 />
                 <Service
                   title="Mobile & desktop app design"
-                  description="Whether it's starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
+                  description="Whether it&#39;s starting fresh or brushing up what you already have. We&#39;ve worked on simple habit trackers to full-scale trading platforms."
                   image={img_1_services}
                   initialActiveState={false}
                 />
                 <Service
                   title="Mobile & desktop app design"
-                  description="Whether it's starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
+                  description="Whether it&#39;s starting fresh or brushing up what you already have. We&#39;ve worked on simple habit trackers to full-scale trading platforms."
                   image={img_1_services}
                   initialActiveState={false}
                 />
