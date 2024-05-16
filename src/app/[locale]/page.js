@@ -373,19 +373,19 @@ export default function Home() {
               <div className={styles.services}>
                 <Service
                   title="Mobile & desktop app design"
-                  description="Whether it’s starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
+                  description="Whether it's starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
                   image={img_1_services}
                   initialActiveState={true}
                 />
                 <Service
                   title="Mobile & desktop app design"
-                  description="Whether it’s starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
+                  description="Whether it's starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
                   image={img_1_services}
                   initialActiveState={false}
                 />
                 <Service
                   title="Mobile & desktop app design"
-                  description="Whether it’s starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
+                  description="Whether it's starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
                   image={img_1_services}
                   initialActiveState={false}
                 />
