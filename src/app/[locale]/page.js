@@ -591,20 +591,20 @@ export default function Home() {
                 </div>
                 <div className={styles.content}>
                   <p>
-                    We're selective about our partnerships—rarely taking on more
+                    We&#39;re selective about our partnerships—rarely taking on more
                     than 3-4 projects at once. Quality matters to us, and that
                     means staying focused.
                     <br />
                     <br />
-                    We're not just about executing ideas; we'll challenge them,
+                    We&#39;re not just about executing ideas; we&#39;ll challenge them,
                     push back, and ensure your users are as happy as you are.
                     <br />
                     <br />
-                    If you're ready for a straightforward, collaborative
-                    approach, let's talk.
+                    If you&#39;re ready for a straightforward, collaborative
+                    approach, let&#39;s talk.
                     <br />
                     <br />
-                    But if you're not open to a bit of pushback and prefer a
+                    But if you&#39;re not open to a bit of pushback and prefer a
                     more hands-off style, we might not be the right fit.
                   </p>
                 </div>
