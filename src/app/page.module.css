@@ -548,7 +548,7 @@
   background-color: white;
   gap: 2.5rem;
 }
-.HeroSection .overlayServicesCard .contanier {
+.HeroSection.ar .overlayServicesCard .contanier {
   direction: rtl;
 }
 .HeroSection .overlayServicesCard.active .contanier {
