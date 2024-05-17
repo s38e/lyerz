@@ -406,8 +406,8 @@ export default function Home() {
               <div className={styles.headTexts}>
                 <h2>About</h2>
                 <p>
-                  We're a two-person team with a thing for startups. Between us,
-                  we've spent 15 years diving into the startup world.
+                  We&#39;re a two-person team with a thing for startups. Between
+                  us, we&#39;ve spent 15 years diving into the startup world.
                 </p>
               </div>
               <div className={styles.about_teamCards}>
@@ -435,9 +435,10 @@ export default function Home() {
                 </div>
               </div>
               <p className={styles.text}>
-                We've been in the trenches, working side by side with founders
-                and teams. We know what it's like. Startups need growth, and
-                we're here to make sure your design pulls its weight.
+                We&#39;ve been in the trenches, working side by side with
+                founders and teams. We know what it&#39;s like. Startups need
+                growth, and we&#39;re here to make sure your design pulls its
+                weight.
               </p>
               <div className={styles.about_summary}>
                 <p className={styles.heading}>Summary</p>
@@ -458,10 +459,10 @@ export default function Home() {
                       ></path>
                     </svg>
                     <div className={styles.texts}>
-                      <p>At our core, we're product people</p>
+                      <p>At our core, we&#39;re product people</p>
                       <p>
-                        This means we don't just design; we craft products with
-                        a keen eye on user experience and market fit
+                        This means we don&#39;t just design; we craft products
+                        with a keen eye on user experience and market fit
                       </p>
                     </div>
                   </div>
@@ -481,10 +482,10 @@ export default function Home() {
                       ></path>
                     </svg>
                     <div className={styles.texts}>
-                      <p>At our core, we're product people</p>
+                      <p>At our core, we&#39;re product people</p>
                       <p>
-                        This means we don't just design; we craft products with
-                        a keen eye on user experience and market fit
+                        This means we don&#39;t just design; we craft products
+                        with a keen eye on user experience and market fit
                       </p>
                     </div>
                   </div>
@@ -504,10 +505,10 @@ export default function Home() {
                       ></path>
                     </svg>
                     <div className={styles.texts}>
-                      <p>At our core, we're product people</p>
+                      <p>At our core, we&#39;re product people</p>
                       <p>
-                        This means we don't just design; we craft products with
-                        a keen eye on user experience and market fit
+                        This means we don&#39;t just design; we craft products
+                        with a keen eye on user experience and market fit
                       </p>
                     </div>
                   </div>
