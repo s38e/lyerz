@@ -4,8 +4,8 @@
   src: url(/fonts/TerminaTest/TerminaTest-Demi.otf);
 }
 @font-face {
-  font-family: "TerminaTest-bold";
-  src: url(/fonts/TerminaTest/TerminaTest-bold.otf);
+  font-family: "TerminaTest-Regular";
+  src: url(/fonts/TerminaTest/TerminaTest-Regular.otf);
 }
 @font-face {
   font-family: "LufgaRegular";
@@ -16,7 +16,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  font-family: "Tajawal", sans-serif !important;
+  font-family: "LufgaRegular";
 }
 /* ---------------- HeroSection ---------------- */
 .HeroSection {
@@ -32,12 +32,8 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  font-family: "Tajawal", sans-serif !important;
+  font-family: "LufgaRegular";
   position: relative;
-  direction: ltr;
-}
-.HeroSection.ar {
-  direction: rtl;
 }
 .HeroSection .hero_content {
   display: flex;
@@ -66,7 +62,11 @@
 }
 .HeroSection .hero_content .headTexts p {
   font-family: "LufgaRegular";
+  direction: ltr;
   color: #a7a7a7;
+}
+.HeroSection.ar .hero_content .headTexts p {
+  direction: rtl;
 }
 .HeroSection .hero_content .hero_cards {
   gap: 0.75rem;
@@ -399,6 +399,7 @@
   opacity: 0;
   align-self: stretch;
   text-align: start;
+  font-family: "LufgaRegular";
 }
 .HeroSection.ar .hero_content .hero_cards .cardsPlansCard .plan_tag {
   text-align: end;
@@ -515,34 +516,34 @@
   align-items: center;
   justify-content: center;
   visibility: hidden;
-  transition: visibility 0s 0.7s linear,
-    backdrop-filter 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
-    background-color 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: visibility 0s 0.7s linear, backdrop-filter 0.3s 0.3s linear,
+    background-color 0.3s 0.3s linear;
   cursor: pointer;
 }
 .HeroSection .overlayServicesCard.active {
   background-color: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(15px);
   visibility: visible;
-  transition: visibility 0s linear,
-    backdrop-filter 1s cubic-bezier(0.075, 0.82, 0.165, 1),
-    background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: visibility 0s linear, backdrop-filter 0.3s linear,
+    background-color 0.3s linear;
 }
 .HeroSection .overlayServicesCard .contanier {
-  cursor: default;
-  width: 35%;
-  height: 80%;
   background-color: white;
-  border-radius: 20px;
   overflow: auto;
-  transform: translateY(-100px);
-  opacity: 0;
-  transition: transform 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   padding: 4rem;
-  gap: 2.5rem;
-  flex-direction: column;
+  cursor: default;
+  width: 30%;
+  height: 80%;
+  border-radius: 30px;
+  overflow: auto;
+  opacity: 0;
+  transition: opacity 0.3s 0.2s linear;
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: white;
+  gap: 2.5rem;
 }
 .HeroSection .overlayServicesCard.active .contanier {
   opacity: 1;
@@ -567,6 +568,7 @@
   font-size: 1.75rem;
   font-weight: 600;
   line-height: 1;
+  font-family: "TerminaTest-Demi";
 }
 .HeroSection .overlayServicesCard .contanier .head p {
   color: #727272;
@@ -615,16 +617,21 @@
     background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .HeroSection .overlayAboutCard .contanier {
-  cursor: default;
-  width: 60%;
-  height: 80%;
   background-color: white;
-  border-radius: 20px;
+  padding: 4rem;
+  cursor: default;
+  width: 30%;
+  height: 80%;
+  border-radius: 30px;
   overflow: auto;
-  transform: translateY(-100px);
   opacity: 0;
-  transition: transform 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: opacity 0.3s 0.2s linear;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: white;
+  gap: 2.5rem;
 }
 .HeroSection .overlayAboutCard.active .contanier {
   opacity: 1;
@@ -638,6 +645,161 @@
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(15px);
   border-radius: 20px;
+}
+.HeroSection .overlayAboutCard .contanier .headTexts {
+  gap: 0.5rem;
+  flex-direction: column;
+  display: flex;
+}
+.HeroSection .overlayAboutCard .contanier .headTexts h2 {
+  text-align: left;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1;
+  font-family: "TerminaTest-Demi";
+}
+.HeroSection .overlayAboutCard .contanier .headTexts p {
+  color: #727272;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.HeroSection .overlayAboutCard .contanier .about_teamCards {
+  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.HeroSection .overlayAboutCard .contanier .about_teamCards .card {
+  gap: 1rem;
+  border: 2px solid #f1f1f1;
+  background-color: #f7f7f7;
+  border-radius: 16px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+}
+.HeroSection .overlayAboutCard .contanier .about_teamCards .card img {
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  height: auto;
+}
+.HeroSection .overlayAboutCard .contanier .about_teamCards .card .heading {
+  flex-direction: column;
+  display: flex;
+}
+.HeroSection .overlayAboutCard .contanier .about_teamCards .card .heading p {
+  text-align: center;
+}
+.HeroSection
+  .overlayAboutCard
+  .contanier
+  .about_teamCards
+  .card
+  .heading
+  p:nth-child(1) {
+  font-weight: 600;
+  font-size: 1.25rem;
+  font-family: "TerminaTest-Demi";
+}
+.HeroSection
+  .overlayAboutCard
+  .contanier
+  .about_teamCards
+  .card
+  .heading
+  p:nth-child(2) {
+  font-size: 0.875rem;
+  color: #a7a7a7;
+}
+.HeroSection .overlayAboutCard .contanier .about_teamCards .card .country_flag {
+  gap: 0.5rem;
+  flex-flow: row;
+  display: flex;
+}
+.HeroSection
+  .overlayAboutCard
+  .contanier
+  .about_teamCards
+  .card
+  .country_flag
+  p {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #a7a7a7;
+  /* font-weight: 600; */
+}
+.HeroSection .overlayAboutCard .contanier .text {
+  color: #727272;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.HeroSection .overlayAboutCard .contanier .about_summary {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border-radius: 12px;
+  /* overflow: hidden; */
+}
+.HeroSection .overlayAboutCard .contanier .about_summary .heading {
+  color: #727272;
+  font-weight: 500;
+  font-family: "TerminaTest-Demi";
+  background-color: #ededed;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  border-radius: 12px 12px 0 0;
+}
+.HeroSection .overlayAboutCard .contanier .about_summary .content {
+  gap: 0.75rem;
+  background-color: #f7f7f7;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  flex-direction: column;
+  padding: 1.25rem;
+  display: flex;
+}
+.HeroSection .overlayAboutCard .contanier .about_summary .content .item {
+  gap: 0.75rem;
+  display: flex;
+}
+.HeroSection .overlayAboutCard .contanier .about_summary .content .item svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+.HeroSection .overlayAboutCard .contanier .about_summary .content .item .texts {
+  gap: 0.125rem;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+}
+.HeroSection
+  .overlayAboutCard
+  .contanier
+  .about_summary
+  .content
+  .item
+  .texts
+  p:nth-child(1) {
+  font-weight: 600;
+  color: black;
+  font-family: "TerminaTest-Regular";
+}
+.HeroSection
+  .overlayAboutCard
+  .contanier
+  .about_summary
+  .content
+  .item
+  .texts
+  p:nth-child(2) {
+  font-weight: 500;
+  color: #8c8c8c;
+  font-family: "LufgaRegular";
 }
 /* ---------------- Overlay Plans Card ---------------- */
 .HeroSection .overlayPlansCard {
@@ -667,16 +829,21 @@
     background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .HeroSection .overlayPlansCard .contanier {
-  cursor: default;
-  width: 60%;
-  height: 80%;
   background-color: white;
-  border-radius: 20px;
+  padding: 4rem;
+  cursor: default;
+  width: 30%;
+  height: 80%;
+  border-radius: 30px;
   overflow: auto;
-  transform: translateY(-100px);
   opacity: 0;
-  transition: transform 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 1.5s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: opacity 0.3s 0.2s linear;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: white;
+  gap: 2.5rem;
 }
 .HeroSection .overlayPlansCard.active .contanier {
   opacity: 1;
@@ -690,4 +857,104 @@
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(15px);
   border-radius: 20px;
+}
+.HeroSection .overlayPlansCard .contanier h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "TerminaTest-Demi";
+}
+.HeroSection .overlayPlansCard .contanier .plans {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 0.5rem;
+}
+.HeroSection .overlayPlansCard .contanier .plans .plan {
+  gap: 1.25rem;
+  border: 2px solid #f1f1f1;
+  border-radius: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1.25rem;
+  display: flex;
+}
+.HeroSection .overlayPlansCard .contanier .plans .plan:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.HeroSection .overlayPlansCard .contanier .plans .plan .pricingTag {
+  border-radius: 50px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan:nth-child(1)
+  .pricingTag {
+  background-color: #e0e1fd;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan:nth-child(2)
+  .pricingTag {
+  background-color: #f1e8fe;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan:nth-child(3)
+  .pricingTag {
+  background-color: #f1f1f1;
+}
+.HeroSection .overlayPlansCard .contanier .plans .plan .pricingContent {
+  gap: 1rem;
+  flex-direction: column;
+  /* font-weight: 600; */
+  display: flex;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingContent
+  p:nth-child(1) {
+  font-size: 1.5rem;
+  font-family: "TerminaTest-Demi";
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingContent
+  p:nth-child(1)
+  span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #727272;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingContent
+  p:nth-child(2) {
+  color: #727272;
+}
+.HeroSection .overlayPlansCard .contanier .plans .plan button {
+  font-family: "TerminaTest-Regular";
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 9px;
+  background-color: black;
+  color: white;
 }

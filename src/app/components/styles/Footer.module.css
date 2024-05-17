@@ -19,7 +19,7 @@
   z-index: 99;
   font-family: "LufgaMedium" !important;
 }
-.Footer.footer-ar {
+.Footer.ar {
   /* background-color: green; */
 }
 .Footer button {
@@ -83,6 +83,9 @@
   line-height: 1rem;
   color: rgba(34, 34, 34, 0.6);
   font-size: 0.75rem;
+}
+.Footer.ar p {
+  direction: rtl;
 }
 .Footer button .menu {
   position: absolute;

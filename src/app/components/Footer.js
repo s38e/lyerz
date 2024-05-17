@@ -46,9 +46,7 @@ function Footer() {
   const isArabic = pathName.includes("/ar");
 
   return (
-    <footer
-      className={`${styles.Footer} ${isArabic ? styles["footer-ar"] : ""}`}
-    >
+    <footer className={`${styles.Footer} ${isArabic ? styles.ar : ""}`}>
       <button
         className={isActive ? styles.active : ""}
         onClick={handleButtonClick}
