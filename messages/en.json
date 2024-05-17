@@ -35,5 +35,48 @@
   },
   "movingCircle": {
     "title": "Close"
+  },
+  "overlayServicesCard": {
+    "head->h2": "Services",
+    "head->p": "We team up with founders and startups to bring their ideas to life—whether it's a simple landing page, a complete website, or mobile and web apps.",
+    "head->li_1": "No template work",
+    "head->li_2": "Deep-dive into your product and ideas",
+    "Service_1_Title": "Mobile & desktop design",
+    "Service_1_Description": "Whether it's starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
+  },
+  "overlayAboutCard": {
+    "headTexts->h2": "About",
+    "headTexts->p": "We're a two-person team with a thing for startups. Between us, we've spent 15 years diving into the startup world.",
+    "card_1_heading->p_1": "Dragana D.",
+    "card_1_heading->p_2": "Product Designer",
+    "card_1_country_flag->p_1": "🇩🇪",
+    "card_1_country_flag->p_2": "Germany",
+    "card_2_heading->p_1": "Peter K.",
+    "card_2_heading->p_2": "Webflow Developer",
+    "card_2_country_flag->p_1": "🇺🇸",
+    "card_2_country_flag->p_2": "USA",
+    "p->text": "We've been in the trenches, working side by side with founders and teams. We know what it's like. Startups need growth, and we're here to make sure your design pulls its weight.",
+    "about_summary->heading": "Summary",
+    "about_summary-content-item_1-texts->p_1": "At our core, we're product people",
+    "about_summary-content-item_1-texts->p_2": "This means we don't just design; we craft products with a keen eye on user experience and market fit"
+  },
+  "overlayPlansCard": {
+    "h2": "Pricing",
+    "plans-plan_1->pricingTag": "Flat monthly fee",
+    "plans-plan_1-pricingContent->p_1": "$6,990",
+    "plans-plan_1-pricingContent->p_2": "Best if you're looking for steady and ongoing design work.",
+    "plans-plan_2->pricingTag": "Webflow development",
+    "plans-plan_2-pricingContent->p_1": "$2,990",
+    "plans-plan_2-pricingContent->p_2": "For ongoing support and consistent updates to your existing Webflow site.",
+    "plans-plan-pricingContent-p_2->span": "/month",
+    "plans-plan_3->pricingTag": "Project based",
+    "plans-plan_3-pricingContent->p_1": "Custom",
+    "plans-plan_3-pricingContent->p_2": "Perfect for a bigger one-time thing",
+    "plans-plan_3-button->p": "Get Started",
+    "note->heading": "Note",
+    "note-content->p_part_1": "We're selective about our partnerships—rarely taking on more than 3-4 projects at once. Quality matters to us, and that means staying focused.",
+    "note-content->p_part_2": "We're not just about executing ideas; we'll challenge them, push back, and ensure your users are as happy as you are.",
+    "note-content->p_part_3": "If you're ready for a straightforward, collaborative approach, let's talk.",
+    "note-content->p_part_4": "But if you're not open to a bit of pushback and prefer a more hands-off style, we might not be the right fit."
   }
 }

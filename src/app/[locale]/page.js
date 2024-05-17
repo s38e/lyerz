@@ -42,6 +42,7 @@ import CircleOverlayServicesCard from "../components/CircleOverlayServicesCard";
 import CircleOverlayAboutCard from "../components/CircleOverlayAboutCard";
 import CircleOverlayPlansCard from "../components/CircleOverlayPlansCard";
 import Service from "../components/Service";
+import gsap from "gsap";
 
 export default function Home() {
   // ---------------- Hovered ---------------- //
@@ -129,6 +130,42 @@ export default function Home() {
       setIsCardPlansHovered(false);
     });
   });
+  // ---------------- Animations ---------------- //
+  useEffect(() => {
+    // ---------------- Animation HeadTexts ---------------- //
+    gsap.fromTo(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} h2`,
+      { opacity: 0, y: 100 },
+      { opacity: 1, delay: 0.8, y: 0, duration: 1.25, ease: "power4.out" }
+    );
+    gsap.fromTo(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} p`,
+      { opacity: 0, y: 100 },
+      { opacity: 1, delay: 1, y: 0, duration: 1.25, ease: "power4.out" }
+    );
+    // ---------------- Animation Cards ---------------- //
+    gsap.fromTo(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(2)`,
+      { opacity: 0, y: 100 },
+      { opacity: 1, delay: 1.3, y: 0, duration: 1.25, ease: "power4.out" }
+    );
+    gsap.fromTo(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(3)`,
+      { opacity: 0, y: 100 },
+      { opacity: 1, delay: 1.5, y: 0, duration: 1.25, ease: "power4.out" }
+    );
+    gsap.fromTo(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(4)`,
+      { opacity: 0, y: 100 },
+      { opacity: 1, delay: 1.7, y: 0, duration: 1.25, ease: "power4.out" }
+    );
+    gsap.fromTo(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(5)`,
+      { opacity: 0, y: 100 },
+      { opacity: 1, delay: 1.9, y: 0, duration: 1.25, ease: "power4.out" }
+    );
+  }, []);
+
   // ---------------- Click Work Card ---------------- //
   const handleCardWorkClick = () => {
     setIsCardWorkClicked(true);
@@ -172,9 +209,13 @@ export default function Home() {
   const pathName = window.location.pathname;
   const isArabic = pathName.includes("/ar");
 
+  // ---------------- translate ---------------- //
   const t = useTranslations("Home");
   const tags = useTranslations("plan_tag");
   const ServicesCards = useTranslations("servicesCards");
+  const overlayServicesCard = useTranslations("overlayServicesCard");
+  const overlayAboutCard = useTranslations("overlayAboutCard");
+  const overlayPlansCard = useTranslations("overlayPlansCard");
 
   return (
     <>
@@ -361,33 +402,29 @@ export default function Home() {
             <CircleOverlayServicesCard />
             <div className={styles.contanier} onClick={handleContainerClick}>
               <div className={styles.head}>
-                <h2>Services</h2>
-                <p>
-                  We team up with founders and startups to bring their ideas to
-                  life—whether it&#39;s a simple landing page, a complete
-                  website, or mobile and web apps.
-                </p>
+                <h2>{overlayServicesCard("head->h2")}</h2>
+                <p>{overlayServicesCard("head->p")}</p>
                 <ul role="list" class="list">
-                  <li>No template work</li>
-                  <li>Deep-dive into your product and ideas</li>
+                  <li>{overlayServicesCard("head->li_1")}</li>
+                  <li>{overlayServicesCard("head->li_2")}</li>
                 </ul>
               </div>
               <div className={styles.services}>
                 <Service
-                  title="Mobile & desktop app design"
-                  description="Whether it&#39;s starting fresh or brushing up what you already have. We&#39;ve worked on simple habit trackers to full-scale trading platforms."
+                  title={overlayServicesCard("Service_1_Title")}
+                  description={overlayServicesCard("Service_1_Description")}
                   image={img_1_services}
                   initialActiveState={true}
                 />
                 <Service
-                  title="Mobile & desktop app design"
-                  description="Whether it&#39;s starting fresh or brushing up what you already have. We&#39;ve worked on simple habit trackers to full-scale trading platforms."
+                  title={overlayServicesCard("Service_1_Title")}
+                  description={overlayServicesCard("Service_1_Description")}
                   image={img_2_services}
                   initialActiveState={false}
                 />
                 <Service
-                  title="Mobile & desktop app design"
-                  description="Whether it&#39;s starting fresh or brushing up what you already have. We&#39;ve worked on simple habit trackers to full-scale trading platforms."
+                  title={overlayServicesCard("Service_1_Title")}
+                  description={overlayServicesCard("Service_1_Description")}
                   image={img_3_services}
                   initialActiveState={false}
                 />
@@ -404,44 +441,38 @@ export default function Home() {
             <CircleOverlayAboutCard />
             <div className={styles.contanier} onClick={handleContainerClick}>
               <div className={styles.headTexts}>
-                <h2>About</h2>
-                <p>
-                  We&#39;re a two-person team with a thing for startups. Between
-                  us, we&#39;ve spent 15 years diving into the startup world.
-                </p>
+                <h2>{overlayAboutCard("headTexts->h2")}</h2>
+                <p>{overlayAboutCard("headTexts->p")}</p>
               </div>
               <div className={styles.about_teamCards}>
                 <div className={styles.card}>
                   <Image src={img_1_overlayAbout} alt="img_1_overlayAbout" />
                   <div className={styles.heading}>
-                    <p>Dragana D.</p>
-                    <p>Product Designer</p>
+                    <p>{overlayAboutCard("card_1_heading->p_1")}</p>
+                    <p>{overlayAboutCard("card_1_heading->p_2")}</p>
                   </div>
                   <div className={styles.country_flag}>
-                    <p>🇩🇪</p>
-                    <p>Germany</p>
+                    <p>{overlayAboutCard("card_1_country_flag->p_1")}</p>
+                    <p>{overlayAboutCard("card_1_country_flag->p_2")}</p>
                   </div>
                 </div>
                 <div className={styles.card}>
                   <Image src={img_2_overlayAbout} alt="img_2_overlayAbout" />
                   <div className={styles.heading}>
-                    <p>Peter K.</p>
-                    <p>Webflow Developer</p>
+                    <p>{overlayAboutCard("card_2_heading->p_1")}</p>
+                    <p>{overlayAboutCard("card_2_heading->p_2")}</p>
                   </div>
                   <div className={styles.country_flag}>
-                    <p>🇺🇸</p>
-                    <p>USA</p>
+                    <p>{overlayAboutCard("card_2_country_flag->p_1")}</p>
+                    <p>{overlayAboutCard("card_2_country_flag->p_2")}</p>
                   </div>
                 </div>
               </div>
-              <p className={styles.text}>
-                We&#39;ve been in the trenches, working side by side with
-                founders and teams. We know what it&#39;s like. Startups need
-                growth, and we&#39;re here to make sure your design pulls its
-                weight.
-              </p>
+              <p className={styles.text}>{overlayAboutCard("p->text")}</p>
               <div className={styles.about_summary}>
-                <p className={styles.heading}>Summary</p>
+                <p className={styles.heading}>
+                  {overlayAboutCard("about_summary->heading")}
+                </p>
                 <div className={styles.content}>
                   <div className={styles.item}>
                     <svg
@@ -459,10 +490,15 @@ export default function Home() {
                       ></path>
                     </svg>
                     <div className={styles.texts}>
-                      <p>At our core, we&#39;re product people</p>
                       <p>
-                        This means we don&#39;t just design; we craft products
-                        with a keen eye on user experience and market fit
+                        {overlayAboutCard(
+                          "about_summary-content-item_1-texts->p_1"
+                        )}
+                      </p>
+                      <p>
+                        {overlayAboutCard(
+                          "about_summary-content-item_1-texts->p_2"
+                        )}
                       </p>
                     </div>
                   </div>
@@ -482,10 +518,15 @@ export default function Home() {
                       ></path>
                     </svg>
                     <div className={styles.texts}>
-                      <p>At our core, we&#39;re product people</p>
                       <p>
-                        This means we don&#39;t just design; we craft products
-                        with a keen eye on user experience and market fit
+                        {overlayAboutCard(
+                          "about_summary-content-item_1-texts->p_1"
+                        )}
+                      </p>
+                      <p>
+                        {overlayAboutCard(
+                          "about_summary-content-item_1-texts->p_2"
+                        )}
                       </p>
                     </div>
                   </div>
@@ -505,10 +546,15 @@ export default function Home() {
                       ></path>
                     </svg>
                     <div className={styles.texts}>
-                      <p>At our core, we&#39;re product people</p>
                       <p>
-                        This means we don&#39;t just design; we craft products
-                        with a keen eye on user experience and market fit
+                        {overlayAboutCard(
+                          "about_summary-content-item_1-texts->p_1"
+                        )}
+                      </p>
+                      <p>
+                        {overlayAboutCard(
+                          "about_summary-content-item_1-texts->p_2"
+                        )}
                       </p>
                     </div>
                   </div>
@@ -525,40 +571,60 @@ export default function Home() {
           >
             <CircleOverlayPlansCard />
             <div className={styles.contanier} onClick={handleContainerClick}>
-              <h2>Pricing</h2>
+              <h2>{overlayPlansCard("h2")}</h2>
               <div className={styles.plans}>
                 <div className={styles.plan}>
-                  <p className={styles.pricingTag}>Flat monthly fee</p>
+                  <p className={styles.pricingTag}>
+                    {overlayPlansCard("plans-plan_1->pricingTag")}
+                  </p>
                   <div className={styles.pricingContent}>
                     <p>
-                      $6,990
-                      <span>/month</span>
+                      {overlayPlansCard("plans-plan_1-pricingContent->p_1")}
+                      <span>
+                        {overlayPlansCard(
+                          "plans-plan-pricingContent-p_2->span"
+                        )}
+                      </span>
                     </p>
                     <p>
-                      Best if you’re looking for steady and ongoing design work.
+                      {overlayPlansCard("plans-plan_1-pricingContent->p_2")}
                     </p>
                   </div>
                 </div>
                 <div className={styles.plan}>
-                  <p className={styles.pricingTag}>Webflow development</p>
+                  <p className={styles.pricingTag}>
+                    {overlayPlansCard("plans-plan_2->pricingTag")}
+                  </p>
                   <div className={styles.pricingContent}>
                     <p>
-                      $2,990
-                      <span>/month</span>
+                      {overlayPlansCard("plans-plan_2-pricingContent->p_1")}
+                      <span>
+                        {overlayPlansCard(
+                          "plans-plan-pricingContent-p_2->span"
+                        )}
+                      </span>
                     </p>
                     <p>
-                      For ongoing support and consistent updates to your
-                      existing Webflow site.
+                      {overlayPlansCard("plans-plan_2-pricingContent->p_2")}
                     </p>
                   </div>
                 </div>
                 <div className={styles.plan}>
-                  <p className={styles.pricingTag}>Project based</p>
+                  <p className={styles.pricingTag}>
+                    {overlayPlansCard("plans-plan_3->pricingTag")}
+                  </p>
                   <div className={styles.pricingContent}>
-                    <p>Custom</p>
-                    <p>Perfect for a bigger one-time thing.</p>
+                    <p>
+                      {overlayPlansCard("plans-plan_3-pricingContent->p_1")}
+                    </p>
+                    <p>
+                      {overlayPlansCard("plans-plan_3-pricingContent->p_2")}
+                    </p>
                   </div>
-                  <button> Get Started</button>
+                  <button>
+                    <p>{overlayPlansCard("plans-plan_3-button->p")}</p>
+                    <p>{overlayPlansCard("plans-plan_3-button->p")}</p>
+                  </button>
                 </div>
               </div>
               <div className={styles.note}>
@@ -575,7 +641,7 @@ export default function Home() {
                       fill="#727272"
                     ></path>
                   </svg>
-                  <p>Note</p>
+                  <p>{overlayPlansCard("note->heading")}</p>
                   <svg
                     width="100%"
                     height="100%"
@@ -591,21 +657,16 @@ export default function Home() {
                 </div>
                 <div className={styles.content}>
                   <p>
-                    We&#39;re selective about our partnerships—rarely taking on more
-                    than 3-4 projects at once. Quality matters to us, and that
-                    means staying focused.
+                    {overlayPlansCard("note-content->p_part_1")}
                     <br />
                     <br />
-                    We&#39;re not just about executing ideas; we&#39;ll challenge them,
-                    push back, and ensure your users are as happy as you are.
+                    {overlayPlansCard("note-content->p_part_2")}
                     <br />
                     <br />
-                    If you&#39;re ready for a straightforward, collaborative
-                    approach, let&#39;s talk.
+                    {overlayPlansCard("note-content->p_part_3")}
                     <br />
                     <br />
-                    But if you&#39;re not open to a bit of pushback and prefer a
-                    more hands-off style, we might not be the right fit.
+                    {overlayPlansCard("note-content->p_part_4")}
                   </p>
                 </div>
               </div>

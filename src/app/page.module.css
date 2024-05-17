@@ -56,6 +56,7 @@
   font-weight: 100;
   line-height: 1;
   text-align: center;
+  opacity: 0;
 }
 .HeroSection .hero_content .headTexts h2 span {
   color: #a7a7a7;
@@ -64,6 +65,7 @@
   font-family: "LufgaRegular";
   direction: ltr;
   color: #a7a7a7;
+  opacity: 0;
 }
 .HeroSection.ar .hero_content .headTexts p {
   direction: rtl;
@@ -90,6 +92,7 @@
   gap: 1rem;
   font-family: "TerminaTest-Demi" !important;
   cursor: pointer;
+  opacity: 0;
 }
 .HeroSection .hero_content .hero_cards .card:hover {
   flex: 1.3 1.3 0;
@@ -545,6 +548,9 @@
   background-color: white;
   gap: 2.5rem;
 }
+.HeroSection .overlayServicesCard .contanier {
+  direction: rtl;
+}
 .HeroSection .overlayServicesCard.active .contanier {
   opacity: 1;
   transform: translateY(0);
@@ -633,6 +639,9 @@
   background-color: white;
   gap: 2.5rem;
 }
+.HeroSection.ar .overlayAboutCard .contanier {
+  direction: rtl;
+}
 .HeroSection .overlayAboutCard.active .contanier {
   opacity: 1;
   transform: translateY(0);
@@ -652,7 +661,6 @@
   display: flex;
 }
 .HeroSection .overlayAboutCard .contanier .headTexts h2 {
-  text-align: left;
   font-size: 1.75rem;
   font-weight: 600;
   line-height: 1;
@@ -849,6 +857,9 @@
   opacity: 1;
   transform: translateY(0);
 }
+.HeroSection.ar .overlayPlansCard .contanier {
+  direction: rtl;
+}
 .HeroSection .overlayPlansCard .contanier::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -951,16 +962,50 @@
   color: #727272;
 }
 .HeroSection .overlayPlansCard .contanier .plans .plan button {
+  position: relative;
   font-family: "TerminaTest-Regular";
   width: 100%;
   padding: 10px 20px;
   border-radius: 9px;
-  background-color: rgb(50, 50, 50);
-  color: white;
-  transition: 0.3s;
+  background-color: black;
+  transition: 0.35s;
+  overflow: hidden;
 }
 .HeroSection .overlayPlansCard .contanier .plans .plan button:hover {
-  background-color: black;
+  background-color: #ebebeb;
+}
+.HeroSection .overlayPlansCard .contanier .plans .plan button p {
+  transition: 0.35s;
+}
+.HeroSection .overlayPlansCard .contanier .plans .plan button p:nth-child(1) {
+  color: white;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  button:hover
+  p:nth-child(1) {
+  transform: translateY(-200%);
+}
+.HeroSection .overlayPlansCard .contanier .plans .plan button p:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 150%);
+  transition: 0.35s 0;
+  position: absolute;
+  color: black;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  button:hover
+  p:nth-child(2) {
+  transform: translate(-50%, -50%);
+  transition: 0.35s 0.1s;
 }
 .HeroSection .overlayPlansCard .contanier .note {
   display: flex;

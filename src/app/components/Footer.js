@@ -4,6 +4,7 @@ import logo_2 from "../../../public/assets/logo_2.svg";
 import styles from "./styles/Footer.module.css";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import gsap from "gsap";
 
 function Footer() {
   const [isActive, setIsActive] = useState(false);
@@ -39,6 +40,20 @@ function Footer() {
     backGroundLink.style.height = `${linkHeight}px`;
     setMenuHeight(newMenuHeight);
   }, []);
+  useEffect(() => {
+    // ---------------- Animation HeadTexts ---------------- //
+    gsap.fromTo(
+      `.${styles.Footer} button`,
+      { opacity: 0, y: 100 },
+      { opacity: 1, y: 0, duration: 1.25, ease: "power4.out" }
+    );
+    gsap.fromTo(
+      `.${styles.Footer} p`,
+      { opacity: 0, y: 100 },
+      { opacity: 1, delay: 0.3, y: 0, duration: 1.25, ease: "power4.out" }
+    );
+  }, []);
+
   const t = useTranslations("Footer");
 
   // ---------------- Check the language to determine the style ---------------- //
@@ -110,11 +125,13 @@ function Footer() {
             {t("btn_5")}
           </Link>
         </menu>
-        <div className={styles.menuIcon}>
-          <div></div>
-          <div></div>
+        <div className={styles.defultBtn}>
+          <div className={styles.menuIcon}>
+            <div></div>
+            <div></div>
+          </div>
+          <span>{t("btnMenu")}</span>
         </div>
-        <span>{t("btnMenu")}</span>
       </button>
       <p>
         {t("notePart1")}

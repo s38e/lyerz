@@ -26,6 +26,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ebebeb;
+  color: black;
+  border-radius: 2rem;
+  position: relative;
+  font-family: "TerminaTest-Demi" !important;
+  height: calc(40px + 1rem);
+  opacity: 0;
+}
+.Footer button .defultBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   padding: 0.5rem;
   background-color: #ebebeb;
@@ -37,7 +49,7 @@
   font-weight: 400;
   height: calc(40px + 1rem);
 }
-.Footer button .menuIcon {
+.Footer button .defultBtn .menuIcon {
   height: 40px;
   width: 40px;
   padding: 10px;
@@ -54,25 +66,25 @@
   flex-direction: column;
   gap: 4px;
 }
-.Footer button:hover .menuIcon {
+.Footer button:hover .defultBtn .menuIcon {
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(-50%) rotate(90deg);
   left: 50%;
 }
-.Footer button .menuIcon div {
+.Footer button .defultBtn .menuIcon div {
   display: inline-block;
   height: 3px;
   width: 80%;
   background-color: black;
 }
-.Footer button span {
+.Footer button .defultBtn span {
   margin-left: calc(40px + 1.5rem);
   margin-right: 1.5rem;
   font-size: 1.3rem;
   line-height: 1;
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.Footer button:hover span {
+.Footer button:hover .defultBtn span {
   position: relative;
   transform: translateX(-20px);
   opacity: 0;
@@ -83,6 +95,7 @@
   line-height: 1rem;
   color: rgba(34, 34, 34, 0.6);
   font-size: 0.75rem;
+  opacity: 0;
 }
 .Footer.ar p {
   direction: rtl;
@@ -102,14 +115,14 @@
   border-radius: 2rem;
   overflow: hidden;
   visibility: hidden;
-  transition: height 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
-    visibility 0.3s 0.3s linear;
+  transition: height 0.5s 0.2s cubic-bezier(0.755, 0.05, 0.855, 0.06),
+    visibility 0.5s 0.3s linear;
   font-family: "TerminaTest-Demi" !important;
   padding: 0.5rem 0;
 }
 .Footer button.active .menu {
-  transition: height 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
-    visibility 0.3s linear;
+  transition: height 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06),
+    visibility 0.5s linear;
   visibility: visible;
   z-index: 2;
   cursor: default;
@@ -122,25 +135,42 @@
   font-family: "TerminaTest-Demi" !important;
   width: 100%;
 }
-.Footer button .menu .link.link:nth-child(2) {
-  transition: transform 0.3s 0.05s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 0.3s 0.05s cubic-bezier(0.075, 0.82, 0.165, 1);
+.Footer button .menu .link:nth-child(7) {
+  transition: transform 0.5s 0.15s, opacity 0.5s 0.15s;
 }
-.Footer button .menu .link.link:nth-child(3) {
-  transition: transform 0.3s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 0.3s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+.Footer button .menu .link:nth-child(6) {
+  transition: transform 0.5s 0.2s, opacity 0.5s 0.2s;
 }
-.Footer button .menu .link.link:nth-child(4) {
-  transition: transform 0.3s 0.15s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 0.3s 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+.Footer button .menu .link:nth-child(5) {
+  transition: transform 0.5s 0.25s, opacity 0.5s 0.25s;
 }
-.Footer button .menu .link.link:nth-child(5) {
-  transition: transform 0.3s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 0.3s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+.Footer button .menu .link:nth-child(4) {
+  transition: transform 0.5s 0.3s, opacity 0.5s 0.3s;
 }
-.Footer button .menu .link.link:nth-child(6) {
-  transition: transform 0.3s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 0.3s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+.Footer button .menu .link:nth-child(3) {
+  transition: transform 0.5s 0.35s, opacity 0.5s 0.35s;
+}
+.Footer button .menu .link:nth-child(2) {
+  transition: transform 0.5s 0.4s, opacity 0.5s 0.4s;
+}
+/*  */
+.Footer button.active .menu .link:nth-child(2) {
+  transition: transform 0.5s 0.4s, opacity 0.5s 0.4s;
+}
+.Footer button.active .menu .link:nth-child(3) {
+  transition: transform 0.5s 0.45s, opacity 0.5s 0.45s;
+}
+.Footer button.active .menu .link:nth-child(4) {
+  transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
+}
+.Footer button.active .menu .link:nth-child(5) {
+  transition: transform 0.5s 0.55s, opacity 0.5s 0.55s;
+}
+.Footer button.active .menu .link:nth-child(6) {
+  transition: transform 0.5s 0.6s, opacity 0.5s 0.6s;
+}
+.Footer button.active .menu .link:nth-child(7) {
+  transition: transform 0.5s 0.65s, opacity 0.5s 0.65s;
 }
 .Footer button.active .menu .link {
   opacity: 1;
@@ -160,7 +190,7 @@
   visibility: hidden;
   transform: translateY(0);
   transition: transform 0.25s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 0.25s 0.3s linear;
+    opacity 0.25s 0.8s linear;
   opacity: 0;
 }
 .Footer button.active .menu .backGroundLink {
