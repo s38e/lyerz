@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import logo_2 from "../../../public/assets/logo_2.svg";
 import styles from "./styles/Footer.module.css";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
