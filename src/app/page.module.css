@@ -955,6 +955,44 @@
   width: 100%;
   padding: 10px 20px;
   border-radius: 9px;
-  background-color: black;
+  background-color: rgb(50, 50, 50);
   color: white;
+  transition: 0.3s;
+}
+.HeroSection .overlayPlansCard .contanier .plans .plan button:hover {
+  background-color: black;
+}
+.HeroSection .overlayPlansCard .contanier .note {
+  display: flex;
+  flex-direction: column;
+}
+.HeroSection .overlayPlansCard .contanier .note .heading {
+  background-color: #ededed;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  display: flex;
+}
+.HeroSection .overlayPlansCard .contanier .note .heading svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.HeroSection .overlayPlansCard .contanier .note .heading p {
+  font-weight: 500;
+  font-family: "TerminaTest-Demi";
+}
+.HeroSection .overlayPlansCard .contanier .note .content {
+  gap: 0.75rem;
+  background-color: #f7f7f7;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  flex-direction: column;
+  padding: 1.25rem;
+  display: flex;
+}
+.HeroSection .overlayPlansCard .contanier .note .content p {
+  font-weight: 500;
+  line-height: 1.25;
 }

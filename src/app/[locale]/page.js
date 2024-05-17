@@ -561,6 +561,54 @@ export default function Home() {
                   <button> Get Started</button>
                 </div>
               </div>
+              <div className={styles.note}>
+                <div className={styles.heading}>
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 1.25C5.125 1.25 1.25 5.125 1.25 10C1.25 14.875 5.125 18.75 10 18.75C14.875 18.75 18.75 14.875 18.75 10C18.75 5.125 14.875 1.25 10 1.25ZM13.375 14.375L10 11L6.625 14.375L5.625 13.375L9 10L5.625 6.625L6.625 5.625L10 9L13.375 5.625L14.375 6.625L11 10L14.375 13.375L13.375 14.375Z"
+                      fill="#727272"
+                    ></path>
+                  </svg>
+                  <p>Note</p>
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.3189 2.68129C17.2345 2.59733 17.128 2.53921 17.0117 2.51374C16.8955 2.48828 16.7743 2.49653 16.6626 2.53754L2.91262 7.53754C2.79404 7.58252 2.69195 7.66251 2.6199 7.76689C2.54786 7.87126 2.50928 7.99509 2.50928 8.12191C2.50928 8.24874 2.54786 8.37256 2.6199 8.47694C2.69195 8.58132 2.79404 8.66131 2.91262 8.70629L8.28137 10.85L12.2439 6.87504L13.1251 7.75629L9.14387 11.7375L11.2939 17.1063C11.3402 17.2226 11.4204 17.3223 11.524 17.3925C11.6276 17.4627 11.7499 17.5002 11.8751 17.5C12.0014 17.4974 12.124 17.4566 12.2266 17.383C12.3293 17.3094 12.4072 17.2064 12.4501 17.0875L17.4501 3.33754C17.4927 3.22696 17.503 3.10656 17.4797 2.99037C17.4565 2.87417 17.4007 2.76698 17.3189 2.68129Z"
+                      fill="#727272"
+                    ></path>
+                  </svg>
+                </div>
+                <div className={styles.content}>
+                  <p>
+                    We're selective about our partnerships—rarely taking on more
+                    than 3-4 projects at once. Quality matters to us, and that
+                    means staying focused.
+                    <br />
+                    <br />
+                    We're not just about executing ideas; we'll challenge them,
+                    push back, and ensure your users are as happy as you are.
+                    <br />
+                    <br />
+                    If you're ready for a straightforward, collaborative
+                    approach, let's talk.
+                    <br />
+                    <br />
+                    But if you're not open to a bit of pushback and prefer a
+                    more hands-off style, we might not be the right fit.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
