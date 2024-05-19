@@ -204,8 +204,6 @@ function HomePage() {
   };
 
   // ---------------- Check the language to determine the style ---------------- //
-  // const pathName = window.location.pathname;
-  // const isArabic = pathName.includes("/ar");
 
   // ---------------- translate ---------------- //
   const t = useTranslations("Home");
