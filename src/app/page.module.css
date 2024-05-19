@@ -35,10 +35,6 @@
   font-family: "LufgaRegular";
   position: relative;
 }
-.TestAr{
-  width: 100%;
-  background-color: red;
-}
 .HeroSection .hero_content {
   display: flex;
   align-items: center;
@@ -71,9 +67,9 @@
   color: #a7a7a7;
   opacity: 0;
 }
-/* .HeroSection.ar .hero_content .headTexts p {
+.HeroSection.ar .hero_content .headTexts p {
   direction: rtl;
-} */
+}
 .HeroSection .hero_content .hero_cards {
   gap: 0.75rem;
   width: 47rem;
@@ -241,9 +237,9 @@
 /* .HeroSection .cardsServicesCard .card:nth-child(3) p br {
   display: none;
 } */
-/* .HeroSection.ar .cardsServicesCard .card p {
+.HeroSection.ar .cardsServicesCard .card p {
   text-align: end;
-} */
+}
 .HeroSection .cardsServicesCard .card img {
   border-radius: 12px;
   max-width: 100%;
@@ -408,9 +404,9 @@
   text-align: start;
   font-family: "LufgaRegular";
 }
-/* .HeroSection.ar .hero_content .hero_cards .cardsPlansCard .plan_tag {
+.HeroSection.ar .hero_content .hero_cards .cardsPlansCard .plan_tag {
   text-align: end;
-} */
+}
 .HeroSection .hero_content .hero_cards .cardsPlansCard.active .plan_tag {
   opacity: 1;
 }
@@ -552,9 +548,9 @@
   background-color: white;
   gap: 2.5rem;
 }
-/* .HeroSection.ar .overlayServicesCard .contanier {
+.HeroSection.ar .overlayServicesCard .contanier {
   direction: rtl;
-} */
+}
 .HeroSection .overlayServicesCard.active .contanier {
   opacity: 1;
   transform: translateY(0);
@@ -643,9 +639,9 @@
   background-color: white;
   gap: 2.5rem;
 }
-/* .HeroSection.ar .overlayAboutCard .contanier {
+.HeroSection.ar .overlayAboutCard .contanier {
   direction: rtl;
-} */
+}
 .HeroSection .overlayAboutCard.active .contanier {
   opacity: 1;
   transform: translateY(0);
@@ -861,9 +857,9 @@
   opacity: 1;
   transform: translateY(0);
 }
-/* .HeroSection.ar .overlayPlansCard .contanier {
+.HeroSection.ar .overlayPlansCard .contanier {
   direction: rtl;
-} */
+}
 .HeroSection .overlayPlansCard .contanier::-webkit-scrollbar {
   width: 5px;
   height: 5px;

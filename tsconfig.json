@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     "src/app/[locale]/page.tsx"
-, "src/app/not-found.tsx"  ],
+, "src/app/not-found.tsx", "src/app/sitemap.ts"  ],
   "exclude": [
     "node_modules"
   ]
