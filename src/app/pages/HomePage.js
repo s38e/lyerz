@@ -204,8 +204,8 @@ function HomePage() {
   };
 
   // ---------------- Check the language to determine the style ---------------- //
-  const pathName = window.location.pathname;
-  const isArabic = pathName.includes("/ar");
+  // const pathName = window.location.pathname;
+  // const isArabic = pathName.includes("/ar");
 
   // ---------------- translate ---------------- //
   const t = useTranslations("Home");
@@ -218,9 +218,7 @@ function HomePage() {
   return (
     <>
       <main className={styles.page}>
-        <section
-          className={`${styles.HeroSection} ${isArabic ? styles.ar : ""}`}
-        >
+        <section className={`${styles.HeroSection} `}>
           <NavBar />
           <div className={styles.hero_content}>
             <div className={styles.headTexts}>
