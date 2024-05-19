@@ -44,7 +44,7 @@ import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 
-function HomePage() {
+const HomePage = () => {
   // ---------------- Hovered ---------------- //
   const [isCardWorkHovered, setIsCardWorkHovered] = useState(false);
   const [isCardServicesHovered, setIsCardServicesHovered] = useState(false);
@@ -688,6 +688,6 @@ function HomePage() {
       </main>
     </>
   );
-}
+};
 
 export default HomePage;
