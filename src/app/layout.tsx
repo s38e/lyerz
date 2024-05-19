@@ -1,11 +1,21 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Lyerz - Desgin Studio",
+export const metadata: Metadata = {
+  title: {
+    default: "Lyerz - Desgin Studio",
+    template: "%s | Lyerz - Desgin Studio",
+  },
   description: "Dev with Lyerz by Saeed Khaled",
+  openGraph: {},
+  twitter: {
+    card: "summary_large_image",
+    title: "Lyerz - Desgin Studio",
+    description: "Dev with Lyerz by Saeed Khaled",
+  },
 };
 
 export default function RootLayout({ children }) {

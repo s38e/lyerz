@@ -44,7 +44,7 @@ import CircleOverlayPlansCard from "../components/CircleOverlayPlansCard";
 import Service from "../components/Service";
 import gsap from "gsap";
 
-export default function Home() {
+function HomePage() {
   // ---------------- Hovered ---------------- //
   const [isCardWorkHovered, setIsCardWorkHovered] = useState(false);
   const [isCardServicesHovered, setIsCardServicesHovered] = useState(false);
@@ -677,3 +677,5 @@ export default function Home() {
     </>
   );
 }
+
+export default HomePage;
