@@ -203,8 +203,6 @@ function HomePage() {
     e.stopPropagation();
   };
 
-  // ---------------- Check the language to determine the style ---------------- //
-
   // ---------------- translate ---------------- //
   const t = useTranslations("Home");
   const tags = useTranslations("plan_tag");
@@ -216,7 +214,11 @@ function HomePage() {
   return (
     <>
       <main className={styles.page}>
-        <section className={`${styles.HeroSection} `}>
+        <section
+          className={`${styles.HeroSection} ${
+            window.location.pathname.includes("/ar") ? styles.ar : ""
+          }`}
+        >
           <NavBar />
           <div className={styles.hero_content}>
             <div className={styles.headTexts}>
