@@ -16,7 +16,8 @@
     "next-seo": "^6.5.0",
     "react": "^18",
     "react-device-detect": "^2.2.3",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "@types/node": "20.12.11",

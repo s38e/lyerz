@@ -35,6 +35,10 @@
   font-family: "LufgaRegular";
   position: relative;
 }
+.TestAr{
+  width: 100%;
+  background-color: red;
+}
 .HeroSection .hero_content {
   display: flex;
   align-items: center;
