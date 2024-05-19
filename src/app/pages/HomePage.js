@@ -1,4 +1,8 @@
 "use client";
+import Image from "next/image";
+import styles from "../page.module.css";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import img_1_work from "/public/assets/img_1_work.png";
 import img_2_work from "/public/assets/img_2_work.png";
 import img_3_work from "/public/assets/img_3_work.png";
@@ -31,20 +35,16 @@ import card_work from "/public/assets/card_work.png";
 import card_services from "/public/assets/card_services.png";
 import card_about from "/public/assets/card_about.png";
 import card_plans from "/public/assets/card_plans.png";
+import { useTranslations } from "next-intl";
+import React, { useEffect, useState } from "react";
 import CircleOverlayWorkCard from "../components/CircleOverlayWorkCard";
 import CircleOverlayServicesCard from "../components/CircleOverlayServicesCard";
 import CircleOverlayAboutCard from "../components/CircleOverlayAboutCard";
 import CircleOverlayPlansCard from "../components/CircleOverlayPlansCard";
 import Service from "../components/Service";
-import Image from "next/image";
-import styles from "../page.module.css";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import { useTranslations } from "next-intl";
-import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 
-export default function Home() {
+function HomePage() {
   // ---------------- Hovered ---------------- //
   const [isCardWorkHovered, setIsCardWorkHovered] = useState(false);
   const [isCardServicesHovered, setIsCardServicesHovered] = useState(false);
@@ -199,8 +199,8 @@ export default function Home() {
   };
 
   // ---------------- Check the language to determine the style ---------------- //
-  // const pathName = window.location.pathname;
-  // const isArabic = pathName.includes("/ar");
+  const pathName = window.location.pathname;
+  const isArabic = pathName.includes("/ar");
 
   // ---------------- translate ---------------- //
   const t = useTranslations("Home");
@@ -213,7 +213,9 @@ export default function Home() {
   return (
     <>
       <main className={styles.page}>
-        <section className={`${styles.HeroSection} `}>
+        <section
+          className={`${styles.HeroSection} ${isArabic ? styles.ar : ""}`}
+        >
           <NavBar />
           <div className={styles.hero_content}>
             <div className={styles.headTexts}>
@@ -250,10 +252,6 @@ export default function Home() {
                   alt="Image Card Work"
                   width={100}
                   height={100}
-                  style={{
-                    height: "auto",
-                    width: "auto",
-                  }}
                 />
                 <p>{t("card_1")}</p>
               </button>
@@ -263,10 +261,6 @@ export default function Home() {
                   alt="Image Card Services"
                   width={100}
                   height={100}
-                  style={{
-                    height: "auto",
-                    width: "auto",
-                  }}
                 />
                 <p>{t("card_2")}</p>
               </button>
@@ -276,10 +270,6 @@ export default function Home() {
                   alt="Image Card About"
                   width={100}
                   height={100}
-                  style={{
-                    height: "auto",
-                    width: "auto",
-                  }}
                 />
                 <p>{t("card_3")}</p>
               </button>
@@ -289,10 +279,6 @@ export default function Home() {
                   alt="Image Card Plans"
                   width={100}
                   height={100}
-                  style={{
-                    height: "auto",
-                    width: "auto",
-                  }}
                 />
                 <p>{t("card_4")}</p>
               </button>
@@ -311,7 +297,7 @@ export default function Home() {
             </div>
             <div className={styles.image}>
               <div className={styles.overlay}></div>
-              <Image src={img_2_work} alt="Image Work Card" priority />
+              <Image src={img_2_work} alt="Image Work Card" />
             </div>
             <div className={styles.image}>
               <div className={styles.overlay}></div>
@@ -684,3 +670,5 @@ export default function Home() {
     </>
   );
 }
+
+export default HomePage;
