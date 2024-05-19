@@ -1,5 +1,5 @@
 import React from "react";
-import HomePage from "../pages/HomePage";
+import HomePage from "../../pages/HomePage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
       url: "../../../assets/Opengraph-Image.png",
       width: 1200,
       height: 630,
+      alt: "Lyerz - Design Studio",
     },
   },
 };

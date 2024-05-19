@@ -1,0 +1,107 @@
+/* ---------------- Font ---------------- */
+@font-face {
+  font-family: "TerminaTest-Bold";
+  src: url(/fonts/TerminaTest/TerminaTest-Bold.otf);
+}
+@font-face {
+  font-family: "TerminaTest-Regular";
+  src: url(/fonts/TerminaTest/TerminaTest-Regular.otf);
+}
+@font-face {
+  font-family: "LufgaRegular";
+  src: url(/fonts/Lufga/LufgaRegular.ttf);
+}
+/*  */
+.errorSection {
+  height: calc(100vh - 2rem);
+  width: calc(100vw - 2rem);
+  background-color: white;
+  margin: 1rem;
+  border-radius: 20px;
+  overflow: hidden;
+  padding-top: 1.25rem;
+  padding-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "LufgaRegular";
+  position: relative;
+  text-align: center;
+  /* gap: 1.5rem; */
+}
+.errorSection img {
+  height: 30rem;
+  width: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s;
+}
+.errorSection.animated img {
+  transform: translateY(0);
+  opacity: 1;
+}
+.errorSection .head {
+  font-family: "TerminaTest-Bold";
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s 0.2s;
+}
+.errorSection.animated .head {
+  transform: translateY(0);
+  opacity: 1;
+}
+.errorSection .title {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #9e9e9e;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s 0.4s;
+}
+.errorSection.animated .title {
+  transform: translateY(0);
+  opacity: 1;
+}
+.errorSection a {
+  position: relative;
+  font-family: "TerminaTest-Regular";
+  padding: 10px 20px;
+  border-radius: 9px;
+  background-color: black;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s 0.4s, transform 1s 0.4s, background-color 0.35s;
+}
+.errorSection.animated a {
+  transform: translateY(0);
+  opacity: 1;
+}
+.errorSection a:hover {
+  background-color: #ebebeb;
+}
+.errorSection a p {
+  transition: 0.35s;
+  white-space: nowrap;
+}
+.errorSection a p:nth-child(1) {
+  color: white;
+}
+.errorSection a:hover p:nth-child(1) {
+  transform: translateY(-200%);
+}
+.errorSection a p:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 150%);
+  transition: 0.35s;
+  position: absolute;
+  color: black;
+}
+.errorSection a:hover p:nth-child(2) {
+  transform: translate(-50%, -50%);
+  transition: 0.35s 0.1s;
+}
