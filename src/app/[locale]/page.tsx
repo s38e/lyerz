@@ -1,7 +1,6 @@
 import React from "react";
 import HomePage from "../pages/HomePage";
 import { Metadata } from "next";
-import styles from "../page.module.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lyerz.vercel.app"),

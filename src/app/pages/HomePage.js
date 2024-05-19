@@ -44,7 +44,7 @@ import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 
-const HomePage = () => {
+function HomePage() {
   // ---------------- Hovered ---------------- //
   const [isCardWorkHovered, setIsCardWorkHovered] = useState(false);
   const [isCardServicesHovered, setIsCardServicesHovered] = useState(false);
@@ -186,11 +186,6 @@ const HomePage = () => {
   const handleOverlayAboutClick = () => {
     setIsCardAboutClicked(false);
   };
-  //
-  const handleActiveService_1 = () => {
-    setisService_1_Active(true);
-  };
-
   // ---------------- Click Plans Card ---------------- //
   const handleCardPlansClick = () => {
     setIsCardPlansClicked(true);
@@ -688,6 +683,6 @@ const HomePage = () => {
       </main>
     </>
   );
-};
+}
 
 export default HomePage;
