@@ -56,15 +56,11 @@ function Footer() {
   const t = useTranslations("Footer");
 
   // ---------------- Check the language to determine the style ---------------- //
-  const pathName = window.location.pathname;
-  const isArabic = pathName.includes("/ar");
+  // const pathName = window.location.pathname;
+  // const isArabic = pathName.includes("/ar");
 
   return (
-    <footer
-      className={`${styles.Footer} ${
-        window.location.pathname.includes("/ar") ? styles.ar : ""
-      }`}
-    >
+    <footer className={`${styles.Footer} `}>
       <button
         className={isActive ? styles.active : ""}
         onClick={handleButtonClick}
@@ -113,7 +109,7 @@ function Footer() {
           </Link>
           <Link
             className={styles.link}
-            href={isArabic ? "/en" : "/ar"}
+            href=""
             onMouseEnter={() => handleLinkHover(4)}
             onMouseLeave={handleLinkLeave}
           >

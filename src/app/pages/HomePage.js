@@ -203,6 +203,10 @@ function HomePage() {
     e.stopPropagation();
   };
 
+  // ---------------- Check the language to determine the style ---------------- //
+  // const pathName = window.location.pathname;
+  // const isArabic = pathName.includes("/ar");
+
   // ---------------- translate ---------------- //
   const t = useTranslations("Home");
   const tags = useTranslations("plan_tag");
@@ -214,11 +218,7 @@ function HomePage() {
   return (
     <>
       <main className={styles.page}>
-        <section
-          className={`${styles.HeroSection} ${
-            window.location.pathname.includes("/ar") ? styles.ar : ""
-          }`}
-        >
+        <section className={`${styles.HeroSection} `}>
           <NavBar />
           <div className={styles.hero_content}>
             <div className={styles.headTexts}>
