@@ -616,7 +616,6 @@ function HomePage() {
                   </div>
                   <button>
                     <p>{overlayPlansCard("plans-plan_3-button->p")}</p>
-                    <p>{overlayPlansCard("plans-plan_3-button->p")}</p>
                   </button>
                 </div>
               </div>

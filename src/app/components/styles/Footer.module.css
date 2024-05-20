@@ -4,8 +4,8 @@
   src: url(/fonts/Lufga/LufgaMedium.ttf);
 }
 @font-face {
-  font-family: "TerminaTest-Demi";
-  src: url(/fonts/TerminaTest/TerminaTest-Demi.otf);
+  font-family: "TerminaTest-Medium";
+  src: url(/fonts/TerminaTest/TerminaTest-Medium.otf);
 }
 /* ---------------- Footer ---------------- */
 .Footer {
@@ -19,20 +19,21 @@
   z-index: 99;
   font-family: "LufgaMedium" !important;
 }
-.Footer.ar {
-  /* background-color: green; */
-}
 .Footer button {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: #ebebeb;
-  color: black;
+  color: #626262;
   border-radius: 2rem;
   position: relative;
-  font-family: "TerminaTest-Demi" !important;
-  height: calc(40px + 1rem);
+  font-family: "TerminaTest-Medium";
   opacity: 0;
+  transition: box-shadow 0.5s;
+}
+.Footer button.active {
+  box-shadow: 0 0 44px 4px rgb(0, 0, 0, 0.2);
 }
 .Footer button .defultBtn {
   display: flex;
@@ -41,13 +42,11 @@
   gap: 1rem;
   padding: 0.5rem;
   background-color: #ebebeb;
-  color: black;
+  color: #626262;
   border-radius: 2rem;
   line-height: 1;
   position: relative;
-  font-family: "TerminaTest-Demi" !important;
-  font-weight: 400;
-  height: calc(40px + 1rem);
+  font-family: "TerminaTest-Medium";
 }
 .Footer button .defultBtn .menuIcon {
   height: 40px;
@@ -56,16 +55,16 @@
   background-color: white;
   border-radius: 50%;
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  z-index: 1;
+  position: relative;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 4px;
 }
+.Footer button.active .defultBtn .menuIcon,
 .Footer button:hover .defultBtn .menuIcon {
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(-50%) rotate(90deg);
@@ -73,17 +72,17 @@
 }
 .Footer button .defultBtn .menuIcon div {
   display: inline-block;
-  height: 3px;
+  height: 1px;
   width: 80%;
-  background-color: black;
+  background-color: #626262;
 }
 .Footer button .defultBtn span {
-  margin-left: calc(40px + 1.5rem);
   margin-right: 1.5rem;
   font-size: 1.3rem;
   line-height: 1;
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+.Footer button.active .defultBtn span,
 .Footer button:hover .defultBtn span {
   position: relative;
   transform: translateX(-20px);
@@ -91,7 +90,6 @@
 }
 .Footer p {
   text-align: center;
-  /* font-weight: 600; */
   line-height: 1rem;
   color: rgba(34, 34, 34, 0.6);
   font-size: 0.75rem;
@@ -100,119 +98,111 @@
 .Footer.ar p {
   direction: rtl;
 }
-.Footer button .menu {
+/* .Footer button .menu {
   position: absolute;
-  width: 100%;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: #ebebeb;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
-  z-index: -1;
   border-radius: 2rem;
   overflow: hidden;
   visibility: hidden;
   transition: height 0.5s 0.2s cubic-bezier(0.755, 0.05, 0.855, 0.06),
-    visibility 0.5s 0.3s linear;
-  font-family: "TerminaTest-Demi" !important;
+  visibility 0.5s 0.3s linear;
+  font-family: "TerminaTest-Medium";
   padding: 0.5rem 0;
+  color: #626262;
+  padding: 0.5rem;
 }
 .Footer button.active .menu {
   transition: height 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06),
-    visibility 0.5s linear;
+  visibility 0.5s linear;
   visibility: visible;
-  z-index: 2;
   cursor: default;
 }
 .Footer button .menu .link {
-  padding: 1rem 0;
-  font-size: 1.3rem;
+  padding: 1rem 0.5rem;
+  font-size: 1.2rem;
   transform: translateY(100%);
   opacity: 0;
-  font-family: "TerminaTest-Demi" !important;
+  font-family: "TerminaTest-Medium";
   width: 100%;
+  color: white;
+  white-space: nowrap;
 }
-.Footer button .menu .link:nth-child(7) {
-  transition: transform 0.5s 0.15s, opacity 0.5s 0.15s;
-}
-.Footer button .menu .link:nth-child(6) {
-  transition: transform 0.5s 0.2s, opacity 0.5s 0.2s;
-}
-.Footer button .menu .link:nth-child(5) {
-  transition: transform 0.5s 0.25s, opacity 0.5s 0.25s;
-}
-.Footer button .menu .link:nth-child(4) {
-  transition: transform 0.5s 0.3s, opacity 0.5s 0.3s;
-}
-.Footer button .menu .link:nth-child(3) {
-  transition: transform 0.5s 0.35s, opacity 0.5s 0.35s;
+.Footer button .menu .link:nth-child(1) {
+  background-color: #001aff;
 }
 .Footer button .menu .link:nth-child(2) {
+  background-color: #000000;
+}
+.Footer button .menu .socialLinks {
+  transition: transform 0.5s 0.3s, opacity 0.5s 0.3s;
+}
+.Footer button .menu .link:nth-child(2) {
+  transition: transform 0.5s 0.35s, opacity 0.5s 0.35s;
+}
+.Footer button .menu .link:nth-child(1) {
+  transition: transform 0.5s 0.4s, opacity 0.5s 0.4s;
+} 
+.Footer button.active .menu .link:nth-child(1) {
   transition: transform 0.5s 0.4s, opacity 0.5s 0.4s;
 }
-/*  */
 .Footer button.active .menu .link:nth-child(2) {
-  transition: transform 0.5s 0.4s, opacity 0.5s 0.4s;
-}
-.Footer button.active .menu .link:nth-child(3) {
   transition: transform 0.5s 0.45s, opacity 0.5s 0.45s;
 }
-.Footer button.active .menu .link:nth-child(4) {
+.Footer button.active .menu .socialLinks {
   transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
-}
-.Footer button.active .menu .link:nth-child(5) {
-  transition: transform 0.5s 0.55s, opacity 0.5s 0.55s;
-}
-.Footer button.active .menu .link:nth-child(6) {
-  transition: transform 0.5s 0.6s, opacity 0.5s 0.6s;
-}
-.Footer button.active .menu .link:nth-child(7) {
-  transition: transform 0.5s 0.65s, opacity 0.5s 0.65s;
 }
 .Footer button.active .menu .link {
   opacity: 1;
   transform: translateY(0);
 }
-.Footer button .menu .backGroundLink {
-  position: absolute;
-  /* height: 52.8px; */
+.Footer button .menu .socialLinks {
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  background-color: transparent;
-  bottom: 0.5rem;
-  left: 0;
-  margin: 0;
-  width: calc(100% - 1rem);
-  margin: 0 0.5rem;
-  border-radius: 1.3rem;
-  visibility: hidden;
-  transform: translateY(0) !important;
-  transition: transform 0.25s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 0.25s 0.8s linear;
-  opacity: 0;
+  font-size: 10px !important;
 }
-.Footer button.active .menu .backGroundLink {
-  opacity: 1;
-  background-color: #c5c5c5;
-  visibility: visible;
+.Footer button .menu .socialLinks {
+} */
+
+.Footer button .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
 }
-.Footer button .menu .backGroundLink.link_1 {
-  transform: translateY(-500%) !important;
+.Footer button .menu .link {
+  font-family: "TerminaTest-Medium";
+  font-size: 1.2rem;
+  color: white;
+  width: 100%;
+  border-radius: 100rem;
+  padding: 10px 25px;
 }
-.Footer button .menu .backGroundLink.link_2 {
-  transform: translateY(-400%) !important;
+.Footer button .menu .link:nth-child(1) {
+  background-color: #001aff;
 }
-.Footer button .menu .backGroundLink.link_3 {
-  transform: translateY(-300%) !important;
+.Footer button .menu .link:nth-child(2) {
+  background-color: #000;
 }
-.Footer button .menu .backGroundLink.link_4 {
-  transform: translateY(-200%) !important;
+.Footer button .menu .socialLinks {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
-.Footer button .menu .backGroundLink.link_5 {
-  transform: translateY(-100%) !important;
+.Footer button .menu .socialLinks a:nth-child(1) {
+  color: #e5457e;
 }
-.Footer button .menu .backGroundLink.link_6 {
-  transform: translateY(0) !important;
+.Footer button .menu .socialLinks a:nth-child(2) {
+  color: #4582f6;
 }

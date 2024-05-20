@@ -34,7 +34,6 @@ const Custom404 = () => {
       </p>
       <Link href="/">
         <p>Go back to home</p>
-        <p>Go back to home</p>
       </Link>
     </section>
   );

@@ -8,6 +8,7 @@ import gsap from "gsap";
 function Footer() {
   const [isActive, setIsActive] = useState(false);
   const [menuHeight, setMenuHeight] = useState(56);
+  const [menuWidth, setMenuWidth] = useState();
   const [linkHovered, setLinkHovered] = useState(null);
   const { locale } = useTranslations();
 
@@ -16,28 +17,25 @@ function Footer() {
   };
 
   const handleButtonMouseLeave = () => {
-    setIsActive(false);
-  };
-
-  const handleLinkHover = (index) => {
-    setLinkHovered(index);
-  };
-
-  const handleLinkLeave = () => {
-    setLinkHovered(null);
+    // setIsActive(false);
   };
 
   useEffect(() => {
     // ---------------- Backgound Links ---------------- //
-    const links = document.querySelectorAll(`.${styles.menu} .${styles.link}`);
-    const backGroundLink = document.querySelector(
-      `.${styles.menu} .${styles.backGroundLink}`
-    );
-
-    const linkHeight = links[0].offsetHeight;
-    const newMenuHeight = linkHeight * links.length + 16;
-    backGroundLink.style.height = `${linkHeight}px`;
-    setMenuHeight(newMenuHeight);
+    // const links = document.querySelectorAll(`.${styles.menu} .${styles.link}`);
+    // const socialLink_1 = document.querySelector(
+    //   `.${styles.menu} .${styles.socialLinks} a:nth-child(1)`
+    // );
+    // const socialLink_2 = document.querySelector(
+    //   `.${styles.menu} .${styles.socialLinks} a:nth-child(1)`
+    // );
+    // const socialLink_1Width = socialLink_1.offsetWidth;
+    // const socialLink_2Width = socialLink_2.offsetWidth;
+    // const newMenuWidth = socialLink_1Width + socialLink_2Width;
+    // const linkHeight = links[0].offsetHeight;
+    // const newMenuHeight = linkHeight * 3 + 16 + linkHeight;
+    // setMenuHeight(newMenuHeight);
+    // // setMenuWidth(newMenuWidth);
   }, []);
   useEffect(() => {
     // ---------------- Animation HeadTexts ---------------- //
@@ -68,61 +66,23 @@ function Footer() {
       >
         <menu
           className={styles.menu}
-          style={{ height: isActive ? `${menuHeight}px` : 56 }}
+          style={
+            {
+              // height: isActive ? `${menuHeight}px` : 56,
+              // width: isActive ? `${menuWidth}px` : "auto",
+            }
+          }
         >
-          <div
-            className={`${styles.backGroundLink} ${
-              linkHovered !== null ? styles[`link_${linkHovered + 1}`] : ""
-            }`}
-          ></div>
-          <Link
-            className={styles.link}
-            href=""
-            onMouseEnter={() => handleLinkHover(0)}
-            onMouseLeave={handleLinkLeave}
-          >
-            {t("btn_1")}
+          <Link className={styles.link} href="">
+            <span>LYERZ</span> Space
           </Link>
-          <Link
-            className={styles.link}
-            href=""
-            onMouseEnter={() => handleLinkHover(1)}
-            onMouseLeave={handleLinkLeave}
-          >
-            {t("btn_2")}
+          <Link className={styles.link} href="">
+            Book a Demo
           </Link>
-          <Link
-            className={styles.link}
-            href=""
-            onMouseEnter={() => handleLinkHover(2)}
-            onMouseLeave={handleLinkLeave}
-          >
-            {t("btn_3")}
-          </Link>
-          <Link
-            className={styles.link}
-            href=""
-            onMouseEnter={() => handleLinkHover(3)}
-            onMouseLeave={handleLinkLeave}
-          >
-            {t("btn_4")}
-          </Link>
-          <Link
-            className={styles.link}
-            href={isArabic ? "/en" : "/ar"}
-            onMouseEnter={() => handleLinkHover(4)}
-            onMouseLeave={handleLinkLeave}
-          >
-            {t("language")}
-          </Link>
-          <Link
-            className={styles.link}
-            href=""
-            onMouseEnter={() => handleLinkHover(5)}
-            onMouseLeave={handleLinkLeave}
-          >
-            {t("btn_5")}
-          </Link>
+          <div className={styles.socialLinks}>
+            <Link href="">INSTAGRAM</Link>
+            <Link href="">LINKINDIN</Link>
+          </div>
         </menu>
         <div className={styles.defultBtn}>
           <div className={styles.menuIcon}>
