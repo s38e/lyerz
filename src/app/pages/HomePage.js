@@ -243,8 +243,8 @@ function HomePage() {
               <p>
                 <span>{t("header_3")}</span>
                 <span>
-                  Some Text Some Text Some Text Some Text Some Text Some Text
-                  Some Text
+                  See our top projects and discover how we turn ideas into
+                  reality.
                 </span>
               </p>
             </div>
