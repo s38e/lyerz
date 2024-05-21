@@ -37,6 +37,7 @@
   bottom: 170%;
 }
 .Footer button.active {
+  cursor: default;
   transition: height 0.5s 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     width 0.5s 0.2s, box-shadow 0.5s linear;
   box-shadow: 0 0 30px 5px rgb(0, 0, 0, 0.15);
@@ -70,6 +71,7 @@
   flex-direction: column;
   gap: 4px;
   z-index: 1;
+  cursor: pointer;
 }
 .Footer button.active .defultBtn .menuIcon {
   gap: 0;
@@ -79,6 +81,9 @@
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(-50%) rotate(90deg);
   left: 50%;
+}
+.Footer button .defultBtn .menuIcon:hover {
+  box-shadow: 0 0 30px 5px rgb(0, 0, 0, 0.15);
 }
 .Footer button .defultBtn .menuIcon .spanIcon {
   display: inline-block;

@@ -72,7 +72,9 @@
 }
 .HeroSection .hero_content .headTexts p span {
   transition: opacity 0.5s;
-  white-space: nowrap;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
 }
 .HeroSection .hero_content .headTexts p span:nth-child(2) {
   top: 50%;
@@ -114,7 +116,9 @@
 }
 .HeroSection .hero_content .hero_cards .card img {
   pointer-events: none;
-  height: 100%;
+  height: 7.5rem;
+  width: 100%;
+  vertical-align: middle;
   object-fit: contain;
 }
 .HeroSection .hero_content .hero_cards .card p {

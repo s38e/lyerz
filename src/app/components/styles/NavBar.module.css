@@ -5,7 +5,7 @@
   width: 100%;
   height: 50px;
 }
-.NavBar img {
+.NavBar a img {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
