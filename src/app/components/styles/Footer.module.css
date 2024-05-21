@@ -55,12 +55,12 @@
   font-family: "TerminaTest-Medium";
 }
 .Footer button .defultBtn .menuIcon {
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   padding: 10px;
   background-color: white;
   border-radius: 50%;
-  transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1), gap 0.5s linear;
   position: relative;
   top: 0;
   left: 0;
@@ -71,6 +71,9 @@
   gap: 4px;
   z-index: 1;
 }
+.Footer button.active .defultBtn .menuIcon {
+  gap: 0;
+}
 .Footer button.active .defultBtn .menuIcon,
 .Footer button:hover .defultBtn .menuIcon {
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -80,12 +83,19 @@
 .Footer button .defultBtn .menuIcon .spanIcon {
   display: inline-block;
   height: 1px;
-  width: 80%;
+  width: 100%;
   background-color: #626262;
+  transition: 0.5s;
+}
+.Footer button.active .defultBtn .menuIcon .spanIcon:nth-child(1) {
+  transform: translateY(0.5px) rotate(45deg);
+}
+.Footer button.active .defultBtn .menuIcon .spanIcon:nth-child(2) {
+  transform: translateY(-0.5px) rotate(-45deg);
 }
 .Footer button .defultBtn span {
-  margin-right: 1.5rem;
-  font-size: 1.3rem;
+  margin-right: 1rem;
+  font-size: 1rem;
   line-height: 1;
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -121,7 +131,7 @@
 }
 .Footer button .menu .link {
   font-family: "TerminaTest-Medium";
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
   width: 100%;
   border-radius: 100rem;
