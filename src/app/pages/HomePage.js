@@ -83,13 +83,29 @@ function HomePage() {
     const WorkCard = document.querySelector(
       `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(2)`
     );
+    const headTexts_P_1 = document.querySelector(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} p span:nth-child(1)`
+    );
+    const headTexts_P_2 = document.querySelector(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} p span:nth-child(2)`
+    );
 
     WorkCard.addEventListener("mouseover", () => {
       setIsCardWorkHovered(true);
+      headTexts_P_2.style.opacity = "1";
+      headTexts_P_1.style.opacity = "0";
+      //---------------------------------------
+      headTexts_P_1.style.transitionDelay = "0s";
+      headTexts_P_2.style.transitionDelay = "0.4s";
     });
 
     WorkCard.addEventListener("mouseout", () => {
       setIsCardWorkHovered(false);
+      headTexts_P_2.style.opacity = "0";
+      headTexts_P_1.style.opacity = "1";
+      //---------------------------------------
+      headTexts_P_1.style.transitionDelay = "0.4s";
+      headTexts_P_2.style.transitionDelay = "0s";
     });
     // ---------------- ServicesCard ---------------- //
     const ServicesCard = document.querySelector(
@@ -224,7 +240,13 @@ function HomePage() {
                 <br />
                 <span>{t("header_2")}</span>
               </h2>
-              <p>{t("header_3")}</p>
+              <p>
+                <span>{t("header_3")}</span>
+                <span>
+                  Some Text Some Text Some Text Some Text Some Text Some Text
+                  Some Text
+                </span>
+              </p>
             </div>
             <div className={styles.hero_cards}>
               {/* ---------------- cardsPlansCard ---------------- */}

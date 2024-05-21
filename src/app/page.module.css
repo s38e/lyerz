@@ -70,6 +70,18 @@
   color: #a7a7a7;
   opacity: 0;
 }
+.HeroSection .hero_content .headTexts p span {
+  transition: opacity 0.5s;
+  white-space: nowrap;
+}
+.HeroSection .hero_content .headTexts p span:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  opacity: 0;
+  /* transition-delay: 0.4s; */
+}
 .HeroSection.ar .hero_content .headTexts p {
   direction: rtl;
 }
