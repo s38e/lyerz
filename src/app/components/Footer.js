@@ -11,7 +11,6 @@ function Footer() {
   const [buttonWidth, setButtonWidth] = useState(133);
   const [menuHeight, setmenuHeight] = useState(0);
   const [buttonHeight, setButtonHeight] = useState(46);
-  const { locale } = useTranslations();
 
   const handleButtonClick = () => {
     setIsActive(!isActive);
