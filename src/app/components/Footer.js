@@ -8,9 +8,9 @@ import gsap from "gsap";
 function Footer() {
   const [isActive, setIsActive] = useState(false);
   const [menuWidth, setMenuWidth] = useState(0);
-  const [buttonWidth, setButtonWidth] = useState(138);
+  const [buttonWidth, setButtonWidth] = useState(133);
   const [menuHeight, setmenuHeight] = useState(0);
-  const [buttonHeight, setButtonHeight] = useState(51);
+  const [buttonHeight, setButtonHeight] = useState(46);
   const { locale } = useTranslations();
 
   const handleButtonClick = () => {

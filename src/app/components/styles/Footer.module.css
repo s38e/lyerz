@@ -55,9 +55,9 @@
   font-family: "TerminaTest-Medium";
 }
 .Footer button .defultBtn .menuIcon {
-  height: 35px;
-  width: 35px;
-  padding: 10px;
+  height: 30px;
+  width: 30px;
+  padding: 7px;
   background-color: white;
   border-radius: 50%;
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1), gap 0.5s linear;
