@@ -7,9 +7,10 @@ import gsap from "gsap";
 
 function Footer() {
   const [isActive, setIsActive] = useState(false);
-  const [menuHeight, setMenuHeight] = useState(56);
-  const [menuWidth, setMenuWidth] = useState();
-  const [linkHovered, setLinkHovered] = useState(null);
+  const [menuWidth, setMenuWidth] = useState(0);
+  const [buttonWidth, setButtonWidth] = useState(168);
+  const [menuHeight, setmenuHeight] = useState(0);
+  const [buttonHeight, setButtonHeight] = useState(56);
   const { locale } = useTranslations();
 
   const handleButtonClick = () => {
@@ -17,28 +18,38 @@ function Footer() {
   };
 
   const handleButtonMouseLeave = () => {
-    // setIsActive(false);
+    setIsActive(false);
   };
 
   useEffect(() => {
-    // ---------------- Backgound Links ---------------- //
-    // const links = document.querySelectorAll(`.${styles.menu} .${styles.link}`);
-    // const socialLink_1 = document.querySelector(
-    //   `.${styles.menu} .${styles.socialLinks} a:nth-child(1)`
-    // );
-    // const socialLink_2 = document.querySelector(
-    //   `.${styles.menu} .${styles.socialLinks} a:nth-child(1)`
-    // );
-    // const socialLink_1Width = socialLink_1.offsetWidth;
-    // const socialLink_2Width = socialLink_2.offsetWidth;
-    // const newMenuWidth = socialLink_1Width + socialLink_2Width;
-    // const linkHeight = links[0].offsetHeight;
-    // const newMenuHeight = linkHeight * 3 + 16 + linkHeight;
-    // setMenuHeight(newMenuHeight);
-    // // setMenuWidth(newMenuWidth);
+    const defultBtn = document.querySelector(`.${styles.defultBtn}`);
+    const Menu = document.querySelector(`.${styles.menu}`);
+
+    const updateDimensions = () => {
+      if (defultBtn && Menu) {
+        const defultBtnWidth = defultBtn.offsetWidth;
+        const MenuWidth = Menu.offsetWidth;
+        const defultBtnHeight = defultBtn.offsetHeight;
+        const MenuHeight = defultBtn.offsetHeight + Menu.offsetHeight;
+        setButtonWidth(defultBtnWidth);
+        setMenuWidth(MenuWidth);
+        setButtonHeight(defultBtnHeight);
+        setmenuHeight(MenuHeight);
+      }
+    };
+
+    window.onload = updateDimensions;
+    updateDimensions();
+
+    // Update dimensions on window resize
+    window.addEventListener("resize", updateDimensions);
+
+    return () => {
+      window.removeEventListener("resize", updateDimensions);
+    };
   }, []);
+
   useEffect(() => {
-    // ---------------- Animation HeadTexts ---------------- //
     gsap.fromTo(
       `.${styles.Footer} button`,
       { opacity: 0, y: 100 },
@@ -53,7 +64,6 @@ function Footer() {
 
   const t = useTranslations("Footer");
 
-  // ---------------- Check the language to determine the style ---------------- //
   const pathName = window.location.pathname;
   const isArabic = pathName.includes("/ar");
 
@@ -63,16 +73,12 @@ function Footer() {
         className={isActive ? styles.active : ""}
         onClick={handleButtonClick}
         onMouseLeave={handleButtonMouseLeave}
+        style={{
+          width: isActive ? `${menuWidth}px` : `${buttonWidth}px`,
+          height: isActive ? `${menuHeight}px` : `${buttonHeight}px`,
+        }}
       >
-        <menu
-          className={styles.menu}
-          style={
-            {
-              // height: isActive ? `${menuHeight}px` : 56,
-              // width: isActive ? `${menuWidth}px` : "auto",
-            }
-          }
-        >
+        <menu className={styles.menu}>
           <Link className={styles.link} href="">
             <span>LYERZ</span> Space
           </Link>
@@ -86,8 +92,8 @@ function Footer() {
         </menu>
         <div className={styles.defultBtn}>
           <div className={styles.menuIcon}>
-            <div></div>
-            <div></div>
+            <div className={styles.spanIcon}></div>
+            <div className={styles.spanIcon}></div>
           </div>
           <span>{t("btnMenu")}</span>
         </div>
