@@ -6,36 +6,77 @@ import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import smallLogo from "/public/assets/smallLogo.svg";
 import Arrow from "/public/assets/Arrow_2.svg";
+import flagUSA from "/public/assets/flagUSA.png";
+import flagSaudiArabia from "/public/assets/flagSaudiArabia.png";
+import flagEgypt from "/public/assets/flagEgypt.png";
 
 function Footer() {
   const [isActive, setIsActive] = useState(false);
   const [menuWidth, setMenuWidth] = useState(0);
-  const [buttonWidth, setButtonWidth] = useState(133);
-  const [menuHeight, setmenuHeight] = useState(0);
+  const [buttonWidth, setButtonWidth] = useState(121);
+  const [menuHeight, setMenuHeight] = useState(0);
   const [buttonHeight, setButtonHeight] = useState(46);
+  const [isContactContainerActive, setIsContactContainerActive] =
+    useState(false);
 
   const handleButtonClick = () => {
-    setIsActive(!isActive);
+    if (!isContactContainerActive) {
+      setIsActive(!isActive);
+    }
+    if (isContactContainerActive) {
+      setIsContactContainerActive(false);
+    }
   };
 
   const handleButtonMouseLeave = () => {
     // setIsActive(false); // -----------> Close Menu On Mouse Leave
   };
 
+  const handleContactClick = () => {
+    setIsContactContainerActive(true);
+  };
+
   useEffect(() => {
     const defultBtn = document.querySelector(`.${styles.defultBtn}`);
     const Menu = document.querySelector(`.${styles.menu}`);
+    const contactContainer = document.querySelector(
+      `.${styles.contactContainer}`
+    );
 
     const updateDimensions = () => {
       if (defultBtn && Menu) {
         const defultBtnWidth = defultBtn.offsetWidth;
         const MenuWidth = Menu.offsetWidth;
         const defultBtnHeight = defultBtn.offsetHeight;
-        const MenuHeight = defultBtn.offsetHeight + Menu.offsetHeight;
+        const MenuHeight = defultBtnHeight + Menu.offsetHeight;
         setButtonWidth(defultBtnWidth);
         setMenuWidth(MenuWidth);
         setButtonHeight(defultBtnHeight);
-        setmenuHeight(MenuHeight);
+        setMenuHeight(MenuHeight);
+        Menu.style.visibility = "visible";
+        Menu.style.opacity = "1";
+        Menu.style.transition = "visibility 0.5s 0s, opacity 0.5s 1s";
+        // Menu.classList.remove(`${styles.hidden}`);
+        contactContainer.style.visibility = "hidden";
+        contactContainer.style.opacity = "0";
+        // contactContainer.classList.remove(`${styles.hidden}`);
+        contactContainer.style.transition =
+          "visibility 0.5s 0.6s, opacity 0.5s 0s";
+
+        if (contactContainer && isContactContainerActive) {
+          Menu.style.visibility = "hidden";
+          Menu.style.opacity = "0";
+          Menu.style.transition = "visibility 0.5s 0.5s, opacity 0.5s 0s";
+          // Menu.classList.add(`${styles.hidden}`);
+          contactContainer.style.visibility = "visible";
+          contactContainer.style.opacity = "1";
+          // contactContainer.classList.add(`${styles.hidden}`);
+          contactContainer.style.transition =
+            "visibility 0.5s 0s, opacity 0.5s 0.6s";
+          const contactContainerHeight = contactContainer.offsetHeight;
+          const newMenuHeight = defultBtnHeight + contactContainerHeight;
+          setMenuHeight(newMenuHeight);
+        }
       }
     };
 
@@ -48,7 +89,7 @@ function Footer() {
     return () => {
       window.removeEventListener("resize", updateDimensions);
     };
-  }, []);
+  }, [isContactContainerActive]);
 
   useEffect(() => {
     gsap.fromTo(
@@ -72,7 +113,6 @@ function Footer() {
     <footer className={`${styles.Footer} ${isArabic ? styles.ar : ""}`}>
       <button
         className={isActive ? styles.active : ""}
-        onClick={handleButtonClick}
         onMouseLeave={handleButtonMouseLeave}
         style={{
           width: isActive ? `${menuWidth}px` : `${buttonWidth}px`,
@@ -87,12 +127,27 @@ function Footer() {
             <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
           </Link>
           <Link className={styles.link} href="">
-            <div>Book a Demo</div>
-            <div>Book a Demo</div>
+            <span>Book a Demo</span>
+            <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
           </Link>
-          <Link className={styles.link} href="">
+          <div className={styles.link} onClick={handleContactClick}>
             <span>Contact</span>
-          </Link>
+            <svg
+              className={styles.Arrow}
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.24264 0.999974L5.48528 5.24261L1.24264 9.48526"
+                stroke="#414141"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
           <div className={styles.socialLinks}>
             <Link href="">Instagram</Link>
             <Link href="">Linkedin</Link>
@@ -102,8 +157,48 @@ function Footer() {
             2024 © LYERZ LLC. All rights reserved
           </span>
         </menu>
-        <div className={styles.defultBtn}>
-          <div className={styles.menuIcon}>
+        <div className={styles.contactContainer}>
+          <div className={styles.heading}>Contact</div>
+          <Link className={styles.email} href="mailto:hi@lyerz.com">
+            hi@lyerz.com
+          </Link>
+          <div className={styles.locations}>
+            <div className={styles.location}>
+              <Image src={flagUSA} alt="flagUSA" />
+              <p>
+                30 N GOULD, ST STE R SHERIDAN
+                <br />
+                WY 82801
+              </p>
+            </div>
+            <div className={styles.location}>
+              <Image src={flagSaudiArabia} alt="flagSaudiArabia" />
+              <p>
+                King Abdulaziz, Al Raed,
+                <br />
+                Riyadh 12354
+              </p>
+            </div>
+            <div className={styles.location}>
+              <Image src={flagEgypt} alt="flagEgypt" />
+              <p>
+                6, 5, 273,
+                <br />
+                Maadi, Cairo 11757
+              </p>
+            </div>
+          </div>
+          <div className={styles.line}></div>
+          <span className={styles.copyright}>
+            2024 © LYERZ LLC. All rights reserved
+          </span>
+        </div>
+        <div className={styles.defultBtn} onClick={handleButtonClick}>
+          <div
+            className={`${styles.menuIcon} ${
+              isContactContainerActive ? styles.ContainerActive : ""
+            }`}
+          >
             <div className={styles.spanIcon}></div>
             <div className={styles.spanIcon}></div>
           </div>
