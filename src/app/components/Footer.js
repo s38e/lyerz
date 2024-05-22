@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import smallLogo from "/public/assets/smallLogo.svg";
+import Arrow from "/public/assets/Arrow_2.svg";
 
 function Footer() {
   const [isActive, setIsActive] = useState(false);
@@ -80,13 +81,17 @@ function Footer() {
       >
         <menu className={styles.menu}>
           <Link className={styles.link} href="">
-            <Image src={smallLogo} alt="smallLogo" /> LYERZ Space
+            <span>
+              <Image src={smallLogo} alt="smallLogo" /> LYERZ Space
+            </span>
+            <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
           </Link>
           <Link className={styles.link} href="">
-            Book a Demo
+            <div>Book a Demo</div>
+            <div>Book a Demo</div>
           </Link>
           <Link className={styles.link} href="">
-            Contact
+            <span>Contact</span>
           </Link>
           <div className={styles.socialLinks}>
             <Link href="">Instagram</Link>

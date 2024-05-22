@@ -82,7 +82,7 @@
   text-align: center;
 }
 .HeroSection .hero_content .headTexts p span:nth-child(1) div {
-  top: -30px;
+  top: -25px;
   right: -25px;
   position: absolute;
   color: #001aff;
@@ -90,7 +90,7 @@
   font-size: 19px;
 }
 .HeroSection .hero_content .headTexts p span:nth-child(1) img {
-  top: -4px;
+  top: -2px;
   right: -25px;
   position: absolute;
   width: 17px;
