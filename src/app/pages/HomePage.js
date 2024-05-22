@@ -35,6 +35,7 @@ import card_work from "/public/assets/card_work.png";
 import card_services from "/public/assets/card_services.png";
 import card_about from "/public/assets/card_about.png";
 import card_plans from "/public/assets/card_plans.png";
+import Arrow from "/public/assets/Arrow.svg";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 import CircleOverlayWorkCard from "../components/CircleOverlayWorkCard";
@@ -241,7 +242,11 @@ function HomePage() {
                 <span>{t("header_2")}</span>
               </h2>
               <p>
-                <span>{t("header_3")}</span>
+                <span>
+                  {t("header_3")}
+                  <div>in days not months</div>
+                  <Image src={Arrow} alt="Arrow" />
+                </span>
                 <span>
                   See our top projects and discover how we turn ideas into
                   reality.

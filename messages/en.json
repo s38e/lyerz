@@ -2,7 +2,7 @@
   "Home": {
     "header_1": "All your design tasks in",
     "header_2": "one monthly subscription",
-    "header_3": "Empower your team with a tap designer and scale your design capabilities - in days not months.",
+    "header_3": "Empower your team with a tap designer and scale your design capabilities.",
     "card_1": "Work",
     "card_2": "Services",
     "card_3": "About us",
@@ -30,8 +30,7 @@
     "btn_4": "Plans",
     "btn_5": "Login",
     "language": "Arabic",
-    "notePart1": "*Disclaimer: We design for your users,",
-    "notePart2": "not just for you."
+    "notePart1": "Together we create."
   },
   "movingCircle": {
     "title": "Close"

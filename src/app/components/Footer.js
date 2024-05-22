@@ -4,6 +4,7 @@ import styles from "./styles/Footer.module.css";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
+import smallLogo from "/public/assets/smallLogo.svg";
 
 function Footer() {
   const [isActive, setIsActive] = useState(false);
@@ -17,7 +18,7 @@ function Footer() {
   };
 
   const handleButtonMouseLeave = () => {
-    setIsActive(false);
+    // setIsActive(false); // -----------> Close Menu On Mouse Leave
   };
 
   useEffect(() => {
@@ -79,15 +80,22 @@ function Footer() {
       >
         <menu className={styles.menu}>
           <Link className={styles.link} href="">
-            <span>LYERZ</span> Space
+            <Image src={smallLogo} alt="smallLogo" /> LYERZ Space
           </Link>
           <Link className={styles.link} href="">
             Book a Demo
           </Link>
+          <Link className={styles.link} href="">
+            Contact
+          </Link>
           <div className={styles.socialLinks}>
-            <Link href="">INSTAGRAM</Link>
-            <Link href="">LINKINDIN</Link>
+            <Link href="">Instagram</Link>
+            <Link href="">Linkedin</Link>
           </div>
+          <div className={styles.line}></div>
+          <span className={styles.copyright}>
+            2024 © LYERZ LLC. All rights reserved
+          </span>
         </menu>
         <div className={styles.defultBtn}>
           <div className={styles.menuIcon}>
@@ -97,11 +105,7 @@ function Footer() {
           <span>{t("btnMenu")}</span>
         </div>
       </button>
-      <p>
-        {t("notePart1")}
-        <br />
-        {t("notePart2")}
-      </p>
+      <p>{t("notePart1")}</p>
     </footer>
   );
 }
