@@ -308,6 +308,14 @@ function HomePage() {
                   height={100}
                 />
                 <p>{t("card_4")}</p>
+                <div className={styles.status}>
+                  <div className={styles.live_indicator}>
+                    <div className={styles.red_dot}></div>
+                    <div className={`${styles.pulse} ${styles.one}`}></div>
+                    <div className={`${styles.pulse} ${styles.tow}`}></div>
+                  </div>
+                  <p>Slots available</p>
+                </div>
               </button>
             </div>
           </div>

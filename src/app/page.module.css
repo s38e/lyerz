@@ -116,6 +116,7 @@
   z-index: 99;
 }
 .HeroSection .hero_content .hero_cards .card {
+  position: relative;
   border: 2px solid #f1f1f1;
   background-color: #f7f7f7;
   border-radius: 20px;
@@ -130,6 +131,64 @@
   font-family: "TerminaTest-Medium";
   cursor: pointer;
   opacity: 0;
+}
+.HeroSection .hero_content .hero_cards .card .status {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: -1.5rem;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.HeroSection .hero_content .hero_cards .card .status p {
+  font-family: "LufgaRegular";
+  font-size: 11px;
+  color: #626262;
+}
+.live_indicator {
+  width: 6px;
+  height: 6px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.live_indicator .red_dot,
+.live_indicator .pulse {
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-radius: 18px;
+  background-color: #2CE733;
+}
+
+.live_indicator .pulse {
+  animation-name: red-dot-scale-fade;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+.live_indicator .pulse.two {
+  animation-delay: 0.25s;
+}
+@keyframes red-dot-scale-fade {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
 }
 .HeroSection .hero_content .hero_cards .card:hover {
   flex: 1.4 1.4 0;
