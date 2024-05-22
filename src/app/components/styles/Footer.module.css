@@ -36,7 +36,7 @@
   font-family: "LufgaMedium";
   /* cubic-bezier(0.755, 0.001, 0.855, 0.001) */
   transition: height 0.7s 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955),
-    width 0.5s 1.6s;
+    width 0.5s 1.7s;
   bottom: calc(68px + 16px);
   z-index: 999;
   opacity: 0;

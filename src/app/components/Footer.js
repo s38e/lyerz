@@ -66,7 +66,7 @@ function Footer() {
           contactContainer.style.visibility = "visible";
           contactContainer.style.opacity = "1";
           contactContainer.style.transition =
-            "visibility 0.5s 0s, opacity 0.5s 0.6s";
+            "visibility 0.5s 0s, opacity 0.5s 0.5s";
           const contactContainerHeight = contactContainer.offsetHeight;
           const newMenuHeight = defultBtnHeight + contactContainerHeight;
           setMenuHeight(newMenuHeight);
@@ -74,15 +74,16 @@ function Footer() {
         if (isMenuActive) {
           Menu.style.visibility = "visible";
           Menu.style.opacity = "1";
-          Menu.style.transition = "visibility 0.5s 0s, opacity 0.5s 1s";
+          Menu.style.transition = "visibility 0.5s 0s, opacity 0.5s 0.9s";
           contactContainer.style.visibility = "hidden";
           contactContainer.style.opacity = "0";
           contactContainer.style.transition =
-            "visibility 0.5s 0.6s, opacity 0.5s 0s";
+            "visibility 0.5s 0.5s, opacity 0.5s 0s";
         }
         if (!isMenuActive) {
           Menu.style.visibility = "hidden";
           Menu.style.opacity = "0";
+          Menu.style.transition = "visibility 0.5s 1.4s, opacity 0.5s 1.4s";
         }
       }
     };
