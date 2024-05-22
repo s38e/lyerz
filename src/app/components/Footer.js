@@ -16,25 +16,30 @@ function Footer() {
   const [buttonWidth, setButtonWidth] = useState(121);
   const [menuHeight, setMenuHeight] = useState(0);
   const [buttonHeight, setButtonHeight] = useState(46);
+  const [isMenuActive, setIsMenuActive] = useState(false);
   const [isContactContainerActive, setIsContactContainerActive] =
     useState(false);
-
-  const handleButtonClick = () => {
-    if (!isContactContainerActive) {
-      setIsActive(!isActive);
-    }
-    if (isContactContainerActive) {
-      setIsContactContainerActive(false);
-    }
-  };
 
   const handleButtonMouseLeave = () => {
     // setIsActive(false); // -----------> Close Menu On Mouse Leave
   };
 
+  const handleButtonClick = () => {
+    setIsActive(!isActive);
+    setIsMenuActive(!isActive);
+  };
+
   const handleContactClick = () => {
+    setIsMenuActive(false);
     setIsContactContainerActive(true);
   };
+
+  const handleButtonClickToBack = () => {
+    setIsContactContainerActive(false);
+    setIsMenuActive(true);
+  };
+
+  console.log(isMenuActive);
 
   useEffect(() => {
     const defultBtn = document.querySelector(`.${styles.defultBtn}`);
@@ -44,7 +49,7 @@ function Footer() {
     );
 
     const updateDimensions = () => {
-      if (defultBtn && Menu) {
+      if (defultBtn && Menu && contactContainer) {
         const defultBtnWidth = defultBtn.offsetWidth;
         const MenuWidth = Menu.offsetWidth;
         const defultBtnHeight = defultBtn.offsetHeight;
@@ -53,29 +58,31 @@ function Footer() {
         setMenuWidth(MenuWidth);
         setButtonHeight(defultBtnHeight);
         setMenuHeight(MenuHeight);
-        Menu.style.visibility = "visible";
-        Menu.style.opacity = "1";
-        Menu.style.transition = "visibility 0.5s 0s, opacity 0.5s 1s";
-        // Menu.classList.remove(`${styles.hidden}`);
-        contactContainer.style.visibility = "hidden";
-        contactContainer.style.opacity = "0";
-        // contactContainer.classList.remove(`${styles.hidden}`);
-        contactContainer.style.transition =
-          "visibility 0.5s 0.6s, opacity 0.5s 0s";
 
-        if (contactContainer && isContactContainerActive) {
+        if (isContactContainerActive) {
           Menu.style.visibility = "hidden";
           Menu.style.opacity = "0";
           Menu.style.transition = "visibility 0.5s 0.5s, opacity 0.5s 0s";
-          // Menu.classList.add(`${styles.hidden}`);
           contactContainer.style.visibility = "visible";
           contactContainer.style.opacity = "1";
-          // contactContainer.classList.add(`${styles.hidden}`);
           contactContainer.style.transition =
             "visibility 0.5s 0s, opacity 0.5s 0.6s";
           const contactContainerHeight = contactContainer.offsetHeight;
           const newMenuHeight = defultBtnHeight + contactContainerHeight;
           setMenuHeight(newMenuHeight);
+        }
+        if (isMenuActive) {
+          Menu.style.visibility = "visible";
+          Menu.style.opacity = "1";
+          Menu.style.transition = "visibility 0.5s 0s, opacity 0.5s 1s";
+          contactContainer.style.visibility = "hidden";
+          contactContainer.style.opacity = "0";
+          contactContainer.style.transition =
+            "visibility 0.5s 0.6s, opacity 0.5s 0s";
+        }
+        if (!isMenuActive) {
+          Menu.style.visibility = "hidden";
+          Menu.style.opacity = "0";
         }
       }
     };
@@ -89,7 +96,7 @@ function Footer() {
     return () => {
       window.removeEventListener("resize", updateDimensions);
     };
-  }, [isContactContainerActive]);
+  }, [isContactContainerActive, isMenuActive]);
 
   useEffect(() => {
     gsap.fromTo(
@@ -193,7 +200,14 @@ function Footer() {
             2024 © LYERZ LLC. All rights reserved
           </span>
         </div>
-        <div className={styles.defultBtn} onClick={handleButtonClick}>
+        <div
+          className={styles.defultBtn}
+          onClick={
+            isContactContainerActive
+              ? handleButtonClickToBack
+              : handleButtonClick
+          }
+        >
           <div
             className={`${styles.menuIcon} ${
               isContactContainerActive ? styles.ContainerActive : ""

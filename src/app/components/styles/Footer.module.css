@@ -148,9 +148,8 @@
   flex-direction: column;
   gap: 1rem;
   padding: 1.5rem;
-  visibility: hidden;
   transition: visibility 0s 1.4s linear;
-  /* z-index: 1; */
+  visibility: hidden;
 }
 .Footer button.active .menu {
   transition: visibility 0s 0.8s linear;
@@ -330,7 +329,6 @@
   top: 0;
   left: 0;
   padding: 1.5rem;
-  /* padding-bottom: 0; */
   display: flex;
   align-items: center;
   justify-content: flex-start;

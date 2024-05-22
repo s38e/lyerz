@@ -1091,4 +1091,5 @@
 .HeroSection .overlayPlansCard .contanier .note .content p {
   font-weight: 500;
   line-height: 1.25;
+  visibility: hidden;
 }
