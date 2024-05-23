@@ -46,9 +46,6 @@
   flex-direction: column;
   gap: 3rem;
   position: relative;
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
 }
 .HeroSection .hero_content .headTexts {
   display: flex;
@@ -68,43 +65,44 @@
 .HeroSection .hero_content .headTexts h2 span {
   color: #a7a7a7;
 }
-.HeroSection .hero_content .headTexts p {
+.HeroSection .hero_content .headTexts div {
   font-family: "LufgaRegular";
   direction: ltr;
   color: #a7a7a7;
   opacity: 0;
 }
-.HeroSection .hero_content .headTexts p span {
+.HeroSection .hero_content .headTexts div span {
   position: relative;
   transition: opacity 0.5s;
   width: 100%;
   display: inline-block;
   text-align: center;
 }
-.HeroSection .hero_content .headTexts p span:nth-child(1) div {
+.HeroSection .hero_content .headTexts div span:nth-child(1) p {
   top: -25px;
   right: -25px;
   position: absolute;
   color: #001aff;
   font-family: "sweet-purple";
-  font-size: 19px;
+  font-size: 20px;
+  opacity: 1;
+  line-height: 1;
 }
-.HeroSection .hero_content .headTexts p span:nth-child(1) img {
+.HeroSection .hero_content .headTexts div span:nth-child(1) img {
   top: -2px;
   right: -25px;
   position: absolute;
   width: 17px;
   height: auto;
 }
-.HeroSection .hero_content .headTexts p span:nth-child(2) {
+.HeroSection .hero_content .headTexts div span:nth-child(2) {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
   opacity: 0;
-  /* transition-delay: 0.4s; */
 }
-.HeroSection.ar .hero_content .headTexts p {
+.HeroSection.ar .hero_content .headTexts div {
   direction: rtl;
 }
 .HeroSection .hero_content .hero_cards {
@@ -163,7 +161,7 @@
   height: 6px;
   width: 6px;
   border-radius: 18px;
-  background-color: #2CE733;
+  background-color: #2ce733;
 }
 
 .live_indicator .pulse {
@@ -201,7 +199,7 @@
   object-fit: contain;
 }
 .HeroSection .hero_content .hero_cards .card p {
-  font-family: "TerminaTest-Medium";
+  font-family: "LufgaRegular";
   color: #626262;
   font-size: 16px;
 }
@@ -288,7 +286,6 @@
 /* ---------------- cardsServicesCard ---------------- */
 .HeroSection .cardsServicesCard {
   gap: 0.5rem;
-  /* background-color: white; */
   width: 53rem;
   height: 13rem;
   position: absolute;
@@ -331,12 +328,6 @@
   align-self: stretch;
   text-align: start;
 }
-/* .HeroSection .cardsServicesCard .card:nth-child(3) p br {
-  display: none;
-} */
-.HeroSection.ar .cardsServicesCard .card p {
-  text-align: end;
-}
 .HeroSection .cardsServicesCard .card img {
   border-radius: 12px;
   max-width: 100%;
@@ -374,7 +365,6 @@
   width: 100%;
   max-width: 51rem;
   height: 35vh;
-  /* display: none; */
   position: absolute;
   top: auto;
   bottom: 0%;
@@ -500,9 +490,6 @@
   align-self: stretch;
   text-align: start;
   font-family: "LufgaRegular";
-}
-.HeroSection.ar .hero_content .hero_cards .cardsPlansCard .plan_tag {
-  text-align: end;
 }
 .HeroSection .hero_content .hero_cards .cardsPlansCard.active .plan_tag {
   opacity: 1;
@@ -822,7 +809,6 @@
   text-align: center;
   font-size: 0.875rem;
   color: #a7a7a7;
-  /* font-weight: 600; */
 }
 .HeroSection .overlayAboutCard .contanier .text {
   color: #727272;
@@ -834,7 +820,6 @@
   width: 100%;
   flex-direction: column;
   border-radius: 12px;
-  /* overflow: hidden; */
 }
 .HeroSection .overlayAboutCard .contanier .about_summary .heading {
   color: #727272;
@@ -879,7 +864,6 @@
   .item
   .texts
   p:nth-child(1) {
-  font-weight: 600;
   color: black;
   font-family: "TerminaTest-Medium";
 }
@@ -1010,7 +994,6 @@
 .HeroSection .overlayPlansCard .contanier .plans .plan .pricingContent {
   gap: 1rem;
   flex-direction: column;
-  /* font-weight: 600; */
   display: flex;
 }
 .HeroSection
@@ -1091,5 +1074,55 @@
 .HeroSection .overlayPlansCard .contanier .note .content p {
   font-weight: 500;
   line-height: 1.25;
-  visibility: hidden;
+}
+/* --------------------- Arabic Styles --------------------- */
+.HeroSection.ar .hero_content .headTexts div span:nth-child(1) p {
+  left: -28px;
+  top: -20px;
+  font-size: 15px;
+  right: unset;
+}
+.HeroSection.ar .hero_content .headTexts div span:nth-child(1) img {
+  left: -25px;
+  right: unset;
+  transform: scaleX(-1);
+}
+.HeroSection.ar .hero_content .hero_cards .cardsPlansCard {
+  left: -32%;
+  right: auto;
+}
+.HeroSection.ar
+  .hero_content
+  .hero_cards
+  .cardsPlansCard
+  .plan_tag:nth-child(1) {
+  left: -10%;
+}
+.HeroSection.ar
+  .hero_content
+  .hero_cards
+  .cardsPlansCard
+  .plan_tag:nth-child(3) {
+  left: -5%;
+}
+.HeroSection.ar
+  .hero_content
+  .hero_cards
+  .cardsPlansCard
+  .plan_tag:nth-child(4) {
+  left: -10%;
+}
+.HeroSection.ar
+  .hero_content
+  .hero_cards
+  .cardsPlansCard.active
+  .plan_tag:nth-child(1) {
+  transform: rotate(2deg);
+}
+.HeroSection.ar
+  .hero_content
+  .hero_cards
+  .cardsPlansCard.active
+  .plan_tag:nth-child(4) {
+  transform: rotate(-2deg);
 }

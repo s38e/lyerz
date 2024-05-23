@@ -3,6 +3,7 @@
     "header_1": "All your design tasks in",
     "header_2": "one monthly subscription",
     "header_3": "Empower your team with a tap designer and scale your design capabilities.",
+    "absoluteTitle": "in days not months",
     "card_1": "Work",
     "card_2": "Services",
     "card_3": "About us",
@@ -24,12 +25,12 @@
   },
   "Footer": {
     "btnMenu": "Menu",
-    "btn_1": "Work",
-    "btn_2": "Services",
-    "btn_3": "About",
-    "btn_4": "Plans",
-    "btn_5": "Login",
-    "language": "Arabic",
+    "btn_1": "LYERZ Space",
+    "btn_2": "Book a Demo",
+    "btn_3": "Contact",
+    "socialInstagram": "Instagram",
+    "socialLinkedin": "Linkedin",
+    "copyright": "2024 © LYERZ LLC. All rights reserved",
     "notePart1": "Together we create."
   },
   "movingCircle": {

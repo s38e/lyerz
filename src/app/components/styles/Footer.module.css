@@ -216,7 +216,6 @@
 .Footer button.active .menu .link:nth-child(3) {
   transition: transform 0.8s 1.4s, opacity 0.8s 1.4s, box-shadow 0.25s linear;
 }
-/* --------------------- link 1 --------------------- */
 .Footer button .menu .link .Arrow {
   position: absolute;
   height: 17px;
@@ -237,7 +236,6 @@
   transform: translate(-2rem, -50%) scale(1);
   opacity: 1;
 }
-/* --------------------- link 1 --------------------- */
 .Footer button .menu .socialLinks {
   margin-top: 1.5rem;
   display: flex;
@@ -407,4 +405,43 @@
 }
 .Footer button.active .contactContainer.hidden {
   background-color: red;
+}
+/* --------------------- Arabic Styles --------------------- */
+.Footer.ar button .defultBtn span {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+.Footer.ar button.active .defultBtn .menuIcon,
+.Footer.ar button .defultBtn:hover .menuIcon {
+  transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(50%) rotate(-90deg);
+  left: -50%;
+}
+.Footer.ar button.active .defultBtn span,
+.Footer.ar button .defultBtn:hover span {
+  position: relative;
+  transform: translateX(20px);
+  opacity: 0;
+}
+.Footer.ar button.active .defultBtn .menuIcon .spanIcon:nth-child(1) {
+  transform: translateY(0.5px) rotate(-45deg);
+}
+.Footer.ar button.active .defultBtn .menuIcon .spanIcon:nth-child(2) {
+  transform: translateY(-0.5px) rotate(45deg);
+}
+.Footer.ar
+  button.active
+  .defultBtn
+  .menuIcon.ContainerActive
+  .spanIcon:nth-child(1) {
+  transform: translateX(2.5px) translateY(0.5px) rotate(-45deg);
+  width: 50%;
+}
+.Footer.ar
+  button.active
+  .defultBtn
+  .menuIcon.ContainerActive
+  .spanIcon:nth-child(2) {
+  width: 50%;
+  transform: translateX(-2.5px) translateY(-0.5px) rotate(45deg);
 }

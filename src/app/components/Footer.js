@@ -2,13 +2,14 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styles from "./styles/Footer.module.css";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import gsap from "gsap";
 import smallLogo from "/public/assets/smallLogo.svg";
 import Arrow from "/public/assets/Arrow_2.svg";
 import flagUSA from "/public/assets/flagUSA.png";
 import flagSaudiArabia from "/public/assets/flagSaudiArabia.png";
 import flagEgypt from "/public/assets/flagEgypt.png";
+import { getLangDir } from "rtl-detect";
 
 function Footer() {
   const [isActive, setIsActive] = useState(false);
@@ -38,8 +39,6 @@ function Footer() {
     setIsContactContainerActive(false);
     setIsMenuActive(true);
   };
-
-  console.log(isMenuActive);
 
   useEffect(() => {
     const defultBtn = document.querySelector(`.${styles.defultBtn}`);
@@ -114,11 +113,14 @@ function Footer() {
 
   const t = useTranslations("Footer");
 
-  const pathName = window.location.pathname;
-  const isArabic = pathName.includes("/ar");
+  // ---------------- Check the language to determine the style ---------------- //
+  const locale = useLocale();
+  const direction = getLangDir(locale);
 
   return (
-    <footer className={`${styles.Footer} ${isArabic ? styles.ar : ""}`}>
+    <footer
+      className={`${styles.Footer} ${direction === "rtl" ? styles.ar : ""}`}
+    >
       <button
         className={isActive ? styles.active : ""}
         onMouseLeave={handleButtonMouseLeave}
@@ -130,16 +132,16 @@ function Footer() {
         <menu className={styles.menu}>
           <Link className={styles.link} href="">
             <span>
-              <Image src={smallLogo} alt="smallLogo" /> LYERZ Space
+              <Image src={smallLogo} alt="smallLogo" /> {t("btn_1")}
             </span>
             <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
           </Link>
           <Link className={styles.link} href="">
-            <span>Book a Demo</span>
+            <span>{t("btn_2")}</span>
             <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
           </Link>
           <div className={styles.link} onClick={handleContactClick}>
-            <span>Contact</span>
+            <span>{t("btn_3")}</span>
             <svg
               className={styles.Arrow}
               width="6"
@@ -151,22 +153,20 @@ function Footer() {
               <path
                 d="M1.24264 0.999974L5.48528 5.24261L1.24264 9.48526"
                 stroke="#414141"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>
           <div className={styles.socialLinks}>
-            <Link href="">Instagram</Link>
-            <Link href="">Linkedin</Link>
+            <Link href="">{t("socialInstagram")}</Link>
+            <Link href="">{t("socialLinkedin")}</Link>
           </div>
           <div className={styles.line}></div>
-          <span className={styles.copyright}>
-            2024 © LYERZ LLC. All rights reserved
-          </span>
+          <span className={styles.copyright}>{t("copyright")} </span>
         </menu>
         <div className={styles.contactContainer}>
-          <div className={styles.heading}>Contact</div>
+          <div className={styles.heading}>{t("btn_3")}</div>
           <Link className={styles.email} href="mailto:hi@lyerz.com">
             hi@lyerz.com
           </Link>
@@ -197,9 +197,7 @@ function Footer() {
             </div>
           </div>
           <div className={styles.line}></div>
-          <span className={styles.copyright}>
-            2024 © LYERZ LLC. All rights reserved
-          </span>
+          <span className={styles.copyright}>{t("copyright")} </span>
         </div>
         <div
           className={styles.defultBtn}
