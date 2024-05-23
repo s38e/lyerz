@@ -445,3 +445,24 @@
   width: 50%;
   transform: translateX(-2.5px) translateY(-0.5px) rotate(45deg);
 }
+.Footer.ar button .menu .link:nth-child(3) .Arrow {
+  transform: translate(5rem, -50%) scale(0.5) scaleX(-1);
+}
+.Footer.ar button .menu .link .Arrow {
+  transform: translate(2.5rem, -50%) scale(0.5) scaleX(-1);
+  right: unset;
+  left: 0;
+}
+.Footer.ar button .menu .link:hover .Arrow {
+  transition: 0.4s 0.1s;
+  transform: translate(1.5rem, -50%) scale(1) scaleX(-1);
+  opacity: 1;
+}
+.Footer.ar button .menu .link:hover span {
+  margin-left: 15px;
+  margin-right: 0;
+  transition: 0.4s 0.1s;
+}
+.Footer.ar button .menu .copyright {
+  font-size: unset;
+}
