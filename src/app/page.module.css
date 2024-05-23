@@ -48,6 +48,7 @@
   position: relative;
 }
 .HeroSection .hero_content .headTexts {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
