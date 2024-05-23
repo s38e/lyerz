@@ -140,6 +140,7 @@ function Footer() {
             <span>{t("btn_2")}</span>
             <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
           </Link>
+
           <div className={styles.link} onClick={handleContactClick}>
             <span>{t("btn_3")}</span>
             <svg
@@ -158,6 +159,13 @@ function Footer() {
               />
             </svg>
           </div>
+          {/* <Link
+            className={styles.link}
+            href={direction === "rtl" ? "/en" : "/ar"}
+          >
+            <span>{t("language")}</span>
+            <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
+          </Link> */}
           <div className={styles.socialLinks}>
             <Link href="">{t("socialInstagram")}</Link>
             <Link href="">{t("socialLinkedin")}</Link>

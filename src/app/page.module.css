@@ -81,13 +81,12 @@
 }
 .HeroSection .hero_content .headTexts div span:nth-child(1) p {
   top: -25px;
-  right: -25px;
+  right: -80px;
   position: absolute;
   color: #001aff;
   font-family: "sweet-purple";
   font-size: 20px;
   opacity: 1;
-  line-height: 1;
 }
 .HeroSection .hero_content .headTexts div span:nth-child(1) img {
   top: -2px;
