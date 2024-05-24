@@ -21,20 +21,20 @@ import img_2_overlayWork from "/public/assets/img_2_overlayWork.png";
 import img_3_overlayWork from "/public/assets/img_3_overlayWork.png";
 import img_4_overlayWork from "/public/assets/img_4_overlayWork.png";
 import img_5_overlayWork from "/public/assets/img_5_overlayWork.png";
-import img_6_overlayWork from "/public/assets/img_6_overlayWork.png";
-import img_7_overlayWork from "/public/assets/img_7_overlayWork.png";
-import img_8_overlayWork from "/public/assets/img_8_overlayWork.png";
-import img_9_overlayWork from "/public/assets/img_9_overlayWork.png";
-import img_10_overlayWork from "/public/assets/img_10_overlayWork.png";
-import img_11_overlayWork from "/public/assets/img_11_overlayWork.png";
-import img_12_overlayWork from "/public/assets/img_12_overlayWork.png";
-import img_13_overlayWork from "/public/assets/img_13_overlayWork.png";
+import img_6_overlayWork from "/public/assets/img_6_overlayWork.webp";
+import img_7_overlayWork from "/public/assets/img_7_overlayWork.webp";
+import img_8_overlayWork from "/public/assets/img_8_overlayWork.webp";
+import img_9_overlayWork from "/public/assets/img_9_overlayWork.webp";
+import img_10_overlayWork from "/public/assets/img_10_overlayWork.webp";
+import img_11_overlayWork from "/public/assets/img_11_overlayWork.webp";
+import img_12_overlayWork from "/public/assets/img_12_overlayWork.webp";
+import img_13_overlayWork from "/public/assets/img_13_overlayWork.webp";
 import img_1_overlayAbout from "/public/assets/img_1_overlayAbout.png";
 import img_2_overlayAbout from "/public/assets/img_2_overlayAbout.png";
 import card_work from "/public/assets/card_work.png";
 import card_services from "/public/assets/card_services.png";
-import card_about from "/public/assets/card_about.png";
-import card_plans from "/public/assets/card_plans.png";
+import card_about from "/public/assets/card_about.webp";
+import card_plans from "/public/assets/card_plans.webp";
 import Arrow from "/public/assets/Arrow.svg";
 import { useLocale, useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
@@ -152,33 +152,33 @@ function HomePage() {
     gsap.fromTo(
       `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} h2`,
       { opacity: 0, y: 100 },
-      { opacity: 1, delay: 0.8, y: 0, duration: 1.25, ease: "power4.out" }
+      { opacity: 1, delay: 0.4, y: 0, duration: 1.25, ease: "power4.out" }
     );
     gsap.fromTo(
       `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} div`,
       { opacity: 0, y: 100 },
-      { opacity: 1, delay: 1, y: 0, duration: 1.25, ease: "power4.out" }
+      { opacity: 1, delay: 0.5, y: 0, duration: 1.25, ease: "power4.out" }
     );
     // ---------------- Animation Cards ---------------- //
     gsap.fromTo(
       `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(2)`,
       { opacity: 0, y: 100 },
-      { opacity: 1, delay: 1.3, y: 0, duration: 1.25, ease: "power4.out" }
+      { opacity: 1, delay: 0.6, y: 0, duration: 1.25, ease: "power4.out" }
     );
     gsap.fromTo(
       `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(3)`,
       { opacity: 0, y: 100 },
-      { opacity: 1, delay: 1.5, y: 0, duration: 1.25, ease: "power4.out" }
+      { opacity: 1, delay: 0.7, y: 0, duration: 1.25, ease: "power4.out" }
     );
     gsap.fromTo(
       `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(4)`,
       { opacity: 0, y: 100 },
-      { opacity: 1, delay: 1.7, y: 0, duration: 1.25, ease: "power4.out" }
+      { opacity: 1, delay: 0.8, y: 0, duration: 1.25, ease: "power4.out" }
     );
     gsap.fromTo(
       `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(5)`,
       { opacity: 0, y: 100 },
-      { opacity: 1, delay: 1.9, y: 0, duration: 1.25, ease: "power4.out" }
+      { opacity: 1, delay: 0.9, y: 0, duration: 1.25, ease: "power4.out" }
     );
   }, []);
 

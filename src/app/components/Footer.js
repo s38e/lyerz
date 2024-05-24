@@ -107,7 +107,7 @@ function Footer() {
     gsap.fromTo(
       `.${styles.Footer} p`,
       { opacity: 0, y: 100 },
-      { opacity: 1, delay: 0.3, y: 0, duration: 1.25, ease: "power4.out" }
+      { opacity: 1, delay: 0.2, y: 0, duration: 1.25, ease: "power4.out" }
     );
   }, []);
 

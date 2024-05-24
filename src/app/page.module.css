@@ -64,12 +64,12 @@
   opacity: 0;
 }
 .HeroSection .hero_content .headTexts h2 span {
-  color: #a7a7a7;
+  color: #b0b0b0;
 }
 .HeroSection .hero_content .headTexts div {
   font-family: "LufgaRegular";
   direction: ltr;
-  color: #a7a7a7;
+  color: #b0b0b0;
   opacity: 0;
 }
 .HeroSection .hero_content .headTexts div span {
@@ -792,7 +792,7 @@
   .heading
   p:nth-child(2) {
   font-size: 0.875rem;
-  color: #a7a7a7;
+  color: #b0b0b0;
 }
 .HeroSection .overlayAboutCard .contanier .about_teamCards .card .country_flag {
   gap: 0.5rem;
@@ -808,7 +808,7 @@
   p {
   text-align: center;
   font-size: 0.875rem;
-  color: #a7a7a7;
+  color: #b0b0b0;
 }
 .HeroSection .overlayAboutCard .contanier .text {
   color: #727272;
