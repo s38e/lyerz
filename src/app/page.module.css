@@ -2,18 +2,22 @@
 @font-face {
   font-family: "TerminaTest-Demi";
   src: url(/fonts/TerminaTest/TerminaTest-Demi.otf);
+  font-display: swap;
 }
 @font-face {
   font-family: "TerminaTest-Medium";
   src: url(/fonts/TerminaTest/TerminaTest-Medium.otf);
+  font-display: swap;
 }
 @font-face {
   font-family: "LufgaRegular";
   src: url(/fonts/Lufga/LufgaRegular.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: "sweet-purple";
   src: url(/fonts/sweet-purple.otf);
+  font-display: swap;
 }
 /* ---------------- Page ---------------- */
 .page {

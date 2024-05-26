@@ -2,14 +2,17 @@
 @font-face {
   font-family: "TerminaTest-Demi";
   src: url(/fonts/TerminaTest/TerminaTest-Demi.otf);
+  font-display: swap;
 }
 @font-face {
   font-family: "TerminaTest-bold";
   src: url(/fonts/TerminaTest/TerminaTest-bold.otf);
+  font-display: swap;
 }
 @font-face {
   font-family: "LufgaRegular";
   src: url(/fonts/Lufga/LufgaRegular.ttf);
+  font-display: swap;
 }
 /* ---------------- Service ---------------- */
 .service {

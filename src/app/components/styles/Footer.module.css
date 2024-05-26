@@ -1,15 +1,15 @@
 /* ---------------- Font ---------------- */
 @font-face {
   font-family: "LufgaMedium";
-  src: url(/fonts/Lufga/LufgaMedium.ttf);
+  src: url(/fonts/Lufga/LufgaMedium.ttf);font-display: swap;
 }
 @font-face {
   font-family: "LufgaRegular";
-  src: url(/fonts/Lufga/LufgaRegular.ttf);
+  src: url(/fonts/Lufga/LufgaRegular.ttf);font-display: swap;
 }
 @font-face {
   font-family: "TerminaTest-Medium";
-  src: url(/fonts/TerminaTest/TerminaTest-Medium.otf);
+  src: url(/fonts/TerminaTest/TerminaTest-Medium.otf);font-display: swap;
 }
 /* ---------------- Footer ---------------- */
 .Footer {
