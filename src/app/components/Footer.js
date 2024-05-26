@@ -6,9 +6,9 @@ import { useLocale, useTranslations } from "next-intl";
 import gsap from "gsap";
 import smallLogo from "/public/assets/smallLogo.svg";
 import Arrow from "/public/assets/Arrow_2.svg";
-import flagUSA from "/public/assets/flagUSA.png";
-import flagSaudiArabia from "/public/assets/flagSaudiArabia.png";
-import flagEgypt from "/public/assets/flagEgypt.png";
+import flagUSA from "/public/assets/flagUSA.webp";
+import flagSaudiArabia from "/public/assets/flagSaudiArabia.webp";
+import flagEgypt from "/public/assets/flagEgypt.webp";
 import { getLangDir } from "rtl-detect";
 
 function Footer() {
