@@ -1,26 +1,29 @@
 /* ---------------- Font ---------------- */
 @font-face {
   font-family: "LufgaMedium";
-  src: url(/fonts/Lufga/LufgaMedium.ttf);font-display: swap;
+  src: url(/fonts/Lufga/LufgaMedium.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: "LufgaRegular";
-  src: url(/fonts/Lufga/LufgaRegular.ttf);font-display: swap;
+  src: url(/fonts/Lufga/LufgaRegular.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: "TerminaTest-Medium";
-  src: url(/fonts/TerminaTest/TerminaTest-Medium.otf);font-display: swap;
+  src: url(/fonts/TerminaTest/TerminaTest-Medium.otf);
+  font-display: swap;
 }
 /* ---------------- Footer ---------------- */
 .Footer {
+  position: absolute;
+  bottom: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  gap: 1.5rem;
-  position: relative;
-  /* z-index: 101; */
+  gap: 4rem;
   font-family: "LufgaMedium" !important;
 }
 .Footer button {
@@ -32,7 +35,6 @@
   backdrop-filter: blur(7px);
   color: #626262;
   border-radius: 2rem;
-  position: absolute;
   font-family: "LufgaMedium";
   /* cubic-bezier(0.755, 0.001, 0.855, 0.001) */
   transition: height 0.7s 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955),

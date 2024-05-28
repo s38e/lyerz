@@ -43,6 +43,10 @@
   font-family: "LufgaRegular";
   position: relative;
 }
+.HeroSection .substituteFooter {
+  height: 50px;
+  width: 100%;
+}
 .HeroSection .hero_content {
   display: flex;
   align-items: center;
@@ -650,7 +654,6 @@
   display: flex;
 }
 .HeroSection .overlayServicesCard .contanier .head h2 {
-  text-align: left;
   font-size: 1.75rem;
   font-weight: 600;
   line-height: 1;

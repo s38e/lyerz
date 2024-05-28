@@ -322,6 +322,7 @@ function HomePage() {
           </div>
         </div>
         <Footer />
+        <div className={styles.substituteFooter}></div>
         {/* ---------------- Images Work Card ---------------- */}
         <div
           className={`${styles.imagesWorkCard} ${
