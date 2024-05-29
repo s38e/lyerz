@@ -233,9 +233,22 @@
   transition: 0.4s 0s;
   z-index: -1;
 }
-.Footer button .menu .link:hover span {
+.Footer button .menu .link:hover .span {
   margin-right: 11px;
   transition: 0.4s 0.1s;
+}
+.Footer button .menu .link .span span {
+  position: relative;
+  font-family: "TerminaTest-Medium";
+  margin-right: 5px;
+}
+.Footer button .menu .link .span span::before {
+  content: "TM";
+  position: absolute;
+  top: 0px;
+  right: -7px;
+  font-size: 4.5px;
+  font-family: "LufgaRegular";
 }
 .Footer button .menu .link:hover .Arrow {
   transition: 0.4s 0.1s;
@@ -464,7 +477,7 @@
   transform: translate(1.5rem, -50%) scale(1) scaleX(-1);
   opacity: 1;
 }
-.Footer.ar button .menu .link:hover span {
+.Footer.ar button .menu .link:hover .span {
   margin-left: 15px;
   margin-right: 0;
   transition: 0.4s 0.1s;

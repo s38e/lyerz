@@ -9,7 +9,7 @@ function NavBar() {
   useEffect(() => {
     // ---------------- Animation HeadTexts ---------------- //
     gsap.fromTo(
-      `.${styles.NavBar} a img`,
+      `.${styles.NavBar} a`,
       { opacity: 0, y: -100 },
       { opacity: 1, delay: 0.3, y: 0, duration: 1.25, ease: "power4.out" }
     );
@@ -19,6 +19,9 @@ function NavBar() {
     <nav className={styles.NavBar}>
       <Link href="/">
         <Image src={logo_4_round} alt="Lyerz Logo" width={100} height={100} />
+        <p>
+          <span>Lyerz</span>
+        </p>
       </Link>
     </nav>
   );

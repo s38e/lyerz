@@ -4,10 +4,10 @@
     "header_2": "one monthly subscription",
     "header_3": "Empower your team with a tap designer and scale your design capabilities.",
     "absoluteTitle": "in days not months",
-    "card_1": "Work",
-    "card_2": "Services",
-    "card_3": "About us",
-    "card_4": "Plans"
+    "card_1": "work",
+    "card_2": "services",
+    "card_3": "about us",
+    "card_4": "plans"
   },
   "servicesCards": {
     "card_1_part1": "Mobile &",
@@ -25,7 +25,8 @@
   },
   "Footer": {
     "btnMenu": "Menu",
-    "btn_1": "LYERZ Space",
+    "btn_1_part_1": "LYERZ",
+    "btn_1_part_2": "Space",
     "btn_2": "Book a Demo",
     "btn_3": "Contact",
     "socialInstagram": "Instagram",

@@ -6,9 +6,9 @@ import { useLocale, useTranslations } from "next-intl";
 import gsap from "gsap";
 import smallLogo from "/public/assets/smallLogo.svg";
 import Arrow from "/public/assets/Arrow_2.svg";
-import flagUSA from "/public/assets/flagUSA.webp";
-import flagSaudiArabia from "/public/assets/flagSaudiArabia.webp";
-import flagEgypt from "/public/assets/flagEgypt.webp";
+import flagUSA from "/public/assets/flagUSA.svg";
+import flagSaudiArabia from "/public/assets/flagSaudiArabia.svg";
+import flagEgypt from "/public/assets/flagEgypt.svg";
 import { getLangDir } from "rtl-detect";
 
 function Footer() {
@@ -131,18 +131,18 @@ function Footer() {
       >
         <menu className={styles.menu}>
           <Link className={styles.link} href="">
-            <span>
-              <Image src={smallLogo} alt="smallLogo" /> {t("btn_1")}
+            <span className={styles.span}>
+              <span>{t("btn_1_part_1")}</span> {t("btn_1_part_2")}
             </span>
             <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
           </Link>
           <Link className={styles.link} href="">
-            <span>{t("btn_2")}</span>
+            <span className={styles.span}>{t("btn_2")}</span>
             <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
           </Link>
 
           <div className={styles.link} onClick={handleContactClick}>
-            <span>{t("btn_3")}</span>
+            <span className={styles.span}>{t("btn_3")}</span>
             <svg
               className={styles.Arrow}
               width="6"
