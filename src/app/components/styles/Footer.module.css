@@ -25,6 +25,7 @@
   width: 100%;
   gap: 4rem;
   font-family: "LufgaMedium" !important;
+  transition: 0.5s;
 }
 .Footer button {
   display: flex;

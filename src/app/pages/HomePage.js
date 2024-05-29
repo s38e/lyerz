@@ -45,6 +45,7 @@ import CircleOverlayPlansCard from "../components/CircleOverlayPlansCard";
 import Service from "../components/Service";
 import gsap from "gsap";
 import { getLangDir } from "rtl-detect";
+import FooterStyles from "../components/styles/Footer.module.css";
 
 function HomePage() {
   // ---------------- Hovered ---------------- //
@@ -59,6 +60,17 @@ function HomePage() {
   const [isCardPlansClicked, setIsCardPlansClicked] = useState(false);
 
   useEffect(() => {
+    const Footer = document.querySelector(`.${FooterStyles.Footer}`);
+    if (
+      isCardWorkClicked ||
+      isCardServicesClicked ||
+      isCardAboutClicked ||
+      isCardPlansClicked
+    ) {
+      Footer.style.gap = "2rem";
+    } else {
+      Footer.style.gap = "4rem";
+    }
     // ---------------- hover effect on cards ---------------- //
     const cards = document.querySelectorAll(
       ` .${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}`

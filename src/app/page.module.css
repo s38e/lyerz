@@ -54,6 +54,7 @@
   flex-direction: column;
   gap: 3rem;
   position: relative;
+  margin-bottom: 10%;
 }
 .HeroSection .hero_content .headTexts {
   position: relative;
