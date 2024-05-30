@@ -545,11 +545,11 @@ function HomePage() {
             <div className={styles.mission}>
               <h2>Our Mission</h2>
               <p>
-                Whether it's a landing page, a white paper, or a presentation -
+                Whether it&#39;s a landing page, a white paper, or a presentation -
                 good design has become indispensable in various fields today.
                 <br />
                 <br />
-                Besides communicating a company's image & brand, appealing and
+                Besides communicating a company&#39;s image & brand, appealing and
                 user-friendly design ensures a positive customer journey.
                 <br />
                 <br />
