@@ -4,6 +4,12 @@
   src: url(/fonts/TerminaTest/TerminaTest-Demi.otf);
   font-display: swap;
 }
+@font-face {
+  font-family: "LufgaRegular";
+  src: url(/fonts/Lufga/LufgaRegular.ttf);
+  font-display: swap;
+}
+
 /* ---------------- NavBar ---------------- */
 .NavBar {
   display: flex;
@@ -36,19 +42,28 @@
   transition: 0.7s;
   overflow: hidden;
 }
-.NavBar a p span {
+.NavBar a p .span {
+  position: relative;
   display: inline-block;
   transform: translateX(-100%);
   transition: 0.7s;
+  width: 75px;
+}
+.NavBar a p .span span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 5px;
+  font-family: "LufgaRegular";
 }
 /* ------------------ Hover ---------------- */
 .NavBar a:hover img {
-  transform: translateX(-0.5rem) !important;
+  transform: translateX(-1rem) !important;
 }
 .NavBar a:hover p {
-  transform: translate(30%, -50%);
+  transform: translate(10%, -50%);
 }
-.NavBar a:hover p span {
+.NavBar a:hover p .span {
   transition: 0.7s;
   transform: translateX(0);
 }

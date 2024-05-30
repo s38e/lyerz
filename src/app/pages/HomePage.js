@@ -29,8 +29,13 @@ import img_10_overlayWork from "/public/assets/img_10_overlayWork.webp";
 import img_11_overlayWork from "/public/assets/img_11_overlayWork.webp";
 import img_12_overlayWork from "/public/assets/img_12_overlayWork.webp";
 import img_13_overlayWork from "/public/assets/img_13_overlayWork.webp";
-import img_1_overlayAbout from "/public/assets/img_1_overlayAbout.webp";
-import img_2_overlayAbout from "/public/assets/img_2_overlayAbout.png";
+//
+import Unlimited_Tasks from "/public/assets/Unlimited-Tasks.svg";
+import Fast_Results from "/public/assets/Fast-Results.svg";
+import Fixed_Monthly_Subscription from "/public/assets/Fixed-Monthly-Subscription.svg";
+import Excellent_Design_Quality from "/public/assets/Excellent-Design-Quality.svg";
+import testImg from "/public/assets/testImg.svg";
+//
 import card_work from "/public/assets/card_work.webp";
 import card_services from "/public/assets/card_services.webp";
 import card_about from "/public/assets/card_about.webp";
@@ -56,7 +61,7 @@ function HomePage() {
   // ---------------- Clicked ---------------- //
   const [isCardWorkClicked, setIsCardWorkClicked] = useState(false);
   const [isCardServicesClicked, setIsCardServicesClicked] = useState(false);
-  const [isCardAboutClicked, setIsCardAboutClicked] = useState(false);
+  const [isCardAboutClicked, setIsCardAboutClicked] = useState(true);
   const [isCardPlansClicked, setIsCardPlansClicked] = useState(false);
 
   useEffect(() => {
@@ -489,29 +494,79 @@ function HomePage() {
             </div>
             <div className={styles.about_teamCards}>
               <div className={styles.card}>
-                <Image src={img_1_overlayAbout} alt="img_1_overlayAbout" />
+                <Image src={Unlimited_Tasks} alt="Unlimited_Tasks" />
                 <div className={styles.heading}>
                   <p>{overlayAboutCard("card_1_heading->p_1")}</p>
                   <p>{overlayAboutCard("card_1_heading->p_2")}</p>
                 </div>
-                <div className={styles.country_flag}>
-                  <p>{overlayAboutCard("card_1_country_flag->p_1")}</p>
-                  <p>{overlayAboutCard("card_1_country_flag->p_2")}</p>
-                </div>
               </div>
               <div className={styles.card}>
-                <Image src={img_2_overlayAbout} alt="img_2_overlayAbout" />
+                <Image src={Fast_Results} alt="Fast_Results" />
                 <div className={styles.heading}>
                   <p>{overlayAboutCard("card_2_heading->p_1")}</p>
                   <p>{overlayAboutCard("card_2_heading->p_2")}</p>
                 </div>
-                <div className={styles.country_flag}>
-                  <p>{overlayAboutCard("card_2_country_flag->p_1")}</p>
-                  <p>{overlayAboutCard("card_2_country_flag->p_2")}</p>
+              </div>
+              <div className={styles.card}>
+                <Image
+                  src={Fixed_Monthly_Subscription}
+                  alt="Fixed_Monthly_Subscription"
+                />
+                <div className={styles.heading}>
+                  <p>{overlayAboutCard("card_3_heading->p_1")}</p>
+                  <p>{overlayAboutCard("card_3_heading->p_2")}</p>
+                </div>
+              </div>
+              <div className={styles.card}>
+                <Image
+                  src={Excellent_Design_Quality}
+                  alt="Excellent_Design_Quality"
+                />
+                <div className={styles.heading}>
+                  <p>{overlayAboutCard("card_4_heading->p_1")}</p>
+                  <p>{overlayAboutCard("card_4_heading->p_2")}</p>
+                </div>
+              </div>
+              <div className={styles.card}>
+                <Image src={Unlimited_Tasks} alt="Unlimited_Tasks" />
+                <div className={styles.heading}>
+                  <p>{overlayAboutCard("card_1_heading->p_1")}</p>
+                  <p>{overlayAboutCard("card_1_heading->p_2")}</p>
+                </div>
+              </div>
+              <div className={styles.card}>
+                <Image src={Unlimited_Tasks} alt="Unlimited_Tasks" />
+                <div className={styles.heading}>
+                  <p>{overlayAboutCard("card_1_heading->p_1")}</p>
+                  <p>{overlayAboutCard("card_1_heading->p_2")}</p>
                 </div>
               </div>
             </div>
-            <p className={styles.text}>{overlayAboutCard("p->text")}</p>
+            <div className={styles.mission}>
+              <h2>Our Mission</h2>
+              <p>
+                Whether it's a landing page, a white paper, or a presentation -
+                good design has become indispensable in various fields today.
+                <br />
+                <br />
+                Besides communicating a company's image & brand, appealing and
+                user-friendly design ensures a positive customer journey.
+                <br />
+                <br />
+                We know from our own experience how time-consuming, costly and
+                nerve-wracking it can be to build and sustainably scale a design
+                team.
+                <br />
+                <br />
+                With LYERZ, we provide companies with a solution we have been
+                dreaming of ourselves.
+                <br />
+                <br />
+                Unlimited Design, One Subscription: Effortless. Affordable.
+                Magical.
+              </p>
+            </div>
+            <Image className={styles.imgAbout} src={testImg} alt="img_4_about" />
             <div className={styles.about_summary}>
               <p className={styles.heading}>
                 {overlayAboutCard("about_summary->heading")}
@@ -563,12 +618,12 @@ function HomePage() {
                   <div className={styles.texts}>
                     <p>
                       {overlayAboutCard(
-                        "about_summary-content-item_1-texts->p_1"
+                        "about_summary-content-item_2-texts->p_1"
                       )}
                     </p>
                     <p>
                       {overlayAboutCard(
-                        "about_summary-content-item_1-texts->p_2"
+                        "about_summary-content-item_2-texts->p_2"
                       )}
                     </p>
                   </div>
@@ -591,12 +646,68 @@ function HomePage() {
                   <div className={styles.texts}>
                     <p>
                       {overlayAboutCard(
-                        "about_summary-content-item_1-texts->p_1"
+                        "about_summary-content-item_3-texts->p_1"
                       )}
                     </p>
                     <p>
                       {overlayAboutCard(
-                        "about_summary-content-item_1-texts->p_2"
+                        "about_summary-content-item_3-texts->p_2"
+                      )}
+                    </p>
+                  </div>
+                </div>
+                <div className={styles.item}>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M5.13876 17.2754C6.57769 18.2368 8.26942 18.75 10 18.75C12.3198 18.7474 14.5439 17.8247 16.1843 16.1843C17.8247 14.5439 18.7474 12.3198 18.75 10C18.75 8.26942 18.2368 6.57769 17.2754 5.13876C16.3139 3.69983 14.9473 2.57832 13.3485 1.91606C11.7496 1.25379 9.9903 1.08051 8.29296 1.41813C6.59563 1.75575 5.03653 2.58911 3.81282 3.81282C2.58911 5.03653 1.75575 6.59563 1.41813 8.29296C1.08051 9.9903 1.25379 11.7496 1.91606 13.3485C2.57832 14.9473 3.69983 16.3139 5.13876 17.2754ZM5.83323 3.76398C7.0666 2.93987 8.51664 2.5 10 2.5C11.9884 2.50227 13.8948 3.29317 15.3008 4.69921C16.7068 6.10524 17.4977 8.01158 17.5 10C17.5 11.4834 17.0601 12.9334 16.236 14.1668C15.4119 15.4001 14.2406 16.3614 12.8701 16.9291C11.4997 17.4968 9.99168 17.6453 8.53683 17.3559C7.08197 17.0665 5.7456 16.3522 4.6967 15.3033C3.64781 14.2544 2.9335 12.918 2.64411 11.4632C2.35473 10.0083 2.50325 8.50032 3.07091 7.12988C3.63856 5.75943 4.59986 4.58809 5.83323 3.76398ZM16.25 10C16.25 13.4518 13.4518 16.25 10 16.25C6.54822 16.25 3.75 13.4518 3.75 10C3.75 6.54822 6.54822 3.75 10 3.75C13.4518 3.75 16.25 6.54822 16.25 10Z"
+                      fill="#4B8DF3"
+                    ></path>
+                  </svg>
+                  <div className={styles.texts}>
+                    <p>
+                      {overlayAboutCard(
+                        "about_summary-content-item_4-texts->p_1"
+                      )}
+                    </p>
+                    <p>
+                      {overlayAboutCard(
+                        "about_summary-content-item_4-texts->p_2"
+                      )}
+                    </p>
+                  </div>
+                </div>
+                <div className={styles.item}>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M5.13876 17.2754C6.57769 18.2368 8.26942 18.75 10 18.75C12.3198 18.7474 14.5439 17.8247 16.1843 16.1843C17.8247 14.5439 18.7474 12.3198 18.75 10C18.75 8.26942 18.2368 6.57769 17.2754 5.13876C16.3139 3.69983 14.9473 2.57832 13.3485 1.91606C11.7496 1.25379 9.9903 1.08051 8.29296 1.41813C6.59563 1.75575 5.03653 2.58911 3.81282 3.81282C2.58911 5.03653 1.75575 6.59563 1.41813 8.29296C1.08051 9.9903 1.25379 11.7496 1.91606 13.3485C2.57832 14.9473 3.69983 16.3139 5.13876 17.2754ZM5.83323 3.76398C7.0666 2.93987 8.51664 2.5 10 2.5C11.9884 2.50227 13.8948 3.29317 15.3008 4.69921C16.7068 6.10524 17.4977 8.01158 17.5 10C17.5 11.4834 17.0601 12.9334 16.236 14.1668C15.4119 15.4001 14.2406 16.3614 12.8701 16.9291C11.4997 17.4968 9.99168 17.6453 8.53683 17.3559C7.08197 17.0665 5.7456 16.3522 4.6967 15.3033C3.64781 14.2544 2.9335 12.918 2.64411 11.4632C2.35473 10.0083 2.50325 8.50032 3.07091 7.12988C3.63856 5.75943 4.59986 4.58809 5.83323 3.76398ZM16.25 10C16.25 13.4518 13.4518 16.25 10 16.25C6.54822 16.25 3.75 13.4518 3.75 10C3.75 6.54822 6.54822 3.75 10 3.75C13.4518 3.75 16.25 6.54822 16.25 10Z"
+                      fill="#4B8DF3"
+                    ></path>
+                  </svg>
+                  <div className={styles.texts}>
+                    <p>
+                      {overlayAboutCard(
+                        "about_summary-content-item_5-texts->p_1"
+                      )}
+                    </p>
+                    <p>
+                      {overlayAboutCard(
+                        "about_summary-content-item_5-texts->p_2"
                       )}
                     </p>
                   </div>

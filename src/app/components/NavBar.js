@@ -20,7 +20,9 @@ function NavBar() {
       <Link href="/">
         <Image src={logo_4_round} alt="Lyerz Logo" width={100} height={100} />
         <p>
-          <span>Lyerz</span>
+          <span className={styles.span}>
+            LYERZ<span>TM</span>
+          </span>
         </p>
       </Link>
     </nav>

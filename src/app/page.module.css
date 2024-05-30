@@ -711,7 +711,8 @@
   padding: max(1rem, min(4rem, 5vw));
   cursor: default;
   width: 100%;
-  max-width: 36.25rem;
+  /* max-width: 36.25rem; */
+  max-width: 45rem;
   min-height: 46rem;
   height: 46rem;
   border-radius: 30px;
@@ -777,6 +778,7 @@
 .HeroSection .overlayAboutCard .contanier .about_teamCards .card .heading {
   flex-direction: column;
   display: flex;
+  gap: 0.5rem;
 }
 .HeroSection .overlayAboutCard .contanier .about_teamCards .card .heading p {
   text-align: center;
@@ -802,26 +804,13 @@
   font-size: 0.875rem;
   color: #b0b0b0;
 }
-.HeroSection .overlayAboutCard .contanier .about_teamCards .card .country_flag {
-  gap: 0.5rem;
-  flex-flow: row;
-  display: flex;
+.HeroSection .overlayAboutCard .contanier .mission {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
 }
-.HeroSection
-  .overlayAboutCard
-  .contanier
-  .about_teamCards
-  .card
-  .country_flag
-  p {
-  text-align: center;
-  font-size: 0.875rem;
-  color: #b0b0b0;
-}
-.HeroSection .overlayAboutCard .contanier .text {
-  color: #727272;
-  font-weight: 500;
-  line-height: 1.25;
+.HeroSection .overlayAboutCard .contanier .imgAbout {
+  width: 100%;
+  height: auto;
 }
 .HeroSection .overlayAboutCard .contanier .about_summary {
   display: flex;
