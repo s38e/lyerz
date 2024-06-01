@@ -4,7 +4,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lyerz.vercel.app"),
+  title: "Lyerz - Desgin Studio",
+  description: "Dev with Lyerz by Saeed Khaled",
   openGraph: {
+    url: "https://lyerz.vercel.app/",
     title: "Lyerz - Desgin Studio",
     description: "Dev with Lyerz by Saeed Khaled",
     images: {
