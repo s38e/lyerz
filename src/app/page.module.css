@@ -712,7 +712,7 @@
   cursor: default;
   width: 100%;
   /* max-width: 36.25rem; */
-  max-width: 45rem;
+  max-width: 40rem;
   min-height: 46rem;
   height: 46rem;
   border-radius: 30px;
@@ -758,55 +758,19 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.HeroSection .overlayAboutCard .contanier .about_teamCards .card {
-  gap: 1rem;
-  border: 2px solid #f1f1f1;
-  background-color: #f7f7f7;
-  border-radius: 16px;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 1rem;
+.HeroSection .overlayAboutCard .contanier .mission {
   display: flex;
-}
-.HeroSection .overlayAboutCard .contanier .about_teamCards .card img {
-  max-width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  height: auto;
-}
-.HeroSection .overlayAboutCard .contanier .about_teamCards .card .heading {
   flex-direction: column;
-  display: flex;
-  gap: 0.5rem;
+  gap: 2rem;
 }
-.HeroSection .overlayAboutCard .contanier .about_teamCards .card .heading p {
-  text-align: center;
-}
-.HeroSection
-  .overlayAboutCard
-  .contanier
-  .about_teamCards
-  .card
-  .heading
-  p:nth-child(1) {
+.HeroSection .overlayAboutCard .contanier .mission h2 {
   font-weight: 600;
-  font-size: 1.25rem;
+  line-height: 1;
   font-family: "TerminaTest-Demi";
 }
-.HeroSection
-  .overlayAboutCard
-  .contanier
-  .about_teamCards
-  .card
-  .heading
-  p:nth-child(2) {
-  font-size: 0.875rem;
-  color: #b0b0b0;
-}
-.HeroSection .overlayAboutCard .contanier .mission {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
+.HeroSection .overlayAboutCard .contanier .mission p span {
+  margin-bottom: 14px;
+  display: inline-block;
 }
 .HeroSection .overlayAboutCard .contanier .imgAbout {
   width: 100%;
@@ -831,7 +795,7 @@
   border-radius: 12px 12px 0 0;
 }
 .HeroSection .overlayAboutCard .contanier .about_summary .content {
-  gap: 0.75rem;
+  gap: 1.5rem;
   background-color: #f7f7f7;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
