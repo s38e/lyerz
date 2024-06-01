@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: "Dev with Lyerz by Saeed Khaled",
   openGraph: {
     url: "https://lyerz.vercel.app/",
+    siteName: "Lyerz - Desgin Studio",
     title: "Lyerz - Desgin Studio",
     description: "Dev with Lyerz by Saeed Khaled",
     images: {
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     },
   },
 };
+
 export default function Home() {
   return <HomePage />;
 }
