@@ -768,6 +768,7 @@
   font-family: "TerminaTest-Demi";
 }
 .HeroSection .overlayAboutCard .contanier .mission p span {
+  color: #727272;
   margin-bottom: 14px;
   display: inline-block;
 }
