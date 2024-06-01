@@ -1,12 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./styles/cardInOverlayAbout.module.css";
+import { isMobile } from "react-device-detect";
 
 const CardInOverlayAbout = ({ image, title, description }) => {
   const [isActive, setIsActive] = useState(false);
-  const [cardHeight, setCardHeight] = useState(0);
+  const [mobile, setMobile] = useState(false);
+  const [cardHeight, setCardHeight] = useState(141);
   const cardRef = useRef(null);
   const descriptionRef = useRef(null);
+
+  console.log("Is Mobile: ", isMobile); // Debugging statement
+
+  useEffect(() => {
+    setMobile(isMobile);
+  }, []);
 
   const handleMouseEnter = () => {
     setIsActive(true);
@@ -21,26 +29,34 @@ const CardInOverlayAbout = ({ image, title, description }) => {
     const descriptionElement = descriptionRef.current;
 
     if (cardElement && descriptionElement) {
-      if (isActive) {
+      if (mobile) {
         setCardHeight(cardElement.scrollHeight);
       } else {
-        setCardHeight(cardElement.scrollHeight - descriptionElement.scrollHeight);
+        if (isActive) {
+          setCardHeight(cardElement.scrollHeight);
+        } else {
+          setCardHeight(
+            cardElement.scrollHeight - descriptionElement.scrollHeight
+          );
+        }
       }
     }
-  }, [isActive]);
+  }, [isActive, mobile]);
 
   return (
     <div
       ref={cardRef}
       className={`${styles.card} ${isActive ? styles.active : ""}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={!mobile ? handleMouseEnter : undefined}
+      onMouseLeave={!mobile ? handleMouseLeave : undefined}
       style={{ height: `${cardHeight}px` }}
     >
       <Image src={image} alt={`${image}`} />
       <div className={styles.heading}>
         <p>{title}</p>
-        <p ref={descriptionRef}>{description}</p>
+        <p ref={descriptionRef} className={mobile ? styles.mobile : ""}>
+          {description}
+        </p>
       </div>
     </div>
   );

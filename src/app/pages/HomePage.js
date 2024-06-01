@@ -499,11 +499,6 @@ function HomePage() {
             <div className={styles.about_teamCards}>
               <CardInOverlayAbout
                 image={Unlimited_Tasks}
-                title={overlayAboutCard("card_2_heading->p_1")}
-                description={overlayAboutCard("card_2_heading->p_2")}
-              />
-              <CardInOverlayAbout
-                image={Fast_Results}
                 title={overlayAboutCard("card_1_heading->p_1")}
                 description={overlayAboutCard("card_1_heading->p_2")}
               />
@@ -513,14 +508,20 @@ function HomePage() {
                 description={overlayAboutCard("card_3_heading->p_2")}
               />
               <CardInOverlayAbout
+                image={Create_WOW}
+                title={overlayAboutCard("card_5_heading->p_1")}
+                description={overlayAboutCard("card_5_heading->p_2")}
+              />
+              {/*  */}
+              <CardInOverlayAbout
                 image={Excellent_Design_Quality}
                 title={overlayAboutCard("card_4_heading->p_1")}
                 description={overlayAboutCard("card_4_heading->p_2")}
               />
               <CardInOverlayAbout
-                image={Create_WOW}
-                title={overlayAboutCard("card_5_heading->p_1")}
-                description={overlayAboutCard("card_5_heading->p_2")}
+                image={Fast_Results}
+                title={overlayAboutCard("card_2_heading->p_1")}
+                description={overlayAboutCard("card_2_heading->p_2")}
               />
               <CardInOverlayAbout
                 image={Own_It}

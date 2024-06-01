@@ -10,6 +10,7 @@
   display: flex;
   transition: 0.5s;
   overflow: hidden;
+  margin-bottom: 0.5rem;
 }
 .card img {
   max-width: 100%;
@@ -41,6 +42,10 @@
   transition: 0.5s;
 }
 .card.active .heading p:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card .heading p.mobile {
   opacity: 1;
   transform: translateY(0);
 }

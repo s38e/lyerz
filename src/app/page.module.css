@@ -755,8 +755,7 @@
 }
 .HeroSection .overlayAboutCard .contanier .about_teamCards {
   gap: 0.5rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  columns: 2;
 }
 .HeroSection .overlayAboutCard .contanier .mission {
   display: flex;
