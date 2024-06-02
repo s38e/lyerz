@@ -956,15 +956,15 @@
 .HeroSection .overlayPlansCard .contanier .plans .plan:nth-child(1) {
   grid-column-start: 1;
   grid-column-end: 3;
-  /* background-color: #000;
-  border: none; */
-  /* color: white; */
+  background-color: #000;
+  border: none;
+  color: white;
 }
 .HeroSection .overlayPlansCard .contanier .plans .plan:nth-child(1) .button {
   grid-column-gap: 32px;
   grid-row-gap: 32px;
   cursor: pointer;
-  border: 2px solid #f1f1f1;
+  border: 1px solid rgb(255, 255, 255, 0.14);
   border-radius: 12px;
   align-items: center;
   padding: 16px;
@@ -977,7 +977,7 @@
   .plans
   .plan:nth-child(1)
   .button:hover {
-  background-color: #ebebeb;
+  background-color: #1b1b1b;
 }
 .HeroSection
   .overlayPlansCard
@@ -1013,7 +1013,7 @@
   .texts
   p {
   font-size: 15px;
-  /* color: white; */
+  color: #c8c8c8;
   line-height: 1;
 }
 .HeroSection .overlayPlansCard .contanier .plans .plan .pricingTag {
@@ -1190,12 +1190,12 @@
 .HeroSection .overlayPlansCard .contanier .plans .plan button:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-.HeroSection .overlayPlansCard .contanier .note {
+.HeroSection .overlayPlansCard .contanier .faq {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.HeroSection .overlayPlansCard .contanier .note .heading {
+.HeroSection .overlayPlansCard .contanier .faq .heading {
   background-color: #ededed;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -1204,25 +1204,25 @@
   padding: 1rem;
   display: flex;
 }
-.HeroSection .overlayPlansCard .contanier .note .heading svg {
+.HeroSection .overlayPlansCard .contanier .faq .heading svg {
   width: 1.25rem;
   height: 1.25rem;
 }
-.HeroSection .overlayPlansCard .contanier .note .heading p {
+.HeroSection .overlayPlansCard .contanier .faq .heading p {
   font-family: "TerminaTest-Demi";
 }
-.HeroSection .overlayPlansCard .contanier .note .content {
+.HeroSection .overlayPlansCard .contanier .faq .content {
   gap: 0.75rem;
   background-color: #f7f7f7;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
   flex-direction: column;
-  padding: 1.25rem;
+  padding: 0.75rem;
   display: flex;
 }
-.HeroSection .overlayPlansCard .contanier .note .content p {
-  font-weight: 500;
-  line-height: 1.25;
+.HeroSection .overlayPlansCard .contanier .faq .content .link {
+  color: black;
+  font-weight: 600;
 }
 /* --------------------- Arabic Styles --------------------- */
 .HeroSection.ar .hero_content .headTexts div span:nth-child(1) p {

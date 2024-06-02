@@ -54,9 +54,11 @@ import CircleOverlayServicesCard from "../components/CircleOverlayServicesCard";
 import CircleOverlayAboutCard from "../components/CircleOverlayAboutCard";
 import CircleOverlayPlansCard from "../components/CircleOverlayPlansCard";
 import Service from "../components/Service";
+import Question from "../components/Question";
 import gsap from "gsap";
 import { getLangDir } from "rtl-detect";
 import FooterStyles from "../components/styles/Footer.module.css";
+import Link from "next/link";
 
 function HomePage() {
   // ---------------- Hovered ---------------- //
@@ -757,7 +759,7 @@ function HomePage() {
                 </button>
               </div>
             </div>
-            <div className={styles.note}>
+            <div className={styles.faq}>
               <div className={styles.heading}>
                 <svg
                   width="100%"
@@ -771,7 +773,7 @@ function HomePage() {
                     fill="#727272"
                   ></path>
                 </svg>
-                <p>{overlayPlansCard("note->heading")}</p>
+                <p>{overlayPlansCard("faq->heading")}</p>
                 <svg
                   width="100%"
                   height="100%"
@@ -786,18 +788,186 @@ function HomePage() {
                 </svg>
               </div>
               <div className={styles.content}>
-                <p>
-                  {overlayPlansCard("note-content->p_part_1")}
-                  <br />
-                  <br />
-                  {overlayPlansCard("note-content->p_part_2")}
-                  <br />
-                  <br />
-                  {overlayPlansCard("note-content->p_part_3")}
-                  <br />
-                  <br />
-                  {overlayPlansCard("note-content->p_part_4")}
-                </p>
+                <Question
+                  initialActiveState={true}
+                  question='What exactly does "Unlimited Design Tasks" mean?'
+                  answer={
+                    <>
+                      At LYERZ, we do not charge by hours or projects.
+                      <br />
+                      <br />
+                      Once you have chosen a design subscription, you can set as
+                      many tasks as you like. These will be processed by your
+                      personal designer one after the other.
+                    </>
+                  }
+                />
+                <Question
+                  question="What counts as a Design Task?"
+                  answer={
+                    <>
+                      Our team at LYERZ can handle any type of design job: big
+                      or small. So, you might be wondering: What counts as one
+                      design task? Need a presentation, flyer, landing page, or
+                      some ads? Just tell us what you want through your personal
+                      dashboard and we'll get it done in under 48 hours!
+                      <br />
+                      <br />
+                      Have a bigger project, like a whole new website, an app,
+                      or branding guidelines? These typically take more time and
+                      planning, so we can break them down into smaller tasks and
+                      make sure everything looks great. For example if we're
+                      talking about Branding Guidelines, to achieve a result
+                      that truly represents your brand and fits with your
+                      vision, we deliver the guidelines step by step & one task
+                      at a time with a turnaround of 48 hours as usual ( Logo,
+                      Typography, Illustrations, etc. ).
+                      <br />
+                      <br />
+                      Have more questions? Contact us at hi@lyerz.io. We can
+                      make your design ideas a reality, big or small. Let's put
+                      an end to design stress and create something magical
+                      together!
+                    </>
+                  }
+                />
+                <Question
+                  question="I am not satisfied with the design. How many revisions can I request?"
+                  answer={
+                    <>
+                      The first priority for us is that you are satisfied with
+                      the final design. Whether it's a display banner, an icon
+                      set or newsletter graphics.
+                      <br />
+                      <br />
+                      Therefore, you can request unlimited revisions and always
+                      communicate your change requests to your designer.
+                    </>
+                  }
+                />
+                <Question
+                  question="When do I receive the first drafts?"
+                  answer="Most designs will be delivered in under 48h. More complex tasks such as a landing page design we divide into partial deliverables. We will always keep you updated on the progress."
+                />
+                <Question
+                  question="What types of designs can you realize?"
+                  answer={
+                    <>
+                      You can find the list of our design services{" "}
+                      <Link href="" className={styles.link}>
+                        here
+                      </Link>
+                      .
+                    </>
+                  }
+                />
+                <Question
+                  question="What types of designs are not part of my subscription?"
+                  answer={
+                    <>
+                      We do not (yet) cover the following design services:
+                      <br />
+                      <br />
+                      - 3D Visualizations
+                      <br />- Animations
+                    </>
+                  }
+                />
+                <Question
+                  question="What tools do you use to create designs?"
+                  answer={
+                    <>
+                      We use the following programs to create the designs:
+                      <br />
+                      <br />
+                      - Figma
+                      <br />- Adobe Illustrator
+                      <br />- Adobe Photoshop
+                      <br />- Adobe Indesign
+                    </>
+                  }
+                />
+                <Question
+                  question="In which formats do I receive the finished designs?"
+                  answer={
+                    <>
+                      We usually provide the following formats of the final
+                      designs to download:
+                      <br />
+                      <br />
+                      - .jpg
+                      <br />
+                      - .png
+                      <br />
+                      - .pdf
+                      <br />
+                      - .svg
+                      <br />
+                      <br />
+                      In addition, you can request the raw files:
+                      <br />
+                      <br />
+                      -.psd
+                      <br />
+                      -.fig
+                      <br />
+                      -.ai
+                      <br />
+                      -.indd
+                    </>
+                  }
+                />
+                <Question
+                  question="I would like to sign up for a subscription. How does the onboarding process work?"
+                  answer={
+                    <>
+                      After you have decided to subscribe, we will conduct an
+                      onboarding call to better understand your business and
+                      your design needs. During the call, we'll also explain the
+                      design process and upload your brand assets together.
+                      <br />
+                      <br />
+                      We'll then match you with a designer from our team and
+                      you'll be given access to your design dashboard, where you
+                      can get started right away with your first briefing.
+                    </>
+                  }
+                />
+                <Question
+                  question="I am not satisfied with my designer. Can I switch to another designer?"
+                  answer="Should it be the case that you're not happy with the style of your designer, you can always change your personal designer, without a hassle."
+                />
+                <Question
+                  question="Is it possible to pause my subscription?"
+                  answer="Yes, you can pause your subscription at any time for the following month."
+                />
+                <Question
+                  question="Who creates the designs?"
+                  answer={
+                    <>
+                      Our remote design team is located worldwide, as good
+                      designers are not only found in the hot spots like Berlin,
+                      London and Paris.
+                      <br />
+                      <br />
+                      To ensure the highest quality standards, all designers
+                      complete a 4-stage selection process, with 3% of
+                      applicants being accepted at the end.
+                    </>
+                  }
+                />
+                <Question
+                  question="Can I invite multiple team members to use LYERZ at the same time?"
+                  answer="Yes, you can invite as many team members as you want. Team members can set individual tasks or work together on design tasks."
+                />
+                <Question
+                  question="Can I cancel my subscription monthly?"
+                  answer="Yes, we do not have long contract periods. Your subscription will be renewed every month and you can cancel it 7 days before the end of the payment cycle."
+                />
+                <Question
+                  question="Which payment options do you offer?"
+                  answer="You can pay LYERZ by credit card, PayPal, direct debit or bank transfer."
+                />
               </div>
             </div>
           </div>

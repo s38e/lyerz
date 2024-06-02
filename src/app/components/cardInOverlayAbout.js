@@ -15,7 +15,7 @@ const CardInOverlayAbout = ({
   const cardRef = useRef(null);
   const descriptionRef = useRef(null);
 
-  console.log("Is Mobile: ", isMobile); // Debugging statement
+  // console.log("Is Mobile: ", isMobile); // Debugging statement
 
   useEffect(() => {
     setMobile(isMobile);

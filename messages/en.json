@@ -87,10 +87,10 @@
     "plans-plan_3-pricingContent->p_1": "Custom",
     "plans-plan_3-pricingContent->p_2": "Perfect for a bigger one-time thing",
     "plans-plan_3-button->p": "Get Started",
-    "note->heading": "Note",
-    "note-content->p_part_1": "We're selective about our partnerships—rarely taking on more than 3-4 projects at once. Quality matters to us, and that means staying focused.",
-    "note-content->p_part_2": "We're not just about executing ideas; we'll challenge them, push back, and ensure your users are as happy as you are.",
-    "note-content->p_part_3": "If you're ready for a straightforward, collaborative approach, let's talk.",
-    "note-content->p_part_4": "But if you're not open to a bit of pushback and prefer a more hands-off style, we might not be the right fit."
+    "faq->heading": "FAQ",
+    "faq-content->p_part_1": "We're selective about our partnerships—rarely taking on more than 3-4 projects at once. Quality matters to us, and that means staying focused.",
+    "faq-content->p_part_2": "We're not just about executing ideas; we'll challenge them, push back, and ensure your users are as happy as you are.",
+    "faq-content->p_part_3": "If you're ready for a straightforward, collaborative approach, let's talk.",
+    "faq-content->p_part_4": "But if you're not open to a bit of pushback and prefer a more hands-off style, we might not be the right fit."
   }
 }
