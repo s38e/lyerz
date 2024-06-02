@@ -29,6 +29,7 @@ import img_10_overlayWork from "/public/assets/img_10_overlayWork.webp";
 import img_11_overlayWork from "/public/assets/img_11_overlayWork.webp";
 import img_12_overlayWork from "/public/assets/img_12_overlayWork.webp";
 import img_13_overlayWork from "/public/assets/img_13_overlayWork.webp";
+import LightningImg from "/public/assets/LightningImg.svg";
 //
 import CardInOverlayAbout from "/src/app/components/cardInOverlayAbout";
 import Unlimited_Tasks from "/public/assets/Unlimited-Tasks.svg";
@@ -38,13 +39,14 @@ import Excellent_Design_Quality from "/public/assets/Excellent-Design-Quality.sv
 import Create_WOW from "/public/assets/Create-WOW.svg";
 import Own_It from "/public/assets/Own-It.svg";
 import imgInOverlayAbout from "/public/assets/imgInOverlayAbout.svg";
-import circleInOverlayAbout from "/public/assets/circleInOverlayAbout.svg";
+import starInOverlayAbout from "/public/assets/starInOverlayAbout.svg";
 //
 import card_work from "/public/assets/card_work.webp";
 import card_services from "/public/assets/card_services.webp";
 import card_about from "/public/assets/card_about.webp";
 import card_plans from "/public/assets/card_plans.webp";
 import Arrow from "/public/assets/Arrow.svg";
+import Arrow_3 from "/public/assets/Arrow_3.svg";
 import { useLocale, useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 import CircleOverlayWorkCard from "../components/CircleOverlayWorkCard";
@@ -66,7 +68,7 @@ function HomePage() {
   const [isCardWorkClicked, setIsCardWorkClicked] = useState(false);
   const [isCardServicesClicked, setIsCardServicesClicked] = useState(false);
   const [isCardAboutClicked, setIsCardAboutClicked] = useState(false);
-  const [isCardPlansClicked, setIsCardPlansClicked] = useState(false);
+  const [isCardPlansClicked, setIsCardPlansClicked] = useState(true);
 
   useEffect(() => {
     const Footer = document.querySelector(`.${FooterStyles.Footer}`);
@@ -502,6 +504,7 @@ function HomePage() {
                 image={Unlimited_Tasks}
                 title={overlayAboutCard("card_1_heading->p_1")}
                 description={overlayAboutCard("card_1_heading->p_2")}
+                initialActiveState={true}
               />
               <CardInOverlayAbout
                 image={Create_WOW}
@@ -571,10 +574,7 @@ function HomePage() {
               </p>
               <div className={styles.content}>
                 <div className={styles.item}>
-                  <Image
-                    src={circleInOverlayAbout}
-                    alt="circleInOverlayAbout"
-                  />
+                  <Image src={starInOverlayAbout} alt="starInOverlayAbout" />
                   <div className={styles.texts}>
                     <p>
                       {overlayAboutCard(
@@ -589,7 +589,7 @@ function HomePage() {
                   </div>
                 </div>
                 <div className={styles.item}>
-                  <Image src={circleInOverlayAbout} alt="" />
+                  <Image src={starInOverlayAbout} alt="" />
                   <div className={styles.texts}>
                     <p>
                       {overlayAboutCard(
@@ -604,7 +604,7 @@ function HomePage() {
                   </div>
                 </div>
                 <div className={styles.item}>
-                  <Image src={circleInOverlayAbout} alt="" />
+                  <Image src={starInOverlayAbout} alt="" />
                   <div className={styles.texts}>
                     <p>
                       {overlayAboutCard(
@@ -619,7 +619,7 @@ function HomePage() {
                   </div>
                 </div>
                 <div className={styles.item}>
-                  <Image src={circleInOverlayAbout} alt="" />
+                  <Image src={starInOverlayAbout} alt="" />
                   <div className={styles.texts}>
                     <p>
                       {overlayAboutCard(
@@ -634,7 +634,7 @@ function HomePage() {
                   </div>
                 </div>
                 <div className={styles.item}>
-                  <Image src={circleInOverlayAbout} alt="" />
+                  <Image src={starInOverlayAbout} alt="" />
                   <div className={styles.texts}>
                     <p>
                       {overlayAboutCard(
@@ -661,20 +661,72 @@ function HomePage() {
         >
           <CircleOverlayPlansCard />
           <div className={styles.contanier} onClick={handleContainerClick}>
+            <p className={styles.headTitle}>
+              Add a top designer to your team for a fixed monthly price.
+            </p>
+            <div className={styles.checkList}>
+              <div className={styles.heading}>
+                <p>Checklist</p>
+              </div>
+              <div className={styles.content}>
+                <div className={styles.item}>
+                  <Image
+                    className={styles.imgAbout}
+                    src={starInOverlayAbout}
+                    alt="starInOverlayAbout"
+                  />
+                  <p>
+                    You genuinely care about your product and how it impacts
+                    your users
+                  </p>
+                </div>
+                <div className={styles.item}>
+                  <Image
+                    className={styles.imgAbout}
+                    src={starInOverlayAbout}
+                    alt="starInOverlayAbout"
+                  />
+                  <p>
+                    You’re in regular conversations with your users, and their
+                    feedback directly shapes your product
+                  </p>
+                </div>
+                <div className={styles.item}>
+                  <Image
+                    className={styles.imgAbout}
+                    src={starInOverlayAbout}
+                    alt="starInOverlayAbout"
+                  />
+                  <p>
+                    Your goal isn’t to mimic your competition, you’re aiming for
+                    something uniquely yours
+                  </p>
+                </div>
+              </div>
+            </div>
             <h2>{overlayPlansCard("h2")}</h2>
             <div className={styles.plans}>
               <div className={styles.plan}>
-                <p className={styles.pricingTag}>
+                <div className={styles.pricingTag}>
+                  <div className={styles.live_indicator}>
+                    <div className={styles.red_dot}></div>
+                    <div className={`${styles.pulse} ${styles.one}`}></div>
+                    <div className={`${styles.pulse} ${styles.tow}`}></div>
+                  </div>
                   {overlayPlansCard("plans-plan_1->pricingTag")}
-                </p>
+                </div>
                 <div className={styles.pricingContent}>
-                  <p>
-                    {overlayPlansCard("plans-plan_1-pricingContent->p_1")}
-                    <span>
-                      {overlayPlansCard("plans-plan-pricingContent-p_2->span")}
-                    </span>
-                  </p>
-                  <p>{overlayPlansCard("plans-plan_1-pricingContent->p_2")}</p>
+                  <p>Join LYERZ</p>
+                  <div className={styles.button}>
+                    <div className={styles.texts}>
+                      <h5>Book a 30-min intro call</h5>
+                      <p>
+                        Learn more about how LYERZ works and how it can help
+                        you.
+                      </p>
+                    </div>
+                    <Image src={Arrow_3} alt="Arrow_3" />
+                  </div>
                 </div>
               </div>
               <div className={styles.plan}>
@@ -693,6 +745,7 @@ function HomePage() {
               </div>
               <div className={styles.plan}>
                 <p className={styles.pricingTag}>
+                  <Image src={LightningImg} alt="LightningImg" />
                   {overlayPlansCard("plans-plan_3->pricingTag")}
                 </p>
                 <div className={styles.pricingContent}>

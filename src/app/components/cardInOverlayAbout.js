@@ -3,8 +3,13 @@ import Image from "next/image";
 import styles from "./styles/cardInOverlayAbout.module.css";
 import { isMobile } from "react-device-detect";
 
-const CardInOverlayAbout = ({ image, title, description }) => {
-  const [isActive, setIsActive] = useState(false);
+const CardInOverlayAbout = ({
+  image,
+  title,
+  description,
+  initialActiveState = false,
+}) => {
+  const [isActive, setIsActive] = useState(initialActiveState);
   const [mobile, setMobile] = useState(false);
   const [cardHeight, setCardHeight] = useState(141);
   const cardRef = useRef(null);

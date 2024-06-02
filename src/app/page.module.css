@@ -164,7 +164,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .live_indicator .red_dot,
 .live_indicator .pulse {
   position: absolute;
@@ -173,13 +172,11 @@
   border-radius: 18px;
   background-color: #2ce733;
 }
-
 .live_indicator .pulse {
   animation-name: red-dot-scale-fade;
   animation-iteration-count: infinite;
   animation-duration: 2s;
 }
-
 .live_indicator .pulse.two {
   animation-delay: 0.25s;
 }
@@ -192,7 +189,6 @@
     opacity: 0;
     transform: scale(2.5);
   }
-
   100% {
     opacity: 0;
     transform: scale(2.5);
@@ -808,9 +804,9 @@
   gap: 0.75rem;
   display: flex;
 }
-.HeroSection .overlayAboutCard .contanier .about_summary .content .item svg {
-  width: 20px !important;
-  height: 20px !important;
+.HeroSection .overlayAboutCard .contanier .about_summary .content .item img {
+  width: 18px !important;
+  height: 18px !important;
 }
 .HeroSection .overlayAboutCard .contanier .about_summary .content .item .texts {
   gap: 0.125rem;
@@ -898,6 +894,44 @@
   width: 0;
   height: 0;
 }
+.HeroSection .overlayPlansCard .contanier .checkList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.HeroSection .overlayPlansCard .contanier .checkList .heading {
+  width: 100%;
+  background-color: #ededed;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  display: flex;
+  font-family: "TerminaTest-Demi";
+}
+.HeroSection .overlayPlansCard .contanier .checkList .content {
+  width: 100%;
+  gap: 0.75rem;
+  background-color: #f7f7f7;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  flex-direction: column;
+  padding: 1.25rem;
+  display: flex;
+}
+.HeroSection .overlayPlansCard .contanier .checkList .content .item {
+  gap: 0.75rem;
+  display: flex;
+}
+.HeroSection .overlayPlansCard .contanier .checkList .content .item img {
+  width: 18px !important;
+  height: 18px !important;
+}
+.HeroSection .overlayPlansCard .contanier .checkList .content .item p {
+}
 .HeroSection .overlayPlansCard .contanier h2 {
   font-size: 1.5rem;
   font-weight: 600;
@@ -922,12 +956,165 @@
 .HeroSection .overlayPlansCard .contanier .plans .plan:nth-child(1) {
   grid-column-start: 1;
   grid-column-end: 3;
+  /* background-color: #000;
+  border: none; */
+  /* color: white; */
+}
+.HeroSection .overlayPlansCard .contanier .plans .plan:nth-child(1) .button {
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  cursor: pointer;
+  border: 2px solid #f1f1f1;
+  border-radius: 12px;
+  align-items: center;
+  padding: 16px;
+  display: flex;
+  transition: 0.5s;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan:nth-child(1)
+  .button:hover {
+  background-color: #ebebeb;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan:nth-child(1)
+  .button
+  .texts {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan:nth-child(1)
+  .button
+  .texts
+  h5 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan:nth-child(1)
+  .button
+  .texts
+  p {
+  font-size: 15px;
+  /* color: white; */
+  line-height: 1;
 }
 .HeroSection .overlayPlansCard .contanier .plans .plan .pricingTag {
   border-radius: 50px;
   padding: 0.3rem 0.7rem;
   font-size: 0.75rem;
   font-weight: 600;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingTag:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: black;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingTag:nth-child(1)
+  img {
+  width: auto;
+  height: 15px;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingTag:nth-child(1)
+  .live_indicator {
+  width: 7px;
+  height: 7px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingTag:nth-child(1)
+  .live_indicator
+  .red_dot,
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingTag:nth-child(1)
+  .live_indicator
+  .pulse {
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  border-radius: 18px;
+  background-color: black;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingTag:nth-child(1)
+  .live_indicator
+  .pulse {
+  animation-name: red-dot-scale-fade;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingTag:nth-child(1)
+  .live_indicator
+  .pulse.two {
+  animation-delay: 0.25s;
+}
+@keyframes red-dot-scale-fade {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
 }
 .HeroSection
   .overlayPlansCard
