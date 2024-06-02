@@ -11,7 +11,7 @@
 }
 /* ---------------- Question Styles ---------------- */
 .container {
-  width: 100%;
+  /* width: 100%;
   cursor: pointer;
   display: flex;
   align-items: flex-start;
@@ -20,17 +20,28 @@
   overflow: hidden;
   transition: 0.5s 0.5s;
   border-radius: 0px;
-  padding: 0.5rem;
+  padding: 0.5rem; */
+  cursor: pointer;
+  background-color: #f7f7f7;
+  border-radius: 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* flex: 1 1; */
+  overflow: hidden;
+  transition: 0.3s;
+  border: 2px solid #f1f1f1;
+  padding: 1.25rem 1.5rem;
+  transition: 0.5s 0.4s;
 }
 .container.active {
   transition: 0.5s;
-  border-radius: 10px;
-  background-color: #ededed;
 }
 .container .question {
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   border-bottom: none;
   transition: 0.5s 0.5s;
@@ -40,45 +51,32 @@
   transition: 0.5s;
   margin-bottom: 1rem;
 }
-.container .hr {
-  width: 100%;
-  height: 1px;
-  background-color: #373737;
-  margin-bottom: 1rem;
-  opacity: 0;
-  transition: 0.5s 0.2s;
-  transform: translateY(10px);
-}
-.container.active .hr {
-  transition: 0.5s 0.4s;
-  opacity: 1;
-  transform: translateY(0);
-}
 .container .question h4 {
   line-height: 1.1;
   font-family: "TerminaTest-Regular";
-  font-size: 16px;
+  font-size: 15px;
+  width: 100%;
 }
-.container .question img {
-  width: 16px;
-  height: 16px;
+.container .question svg {
+  width: 1.5rem;
+  height: 1.5rem;
   transition: 0.5s;
 }
-.container.active .question img {
-  transform: rotate(-180deg);
+.container.active .question svg {
+  transform: rotate(-45deg);
 }
 .container p {
   color: #373737;
   font-weight: 500;
   line-height: 1.1;
   font-family: "LufgaRegular";
-  font-size: 14px;
+  font-size: 13px;
   transform: translateY(10px);
   opacity: 0;
   transition: 0.5s 0s;
 }
 .container.active p {
-  transition: 0.5s 0.6s;
+  transition: 0.5s 0.4s;
   opacity: 1;
   transform: translateY(0);
 }

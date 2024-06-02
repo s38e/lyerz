@@ -21,14 +21,15 @@
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
+  justify-content: space-between;
+  align-items: flex-start;
   /* flex: 1 1; */
   overflow: hidden;
   transition: 0.3s;
   border: 2px solid #f1f1f1;
 }
 .service .top {
+  width: 100%;
   cursor: pointer;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +59,7 @@
   /* height: 100px !important; */
 }
 .service .bottom p {
-  color: #8c8c8c;
+  color: #373737;
   font-weight: 500;
   line-height: 1.25;
   font-family: "LufgaRegular";
