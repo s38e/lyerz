@@ -810,13 +810,13 @@ function HomePage() {
                       or small. So, you might be wondering: What counts as one
                       design task? Need a presentation, flyer, landing page, or
                       some ads? Just tell us what you want through your personal
-                      dashboard and we'll get it done in under 48 hours!
+                      dashboard and we&#39;ll get it done in under 48 hours!
                       <br />
                       <br />
                       Have a bigger project, like a whole new website, an app,
                       or branding guidelines? These typically take more time and
                       planning, so we can break them down into smaller tasks and
-                      make sure everything looks great. For example if we're
+                      make sure everything looks great. For example if we&#39;re
                       talking about Branding Guidelines, to achieve a result
                       that truly represents your brand and fits with your
                       vision, we deliver the guidelines step by step & one task
@@ -825,8 +825,8 @@ function HomePage() {
                       <br />
                       <br />
                       Have more questions? Contact us at hi@lyerz.io. We can
-                      make your design ideas a reality, big or small. Let's put
-                      an end to design stress and create something magical
+                      make your design ideas a reality, big or small. Let&#39;s
+                      put an end to design stress and create something magical
                       together!
                     </>
                   }
@@ -836,8 +836,8 @@ function HomePage() {
                   answer={
                     <>
                       The first priority for us is that you are satisfied with
-                      the final design. Whether it's a display banner, an icon
-                      set or newsletter graphics.
+                      the final design. Whether it&#39;s a display banner, an
+                      icon set or newsletter graphics.
                       <br />
                       <br />
                       Therefore, you can request unlimited revisions and always
@@ -923,19 +923,25 @@ function HomePage() {
                     <>
                       After you have decided to subscribe, we will conduct an
                       onboarding call to better understand your business and
-                      your design needs. During the call, we'll also explain the
-                      design process and upload your brand assets together.
+                      your design needs. During the call, we&#39;ll also explain
+                      the design process and upload your brand assets together.
                       <br />
                       <br />
-                      We'll then match you with a designer from our team and
-                      you'll be given access to your design dashboard, where you
-                      can get started right away with your first briefing.
+                      We&#39;ll then match you with a designer from our team and
+                      you&#39;ll be given access to your design dashboard, where
+                      you can get started right away with your first briefing.
                     </>
                   }
                 />
                 <Question
                   question="I am not satisfied with my designer. Can I switch to another designer?"
-                  answer="Should it be the case that you're not happy with the style of your designer, you can always change your personal designer, without a hassle."
+                  answer={
+                    <>
+                      Should it be the case that you&#39;re not happy with the
+                      style of your designer, you can always change your
+                      personal designer, without a hassle.
+                    </>
+                  }
                 />
                 <Question
                   question="Is it possible to pause my subscription?"
