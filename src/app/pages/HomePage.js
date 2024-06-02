@@ -70,13 +70,14 @@ function HomePage() {
 
   useEffect(() => {
     const Footer = document.querySelector(`.${FooterStyles.Footer}`);
+
     if (
       isCardWorkClicked ||
       isCardServicesClicked ||
       isCardAboutClicked ||
       isCardPlansClicked
     ) {
-      Footer.style.gap = "2rem";
+      Footer.style.gap = "1rem";
     } else {
       Footer.style.gap = "4rem";
     }
@@ -503,16 +504,15 @@ function HomePage() {
                 description={overlayAboutCard("card_1_heading->p_2")}
               />
               <CardInOverlayAbout
-                image={Fixed_Monthly_Subscription}
-                title={overlayAboutCard("card_3_heading->p_1")}
-                description={overlayAboutCard("card_3_heading->p_2")}
-              />
-              <CardInOverlayAbout
                 image={Create_WOW}
                 title={overlayAboutCard("card_5_heading->p_1")}
                 description={overlayAboutCard("card_5_heading->p_2")}
               />
-              {/*  */}
+              <CardInOverlayAbout
+                image={Fixed_Monthly_Subscription}
+                title={overlayAboutCard("card_3_heading->p_1")}
+                description={overlayAboutCard("card_3_heading->p_2")}
+              />
               <CardInOverlayAbout
                 image={Excellent_Design_Quality}
                 title={overlayAboutCard("card_4_heading->p_1")}

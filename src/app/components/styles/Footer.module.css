@@ -33,7 +33,7 @@
   justify-content: flex-end;
   flex-direction: column;
   background-color: rgba(220, 220, 220, 0.4) !important;
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(11px);
   color: #626262;
   border-radius: 2rem;
   font-family: "LufgaMedium";
