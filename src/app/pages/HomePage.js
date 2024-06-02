@@ -46,7 +46,7 @@ import card_services from "/public/assets/card_services.webp";
 import card_about from "/public/assets/card_about.webp";
 import card_plans from "/public/assets/card_plans.webp";
 import Arrow from "/public/assets/Arrow.svg";
-import Arrow_3 from "/public/assets/Arrow_3.svg";
+import Arrow_3 from "/public/assets/arrow_3.svg";
 import { useLocale, useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 import CircleOverlayWorkCard from "../components/CircleOverlayWorkCard";
