@@ -14,7 +14,6 @@ const Question = ({ question, answer, initialActiveState = false }) => {
       const topQuestionHeight = topQuestionRef.current.offsetHeight + 16;
       if (isQuestionActive) {
         const bottomQuestionHeight = bottomQuestionRef.current.offsetHeight;
-        console.log(bottomQuestionHeight);
         const newHeight = topQuestionHeight + bottomQuestionHeight + 33;
         questionRef.current.style.height = `${newHeight}px`;
       } else {
