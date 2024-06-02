@@ -11,16 +11,6 @@
 }
 /* ---------------- Question Styles ---------------- */
 .container {
-  /* width: 100%;
-  cursor: pointer;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  overflow: hidden;
-  transition: 0.5s 0.5s;
-  border-radius: 0px;
-  padding: 0.5rem; */
   cursor: pointer;
   background-color: #f7f7f7;
   border-radius: 16px;
@@ -28,7 +18,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  /* flex: 1 1; */
   overflow: hidden;
   transition: 0.3s;
   border: 2px solid #f1f1f1;
@@ -52,7 +41,6 @@
   margin-bottom: 1rem;
 }
 .container .question h4 {
-  line-height: 1.1;
   font-family: "TerminaTest-Regular";
   font-size: 15px;
   width: 100%;
