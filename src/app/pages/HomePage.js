@@ -71,7 +71,7 @@ function HomePage() {
   const [isCardWorkClicked, setIsCardWorkClicked] = useState(false);
   const [isCardServicesClicked, setIsCardServicesClicked] = useState(false);
   const [isCardAboutClicked, setIsCardAboutClicked] = useState(false);
-  const [isCardPlansClicked, setIsCardPlansClicked] = useState(false);
+  const [isCardPlansClicked, setIsCardPlansClicked] = useState(true);
 
   useEffect(() => {
     const Footer = document.querySelector(`.${FooterStyles.Footer}`);
@@ -752,12 +752,24 @@ function HomePage() {
                   <div className={styles.pricingPoint}>
                     <Image src={Infenity} alt="Infenity" />
                     <p>Unlimited Requests</p>
-                    <Image src={Info} alt="Info" />
+                    <div className={styles.Image}>
+                      <Image src={Info} alt="Info" />
+                      <div className={styles.infoOverlay}>
+                        One request at a time.
+                      </div>
+                    </div>
                   </div>
                   <div className={styles.pricingPoint}>
                     <Image src={Infenity} alt="Infenity" />
                     <p>Unlimited Revisions</p>
-                    <Image src={Info} alt="Info" />
+                    <div className={styles.Image}>
+                      <Image src={Info} alt="Info" />
+                      <div className={styles.infoOverlay}>
+                        We iterate until you are 100%
+                        <br />
+                        Satisfied
+                      </div>
+                    </div>
                   </div>
                   <div className={styles.pricingPoint}>
                     <Image src={True} alt="True" />
@@ -800,12 +812,24 @@ function HomePage() {
                   <div className={styles.pricingPoint}>
                     <Image src={Infenity} alt="Infenity" />
                     <p>Unlimited Requests</p>
-                    <Image src={Info} alt="Info" />
+                    <div className={styles.Image}>
+                      <Image src={Info} alt="Info" />
+                      <div className={styles.infoOverlay}>
+                        Two request at a time.
+                      </div>
+                    </div>
                   </div>
                   <div className={styles.pricingPoint}>
                     <Image src={Infenity} alt="Infenity" />
                     <p>Unlimited Revisions</p>
-                    <Image src={Info} alt="Info" />
+                    <div className={styles.Image}>
+                      <Image src={Info} alt="Info" />
+                      <div className={styles.infoOverlay}>
+                        We iterate until you are
+                        <br />
+                        100% Satisfied
+                      </div>
+                    </div>
                   </div>
                   <div className={styles.pricingPoint}>
                     <Image src={True} alt="True" />

@@ -1189,9 +1189,90 @@
   .plan
   .pricingContent
   .pricingPoint
+  .Image {
+  position: relative;
+  cursor: pointer;
+  width: 20px !important;
+  height: 20px !important;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingContent
+  .pricingPoint
+  .Image
+  .infoOverlay {
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -155%);
+  background-color: #1b1b1b;
+  color: white;
+  padding: 0.5rem;
+  font-size: 14px;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s 0.3s linear, opacity 0.2s linear;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingContent
+  .pricingPoint
+  .Image
+  .infoOverlay::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, 50%) rotate(45deg);
+  background-color: #1b1b1b;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingContent
+  .pricingPoint
+  .Image
+  img:hover
+  + .infoOverlay {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.2s linear, opacity 0.2s 0.3s linear;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingContent
+  .pricingPoint
+  .Image
   img {
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+.HeroSection
+  .overlayPlansCard
+  .contanier
+  .plans
+  .plan
+  .pricingContent
+  .pricingPoint
+  img {
+  width: 20px !important;
+  height: 20px !important;
   vertical-align: top;
 }
 .HeroSection
@@ -1212,6 +1293,7 @@
   .pricingContent
   .pricingPoint
   p {
+  width: 100%;
   font-size: 13px;
   color: #000 !important;
 }
