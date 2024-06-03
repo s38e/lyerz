@@ -56,6 +56,7 @@ import CircleOverlayAboutCard from "../components/CircleOverlayAboutCard";
 import CircleOverlayPlansCard from "../components/CircleOverlayPlansCard";
 import Service from "../components/Service";
 import Question from "../components/Question";
+import InfiniteScroll from "../components/InfiniteScroll";
 import gsap from "gsap";
 import { getLangDir } from "rtl-detect";
 import FooterStyles from "../components/styles/Footer.module.css";
@@ -112,29 +113,45 @@ function HomePage() {
     const WorkCard = document.querySelector(
       `.${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}:nth-child(2)`
     );
+    const headTexts_h2_1 = document.querySelector(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} .${styles.heading} h2:nth-child(1)`
+    );
+    const headTexts_h2_2 = document.querySelector(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} .${styles.heading} h2:nth-child(2)`
+    );
     const headTexts_P_1 = document.querySelector(
       `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} div span:nth-child(1)`
     );
-    const headTexts_P_2 = document.querySelector(
-      `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} div span:nth-child(2)`
+    const OurPartners = document.querySelector(
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} div .${styles.ourPartners}`
     );
 
     WorkCard.addEventListener("mouseover", () => {
       setIsCardWorkHovered(true);
-      headTexts_P_2.style.opacity = "1";
+      //---------------------------------------
+      OurPartners.style.opacity = "1";
       headTexts_P_1.style.opacity = "0";
+      headTexts_h2_2.style.opacity = "1";
+      headTexts_h2_1.style.opacity = "0";
       //---------------------------------------
       headTexts_P_1.style.transitionDelay = "0s";
-      headTexts_P_2.style.transitionDelay = "0.4s";
+      OurPartners.style.transitionDelay = "0.4s";
+      headTexts_h2_1.style.transitionDelay = "0s";
+      headTexts_h2_2.style.transitionDelay = "0.4s";
     });
 
     WorkCard.addEventListener("mouseout", () => {
       setIsCardWorkHovered(false);
-      headTexts_P_2.style.opacity = "0";
+      //---------------------------------------
+      OurPartners.style.opacity = "0";
       headTexts_P_1.style.opacity = "1";
+      headTexts_h2_2.style.opacity = "0";
+      headTexts_h2_1.style.opacity = "1";
       //---------------------------------------
       headTexts_P_1.style.transitionDelay = "0.4s";
-      headTexts_P_2.style.transitionDelay = "0s";
+      OurPartners.style.transitionDelay = "0s";
+      headTexts_h2_1.style.transitionDelay = "0.4s";
+      headTexts_h2_2.style.transitionDelay = "0s";
     });
     // ---------------- ServicesCard ---------------- //
     const ServicesCard = document.querySelector(
@@ -177,12 +194,12 @@ function HomePage() {
   useEffect(() => {
     // ---------------- Animation HeadTexts ---------------- //
     gsap.fromTo(
-      `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} h2`,
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} .${styles.heading}`,
       { opacity: 0, y: 100 },
       { opacity: 1, delay: 0.4, y: 0, duration: 1.25, ease: "power4.out" }
     );
     gsap.fromTo(
-      `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} div`,
+      `.${styles.HeroSection} .${styles.hero_content} .${styles.headTexts} .${styles.title}`,
       { opacity: 0, y: 100 },
       { opacity: 1, delay: 0.5, y: 0, duration: 1.25, ease: "power4.out" }
     );
@@ -265,21 +282,23 @@ function HomePage() {
         <NavBar />
         <div className={styles.hero_content}>
           <div className={styles.headTexts}>
-            <h2>
-              {t("header_1")}
-              <br />
-              <span>{t("header_2")}</span>
-            </h2>
-            <div>
+            <div className={styles.heading}>
+              <h2>
+                {t("header_1")}
+                <br />
+                <span>{t("header_2")}</span>
+              </h2>
+              <h2>Our Partners</h2>
+            </div>
+            <div className={styles.title}>
               <span>
                 {t("header_3")}
                 <p>{t("absoluteTitle")}</p>
                 <Image src={Arrow} alt="Arrow" />
               </span>
-              <span>
-                See our top projects and discover how we turn ideas into
-                reality.
-              </span>
+              <div className={styles.ourPartners}>
+                <InfiniteScroll />
+              </div>
             </div>
           </div>
           <div className={styles.hero_cards}>

@@ -64,32 +64,45 @@
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
+  transition: 0.5s;
 }
-.HeroSection .hero_content .headTexts h2 {
+.HeroSection .hero_content .headTexts .heading {
+  position: relative;
+  opacity: 0;
+}
+.HeroSection .hero_content .headTexts .heading h2 {
   font-family: "TerminaTest-Demi";
   font-size: 1.75rem;
   font-weight: 100;
   line-height: 1.2;
+  transition: opacity 0.5s;
   text-align: center;
-  opacity: 0;
 }
-.HeroSection .hero_content .headTexts h2 span {
+.HeroSection .hero_content .headTexts .heading h2 span {
   color: #b0b0b0;
 }
-.HeroSection .hero_content .headTexts div {
+.HeroSection .hero_content .headTexts .heading h2:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  white-space: nowrap;
+  opacity: 0;
+}
+.HeroSection .hero_content .headTexts .title {
   font-family: "LufgaRegular";
   direction: ltr;
   color: #b0b0b0;
   opacity: 0;
 }
-.HeroSection .hero_content .headTexts div span {
+.HeroSection .hero_content .headTexts .title span {
   position: relative;
   transition: opacity 0.5s;
   width: 100%;
   display: inline-block;
   text-align: center;
 }
-.HeroSection .hero_content .headTexts div span:nth-child(1) p {
+.HeroSection .hero_content .headTexts .title span:nth-child(1) p {
   top: -25px;
   right: -80px;
   position: absolute;
@@ -98,21 +111,27 @@
   font-size: 20px;
   opacity: 1;
 }
-.HeroSection .hero_content .headTexts div span:nth-child(1) img {
+.HeroSection .hero_content .headTexts .title span:nth-child(1) img {
   top: -2px;
   right: -25px;
   position: absolute;
   width: 17px;
   height: auto;
 }
-.HeroSection .hero_content .headTexts div span:nth-child(2) {
+.HeroSection .hero_content .headTexts .title .ourPartners {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+  height: 70px;
+  width: 41.5rem;
+  border: 2px solid #f1f1f1;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  transition: opacity 0.5s;
   opacity: 0;
 }
-.HeroSection.ar .hero_content .headTexts div {
+.HeroSection.ar .hero_content .headTexts .title {
   direction: rtl;
 }
 .HeroSection .hero_content .hero_cards {
@@ -1377,13 +1396,13 @@
   font-weight: 600;
 }
 /* --------------------- Arabic Styles --------------------- */
-.HeroSection.ar .hero_content .headTexts div span:nth-child(1) p {
+.HeroSection.ar .hero_content .headTexts .title span:nth-child(1) p {
   left: -28px;
   top: -20px;
   font-size: 15px;
   right: unset;
 }
-.HeroSection.ar .hero_content .headTexts div span:nth-child(1) img {
+.HeroSection.ar .hero_content .headTexts .title span:nth-child(1) img {
   left: -25px;
   right: unset;
   transform: scaleX(-1);
