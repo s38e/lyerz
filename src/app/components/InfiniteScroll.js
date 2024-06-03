@@ -34,9 +34,9 @@ const InfiniteScroll = () => {
 
   return (
     <div
-      className={`${styles.scroller} ${styles.slow}`}
+      className={`${styles.scroller} ${styles.fast}`}
       data-direction="left"
-      data-speed="slow"
+      data-speed="fast"
     >
       <div className={styles.scroller__inner}>
         <Image src={card_about} alt="Image" />
