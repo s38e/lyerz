@@ -71,7 +71,7 @@ function HomePage() {
   const [isCardWorkClicked, setIsCardWorkClicked] = useState(false);
   const [isCardServicesClicked, setIsCardServicesClicked] = useState(false);
   const [isCardAboutClicked, setIsCardAboutClicked] = useState(false);
-  const [isCardPlansClicked, setIsCardPlansClicked] = useState(true);
+  const [isCardPlansClicked, setIsCardPlansClicked] = useState(false);
 
   useEffect(() => {
     const Footer = document.querySelector(`.${FooterStyles.Footer}`);
