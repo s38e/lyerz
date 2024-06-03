@@ -1,6 +1,7 @@
 .scroller {
   max-width: 41.5rem;
   height: 100%;
+  direction: ltr;
 }
 
 .scroller__inner {
