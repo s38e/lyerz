@@ -55,6 +55,7 @@
   right: 0;
   font-size: 5px;
   font-family: "LufgaRegular";
+  font-weight: 600;
 }
 /* ------------------ Hover ---------------- */
 .NavBar a:hover img {

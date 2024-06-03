@@ -250,6 +250,7 @@
   right: -7px;
   font-size: 5px;
   font-family: "LufgaRegular";
+  font-weight: 600;
 }
 .Footer button .menu .link:hover .Arrow {
   transition: 0.4s 0.1s;

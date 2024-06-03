@@ -40,11 +40,15 @@
   },
   "overlayServicesCard": {
     "head->h2": "Services",
-    "head->p": "We team up with founders and startups to bring their ideas to life—whether it's a simple landing page, a complete website, or mobile and web apps.",
+    "head->p": "We cover all of your design needs. We team up with founders and startups to bring their ideas to life—whether it's a simple landing page, a complete website, logo, branding, mobile and web apps design.",
     "head->li_1": "No template work",
     "head->li_2": "Deep-dive into your product and ideas",
     "Service_1_Title": "Mobile & desktop design",
-    "Service_1_Description": "Whether it's starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms."
+    "Service_1_Description": "Whether it's starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms.",
+    "Service_2_Title": "Website design",
+    "Service_2_Description": "Every page is purposefully designed with clear goals, whether it's raising awareness or driving conversions.",
+    "Service_3_Title": "Branding & logos",
+    "Service_3_Description": "You need support with the implementation of your brand? Our experienced brand designers will help you develop a top brand."
   },
   "overlayAboutCard": {
     "headTexts->h2": "About",

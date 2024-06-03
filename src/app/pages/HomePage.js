@@ -494,14 +494,14 @@ function HomePage() {
                 initialActiveState={true}
               />
               <Service
-                title={overlayServicesCard("Service_1_Title")}
-                description={overlayServicesCard("Service_1_Description")}
+                title={overlayServicesCard("Service_2_Title")}
+                description={overlayServicesCard("Service_2_Description")}
                 image={img_2_services}
                 initialActiveState={false}
               />
               <Service
-                title={overlayServicesCard("Service_1_Title")}
-                description={overlayServicesCard("Service_1_Description")}
+                title={overlayServicesCard("Service_3_Title")}
+                description={overlayServicesCard("Service_3_Description")}
                 image={img_3_services}
                 initialActiveState={false}
               />
