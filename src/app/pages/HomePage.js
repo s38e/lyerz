@@ -135,9 +135,9 @@ function HomePage() {
       headTexts_h2_1.style.opacity = "0";
       //---------------------------------------
       headTexts_P_1.style.transitionDelay = "0s";
-      OurPartners.style.transitionDelay = "0.4s";
+      OurPartners.style.transitionDelay = "0.3s";
       headTexts_h2_1.style.transitionDelay = "0s";
-      headTexts_h2_2.style.transitionDelay = "0.4s";
+      headTexts_h2_2.style.transitionDelay = "0.3s";
     });
 
     WorkCard.addEventListener("mouseout", () => {
@@ -148,9 +148,9 @@ function HomePage() {
       headTexts_h2_2.style.opacity = "0";
       headTexts_h2_1.style.opacity = "1";
       //---------------------------------------
-      headTexts_P_1.style.transitionDelay = "0.4s";
+      headTexts_P_1.style.transitionDelay = "0.3s";
       OurPartners.style.transitionDelay = "0s";
-      headTexts_h2_1.style.transitionDelay = "0.4s";
+      headTexts_h2_1.style.transitionDelay = "0.3s";
       headTexts_h2_2.style.transitionDelay = "0s";
     });
     // ---------------- ServicesCard ---------------- //

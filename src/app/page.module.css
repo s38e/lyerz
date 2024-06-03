@@ -75,7 +75,7 @@
   font-size: 1.75rem;
   font-weight: 100;
   line-height: 1.2;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
   text-align: center;
 }
 .HeroSection .hero_content .headTexts .heading h2 span {
@@ -97,7 +97,7 @@
 }
 .HeroSection .hero_content .headTexts .title span {
   position: relative;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
   width: 100%;
   display: inline-block;
   text-align: center;
@@ -128,7 +128,7 @@
   border: 2px solid #f1f1f1;
   background-color: #f7f7f7;
   border-radius: 20px;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
   opacity: 0;
 }
 .HeroSection.ar .hero_content .headTexts .title {
