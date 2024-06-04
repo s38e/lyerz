@@ -71,7 +71,7 @@ function HomePage() {
   const [isCardPlansHovered, setIsCardPlansHovered] = useState(false);
   // ---------------- Clicked ---------------- //
   const [isCardWorkClicked, setIsCardWorkClicked] = useState(false);
-  const [isCardServicesClicked, setIsCardServicesClicked] = useState(true);
+  const [isCardServicesClicked, setIsCardServicesClicked] = useState(false);
   const [isCardAboutClicked, setIsCardAboutClicked] = useState(false);
   const [isCardPlansClicked, setIsCardPlansClicked] = useState(false);
 
