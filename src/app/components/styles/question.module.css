@@ -42,7 +42,7 @@
 }
 .container .question h4 {
   font-family: "LufgaRegular";
-  font-size: 15px;
+  font-size: 16px;
   width: 100%;
 }
 .container .question svg {
@@ -58,7 +58,7 @@
   font-weight: 500;
   line-height: 1.1;
   font-family: "LufgaRegular";
-  font-size: 13px;
+  font-size: 14px;
   transform: translateY(10px);
   opacity: 0;
   transition: 0.5s 0s;

@@ -19,7 +19,6 @@ function Table() {
       <div className={styles.right}>
         <div className={styles.header}>
           <div className={styles.lyerz}>
-            <Image src={Logo} alt="Logo" />
             <p>
               LYERZ<span>TM</span>
             </p>
@@ -39,26 +38,26 @@ function Table() {
             <div>
               <Image src={True} alt="True" />
             </div>
-            <div>Pricing</div>
-            <div>Pricing</div>
+            <div>2 days</div>
+            <div>48h</div>
           </div>
           <div className={styles.col}>
-            <div>Pricing</div>
+            <div>Per task</div>
             <div>-</div>
             <div>-</div>
             <div>-</div>
-            <div>Pricing</div>
-            <div>Pricing</div>
+            <div>2+ weeks</div>
+            <div>Several weeks</div>
           </div>
           <div className={styles.col}>
-            <div>Pricing</div>
+            <div>Per task</div>
             <div>-</div>
             <div>-</div>
             <div>
               <Image src={True} alt="True" />
             </div>
-            <div>Pricing</div>
-            <div>Pricing</div>
+            <div>4+ weeks</div>
+            <div>Several weeks</div>
           </div>
         </div>
       </div>

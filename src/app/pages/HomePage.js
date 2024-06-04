@@ -892,7 +892,7 @@ function HomePage() {
                       Typography, Illustrations, etc. ).
                       <br />
                       <br />
-                      Have more questions? Contact us at hi@lyerz.io. We can
+                      Have more questions? Contact us at hi@lyerz.com. We can
                       make your design ideas a reality, big or small. Let&#39;s
                       put an end to design stress and create something magical
                       together!

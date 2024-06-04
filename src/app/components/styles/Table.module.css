@@ -19,11 +19,11 @@
   background-color: #f7f7f7;
   border: 2px solid #f1f1f1;
   border-radius: 16px;
-  padding: 1rem;
+  padding: 0.5rem;
   display: grid;
   width: 100%;
   grid-template-columns: 0.35fr 1fr;
-  gap: 3rem;
+  gap: 1rem;
 }
 .table .right {
   width: 100%;
@@ -34,7 +34,6 @@
   display: grid;
   width: 100%;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -44,10 +43,10 @@
   font-size: 18px;
   font-family: "LufgaRegular";
   padding-block: 2rem;
-  padding-inline: 1rem;
+  padding-inline: 0.5rem;
 }
 .table .right .header .lyerz {
-  padding-inline: 1rem;
+  padding-inline: 0.5rem;
   padding-block: 2rem;
   display: flex;
   align-items: center;
@@ -78,7 +77,6 @@
   display: grid;
   width: 100%;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
 }
 .table .right .cols .col {
   font-size: 14px;
@@ -92,7 +90,7 @@
   padding-block: 1rem;
   width: 100%;
   text-align: center;
-  padding-inline: 1rem;
+  padding-inline: 0.5rem;
 }
 .table .right .cols .col:nth-child(1) div {
   background-color: #dddddd;
