@@ -717,8 +717,8 @@ function HomePage() {
                     alt="starInOverlayAbout"
                   />
                   <p>
-                    You're in regular conversations with your users, and their
-                    feedback directly shapes your product
+                    You&#39;re in regular conversations with your users, and
+                    their feedback directly shapes your product
                   </p>
                 </div>
                 <div className={styles.item}>
@@ -728,8 +728,8 @@ function HomePage() {
                     alt="starInOverlayAbout"
                   />
                   <p>
-                    Your goal isn't to mimic your competition, you're aiming for
-                    something uniquely yours
+                    Your goal isn&#39;t to mimic your competition, you&#39;re
+                    aiming for something uniquely yours
                   </p>
                 </div>
               </div>
