@@ -81,6 +81,15 @@
 .plan .pricingContent p {
   font-size: 1.5rem;
   font-family: "TerminaTest-Demi";
+  position: relative;
+  align-self: flex-start;
+}
+.plan .pricingContent p span {
+  position: absolute;
+  font-size: 7px;
+  top: 0;
+  right: -11px;
+  font-family: "LufgaRegular";
 }
 .plan .button {
   grid-column-gap: 32px;

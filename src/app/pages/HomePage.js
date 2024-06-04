@@ -71,7 +71,7 @@ function HomePage() {
   const [isCardPlansHovered, setIsCardPlansHovered] = useState(false);
   // ---------------- Clicked ---------------- //
   const [isCardWorkClicked, setIsCardWorkClicked] = useState(false);
-  const [isCardServicesClicked, setIsCardServicesClicked] = useState(false);
+  const [isCardServicesClicked, setIsCardServicesClicked] = useState(true);
   const [isCardAboutClicked, setIsCardAboutClicked] = useState(false);
   const [isCardPlansClicked, setIsCardPlansClicked] = useState(false);
 
@@ -750,6 +750,7 @@ function HomePage() {
                       {overlayPlansCard("plans-plan-pricingContent-p_2->span")}
                     </span>
                   </p>
+                  <p>One request at a time. Pause or cancel anytime.</p>
                   <div className={styles.hr}></div>
                   <div className={styles.pricingPoint}>
                     <Image src={Infenity} alt="Infenity" />
@@ -806,6 +807,7 @@ function HomePage() {
                       {overlayPlansCard("plans-plan-pricingContent-p_2->span")}
                     </span>
                   </p>
+                  <p>Two request at a time. Pause or cancel anytime.</p>
                   <div className={styles.hr}></div>
                   <div className={styles.pricingPoint}>
                     <Image src={Infenity} alt="Infenity" />

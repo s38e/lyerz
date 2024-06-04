@@ -636,7 +636,7 @@
   cursor: default;
   width: 100%;
   /* max-width: 36.25rem; */
-  max-width: 48rem;
+  max-width: 46rem;
   min-height: 46rem;
   height: 46rem;
   border-radius: 30px;
@@ -1044,6 +1044,10 @@
   flex-direction: column;
   display: flex;
   width: 100%;
+}
+.HeroSection .overlayPlansCard .contanier .plans .plan .pricingContent p {
+  font-size: 14px;
+  line-height: 1.1;
 }
 .HeroSection .overlayPlansCard .contanier .plans .plan .pricingContent .hr {
   width: 100%;

@@ -18,7 +18,9 @@ const JoinLYERZPlan = () => {
         {overlayPlansCard("plans-plan_1->pricingTag")}
       </div>
       <div className={styles.pricingContent}>
-        <p>Join LYERZ</p>
+        <p>
+          Join LYERZ<span>TM</span>
+        </p>
         <div className={styles.button}>
           <div className={styles.texts}>
             <h5>Book a 30-min intro call</h5>
