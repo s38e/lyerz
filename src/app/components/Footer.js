@@ -227,6 +227,13 @@ function Footer() {
         </div>
       </button>
       <p>{t("notePart1")}</p>
+      <div
+        className={styles.closeMenuIfOpen}
+        onClick={
+          isContactContainerActive ? handleButtonClickToBack : handleButtonClick
+        }
+        style={{ display: isActive ? "block" : "none" }}
+      ></div>
     </footer>
   );
 }

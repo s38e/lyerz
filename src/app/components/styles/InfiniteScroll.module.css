@@ -2,9 +2,11 @@
   max-width: 41.5rem;
   height: 100%;
   direction: ltr;
+  pointer-events: none;
 }
 
 .scroller__inner {
+  pointer-events: none;
   height: 100%;
   display: flex;
   align-items: center;

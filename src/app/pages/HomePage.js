@@ -47,7 +47,6 @@ import card_services from "/public/assets/card_services.webp";
 import card_about from "/public/assets/card_about.webp";
 import card_plans from "/public/assets/card_plans.webp";
 import Arrow from "/public/assets/Arrow.svg";
-import Arrow_3 from "/public/assets/arrow_3.svg";
 import { useLocale, useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 import CircleOverlayWorkCard from "../components/CircleOverlayWorkCard";
@@ -57,6 +56,8 @@ import CircleOverlayPlansCard from "../components/CircleOverlayPlansCard";
 import Service from "../components/Service";
 import Question from "../components/Question";
 import InfiniteScroll from "../components/InfiniteScroll";
+import JoinLYERZPlan from "../components/joinLYERZPlan";
+import Table from "../components/Table";
 import gsap from "gsap";
 import { getLangDir } from "rtl-detect";
 import FooterStyles from "../components/styles/Footer.module.css";
@@ -317,9 +318,6 @@ function HomePage() {
               <div className={styles.plan_tag}>
                 <p>{tags("tag_3")}</p>
               </div>
-              <div className={styles.plan_tag}>
-                <p>{tags("tag_3")}</p>
-              </div>
             </div>
             <button onClick={handleCardWorkClick} className={styles.card}>
               <Image
@@ -506,6 +504,9 @@ function HomePage() {
                 initialActiveState={false}
               />
             </div>
+            <Table />
+            <JoinLYERZPlan />
+            <div></div>
           </div>
         </div>
         {/* ---------------- Overlay About Card ---------------- */}
@@ -672,6 +673,8 @@ function HomePage() {
                 </div>
               </div>
             </div>
+            <JoinLYERZPlan />
+            <div></div>
           </div>
         </div>
         {/* ---------------- Overlay Plans Card ---------------- */}
@@ -714,7 +717,7 @@ function HomePage() {
                     alt="starInOverlayAbout"
                   />
                   <p>
-                    You’re in regular conversations with your users, and their
+                    You're in regular conversations with your users, and their
                     feedback directly shapes your product
                   </p>
                 </div>
@@ -725,7 +728,7 @@ function HomePage() {
                     alt="starInOverlayAbout"
                   />
                   <p>
-                    Your goal isn’t to mimic your competition, you’re aiming for
+                    Your goal isn't to mimic your competition, you're aiming for
                     something uniquely yours
                   </p>
                 </div>
@@ -733,28 +736,8 @@ function HomePage() {
             </div>
             <h2>{overlayPlansCard("h2")}</h2>
             <div className={styles.plans}>
-              <div className={styles.plan}>
-                <div className={styles.pricingTag}>
-                  <div className={styles.live_indicator}>
-                    <div className={styles.red_dot}></div>
-                    <div className={`${styles.pulse} ${styles.one}`}></div>
-                    <div className={`${styles.pulse} ${styles.tow}`}></div>
-                  </div>
-                  {overlayPlansCard("plans-plan_1->pricingTag")}
-                </div>
-                <div className={styles.pricingContent}>
-                  <p>Join LYERZ</p>
-                  <div className={styles.button}>
-                    <div className={styles.texts}>
-                      <h5>Book a 30-min intro call</h5>
-                      <p>
-                        Learn more about how LYERZ works and how it can help
-                        you.
-                      </p>
-                    </div>
-                    <Image src={Arrow_3} alt="Arrow_3" />
-                  </div>
-                </div>
+              <div className={styles.joinLYERZPlan}>
+                <JoinLYERZPlan />
               </div>
               <div className={styles.plan}>
                 <p className={styles.pricingTag}>
@@ -800,15 +783,11 @@ function HomePage() {
                   </div>
                   <div className={styles.pricingPoint}>
                     <Image src={True} alt="True" />
-                    <p>Monthly Cancellable</p>
+                    <p>LYERZ Space Access</p>
                   </div>
                   <div className={styles.pricingPoint}>
                     <Image src={True} alt="True" />
                     <p>Dedicated Project Manager</p>
-                  </div>
-                  <div className={styles.pricingPoint}>
-                    <Image src={True} alt="True" />
-                    <p>Dashboard access for your entire team</p>
                   </div>
                 </div>
                 <button>
@@ -860,15 +839,11 @@ function HomePage() {
                   </div>
                   <div className={styles.pricingPoint}>
                     <Image src={True} alt="True" />
-                    <p>Monthly Cancellable</p>
+                    <p>LYERZ Space Access</p>
                   </div>
                   <div className={styles.pricingPoint}>
                     <Image src={True} alt="True" />
                     <p>Dedicated Project Manager</p>
-                  </div>
-                  <div className={styles.pricingPoint}>
-                    <Image src={True} alt="True" />
-                    <p>Dashboard access for your entire team</p>
                   </div>
                 </div>
                 <button>
@@ -1069,6 +1044,7 @@ function HomePage() {
                 />
               </div>
             </div>
+            <div></div>
           </div>
         </div>
       </section>

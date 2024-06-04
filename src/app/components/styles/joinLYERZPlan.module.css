@@ -1,0 +1,117 @@
+/* ---------------- Font ---------------- */
+@font-face {
+  font-family: "TerminaTest-Demi";
+  src: url(/fonts/TerminaTest/TerminaTest-Demi.otf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "LufgaRegular";
+  src: url(/fonts/Lufga/LufgaRegular.ttf);
+  font-display: swap;
+}
+/* ---------------- Plan ---------------- */
+.plan {
+  background-color: #000;
+  border: none;
+  color: white;
+  gap: 1.25rem;
+  border-radius: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+}
+.plan .pricingTag {
+  background-color: #ffdc26;
+  border-radius: 50px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: black;
+}
+.plan .pricingTag .live_indicator {
+  width: 7px;
+  height: 7px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.plan .pricingTag .live_indicator .red_dot,
+.plan .pricingTag .live_indicator .pulse {
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  border-radius: 18px;
+  background-color: black;
+}
+.plan .pricingTag .live_indicator .pulse {
+  animation-name: red-dot-scale-fade;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+.plan .pricingTag .live_indicator .pulse.two {
+  animation-delay: 0.25s;
+}
+@keyframes red-dot-scale-fade {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+.pricingContent {
+  gap: 1rem;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+}
+.plan .pricingContent p {
+  font-size: 1.5rem;
+  font-family: "TerminaTest-Demi";
+}
+.plan .button {
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  cursor: pointer;
+  border: 1px solid rgb(255, 255, 255, 0.14);
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  display: flex;
+  transition: 0.5s;
+}
+.plan .button:hover {
+  background-color: #1b1b1b;
+}
+.plan .button .texts {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.plan .button .texts h5 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+}
+.plan .button .texts p {
+  font-size: 13px;
+  color: #c8c8c8;
+  line-height: 1;
+  font-family: "LufgaRegular";
+}

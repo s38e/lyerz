@@ -20,3 +20,12 @@ button {
   outline: none;
   border: none;
 }
+::selection {
+  background-color: #444;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #444;
+  color: white;
+}

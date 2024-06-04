@@ -130,6 +130,7 @@
   border-radius: 20px;
   transition: opacity 0.3s;
   opacity: 0;
+  z-index: -1;
 }
 .HeroSection.ar .hero_content .headTexts .title {
   direction: rtl;
@@ -496,7 +497,7 @@
   top: 30%;
   bottom: auto;
   left: auto;
-  right: -32%;
+  right: -20%;
   visibility: hidden;
   transition: visibility 0s 0.3s linear;
 }
@@ -515,6 +516,7 @@
   align-self: stretch;
   text-align: start;
   font-family: "LufgaRegular";
+  min-width: 110px;
 }
 .HeroSection .hero_content .hero_cards .cardsPlansCard.active .plan_tag {
   opacity: 1;
@@ -534,15 +536,8 @@
   z-index: 1;
   background-color: #dfd2fd;
   transition: 1s 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
-  left: 5%;
-}
-.HeroSection .hero_content .hero_cards .cardsPlansCard .plan_tag:nth-child(4) {
   left: 10%;
-  z-index: 1;
-  background-color: #d9fce0;
-  transition: 1s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
 .HeroSection
   .hero_content
   .hero_cards
@@ -554,7 +549,7 @@
   .hero_content
   .hero_cards
   .cardsPlansCard.active
-  .plan_tag:nth-child(4) {
+  .plan_tag:nth-child(3) {
   transform: rotate(2deg);
 }
 /* ---------------- Overlay Work Card ---------------- */
@@ -640,7 +635,8 @@
   padding: max(1rem, min(4rem, 5vw));
   cursor: default;
   width: 100%;
-  max-width: 36.25rem;
+  /* max-width: 36.25rem; */
+  max-width: 52rem;
   min-height: 46rem;
   height: 46rem;
   border-radius: 30px;
@@ -995,68 +991,9 @@
   padding: 1rem;
   display: flex;
 }
-.HeroSection .overlayPlansCard .contanier .plans .plan:nth-child(1) {
+.HeroSection .overlayPlansCard .contanier .plans .joinLYERZPlan {
   grid-column-start: 1;
   grid-column-end: 3;
-  background-color: #000;
-  border: none;
-  color: white;
-}
-.HeroSection .overlayPlansCard .contanier .plans .plan:nth-child(1) .button {
-  grid-column-gap: 32px;
-  grid-row-gap: 32px;
-  cursor: pointer;
-  border: 1px solid rgb(255, 255, 255, 0.14);
-  border-radius: 12px;
-  align-items: center;
-  padding: 16px;
-  display: flex;
-  transition: 0.5s;
-}
-.HeroSection
-  .overlayPlansCard
-  .contanier
-  .plans
-  .plan:nth-child(1)
-  .button:hover {
-  background-color: #1b1b1b;
-}
-.HeroSection
-  .overlayPlansCard
-  .contanier
-  .plans
-  .plan:nth-child(1)
-  .button
-  .texts {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1rem;
-}
-.HeroSection
-  .overlayPlansCard
-  .contanier
-  .plans
-  .plan:nth-child(1)
-  .button
-  .texts
-  h5 {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1;
-}
-.HeroSection
-  .overlayPlansCard
-  .contanier
-  .plans
-  .plan:nth-child(1)
-  .button
-  .texts
-  p {
-  font-size: 13px;
-  color: #c8c8c8;
-  line-height: 1;
 }
 .HeroSection .overlayPlansCard .contanier .plans .plan .pricingTag {
   border-radius: 50px;
@@ -1085,86 +1022,6 @@
   img {
   width: auto;
   height: 15px;
-}
-.HeroSection
-  .overlayPlansCard
-  .contanier
-  .plans
-  .plan
-  .pricingTag:nth-child(1)
-  .live_indicator {
-  width: 7px;
-  height: 7px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.HeroSection
-  .overlayPlansCard
-  .contanier
-  .plans
-  .plan
-  .pricingTag:nth-child(1)
-  .live_indicator
-  .red_dot,
-.HeroSection
-  .overlayPlansCard
-  .contanier
-  .plans
-  .plan
-  .pricingTag:nth-child(1)
-  .live_indicator
-  .pulse {
-  position: absolute;
-  height: 7px;
-  width: 7px;
-  border-radius: 18px;
-  background-color: black;
-}
-.HeroSection
-  .overlayPlansCard
-  .contanier
-  .plans
-  .plan
-  .pricingTag:nth-child(1)
-  .live_indicator
-  .pulse {
-  animation-name: red-dot-scale-fade;
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
-}
-.HeroSection
-  .overlayPlansCard
-  .contanier
-  .plans
-  .plan
-  .pricingTag:nth-child(1)
-  .live_indicator
-  .pulse.two {
-  animation-delay: 0.25s;
-}
-@keyframes red-dot-scale-fade {
-  0% {
-    opacity: 0.5;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0;
-    transform: scale(2.5);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(2.5);
-  }
-}
-.HeroSection
-  .overlayPlansCard
-  .contanier
-  .plans
-  .plan:nth-child(1)
-  .pricingTag {
-  background-color: #ffdc26;
 }
 .HeroSection
   .overlayPlansCard
@@ -1433,21 +1290,7 @@
 .HeroSection.ar
   .hero_content
   .hero_cards
-  .cardsPlansCard
-  .plan_tag:nth-child(4) {
-  left: -10%;
-}
-.HeroSection.ar
-  .hero_content
-  .hero_cards
   .cardsPlansCard.active
   .plan_tag:nth-child(1) {
   transform: rotate(2deg);
-}
-.HeroSection.ar
-  .hero_content
-  .hero_cards
-  .cardsPlansCard.active
-  .plan_tag:nth-child(4) {
-  transform: rotate(-2deg);
 }

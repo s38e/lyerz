@@ -1,0 +1,112 @@
+/* ---------------- Font ---------------- */
+@font-face {
+  font-family: "TerminaTest-Demi";
+  src: url(/fonts/TerminaTest/TerminaTest-Demi.otf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "TerminaTest-Medium";
+  src: url(/fonts/TerminaTest/TerminaTest-Medium.otf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "LufgaRegular";
+  src: url(/fonts/Lufga/LufgaRegular.ttf);
+  font-display: swap;
+}
+/* ---------------- Table ---------------- */
+.table {
+  background-color: #f7f7f7;
+  border: 2px solid #f1f1f1;
+  border-radius: 16px;
+  padding: 1rem;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 0.35fr 1fr;
+  gap: 3rem;
+}
+.table .right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.table .right .header {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid #646464;
+}
+.table .right .header h2 {
+  font-size: 18px;
+  font-family: "LufgaRegular";
+  padding-block: 2rem;
+  padding-inline: 1rem;
+}
+.table .right .header .lyerz {
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  gap: 10px;
+  font-family: "TerminaTest-Demi";
+  background-color: rgba(255, 219, 38, 0.7);
+  border-radius: 10px 10px 0 0;
+}
+.table .right .header .lyerz img {
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+}
+.table .right .header .lyerz p {
+  position: relative;
+}
+.table .right .header .lyerz p span {
+  font-size: 5px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  font-weight: 600;
+  font-family: "LufgaRegular";
+}
+.table .right .cols {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.table .right .cols .col {
+  font-size: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.table .right .cols .col div {
+  padding-block: 1rem;
+  width: 100%;
+  text-align: center;
+  padding-inline: 1rem;
+}
+.table .right .cols .col:nth-child(1) div {
+  background-color: rgba(255, 219, 38, 0.7);
+}
+.table .right .cols .col:nth-child(1) div:last-child {
+  border-radius: 0 0 10px 10px;
+}
+.table .left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.table .left p {
+  margin-block: 1rem;
+  font-size: 14px;
+}
