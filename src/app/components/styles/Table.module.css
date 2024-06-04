@@ -55,7 +55,7 @@
   font-size: 18px;
   gap: 10px;
   font-family: "TerminaTest-Demi";
-  background-color: rgba(255, 219, 38, 0.7);
+  background-color: #dddddd;
   border-radius: 10px 10px 0 0;
 }
 .table .right .header .lyerz img {
@@ -95,7 +95,7 @@
   padding-inline: 1rem;
 }
 .table .right .cols .col:nth-child(1) div {
-  background-color: rgba(255, 219, 38, 0.7);
+  background-color: #dddddd;
 }
 .table .right .cols .col:nth-child(1) div:last-child {
   border-radius: 0 0 10px 10px;
