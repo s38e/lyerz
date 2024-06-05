@@ -90,6 +90,18 @@ function HomePage() {
         Footer.style.gap = "4rem";
       }
     }
+    if (isMobile) {
+      if (
+        isCardWorkClicked ||
+        isCardServicesClicked ||
+        isCardAboutClicked ||
+        isCardPlansClicked
+      ) {
+        Footer.style.gap = "0rem";
+      } else {
+        Footer.style.gap = "1rem";
+      }
+    }
     // ---------------- hover effect on cards ---------------- //
     const cards = document.querySelectorAll(
       ` .${styles.HeroSection} .${styles.hero_content} .${styles.hero_cards} .${styles.card}`
