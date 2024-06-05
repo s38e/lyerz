@@ -27,6 +27,12 @@
   align-items: flex-start;
   justify-content: center;
 }
+.table .heading {
+  display: none;
+  font-size: 14px;
+  padding-block: 0.75rem;
+  font-weight: 600;
+}
 .table .header {
   width: 100%;
   display: grid;
@@ -96,6 +102,15 @@
 /* ---------------- 768px ---------------- */
 @media (max-width: 768px) {
   /* for small devices */
+  .table {
+    align-items: center;
+  }
+  .table .heading {
+    display: inline-block;
+  }
+  .table .header {
+    margin-bottom: 2rem;
+  }
   .table .header div:nth-child(1),
   .table .row p:nth-child(1) {
     display: none;

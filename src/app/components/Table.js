@@ -17,12 +17,14 @@ function Table() {
         <h2>Freelancer</h2>
         <h2>Agencies</h2>
       </div>
+      <p className={styles.heading}>Pricing</p>
       <div className={styles.row}>
         <p>Pricing</p>
         <div>monthly price</div>
         <div>Per task</div>
         <div>Per task</div>
       </div>
+      <p className={styles.heading}>Unlimited tasks</p>
       <div className={styles.row}>
         <p>Unlimited tasks</p>
         <div>
@@ -31,6 +33,7 @@ function Table() {
         <div>-</div>
         <div>-</div>
       </div>
+      <p className={styles.heading}>Unlimited revisions</p>
       <div className={styles.row}>
         <p>Unlimited revisions</p>
         <div>
@@ -39,6 +42,7 @@ function Table() {
         <div>-</div>
         <div>-</div>
       </div>
+      <p className={styles.heading}>Pre-qualified designers</p>
       <div className={styles.row}>
         <p>Pre-qualified designers</p>
         <div>
@@ -49,12 +53,14 @@ function Table() {
           <Image src={True} alt="True" />
         </div>
       </div>
+      <p className={styles.heading}>Time to start</p>
       <div className={styles.row}>
         <p>Time to start</p>
         <div>2 days</div>
         <div>2+ weeks</div>
         <div>4+ weeks</div>
       </div>
+      <p className={styles.heading}>Processing time</p>
       <div className={styles.row}>
         <p>Processing time</p>
         <div>48h</div>
