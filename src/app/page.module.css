@@ -220,7 +220,8 @@
 .HeroSection .hero_content .hero_cards .card img {
   pointer-events: none;
   height: 7.5rem;
-  width: 100%;
+  height: 100%;
+  /* width: auto; */
   vertical-align: middle;
   object-fit: contain;
 }
@@ -1297,4 +1298,65 @@
   .cardsPlansCard.active
   .plan_tag:nth-child(1) {
   transform: rotate(2deg);
+}
+/* ---------------- Responsive Styles ---------------- */
+@media (max-width: 1199.98px) {
+  /* for large devices */
+  .HeroSection .overlayServicesCard,
+  .HeroSection .overlayPlansCard,
+  .HeroSection .overlayAboutCard,
+  .HeroSection .overlayWorkCard {
+    position: fixed;
+    padding: 1rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* for large devices */
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* for medium devices */
+}
+@media (max-width: 768px) {
+  /* for small devices */
+  .HeroSection .hero_content {
+    padding: 0 5%;
+  }
+  .HeroSection .hero_content .hero_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+  }
+  .HeroSection .hero_content .headTexts {
+    gap: 1rem;
+  }
+  .HeroSection .hero_content .headTexts .heading h2 {
+    font-size: 1.2rem;
+  }
+  .HeroSection .hero_content .headTexts .title span {
+    font-size: 13px;
+  }
+  .HeroSection .hero_content .headTexts .title span:nth-child(1) p {
+    right: -30px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* for small devices */
+}
+@media (max-width: 575.98px) {
+  /* for extra small devices */
+  .HeroSection .hero_content .headTexts .title span:nth-child(1) img {
+    right: 28%;
+    top: unset;
+    bottom: -16px;
+    transform: scaleY(-1) rotate(-90deg);
+  }
+  .HeroSection .hero_content .headTexts .title span:nth-child(1) p {
+    left: 50%;
+    top: unset;
+    bottom: -22px;
+    transform: translateX(-50%);
+  }
 }
