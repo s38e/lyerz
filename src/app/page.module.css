@@ -1348,15 +1348,19 @@
 @media (max-width: 575.98px) {
   /* for extra small devices */
   .HeroSection .hero_content .headTexts .title span:nth-child(1) img {
-    right: 28%;
+    right: 30%;
     top: unset;
-    bottom: -16px;
+    bottom: -14px;
     transform: scaleY(-1) rotate(-90deg);
+    width: 14px;
   }
   .HeroSection .hero_content .headTexts .title span:nth-child(1) p {
     left: 50%;
     top: unset;
-    bottom: -22px;
+    bottom: -19px;
     transform: translateX(-50%);
+  }
+  .HeroSection .hero_content .headTexts .title span:nth-child(1) p {
+    font-size: 17px;
   }
 }
