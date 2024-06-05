@@ -219,7 +219,7 @@
 }
 .HeroSection .hero_content .hero_cards .card img {
   pointer-events: none;
-  height: 7.5rem;
+  /* height: 7.5rem; */
   height: 100%;
   /* width: auto; */
   vertical-align: middle;
@@ -1320,6 +1320,7 @@
   /* for small devices */
   .HeroSection .hero_content {
     padding: 0 5%;
+    gap: 2rem;
   }
   .HeroSection .hero_content .hero_cards {
     display: grid;
@@ -1328,6 +1329,16 @@
     justify-content: center;
     height: auto;
     width: 100%;
+    gap: 0.4rem;
+  }
+  .HeroSection .hero_content .hero_cards .card {
+    gap: 0.5rem;
+  }
+  .HeroSection .hero_content .hero_cards .card img {
+    height: 5rem;
+  }
+  .HeroSection .hero_content .hero_cards .card p {
+    font-size: 14px;
   }
   .HeroSection .hero_content .headTexts {
     gap: 1rem;
@@ -1340,6 +1351,9 @@
   }
   .HeroSection .hero_content .headTexts .title span:nth-child(1) p {
     right: -30px;
+  }
+  .HeroSection .hero_content .headTexts .title .ourPartners {
+    width: 100%;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
