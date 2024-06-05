@@ -1318,6 +1318,10 @@
 }
 @media (max-width: 768px) {
   /* for small devices */
+  .HeroSection .overlayWorkCard .contanier {
+    height: 100%;
+    border-radius: 20px;
+  }
   .HeroSection .hero_content {
     padding: 0 5%;
     gap: 2rem;
