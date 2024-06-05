@@ -12,12 +12,12 @@ const Question = ({ question, answer, initialActiveState = false }) => {
   useEffect(() => {
     const updateHeight = () => {
       let topQuestionHeight = topQuestionRef.current.offsetHeight;
-      if (screen.width < 768) {
-        topQuestionHeight += 36;
+      if (screen.width <= 768) {
+        topQuestionHeight = topQuestionHeight + 36;
       } else {
-        topQuestionHeight += 44;
+        topQuestionHeight = topQuestionHeight + 44;
       }
-      if (isQuestionActive && bottomQuestionRef.current) {
+      if (isQuestionActive) {
         const bottomQuestionHeight = bottomQuestionRef.current.offsetHeight;
         const newHeight = topQuestionHeight + bottomQuestionHeight + 16;
         questionRef.current.style.height = `${newHeight}px`;
@@ -61,7 +61,7 @@ const Question = ({ question, answer, initialActiveState = false }) => {
           ></path>
         </svg>
       </div>
-      {isQuestionActive && <p ref={bottomQuestionRef}>{answer}</p>}
+      <p ref={bottomQuestionRef}>{answer}</p>
     </div>
   );
 };

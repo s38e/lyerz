@@ -1254,6 +1254,7 @@
   font-family: "TerminaTest-Demi";
 }
 .HeroSection .overlayPlansCard .contanier .faq .content {
+  width: 100%;
   gap: 1rem;
   flex-direction: column;
   display: flex;
@@ -1411,7 +1412,7 @@
   .HeroSection .overlayAboutCard .contanier {
     padding-top: 3rem;
     width: 100%;
-    min-width: unset;
+    max-width: unset;
     border-radius: 0;
   }
   .HeroSection .overlayWorkCard .contanier {
