@@ -497,3 +497,10 @@
   z-index: 999;
   display: none;
 }
+/* ---------------- Responsive Styles ---------------- */
+@media (max-width: 575.98px) {
+  /* for extra small devices */
+  .Footer {
+    gap: 1rem;
+  }
+}

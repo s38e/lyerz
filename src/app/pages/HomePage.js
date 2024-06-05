@@ -62,6 +62,7 @@ import gsap from "gsap";
 import { getLangDir } from "rtl-detect";
 import FooterStyles from "../components/styles/Footer.module.css";
 import Link from "next/link";
+import { isMobile } from "react-device-detect";
 
 function HomePage() {
   // ---------------- Hovered ---------------- //
@@ -77,16 +78,17 @@ function HomePage() {
 
   useEffect(() => {
     const Footer = document.querySelector(`.${FooterStyles.Footer}`);
-
-    if (
-      isCardWorkClicked ||
-      isCardServicesClicked ||
-      isCardAboutClicked ||
-      isCardPlansClicked
-    ) {
-      Footer.style.gap = "1rem";
-    } else {
-      Footer.style.gap = "4rem";
+    if (!isMobile) {
+      if (
+        isCardWorkClicked ||
+        isCardServicesClicked ||
+        isCardAboutClicked ||
+        isCardPlansClicked
+      ) {
+        Footer.style.gap = "1rem";
+      } else {
+        Footer.style.gap = "4rem";
+      }
     }
     // ---------------- hover effect on cards ---------------- //
     const cards = document.querySelectorAll(
