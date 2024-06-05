@@ -1,12 +1,7 @@
 /* ---------------- Font ---------------- */
 @font-face {
-  font-family: "TerminaTest-Demi";
-  src: url(/fonts/TerminaTest/TerminaTest-Demi.otf);
-  font-display: swap;
-}
-@font-face {
-  font-family: "TerminaTest-bold";
-  src: url(/fonts/TerminaTest/TerminaTest-bold.otf);
+  font-family: "TerminaTest-Medium";
+  src: url(/fonts/TerminaTest/TerminaTest-Medium.otf);
   font-display: swap;
 }
 @font-face {
@@ -38,8 +33,7 @@
   padding: 1.25rem 1.5rem;
 }
 .service .top p {
-  font-weight: 600;
-  font-family: "TerminaTest-Demi";
+  font-family: "TerminaTest-Medium";
 }
 .service .top svg {
   width: 1.5rem;
