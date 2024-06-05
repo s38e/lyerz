@@ -28,7 +28,7 @@
 }
 /* ---------------- HeroSection ---------------- */
 .HeroSection {
-  height: calc(100vh - 2rem);
+  height: calc(100dvh - 2rem);
   width: calc(100vw - 2rem);
   background-color: white;
   margin: 1rem;
