@@ -1337,6 +1337,12 @@
     width: 100%;
     gap: 0.4rem;
   }
+  .HeroSection .hero_content .hero_cards .cardsPlansCard,
+  .HeroSection .imagesWorkCard,
+  .HeroSection .cardsServicesCard,
+  .HeroSection .cardsAboutCard {
+    display: none;
+  }
   .HeroSection .hero_content .hero_cards .card {
     gap: 0.5rem;
   }
@@ -1360,6 +1366,23 @@
   }
   .HeroSection .hero_content .headTexts .title .ourPartners {
     width: 100%;
+  }
+  .HeroSection .overlayServicesCard,
+  .HeroSection .overlayPlansCard,
+  .HeroSection .overlayAboutCard {
+    align-items: flex-start;
+  }
+  .HeroSection .overlayServicesCard .contanier,
+  .HeroSection .overlayPlansCard .contanier,
+  .HeroSection .overlayAboutCard .contanier {
+    height: 90%;
+  }
+  .HeroSection .overlayPlansCard .contanier .plans {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .HeroSection .overlayPlansCard .contanier .plans .joinLYERZPlan {
+    grid-column-start: unset;
+    grid-column-end: unset;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -1385,5 +1408,8 @@
   }
   .HeroSection .substituteFooter {
     height: 78px;
+  }
+  .HeroSection .overlayAboutCard .contanier .about_teamCards {
+    columns: 1;
   }
 }
