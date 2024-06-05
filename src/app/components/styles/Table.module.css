@@ -52,11 +52,6 @@
   height: 100%;
   border-bottom: 2px solid #c4c4c4;
 }
-.table .header .lyerz img {
-  height: 25px;
-  width: 25px;
-  vertical-align: middle;
-}
 .table .header .lyerz p {
   position: relative;
 }
@@ -96,4 +91,28 @@
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #c4c4c4;
+}
+/* ---------------- Responsive Styles ---------------- */
+/* ---------------- 768px ---------------- */
+@media (max-width: 768px) {
+  /* for small devices */
+  .table .header div:nth-child(1),
+  .table .row p:nth-child(1) {
+    display: none;
+  }
+  .table .header,
+  .table .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .table .row div img {
+    height: 9px;
+    width: auto;
+  }
+  .table .row div {
+    font-size: 12px;
+  }
+  .table .header h2,
+  .table .header .lyerz {
+    font-size: 16px;
+  }
 }

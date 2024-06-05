@@ -49,3 +49,14 @@
   opacity: 1;
   transform: translateY(0);
 }
+/* ---------------- Responsive Styles ---------------- */
+/* ---------------- 768px ---------------- */
+@media (max-width: 768px) {
+  /* for small devices */
+  .card .heading p:nth-child(1) {
+    font-size: 14px;
+  }
+  .card .heading p:nth-child(2) {
+    font-size: 11px;
+  }
+}

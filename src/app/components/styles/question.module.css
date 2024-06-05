@@ -68,3 +68,17 @@
   opacity: 1;
   transform: translateY(0);
 }
+/* ---------------- Responsive Styles ---------------- */
+/* ---------------- 768px ---------------- */
+@media (max-width: 768px) {
+  /* for small devices */
+  .container {
+    padding: 1rem 1.25rem;
+  }
+  .container .question h4 {
+    font-size: 14px;
+  }
+  .container p {
+  font-size: 11px;
+}
+}

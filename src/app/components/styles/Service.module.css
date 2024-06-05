@@ -74,3 +74,17 @@
   width: 100%;
   height: 10rem;
 }
+/* ---------------- Responsive Styles ---------------- */
+/* ---------------- 768px ---------------- */
+@media (max-width: 768px) {
+  /* for small devices */
+  .service .top {
+    padding: 1rem 1.25rem;
+  }
+  .service .top p {
+    font-size: 14px;
+  }
+  .service .bottom p {
+    font-size: 11px;
+  }
+}

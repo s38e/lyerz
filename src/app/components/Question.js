@@ -11,8 +11,13 @@ const Question = ({ question, answer, initialActiveState = false }) => {
 
   useEffect(() => {
     const updateHeight = () => {
-      const topQuestionHeight = topQuestionRef.current.offsetHeight + 44;
-      if (isQuestionActive) {
+      let topQuestionHeight = topQuestionRef.current.offsetHeight;
+      if (screen.width < 768) {
+        topQuestionHeight += 36;
+      } else {
+        topQuestionHeight += 44;
+      }
+      if (isQuestionActive && bottomQuestionRef.current) {
         const bottomQuestionHeight = bottomQuestionRef.current.offsetHeight;
         const newHeight = topQuestionHeight + bottomQuestionHeight + 16;
         questionRef.current.style.height = `${newHeight}px`;
@@ -22,6 +27,13 @@ const Question = ({ question, answer, initialActiveState = false }) => {
     };
 
     updateHeight();
+
+    // Add resize listener to handle window resize events
+    window.addEventListener("resize", updateHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+    };
   }, [isQuestionActive]);
 
   const toggleService = () => {
@@ -49,7 +61,7 @@ const Question = ({ question, answer, initialActiveState = false }) => {
           ></path>
         </svg>
       </div>
-      <p ref={bottomQuestionRef}>{answer}</p>
+      {isQuestionActive && <p ref={bottomQuestionRef}>{answer}</p>}
     </div>
   );
 };

@@ -124,3 +124,14 @@
   line-height: 1;
   font-family: "LufgaRegular";
 }
+/* ---------------- Responsive Styles ---------------- */
+/* ---------------- 768px ---------------- */
+@media (max-width: 768px) {
+  /* for small devices */
+  .plan .pricingContent p {
+    font-size: 20px;
+  }
+  .plan .button .texts h5 {
+    font-size: 18px;
+  }
+}

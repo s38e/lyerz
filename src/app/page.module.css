@@ -1321,11 +1321,6 @@
 /* ---------------- 768px ---------------- */
 @media (max-width: 768px) {
   /* for small devices */
-  .HeroSection .overlayWorkCard .contanier {
-    height: 100%;
-    border-radius: 20px;
-    min-height: unset;
-  }
   .HeroSection .hero_content {
     padding: 0 5%;
     gap: 2rem;
@@ -1371,21 +1366,66 @@
   }
   .HeroSection .overlayServicesCard,
   .HeroSection .overlayPlansCard,
+  .HeroSection .overlayWorkCard,
   .HeroSection .overlayAboutCard {
     align-items: flex-start;
   }
   .HeroSection .overlayServicesCard .contanier,
   .HeroSection .overlayPlansCard .contanier,
+  .HeroSection .overlayWorkCard .contanier,
   .HeroSection .overlayAboutCard .contanier {
     height: 90%;
     min-height: unset;
   }
+  .HeroSection .overlayWorkCard .contanier {
+    border-radius: 20px;
+  }
+
   .HeroSection .overlayPlansCard .contanier .plans {
     grid-template-columns: repeat(1, 1fr);
   }
   .HeroSection .overlayPlansCard .contanier .plans .joinLYERZPlan {
     grid-column-start: unset;
     grid-column-end: unset;
+  }
+  .HeroSection .overlayAboutCard .contanier .headTexts h2,
+  .HeroSection .overlayServicesCard .contanier .head h2 {
+    font-size: 18px;
+  }
+  .HeroSection .overlayServicesCard .contanier .head ul li,
+  .HeroSection .overlayAboutCard .contanier .headTexts p,
+  .HeroSection .overlayServicesCard .contanier .head p {
+    font-size: 13px;
+  }
+  .HeroSection .overlayAboutCard .contanier .mission {
+    gap: 1rem;
+  }
+  .HeroSection .overlayAboutCard .contanier .mission h2 {
+    font-size: 18px;
+  }
+  .HeroSection .overlayAboutCard .contanier .mission p span {
+    font-size: 13px;
+  }
+  .HeroSection .overlayAboutCard .contanier .about_summary .heading,
+  .HeroSection
+    .overlayAboutCard
+    .contanier
+    .about_summary
+    .content
+    .item
+    .texts
+    p:nth-child(1) {
+    font-size: 14px;
+  }
+  .HeroSection
+    .overlayAboutCard
+    .contanier
+    .about_summary
+    .content
+    .item
+    .texts
+    p:nth-child(2) {
+    font-size: 12px;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
