@@ -1322,6 +1322,7 @@
   .HeroSection .overlayWorkCard .contanier {
     height: 100%;
     border-radius: 20px;
+    min-height: unset;
   }
   .HeroSection .hero_content {
     padding: 0 5%;
