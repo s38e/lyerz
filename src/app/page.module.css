@@ -1377,4 +1377,7 @@
   .HeroSection .hero_content .headTexts .title span:nth-child(1) p {
     font-size: 17px;
   }
+  .HeroSection .substituteFooter {
+    height: 78px;
+  }
 }
