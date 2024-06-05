@@ -1262,6 +1262,28 @@
   color: black;
   font-weight: 600;
 }
+/* --------------------- Button Close Any Overlay --------------------- */
+.btnCloseAnyOverlay {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebebeb;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s linear, opacity 0.2s linear;
+}
+.btnCloseAnyOverlay svg {
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg);
+}
 /* --------------------- Arabic Styles --------------------- */
 .HeroSection.ar .hero_content .headTexts .title span:nth-child(1) p {
   left: -28px;
@@ -1364,23 +1386,37 @@
   .HeroSection .hero_content .headTexts .title .ourPartners {
     width: 100%;
   }
+  .HeroSection .overlayWorkCard,
   .HeroSection .overlayServicesCard,
   .HeroSection .overlayPlansCard,
-  .HeroSection .overlayWorkCard,
   .HeroSection .overlayAboutCard {
     align-items: flex-start;
   }
+  .HeroSection .overlayWorkCard .contanier,
   .HeroSection .overlayServicesCard .contanier,
   .HeroSection .overlayPlansCard .contanier,
-  .HeroSection .overlayWorkCard .contanier,
   .HeroSection .overlayAboutCard .contanier {
-    height: 90%;
+    height: 100%;
     min-height: unset;
     overflow-x: hidden;
     border-radius: 20px;
   }
+  .HeroSection .overlayServicesCard,
+  .HeroSection .overlayPlansCard,
+  .HeroSection .overlayAboutCard {
+    padding: 0;
+  }
+  .HeroSection .overlayServicesCard .contanier,
+  .HeroSection .overlayPlansCard .contanier,
+  .HeroSection .overlayAboutCard .contanier {
+    padding-top: 3rem;
+    width: 100%;
+    min-width: unset;
+    border-radius: 0;
+  }
   .HeroSection .overlayWorkCard .contanier {
     border-radius: 20px;
+    padding-top: 3rem;
   }
 
   .HeroSection .overlayPlansCard .contanier .plans {
@@ -1497,6 +1533,11 @@
     .texts
     p:nth-child(2) {
     font-size: 12px;
+  }
+  .btnCloseAnyOverlay.active {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.2s linear, opacity 0.2s linear;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
