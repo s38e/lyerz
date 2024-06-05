@@ -50,7 +50,7 @@
   padding-block: 1rem;
   font-size: 18px;
   height: 100%;
-  border-bottom: 1px solid #525252;
+  border-bottom: 2px solid #c4c4c4;
 }
 .table .header .lyerz img {
   height: 25px;
@@ -80,16 +80,20 @@
 .table .row p:nth-child(1) {
   text-align: left;
   margin-right: 1rem;
+  font-weight: 600;
 }
 .table .row div:nth-child(2) {
-  /* border-radius: 10px 10px 0 0; */
   background-color: #dddddd;
-}
-.table .row:last-child div:nth-child(2) {
-  border-radius: 0 0 10px 10px;
 }
 .table .row p,
 .table .row div {
   font-size: 14px;
   padding-block: 0.75rem;
+}
+.table .row div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #c4c4c4;
 }
