@@ -1300,6 +1300,7 @@
   transform: rotate(2deg);
 }
 /* ---------------- Responsive Styles ---------------- */
+/* ---------------- 1199.98px ---------------- */
 @media (max-width: 1199.98px) {
   /* for large devices */
   .HeroSection .overlayServicesCard,
@@ -1317,6 +1318,7 @@
 @media (min-width: 768px) and (max-width: 991.98px) {
   /* for medium devices */
 }
+/* ---------------- 768px ---------------- */
 @media (max-width: 768px) {
   /* for small devices */
   .HeroSection .overlayWorkCard .contanier {
@@ -1376,6 +1378,7 @@
   .HeroSection .overlayPlansCard .contanier,
   .HeroSection .overlayAboutCard .contanier {
     height: 90%;
+    min-height: unset;
   }
   .HeroSection .overlayPlansCard .contanier .plans {
     grid-template-columns: repeat(1, 1fr);
@@ -1388,6 +1391,7 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
   /* for small devices */
 }
+/* ---------------- 576px ---------------- */
 @media (max-width: 575.98px) {
   /* for extra small devices */
   .HeroSection .hero_content .headTexts .title span:nth-child(1) img {
