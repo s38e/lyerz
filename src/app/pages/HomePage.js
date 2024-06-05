@@ -770,8 +770,7 @@ function HomePage() {
                     <div className={styles.Image}>
                       <Image src={Info} alt="Info" />
                       <div className={styles.infoOverlay}>
-                        We iterate until you are 100%
-                        <br />
+                        We iterate until you are 100% <br />
                         Satisfied
                       </div>
                     </div>
@@ -827,8 +826,7 @@ function HomePage() {
                     <div className={styles.Image}>
                       <Image src={Info} alt="Info" />
                       <div className={styles.infoOverlay}>
-                        We iterate until you are
-                        <br />
+                        We iterate until you are <br />
                         100% Satisfied
                       </div>
                     </div>

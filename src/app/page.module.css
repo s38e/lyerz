@@ -1063,7 +1063,7 @@
   .pricingContent
   .pricingPoint {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   gap: 12px;
   width: 100%;
@@ -1376,6 +1376,7 @@
   .HeroSection .overlayAboutCard .contanier {
     height: 90%;
     min-height: unset;
+    overflow-x: hidden;
   }
   .HeroSection .overlayWorkCard .contanier {
     border-radius: 20px;
@@ -1387,6 +1388,75 @@
   .HeroSection .overlayPlansCard .contanier .plans .joinLYERZPlan {
     grid-column-start: unset;
     grid-column-end: unset;
+  }
+  .HeroSection
+    .overlayPlansCard
+    .contanier
+    .plans
+    .plan
+    .pricingContent
+    p:nth-child(1),
+  .HeroSection .overlayPlansCard .contanier .faq .heading,
+  .HeroSection .overlayPlansCard .contanier h2,
+  .HeroSection .overlayPlansCard .contanier .headText p:nth-child(1) {
+    font-size: 20px;
+  }
+  .HeroSection
+    .overlayPlansCard
+    .contanier
+    .plans
+    .plan
+    .pricingContent
+    p:nth-child(1)
+    span {
+    font-size: 13px;
+  }
+  .HeroSection
+    .overlayPlansCard
+    .contanier
+    .plans
+    .plan
+    .pricingContent
+    .pricingPoint
+    .Image
+    .infoOverlay {
+    top: 50%;
+    left: 0;
+    transform: translate(-105%, -50%);
+  }
+  .HeroSection
+    .overlayPlansCard
+    .contanier
+    .plans
+    .plan
+    .pricingContent
+    .pricingPoint
+    .Image
+    .infoOverlay
+    br {
+    display: none;
+  }
+  .HeroSection
+    .overlayPlansCard
+    .contanier
+    .plans
+    .plan
+    .pricingContent
+    .pricingPoint
+    .Image
+    .infoOverlay::before {
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    bottom: unset;
+  }
+  .HeroSection .overlayPlansCard .contanier .headText p {
+    font-size: 13px;
+    text-align: center;
+  }
+  .HeroSection .overlayPlansCard .contanier .checkList .content .item img {
+    width: 15px !important;
+    height: 15px !important;
   }
   .HeroSection .overlayAboutCard .contanier .headTexts h2,
   .HeroSection .overlayServicesCard .contanier .head h2 {
