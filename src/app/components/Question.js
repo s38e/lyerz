@@ -9,30 +9,31 @@ const Question = ({ question, answer, initialActiveState = false }) => {
   const topQuestionRef = useRef(null);
   const bottomQuestionRef = useRef(null);
 
+  const updateHeight = () => {
+    let topQuestionHeight = topQuestionRef.current.offsetHeight;
+    if (window.innerWidth <= 768) {
+      topQuestionHeight += 36;
+    } else {
+      topQuestionHeight += 44;
+    }
+    if (isQuestionActive) {
+      const bottomQuestionHeight = bottomQuestionRef.current.offsetHeight;
+      const newHeight = topQuestionHeight + bottomQuestionHeight + 16;
+      questionRef.current.style.height = `${newHeight}px`;
+    } else {
+      questionRef.current.style.height = `${topQuestionHeight}px`;
+    }
+  };
+
   useEffect(() => {
-    const updateHeight = () => {
-      let topQuestionHeight = topQuestionRef.current.offsetHeight;
-      if (screen.width <= 768) {
-        topQuestionHeight = topQuestionHeight + 36;
-      } else {
-        topQuestionHeight = topQuestionHeight + 44;
-      }
-      if (isQuestionActive) {
-        const bottomQuestionHeight = bottomQuestionRef.current.offsetHeight;
-        const newHeight = topQuestionHeight + bottomQuestionHeight + 16;
-        questionRef.current.style.height = `${newHeight}px`;
-      } else {
-        questionRef.current.style.height = `${topQuestionHeight}px`;
-      }
-    };
+    // Use requestAnimationFrame to ensure all DOM updates are completed
+    const handleResize = () => requestAnimationFrame(updateHeight);
 
-    updateHeight();
-
-    // Add resize listener to handle window resize events
-    window.addEventListener("resize", updateHeight);
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", updateHeight);
+      window.removeEventListener("resize", handleResize);
     };
   }, [isQuestionActive]);
 
