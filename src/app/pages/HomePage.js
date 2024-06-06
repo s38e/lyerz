@@ -400,7 +400,7 @@ function HomePage() {
                   <div className={`${styles.pulse} ${styles.one}`}></div>
                   <div className={`${styles.pulse} ${styles.tow}`}></div>
                 </div>
-                <p>Slots available</p>
+                <p>{t("slots_available")}</p>
               </div>
             </button>
           </div>

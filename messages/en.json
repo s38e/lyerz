@@ -7,7 +7,8 @@
     "card_1": "work",
     "card_2": "services",
     "card_3": "about us",
-    "card_4": "plans"
+    "card_4": "plans",
+    "slots_available": "Slots available"
   },
   "servicesCards": {
     "card_1_part1": "Mobile &",
