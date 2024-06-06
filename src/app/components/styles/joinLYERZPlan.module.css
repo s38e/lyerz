@@ -72,19 +72,19 @@
     transform: scale(2.5);
   }
 }
-.pricingContent {
-  gap: 1rem;
-  flex-direction: column;
-  display: flex;
+.joinText {
   width: 100%;
 }
-.plan .pricingContent span {
+.joinText span {
   font-size: 1.5rem;
   font-family: "TerminaTest-Demi";
-  display: ruby;
-  width: fit-content;
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  width: 100%;
 }
 .plan .button {
+  width: 100%;
   grid-column-gap: 32px;
   grid-row-gap: 32px;
   cursor: pointer;
@@ -118,14 +118,14 @@
   font-family: "LufgaRegular";
 }
 /* ---------------- Responsive Styles ---------------- */
-.plan.ar {
-  /* direction: rtl; */
-}
+/* .plan.ar {
+  direction: rtl;
+} */
 /* ---------------- Responsive Styles ---------------- */
 /* ---------------- 768px ---------------- */
 @media (max-width: 768px) {
   /* for small devices */
-  .plan .pricingContent p {
+  .plan .joinText span {
     font-size: 20px;
   }
   .plan .button .texts h5 {

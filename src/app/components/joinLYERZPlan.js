@@ -22,22 +22,22 @@ const JoinLYERZPlan = () => {
         </div>
         {overlayPlansCard("plans-plan_1->pricingTag")}
       </div>
-      <div className={styles.pricingContent}>
+      <div className={styles.joinText}>
         <span>
-          Join{" "}
+          Join
           <LYERZText
             font_size_LYERZ="24px"
             font_size_TM="7px"
             font_weight_LYERZ="Demi"
           />
         </span>
-        <div className={styles.button}>
-          <div className={styles.texts}>
-            <h5>Book a 30-min intro call</h5>
-            <p>Learn more about how LYERZ works and how it can help you.</p>
-          </div>
-          <Image src={Arrow_3} alt="Arrow_3" />
+      </div>
+      <div className={styles.button}>
+        <div className={styles.texts}>
+          <h5>Book a 30-min intro call</h5>
+          <p>Learn more about how LYERZ works and how it can help you.</p>
         </div>
+        <Image src={Arrow_3} alt="Arrow_3" />
       </div>
     </div>
   );

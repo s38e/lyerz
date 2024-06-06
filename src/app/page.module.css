@@ -1409,6 +1409,7 @@
   }
   .HeroSection.ar .hero_content .headTexts .title span:nth-child(1) p {
     left: -30px;
+    right: unset;
   }
   .HeroSection .hero_content .headTexts .title span:nth-child(1) p {
     right: -30px;
@@ -1443,6 +1444,12 @@
     width: 100%;
     max-width: unset;
     border-radius: 0;
+  }
+  .HeroSection .overlayServicesCard .contanier,
+  .HeroSection .overlayPlansCard .contanier,
+  .HeroSection .overlayAboutCard .contanier,
+  .HeroSection .overlayWorkCard .contanier {
+    padding-bottom: 7rem;
   }
   .HeroSection .overlayWorkCard .contanier {
     border-radius: 20px;
@@ -1576,12 +1583,19 @@
 /* ---------------- 576px ---------------- */
 @media (max-width: 575.98px) {
   /* for extra small devices */
+  .HeroSection .hero_content .headTexts .heading h2 br {
+    display: none;
+  }
   .HeroSection.ar .hero_content .headTexts .title span:nth-child(1) img {
-    left: 27%;
+    left: 35%;
+    right: unset;
     top: unset;
     bottom: -15px;
     transform: scaleX(1) rotate(90deg);
     width: 14px;
+  }
+  .HeroSection.ar .hero_content .headTexts .title span:nth-child(1) img {
+    width: 12px;
   }
   .HeroSection .hero_content .headTexts .title span:nth-child(1) img {
     right: 30%;
@@ -1596,6 +1610,9 @@
     top: unset;
     bottom: -19px;
     transform: translateX(-50%);
+  }
+  .HeroSection.ar .hero_content .headTexts .title span:nth-child(1) p {
+    font-size: 12px;
   }
   .HeroSection .hero_content .headTexts .title span:nth-child(1) p {
     font-size: 17px;

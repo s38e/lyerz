@@ -326,8 +326,7 @@ function HomePage() {
           <div className={styles.headTexts}>
             <div className={styles.heading}>
               <h2>
-                {t("header_1")}
-                <br />
+                {t("header_1")} <br />
                 <span>{t("header_2")}</span>
               </h2>
               <h2>Our Partners</h2>
@@ -506,6 +505,7 @@ function HomePage() {
             <Image src={img_11_overlayWork} alt="img_11_overlayWork" />
             <Image src={img_12_overlayWork} alt="img_12_overlayWork" />
             <Image src={img_13_overlayWork} alt="img_13_overlayWork" />
+            <div></div>
           </div>
         </div>
         {/* ---------------- Overlay Services Card ---------------- */}
