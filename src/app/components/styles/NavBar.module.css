@@ -55,14 +55,14 @@
   right: 0;
   font-size: 5px;
   font-family: "LufgaRegular";
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 /* ------------------ Hover ---------------- */
 .NavBar a:hover img {
-  transform: translateX(-1rem) !important;
+  transform: translateX(-2.5rem) !important;
 }
 .NavBar a:hover p {
-  transform: translate(10%, -50%);
+  transform: translate(-20%, -50%);
 }
 .NavBar a:hover p .span {
   transition: 0.7s;

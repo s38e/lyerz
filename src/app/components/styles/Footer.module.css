@@ -250,7 +250,7 @@
   right: -7px;
   font-size: 5px;
   font-family: "LufgaRegular";
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 .Footer button .menu .link:hover .Arrow {
   transition: 0.4s 0.1s;
@@ -498,9 +498,21 @@
   display: none;
 }
 /* ---------------- Responsive Styles ---------------- */
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
   /* for extra small devices */
   .Footer {
     gap: 1rem;
+  }
+  .Footer button .contactContainer .heading,
+  .Footer button .menu .link .span,
+  .Footer button .menu .link:nth-child(3) span {
+    font-size: 14px;
+  }
+  .Footer button .menu .socialLinks a {
+    font-size: 13px;
+  }
+  .Footer button .contactContainer .copyright,
+  .Footer button .menu .copyright {
+    font-size: 11px;
   }
 }
