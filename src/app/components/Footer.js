@@ -10,8 +10,10 @@ import flagUSA from "/public/assets/flagUSA.svg";
 import flagSaudiArabia from "/public/assets/flagSaudiArabia.svg";
 import flagEgypt from "/public/assets/flagEgypt.svg";
 import { getLangDir } from "rtl-detect";
+import { isMobile } from "react-device-detect";
 
 function Footer() {
+  const [isNotMobile, setIsNotMobile] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [menuWidth, setMenuWidth] = useState(0);
   const [buttonWidth, setButtonWidth] = useState(121);
@@ -41,6 +43,11 @@ function Footer() {
   };
 
   useEffect(() => {
+    if (!isMobile) {
+      setIsNotMobile(true);
+    } else {
+      setIsNotMobile(false);
+    }
     const defultBtn = document.querySelector(`.${styles.defultBtn}`);
     const Menu = document.querySelector(`.${styles.menu}`);
     const contactContainer = document.querySelector(
@@ -208,7 +215,9 @@ function Footer() {
           <span className={styles.copyright}>{t("copyright")} </span>
         </div>
         <div
-          className={styles.defultBtn}
+          className={`${styles.defultBtn} ${
+            isNotMobile ? styles.notMobile : ""
+          }`}
           onClick={
             isContactContainerActive
               ? handleButtonClickToBack

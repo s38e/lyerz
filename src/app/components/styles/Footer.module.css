@@ -84,7 +84,7 @@
   gap: 0;
 }
 .Footer button.active .defultBtn .menuIcon,
-.Footer button .defultBtn:hover .menuIcon {
+.Footer button .defultBtn.notMobile:hover .menuIcon {
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(-50%) rotate(90deg);
   left: 50%;
@@ -129,7 +129,7 @@
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .Footer button.active .defultBtn span,
-.Footer button .defultBtn:hover span {
+.Footer button .defultBtn.notMobile:hover span {
   position: relative;
   transform: translateX(-20px);
   opacity: 0;
@@ -433,13 +433,13 @@
   margin-left: 1rem;
 }
 .Footer.ar button.active .defultBtn .menuIcon,
-.Footer.ar button .defultBtn:hover .menuIcon {
+.Footer.ar button .defultBtn.notMobile:hover .menuIcon {
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(50%) rotate(-90deg);
   left: -50%;
 }
 .Footer.ar button.active .defultBtn span,
-.Footer.ar button .defultBtn:hover span {
+.Footer.ar button .defultBtn.notMobile:hover span {
   position: relative;
   transform: translateX(20px);
   opacity: 0;
