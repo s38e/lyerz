@@ -14,6 +14,17 @@
   src: url(/fonts/TerminaTest/TerminaTest-Medium.otf);
   font-display: swap;
 }
+/* ---------------- Arabic Fonts ---------------- */
+@font-face {
+  font-family: "IBMPlexSansArabic-Regular";
+  src: url(/fonts/arabic/IBMPlexSansArabic/IBMPlexSansArabic-Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheYearofTheCamel-Regular";
+  src: url(/fonts/arabic/TheYearofTheCamel/TheYearofTheCamel-Regular.otf);
+  font-display: swap;
+}
 /* ---------------- Footer ---------------- */
 .Footer {
   position: absolute;
@@ -186,6 +197,7 @@
   gap: 5px;
   height: 100%;
   transition: 0.4s 0s;
+  position: relative;
 }
 .Footer button .menu .link:nth-child(1) span img {
   width: auto;
@@ -241,16 +253,6 @@
 .Footer button .menu .link .span span {
   position: relative;
   font-family: "TerminaTest-Medium";
-  margin-right: 5px;
-}
-.Footer button .menu .link .span span::before {
-  content: "TM";
-  position: absolute;
-  top: 0px;
-  right: -7px;
-  font-size: 5px;
-  font-family: "LufgaRegular";
-  /* font-weight: 600; */
 }
 .Footer button .menu .link:hover .Arrow {
   transition: 0.4s 0.1s;
@@ -428,6 +430,26 @@
   background-color: red;
 }
 /* --------------------- Arabic Styles --------------------- */
+.Footer.ar button .menu .link:nth-child(1) .span {
+  font-family: "TerminaTest-Medium";
+}
+.Footer.ar button .defultBtn span,
+.Footer button .contactContainer .copyright,
+.Footer.ar p,
+.Footer button .contactContainer .heading,
+.Footer button .menu .copyright,
+.Footer.ar button .menu .socialLinks a,
+.Footer.ar button .menu .link:nth-child(2) .span,
+.Footer.ar button .menu .link:nth-child(3) .span,
+.Footer.ar button .menu .link:nth-child(1) .span span {
+  font-family: "IBMPlexSansArabic-Regular";
+}
+.Footer.ar button .menu .link:nth-child(1) .span {
+  direction: ltr;
+}
+.Footer.ar button .menu .link .span span::before {
+  display: none;
+}
 .Footer.ar button .defultBtn span {
   margin-right: 0;
   margin-left: 1rem;

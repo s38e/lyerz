@@ -19,6 +19,17 @@
   src: url(/fonts/sweet-purple.otf);
   font-display: swap;
 }
+/* ---------------- Arabic Fonts ---------------- */
+@font-face {
+  font-family: "IBMPlexSansArabic-Regular";
+  src: url(/fonts/arabic/IBMPlexSansArabic/IBMPlexSansArabic-Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheYearofTheCamel-ExtraBold";
+  src: url(/fonts/arabic/TheYearofTheCamel/TheYearofTheCamel-ExtraBold.otf);
+  font-display: swap;
+}
 /* ---------------- Page ---------------- */
 .page {
   position: relative;
@@ -94,15 +105,19 @@
   direction: ltr;
   color: #b0b0b0;
   opacity: 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .HeroSection .hero_content .headTexts .title span {
   position: relative;
   transition: opacity 0.3s;
-  width: 100%;
   display: inline-block;
   text-align: center;
 }
-.HeroSection .hero_content .headTexts .title span:nth-child(1) p {
+.HeroSection .hero_content .headTexts .title span p {
   top: -25px;
   right: -80px;
   position: absolute;
@@ -693,6 +708,7 @@
   gap: 0.5rem;
   flex-direction: column;
   display: flex;
+  width: 100%;
 }
 /* ---------------- Overlay About Card ---------------- */
 .HeroSection .overlayAboutCard {
@@ -1287,13 +1303,21 @@
   transform: rotate(45deg);
 }
 /* --------------------- Arabic Styles --------------------- */
-.HeroSection.ar .hero_content .headTexts .title span:nth-child(1) p {
+.HeroSection.ar .hero_content .headTexts .title span p,
+.HeroSection.ar .hero_content .headTexts .heading h2 {
+  font-family: "TheYearofTheCamel-ExtraBold";
+}
+.HeroSection.ar .hero_content .hero_cards .card p,
+.HeroSection.ar .hero_content .headTexts .title span {
+  font-family: "IBMPlexSansArabic-Regular";
+}
+.HeroSection.ar .hero_content .headTexts .title span p {
   left: -28px;
   top: -20px;
   font-size: 15px;
   right: unset;
 }
-.HeroSection.ar .hero_content .headTexts .title span:nth-child(1) img {
+.HeroSection.ar .hero_content .headTexts .title span img {
   left: -25px;
   right: unset;
   transform: scaleX(-1);
@@ -1347,6 +1371,7 @@
   /* for small devices */
   .HeroSection .hero_content {
     padding: 0 5%;
+    width: 100%;
   }
   .HeroSection .hero_content .hero_cards {
     display: grid;
@@ -1373,6 +1398,7 @@
     font-size: 14px;
   }
   .HeroSection .hero_content .headTexts {
+    width: 100%;
     gap: 1rem;
   }
   .HeroSection .hero_content .headTexts .heading h2 {
@@ -1380,6 +1406,9 @@
   }
   .HeroSection .hero_content .headTexts .title span {
     font-size: 13px;
+  }
+  .HeroSection.ar .hero_content .headTexts .title span:nth-child(1) p {
+    left: -30px;
   }
   .HeroSection .hero_content .headTexts .title span:nth-child(1) p {
     right: -30px;
@@ -1547,6 +1576,13 @@
 /* ---------------- 576px ---------------- */
 @media (max-width: 575.98px) {
   /* for extra small devices */
+  .HeroSection.ar .hero_content .headTexts .title span:nth-child(1) img {
+    left: 27%;
+    top: unset;
+    bottom: -15px;
+    transform: scaleX(1) rotate(90deg);
+    width: 14px;
+  }
   .HeroSection .hero_content .headTexts .title span:nth-child(1) img {
     right: 30%;
     top: unset;
@@ -1554,6 +1590,7 @@
     transform: scaleY(-1) rotate(-90deg);
     width: 14px;
   }
+  .HeroSection.ar .hero_content .headTexts .title span:nth-child(1) p,
   .HeroSection .hero_content .headTexts .title span:nth-child(1) p {
     left: 50%;
     top: unset;

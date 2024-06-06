@@ -11,6 +11,7 @@ import flagSaudiArabia from "/public/assets/flagSaudiArabia.svg";
 import flagEgypt from "/public/assets/flagEgypt.svg";
 import { getLangDir } from "rtl-detect";
 import { isMobile } from "react-device-detect";
+import LYERZText from "./LYERZText";
 
 function Footer() {
   const [isNotMobile, setIsNotMobile] = useState(false);
@@ -139,7 +140,13 @@ function Footer() {
         <menu className={styles.menu}>
           <Link className={styles.link} href="">
             <span className={styles.span}>
-              <span>{t("btn_1_part_1")}</span> {t("btn_1_part_2")}
+              <LYERZText
+                font_size_LYERZ="16px"
+                font_size_TM="5px"
+                font_weight_LYERZ="Medium"
+                Color="white"
+              />
+              <span>{t("btn_1_part_1")}</span>
             </span>
             <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
           </Link>

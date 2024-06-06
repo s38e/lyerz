@@ -58,6 +58,7 @@ import Question from "../components/Question";
 import InfiniteScroll from "../components/InfiniteScroll";
 import JoinLYERZPlan from "../components/joinLYERZPlan";
 import Table from "../components/Table";
+import LYERZText from "../components/LYERZText";
 import gsap from "gsap";
 import { getLangDir } from "rtl-detect";
 import FooterStyles from "../components/styles/Footer.module.css";

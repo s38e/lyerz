@@ -1,0 +1,84 @@
+/* ---------------- Font ---------------- */
+@font-face {
+  font-family: "TerminaTest-Medium";
+  src: url(/fonts/TerminaTest/TerminaTest-Medium.otf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "TerminaTest-Demi";
+  src: url(/fonts/TerminaTest/TerminaTest-Demi.otf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "LufgaRegular";
+  src: url(/fonts/Lufga/LufgaRegular.ttf);
+  font-display: swap;
+}
+/* ---------------- Lyerz Styles ---------------- */
+.lyerz {
+  position: relative !important;
+  white-space: nowrap !important;
+  line-height: unset !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: fit-content !important;
+}
+.lyerz .tm {
+  align-self: unset !important;
+  line-height: unset !important;
+  display: unset !important;
+  height: unset !important;
+  font-family: "LufgaRegular" !important;
+  white-space: nowrap !important;
+  vertical-align: top !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* ---------------------- Data Color ---------------------- */
+.lyerz[data-color="white"],
+.lyerz .tm[data-color="white"] {
+  color: white !important;
+}
+.lyerz[data-color="black"],
+.lyerz .tm[data-color="black"] {
+  color: black !important;
+}
+/* ---------------------- Data Font Weight ---------------------- */
+.lyerz[data-font-weight="Medium"] {
+  font-family: "TerminaTest-Medium" !important ;
+}
+.lyerz[data-font-weight="Demi"] {
+  font-family: "TerminaTest-Demi" !important;
+}
+/* ---------------------- Data Font Size ---------------------- */
+.lyerz[data-font-size="24px"] {
+  font-size: 24px !important;
+}
+.lyerz[data-font-size="20px"] {
+  font-size: 20px !important;
+}
+.lyerz[data-font-size="16px"] {
+  font-size: 16px !important;
+}
+.lyerz[data-font-size="14px"] {
+  font-size: 14px !important;
+}
+.lyerz .tm[data-font-size="7px"] {
+  font-size: 7px !important;
+}
+.lyerz .tm[data-font-size="5px"] {
+  font-size: 5px !important;
+}
+/* ---------------------- Responsive Styles ---------------------- */
+@media (max-width: 768px) {
+  .lyerz[data-font-size="24px"] {
+    font-size: 20px !important;
+  }
+  .lyerz .tm[data-font-size="7px"] {
+    font-size: 5px !important;
+  }
+  .lyerz[data-font-size="16px"] {
+    font-size: 14px !important;
+  }
+  
+}

@@ -32,7 +32,7 @@
   display: inline-block;
   transition: 0.7s;
 }
-.NavBar a p {
+.NavBar a .NameCompany {
   font-family: "TerminaTest-Demi";
   z-index: 1;
   position: absolute;
@@ -42,29 +42,24 @@
   transition: 0.7s;
   overflow: hidden;
 }
-.NavBar a p .span {
+.NavBar a .NameCompany .span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
   transform: translateX(-100%);
   transition: 0.7s;
   width: 75px;
-}
-.NavBar a p .span span {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 5px;
-  font-family: "LufgaRegular";
-  /* font-weight: 600; */
 }
 /* ------------------ Hover ---------------- */
 .NavBar a:hover img {
   transform: translateX(-2.5rem) !important;
 }
-.NavBar a:hover p {
+.NavBar a:hover .NameCompany {
   transform: translate(-20%, -50%);
 }
-.NavBar a:hover p .span {
+.NavBar a:hover .NameCompany .span {
   transition: 0.7s;
   transform: translateX(0);
 }

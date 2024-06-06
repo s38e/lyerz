@@ -1,14 +1,19 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 import styles from "./styles/joinLYERZPlan.module.css";
 import Arrow_3 from "/public/assets/arrow_3.svg";
 import Image from "next/image";
+import LYERZText from "./LYERZText";
+import { getLangDir } from "rtl-detect";
 
 const JoinLYERZPlan = () => {
   const overlayPlansCard = useTranslations("overlayPlansCard");
+  // ---------------- Check the language to determine the style ---------------- //
+  const locale = useLocale();
+  const direction = getLangDir(locale);
 
   return (
-    <div className={styles.plan}>
+    <div className={`${styles.plan} ${direction === "rtl" ? styles.ar : ""}`}>
       <div className={styles.pricingTag}>
         <div className={styles.live_indicator}>
           <div className={styles.red_dot}></div>
@@ -18,9 +23,14 @@ const JoinLYERZPlan = () => {
         {overlayPlansCard("plans-plan_1->pricingTag")}
       </div>
       <div className={styles.pricingContent}>
-        <p>
-          Join LYERZ<span>TM</span>
-        </p>
+        <span>
+          Join{" "}
+          <LYERZText
+            font_size_LYERZ="24px"
+            font_size_TM="7px"
+            font_weight_LYERZ="Demi"
+          />
+        </span>
         <div className={styles.button}>
           <div className={styles.texts}>
             <h5>Book a 30-min intro call</h5>
