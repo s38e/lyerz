@@ -329,7 +329,7 @@ function HomePage() {
                 {t("header_1")} <br />
                 <span>{t("header_2")}</span>
               </h2>
-              <h2>Our Partners</h2>
+              <h2>{t("our_partners")}</h2>
             </div>
             <div className={styles.title}>
               <span>

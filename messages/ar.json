@@ -8,7 +8,8 @@
     "card_2": "الخدمات",
     "card_3": "معلومات عنا",
     "card_4": "الخطط",
-    "slots_available": "اماكن متاحة"
+    "slots_available": "اماكن متاحة",
+    "our_partners": "شركاؤنا"
   },
   "servicesCards": {
     "card_1_part1": "تصميم الجوال",
@@ -33,7 +34,7 @@
     "socialLinkedin": "لينكد إن",
     "copyright": "2024 © لايرز ذ.م.م. كل الحقوق محفوظة",
     "language": "الأنجليزية",
-    "notePart1": "معا نخلق."
+    "notePart1": "معا نبدع."
   },
   "movingCircle": {
     "title": "إغلاق"
@@ -64,7 +65,7 @@
   },
   "overlayPlansCard": {
     "h2": "التسعير",
-    "plans-plan_1->pricingTag": "رسوم شهرية مسطحة",
+    "plans-plan_1->pricingTag": "اماكن متاحة",
     "plans-plan_1-pricingContent->p_1": "$6,990",
     "plans-plan_1-pricingContent->p_2": "الأفضل إذا كنت تبحث عن أعمال تصميم ثابتة ومستمرة.",
     "plans-plan_2->pricingTag": "مطور ويبفلو",
