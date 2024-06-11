@@ -9,7 +9,10 @@
     "card_3": "about us",
     "card_4": "plans",
     "slots_available": "Slots available",
-    "our_partners": "Our Partners"
+    "our_partners_part_1": "Best",
+    "our_partners_part_2": "forever",
+    "our_partners_span_1": "clients",
+    "our_partners_span_2": "partners "
   },
   "servicesCards": {
     "card_1_part1": "Mobile &",
@@ -81,10 +84,10 @@
   "overlayPlansCard": {
     "h2": "Membership",
     "plans-plan_1->pricingTag": "Slots available",
-    "plans-plan_1-pricingContent->p_1": "$6,990",
+    "plans-plan_1-pricingContent->p_1": "$4,995",
     "plans-plan_1-pricingContent->p_2": "Best if you're looking for steady and ongoing design work.",
     "plans-plan_2->pricingTag": "Startup",
-    "plans-plan_2-pricingContent->p_1": "$2,990",
+    "plans-plan_2-pricingContent->p_1": "$7,995",
     "plans-plan_2-pricingContent->p_2": "For ongoing support and consistent updates to your existing Webflow site.",
     "plans-plan-pricingContent-p_2->span": "/m",
     "plans-plan_3->pricingTag": "Pro",

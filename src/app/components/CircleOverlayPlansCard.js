@@ -24,9 +24,9 @@ const CircleOverlayPlansCard = () => {
         const parentBounds = circle
           .closest(`.${stylesPage.HeroSection} .${stylesPage.overlayPlansCard}`)
           .getBoundingClientRect();
-        const contanier = document
+        const container = document
           .querySelector(
-            `.${stylesPage.HeroSection} .${stylesPage.overlayPlansCard} .${stylesPage.contanier}`
+            `.${stylesPage.HeroSection} .${stylesPage.overlayPlansCard} .${stylesPage.container}`
           )
           .getBoundingClientRect();
         const circleWidth = circle.offsetWidth;
@@ -68,10 +68,10 @@ const CircleOverlayPlansCard = () => {
         }
         // --------------------------------------
         if (
-          mouseX >= contanier.left &&
-          mouseX <= contanier.right &&
-          mouseY >= contanier.top &&
-          mouseY <= contanier.bottom
+          mouseX >= container.left &&
+          mouseX <= container.right &&
+          mouseY >= container.top &&
+          mouseY <= container.bottom
         ) {
           gsap.to([circle, text], {
             duration: "auto",

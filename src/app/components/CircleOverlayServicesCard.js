@@ -26,9 +26,9 @@ const CircleOverlayServicesCard = () => {
             `.${stylesPage.HeroSection} .${stylesPage.overlayServicesCard}`
           )
           .getBoundingClientRect();
-        const contanier = document
+        const container = document
           .querySelector(
-            `.${stylesPage.HeroSection} .${stylesPage.overlayServicesCard} .${stylesPage.contanier}`
+            `.${stylesPage.HeroSection} .${stylesPage.overlayServicesCard} .${stylesPage.container}`
           )
           .getBoundingClientRect();
         const circleWidth = circle.offsetWidth;
@@ -70,10 +70,10 @@ const CircleOverlayServicesCard = () => {
         }
         // --------------------------------------
         if (
-          mouseX >= contanier.left &&
-          mouseX <= contanier.right &&
-          mouseY >= contanier.top &&
-          mouseY <= contanier.bottom
+          mouseX >= container.left &&
+          mouseX <= container.right &&
+          mouseY >= container.top &&
+          mouseY <= container.bottom
         ) {
           gsap.to([circle, text], {
             duration: "auto",
