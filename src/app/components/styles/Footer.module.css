@@ -182,6 +182,9 @@
   opacity: 0;
   overflow: hidden;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .Footer button.active .menu .link {
   transform: translateY(0);
@@ -195,13 +198,9 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
-  height: 100%;
   transition: 0.4s 0s;
   position: relative;
-}
-.Footer button .menu .link:nth-child(1) span img {
-  width: auto;
-  height: 90%;
+  width: fit-content;
 }
 .Footer button .menu .link:nth-child(1) {
   background-color: #001aff;
@@ -235,28 +234,32 @@
 .Footer button.active .menu .link:nth-child(3) {
   transition: transform 0.8s 1.4s, opacity 0.8s 1.4s, box-shadow 0.25s linear;
 }
-.Footer button .menu .link .Arrow {
+.Footer button .menu .link .span .Arrow {
   position: absolute;
-  height: 17px;
+  height: 14px;
   width: auto;
   top: 50%;
   right: 0;
-  transform: translate(-4rem, -50%) scale(0.5);
+  transform: translateY(-50%) scale(0.5);
   opacity: 0;
   transition: 0.4s 0s;
   z-index: -1;
 }
+.Footer button .menu .link .span {
+  position: relative;
+  display: inline-block;
+}
 .Footer button .menu .link:hover .span {
-  margin-right: 11px;
+  transform: translateX(-10px);
   transition: 0.4s 0.1s;
 }
 .Footer button .menu .link .span span {
   position: relative;
   font-family: "TerminaTest-Medium";
 }
-.Footer button .menu .link:hover .Arrow {
+.Footer button .menu .link:hover .span .Arrow {
   transition: 0.4s 0.1s;
-  transform: translate(-2rem, -50%) scale(1);
+  transform: translate(20px, -50%) scale(1);
   opacity: 1;
 }
 .Footer button .menu .socialLinks {
@@ -488,21 +491,21 @@
   width: 50%;
   transform: translateX(-2.5px) translateY(-0.5px) rotate(45deg);
 }
-.Footer.ar button .menu .link:nth-child(3) .Arrow {
-  transform: translate(5rem, -50%) scale(0.5) scaleX(-1);
+.Footer.ar button .menu .link:nth-child(3) .span .Arrow {
+  transform: translateY(-50%) scale(0.5) scaleX(-1);
 }
-.Footer.ar button .menu .link .Arrow {
-  transform: translate(2.5rem, -50%) scale(0.5) scaleX(-1);
+.Footer.ar button .menu .link .span .Arrow {
+  transform: translateY(-50%) scale(0.5) scaleX(-1);
   right: unset;
   left: 0;
 }
-.Footer.ar button .menu .link:hover .Arrow {
+.Footer.ar button .menu .link:hover .span .Arrow {
   transition: 0.4s 0.1s;
-  transform: translate(1.5rem, -50%) scale(1) scaleX(-1);
+  transform: translate(-20px, -50%) scale(1) scaleX(-1);
   opacity: 1;
 }
 .Footer.ar button .menu .link:hover .span {
-  margin-left: 15px;
+  transform: translateX(10px);
   margin-right: 0;
   transition: 0.4s 0.1s;
 }

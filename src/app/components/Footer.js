@@ -12,6 +12,7 @@ import flagEgypt from "/public/assets/flagEgypt.svg";
 import { getLangDir } from "rtl-detect";
 import { isMobile } from "react-device-detect";
 import LYERZText from "./LYERZText";
+import { getCalApi } from "@calcom/embed-react";
 
 function Footer() {
   const [isNotMobile, setIsNotMobile] = useState(false);
@@ -23,6 +24,18 @@ function Footer() {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [isContactContainerActive, setIsContactContainerActive] =
     useState(false);
+
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({});
+      cal("ui", {
+        theme: "light",
+        styles: { branding: { brandColor: "#000000" } },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
 
   const handleButtonMouseLeave = () => {
     // setIsActive(false); // -----------> Close Menu On Mouse Leave
@@ -147,31 +160,40 @@ function Footer() {
                 Color="white"
               />
               <span>{t("btn_1_part_1")}</span>
+              <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
             </span>
-            <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
           </Link>
-          <Link className={styles.link} href="">
-            <span className={styles.span}>{t("btn_2")}</span>
-            <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
+          <Link
+            className={styles.link}
+            href=""
+            data-cal-namespace=""
+            data-cal-link="lyerz/space"
+            data-cal-config='{"layout":"month_view"}'
+          >
+            <span className={styles.span}>
+              {t("btn_2")}
+              <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
+            </span>
           </Link>
-
           <div className={styles.link} onClick={handleContactClick}>
-            <span className={styles.span}>{t("btn_3")}</span>
-            <svg
-              className={styles.Arrow}
-              width="6"
-              height="10"
-              viewBox="0 0 6 10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.24264 0.999974L5.48528 5.24261L1.24264 9.48526"
-                stroke="#414141"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <span className={styles.span}>
+              {t("btn_3")}
+              <svg
+                className={styles.Arrow}
+                width="6"
+                height="10"
+                viewBox="0 0 6 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.24264 0.999974L5.48528 5.24261L1.24264 9.48526"
+                  stroke="#414141"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
           </div>
           {/* <Link
             className={styles.link}

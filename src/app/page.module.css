@@ -1253,6 +1253,9 @@
   .btn:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+.HeroSection .overlayPlansCard .container .plans .twoPlan .plan .btns span {
+  font-size: 14px;
+}
 .HeroSection .overlayPlansCard .container .plans .twoPlan .plan .btns p {
   font-size: 14px;
   white-space: nowrap;
@@ -1691,22 +1694,61 @@
   .HeroSection .overlayAboutCard .container .about_teamCards {
     columns: 1;
   }
+  .HeroSection
+    .overlayPlansCard
+    .container
+    .plans
+    .twoPlan
+    .plan
+    .content
+    .features {
+    columns: 1;
+  }
+  .HeroSection .overlayPlansCard .container .plans .twoPlan .plan .btns {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .HeroSection .overlayPlansCard .container .plans .twoPlan .plan .btns .btn {
+    width: 100%;
+  }
 }
 /*  */
-/* .testWeb {
+.lyerzSpace {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(97, 23, 23);
+  height: calc(100dvh - 2rem);
+  width: calc(100vw - 2rem);
+  margin: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1111;
+  visibility: hidden;
 }
-.testWeb iframe {
-  width: 100%;
-  height: 100%;
+.lyerzSpace iframe {
+  width: 85%;
+  height: 85%;
   border: 0;
-} */
+  border-radius: 20px;
+}
+.lyerzSpace.active {
+  visibility: visible;
+}
+.lyerzSpace .closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 5px 20px;
+  background-color: #000;
+  border-radius: 10rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.lyerzSpace .closeBtn:hover {
+  background-color: #1a1a1a;
+}

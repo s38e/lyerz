@@ -58,15 +58,18 @@ import Question from "../components/Question";
 import InfiniteScroll from "../components/InfiniteScroll";
 import JoinLYERZPlan from "../components/joinLYERZPlan";
 import Table from "../components/Table";
+import LyerzSpace from "../components/LyerzSpace";
 import gsap from "gsap";
 import { getLangDir } from "rtl-detect";
 import FooterStyles from "../components/styles/Footer.module.css";
 import Link from "next/link";
 import { isMobile } from "react-device-detect";
 import anime from "animejs/lib/anime.es.js";
+import { getCalApi } from "@calcom/embed-react";
 
 function HomePage() {
   const [isCloseAnyOverlayActive, setIsCloseAnyOverlayActive] = useState(false);
+  const [isLyerzSpaceActive, setIsLyerzSpaceActive] = useState(false);
   const [isChoice_1_Active, setIsChoice_1_Active] = useState(true);
   const [isChoice_2_Active, setIsChoice_2_Active] = useState(false);
   // ---------------- Hovered ---------------- //
@@ -79,7 +82,20 @@ function HomePage() {
   const [isCardServicesClicked, setIsCardServicesClicked] = useState(false);
   const [isCardAboutClicked, setIsCardAboutClicked] = useState(false);
   const [isCardPlansClicked, setIsCardPlansClicked] = useState(false);
+  //
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({});
+      cal("ui", {
+        theme: "light",
+        styles: { branding: { brandColor: "#000000" } },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
 
+  //
   useEffect(() => {
     const Footer = document.querySelector(`.${FooterStyles.Footer}`);
     if (!isMobile) {
@@ -923,7 +939,15 @@ function HomePage() {
                     </div>
                   </div>
                   <div className={styles.btns}>
-                    <div className={styles.btn}>Get started</div>
+                    <div
+                      data-cal-namespace=""
+                      data-cal-link="lyerz/space"
+                      data-cal-config='{"layout":"month_view"}'
+                      className={styles.btn}
+                      // onClick={() => setIsLyerzSpaceActive(true)}
+                    >
+                      Get started
+                    </div>
                     <span>or</span>
                     <p>
                       <Link href="">book a call</Link>
@@ -979,9 +1003,10 @@ function HomePage() {
                     </div>
                   </div>
                   <div className={styles.btns}>
-                    <div className={styles.btn}>Get started</div>
+                    <div className={styles.btn}>Get started</div>{" "}
+                    <span>or</span>
                     <p>
-                      or <Link href="">book a call</Link>
+                      <Link href="">book a call</Link>
                     </p>
                   </div>
                 </div>
@@ -992,7 +1017,14 @@ function HomePage() {
                   <h2>Custom</h2>
                   <p>Perfect for a bigger one-time thing.</p>
                 </div>
-                <div className={styles.btn}>Get started</div>
+                <div
+                  className={styles.btn}
+                  data-cal-namespace=""
+                  data-cal-link="lyerz/space"
+                  data-cal-config='{"layout":"month_view"}'
+                >
+                  Get started
+                </div>
               </div>
             </div>
             <div className={styles.faq}>
@@ -1212,12 +1244,19 @@ function HomePage() {
           </svg>
         </div>
       </section>
-      {/* <div className={styles.testWeb}>
-        <iframe
-          src="https://rondesignlab-lovat.vercel.app/"
-          title="YouTube"
-        ></iframe>
-      </div> */}
+      <div
+        className={`${styles.lyerzSpace} ${
+          isLyerzSpaceActive ? styles.active : ""
+        }`}
+      >
+        <div
+          className={styles.closeBtn}
+          onClick={() => setIsLyerzSpaceActive(false)}
+        >
+          Close
+        </div>
+        <LyerzSpace />
+      </div>
     </main>
   );
 }
