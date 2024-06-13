@@ -752,7 +752,7 @@
   cursor: default;
   width: 100%;
   /* max-width: 36.25rem; */
-  max-width: 40rem;
+  max-width: 46rem;
   min-height: 46rem;
   height: 46rem;
   border-radius: 30px;
@@ -915,7 +915,8 @@
   padding: max(1rem, min(4rem, 5vw));
   cursor: default;
   width: 100%;
-  max-width: 36.25rem;
+  /* max-width: 36.25rem; */
+  max-width: 46rem;
   min-height: 46rem;
   height: 46rem;
   border-radius: 30px;
@@ -1148,6 +1149,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
 }
 .HeroSection .overlayPlansCard .container .plans .twoPlan .plan .content p {
   font-weight: 600;
@@ -1160,6 +1162,7 @@
   .plan
   .content
   .features {
+  width: 100%;
   columns: 2;
 }
 .HeroSection
@@ -1259,13 +1262,30 @@
 .HeroSection .overlayPlansCard .container .plans .twoPlan .plan .btns p {
   font-size: 14px;
   white-space: nowrap;
-  /* text-align: center; */
+  cursor: pointer;
   flex: 1;
+  /* text-decoration: underline; */
 }
 .HeroSection .overlayPlansCard .container .plans .twoPlan .plan .btns p a {
-  text-decoration: underline;
+  position: relative;
 }
-/*  */
+.HeroSection
+  .overlayPlansCard
+  .container
+  .plans
+  .twoPlan
+  .plan
+  .btns
+  p
+  a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
 .HeroSection .overlayPlansCard .container .plans .twoPlan .plan_1,
 .HeroSection .overlayPlansCard .container .plans .twoPlan .plan_2 {
   display: none;

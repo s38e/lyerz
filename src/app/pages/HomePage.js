@@ -940,16 +940,19 @@ function HomePage() {
                   </div>
                   <div className={styles.btns}>
                     <div
+                      className={styles.btn}
                       data-cal-namespace=""
                       data-cal-link="lyerz/space"
                       data-cal-config='{"layout":"month_view"}'
-                      className={styles.btn}
-                      // onClick={() => setIsLyerzSpaceActive(true)}
                     >
                       Get started
                     </div>
                     <span>or</span>
-                    <p>
+                    <p
+                      data-cal-namespace=""
+                      data-cal-link="lyerz/space"
+                      data-cal-config='{"layout":"month_view"}'
+                    >
                       <Link href="">book a call</Link>
                     </p>
                   </div>
@@ -1003,9 +1006,20 @@ function HomePage() {
                     </div>
                   </div>
                   <div className={styles.btns}>
-                    <div className={styles.btn}>Get started</div>{" "}
+                    <div
+                      className={styles.btn}
+                      data-cal-namespace=""
+                      data-cal-link="lyerz/space"
+                      data-cal-config='{"layout":"month_view"}'
+                    >
+                      Get started
+                    </div>
                     <span>or</span>
-                    <p>
+                    <p
+                      data-cal-namespace=""
+                      data-cal-link="lyerz/space"
+                      data-cal-config='{"layout":"month_view"}'
+                    >
                       <Link href="">book a call</Link>
                     </p>
                   </div>
@@ -1023,7 +1037,7 @@ function HomePage() {
                   data-cal-link="lyerz/space"
                   data-cal-config='{"layout":"month_view"}'
                 >
-                  Get started
+                  Book a coll
                 </div>
               </div>
             </div>
