@@ -454,10 +454,10 @@
   font-family: "TerminaTest-Medium";
 }
 .Footer.ar button .defultBtn span,
-.Footer button .contactContainer .copyright,
+.Footer.ar button .contactContainer .copyright,
 .Footer.ar p,
-.Footer button .contactContainer .heading,
-.Footer button .menu .copyright,
+.Footer.ar button .contactContainer .heading,
+.Footer.ar button .menu .copyright,
 .Footer.ar button .menu .socialLinks a,
 .Footer.ar button .menu .link:nth-child(2) .span,
 .Footer.ar button .menu .link:nth-child(3) .span,

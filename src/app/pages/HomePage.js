@@ -913,12 +913,22 @@ function HomePage() {
                       <div className={styles.feature}>
                         <Image src={Infenity} alt="Infenity" />
                         <p>Unlimited Requests</p>
-                        {/* <Image src={Info} alt="Info" /> */}
+                        <div className={styles.image}>
+                          <Image src={Info} alt="Info" />
+                          <div className={styles.hint}>
+                            One request at a time.
+                          </div>
+                        </div>
                       </div>
                       <div className={styles.feature}>
                         <Image src={Infenity} alt="Infenity" />
                         <p>Unlimited Revisions</p>
-                        {/* <Image src={Info} alt="Info" /> */}
+                        <div className={styles.image}>
+                          <Image src={Info} alt="Info" />{" "}
+                          <div className={styles.hint}>
+                            We iterate until you are satisfied 100%
+                          </div>
+                        </div>
                       </div>
                       <div className={styles.feature}>
                         <Image src={True} alt="True" />
@@ -983,12 +993,22 @@ function HomePage() {
                       <div className={styles.feature}>
                         <Image src={Infenity} alt="Infenity" />
                         <p>Unlimited Requests</p>
-                        {/* <Image src={Info} alt="Info" /> */}
+                        <div className={styles.image}>
+                          <Image src={Info} alt="Info" />
+                          <div className={styles.hint}>
+                            Two request at a time.
+                          </div>
+                        </div>
                       </div>
                       <div className={styles.feature}>
                         <Image src={Infenity} alt="Infenity" />
                         <p>Unlimited Revisions</p>
-                        {/* <Image src={Info} alt="Info" /> */}
+                        <div className={styles.image}>
+                          <Image src={Info} alt="Info" />
+                          <div className={styles.hint}>
+                            We iterate until you are satisfied 100%
+                          </div>
+                        </div>
                       </div>
                       <div className={styles.feature}>
                         <Image src={True} alt="True" />

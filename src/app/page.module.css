@@ -1209,6 +1209,32 @@
   .content
   .features
   .feature
+  .image {
+  position: relative;
+  width: 20px !important;
+  height: 20px !important;
+  cursor: pointer;
+}
+.HeroSection
+  .overlayPlansCard
+  .container
+  .plans
+  .twoPlan
+  .plan
+  .content
+  .features
+  .feature
+  .image
+  img,
+.HeroSection
+  .overlayPlansCard
+  .container
+  .plans
+  .twoPlan
+  .plan
+  .content
+  .features
+  .feature
   img {
   width: 20px !important;
   height: 20px !important;
@@ -1223,9 +1249,74 @@
   .content
   .features
   .feature
+  .image
+  .hint {
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -155%);
+  background-color: #000000;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 14px;
+  transition: visibility 0.2s 0.1s linear, opacity 0.2s linear;
+  line-height: 1.1;
+  pointer-events: none;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.25);
+}
+.HeroSection
+  .overlayPlansCard
+  .container
+  .plans
+  .twoPlan
+  .plan
+  .content
+  .features
+  .feature
+  .image:hover
+  img
+  + .hint {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.2s linear, opacity 0.2s 0.1s linear;
+}
+.HeroSection
+  .overlayPlansCard
+  .container
+  .plans
+  .twoPlan
+  .plan
+  .content
+  .features
+  .feature
+  .image
+  .hint::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, 50%) rotate(45deg);
+  background-color: #000000;
+}
+.HeroSection
+  .overlayPlansCard
+  .container
+  .plans
+  .twoPlan
+  .plan
+  .content
+  .features
+  .feature
   p {
   font-size: 14px;
   font-weight: normal;
+  flex: 1;
 }
 .HeroSection .overlayPlansCard .container .plans .twoPlan .plan .btns {
   display: flex;
@@ -1616,11 +1707,13 @@
     .overlayPlansCard
     .container
     .plans
+    .twoPlan
     .plan
-    .pricingContent
-    .pricingPoint
-    .Image
-    .infoOverlay {
+    .content
+    .features
+    .feature
+    .image
+    .hint {
     top: 50%;
     left: 0;
     transform: translate(-105%, -50%);
@@ -1629,23 +1722,13 @@
     .overlayPlansCard
     .container
     .plans
+    .twoPlan
     .plan
-    .pricingContent
-    .pricingPoint
-    .Image
-    .infoOverlay
-    br {
-    display: none;
-  }
-  .HeroSection
-    .overlayPlansCard
-    .container
-    .plans
-    .plan
-    .pricingContent
-    .pricingPoint
-    .Image
-    .infoOverlay::before {
+    .content
+    .features
+    .feature
+    .image
+    .hint::before {
     top: 50%;
     left: 100%;
     transform: translate(-50%, -50%) rotate(45deg);
