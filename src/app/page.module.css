@@ -1262,13 +1262,15 @@
 .HeroSection .overlayPlansCard .container .plans .twoPlan .plan .btns p {
   font-size: 14px;
   white-space: nowrap;
-  cursor: pointer;
   flex: 1;
   /* text-decoration: underline; */
 }
 .HeroSection .overlayPlansCard .container .plans .twoPlan .plan .btns p a {
+  cursor: pointer;
   position: relative;
+  display: inline-block;
 }
+
 .HeroSection
   .overlayPlansCard
   .container
@@ -1285,6 +1287,40 @@
   width: 100%;
   height: 1px;
   background-color: black;
+  transform-origin: right;
+  transform: scaleX(1);
+  transition: transform 0.8s;
+}
+
+.HeroSection
+  .overlayPlansCard
+  .container
+  .plans
+  .twoPlan
+  .plan
+  .btns
+  p
+  a:hover::before {
+  animation: lineAnimation 0.8s forwards;
+}
+
+@keyframes lineAnimation {
+  0% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  49% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  50% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 }
 .HeroSection .overlayPlansCard .container .plans .twoPlan .plan_1,
 .HeroSection .overlayPlansCard .container .plans .twoPlan .plan_2 {

@@ -948,12 +948,15 @@ function HomePage() {
                       Get started
                     </div>
                     <span>or</span>
-                    <p
-                      data-cal-namespace=""
-                      data-cal-link="lyerz/space"
-                      data-cal-config='{"layout":"month_view"}'
-                    >
-                      <Link href="">book a call</Link>
+                    <p>
+                      <Link
+                        href=""
+                        data-cal-namespace=""
+                        data-cal-link="lyerz/space"
+                        data-cal-config='{"layout":"month_view"}'
+                      >
+                        book a call
+                      </Link>
                     </p>
                   </div>
                 </div>
