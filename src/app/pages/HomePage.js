@@ -898,11 +898,11 @@ function HomePage() {
                   <div className={styles.head}>
                     <p>
                       {overlayPlansCard("plans-plan_1-pricingContent->p_1")}
-                      <span>
+                      {/* <span>
                         {overlayPlansCard(
                           "plans-plan-pricingContent-p_2->span"
                         )}
-                      </span>
+                      </span> */}
                     </p>
                     <p>One request at a time. Pause or cancel anytime.</p>
                   </div>
@@ -978,11 +978,11 @@ function HomePage() {
                   <div className={styles.head}>
                     <p>
                       {overlayPlansCard("plans-plan_2-pricingContent->p_1")}
-                      <span>
+                      {/* <span>
                         {overlayPlansCard(
                           "plans-plan-pricingContent-p_2->span"
                         )}
-                      </span>
+                      </span> */}
                     </p>
                     <p>Two request at a time. Pause or cancel anytime.</p>
                   </div>
