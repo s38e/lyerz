@@ -243,9 +243,8 @@
 }
 .HeroSection .hero_content .hero_cards .card img {
   pointer-events: none;
-  /* height: 7.5rem; */
-  height: 100%;
-  /* width: auto; */
+  height: 7.5rem;
+  width: 6rem;
   vertical-align: middle;
   object-fit: contain;
 }

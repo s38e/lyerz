@@ -450,39 +450,19 @@ function HomePage() {
               </div>
             </div>
             <button onClick={handleCardWorkClick} className={styles.card}>
-              <Image
-                src={card_work}
-                alt="Image Card Work"
-                width={100}
-                height={100}
-              />
+              <Image src={card_work} alt="Image Card Work" />
               <p>{t("card_1")}</p>
             </button>
             <button onClick={handleCardServicesClick} className={styles.card}>
-              <Image
-                src={card_services}
-                alt="Image Card Services"
-                width={100}
-                height={100}
-              />
+              <Image src={card_services} alt="Image Card Services" />
               <p>{t("card_2")}</p>
             </button>
             <button onClick={handleCardAboutClick} className={styles.card}>
-              <Image
-                src={card_about}
-                alt="Image Card About"
-                width={100}
-                height={100}
-              />
+              <Image src={card_about} alt="Image Card About" />
               <p>{t("card_3")}</p>
             </button>
             <button onClick={handleCardPlansClick} className={styles.card}>
-              <Image
-                src={card_plans}
-                alt="Image Card Plans"
-                width={100}
-                height={100}
-              />
+              <Image src={card_plans} alt="Image Card Plans" />
               <p>{t("card_4")}</p>
               <div className={styles.status}>
                 <div className={styles.live_indicator}>
