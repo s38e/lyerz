@@ -84,10 +84,10 @@
   "overlayPlansCard": {
     "h2": "Membership",
     "plans-plan_1->pricingTag": "Slots available",
-    "plans-plan_1-pricingContent->p_1": "One request",
+    "plans-plan_1-pricingContent->p_1": "$2,199",
     "plans-plan_1-pricingContent->p_2": "Best if you're looking for steady and ongoing design work.",
     "plans-plan_2->pricingTag": "Startup",
-    "plans-plan_2-pricingContent->p_1": "Two request",
+    "plans-plan_2-pricingContent->p_1": "$3,999",
     "plans-plan_2-pricingContent->p_2": "For ongoing support and consistent updates to your existing Webflow site.",
     "plans-plan-pricingContent-p_2->span": "/m",
     "plans-plan_3->pricingTag": "Pro",

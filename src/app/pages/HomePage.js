@@ -29,7 +29,6 @@ import img_10_overlayWork from "/public/assets/img_10_overlayWork.webp";
 import img_11_overlayWork from "/public/assets/img_11_overlayWork.webp";
 import img_12_overlayWork from "/public/assets/img_12_overlayWork.webp";
 import img_13_overlayWork from "/public/assets/img_13_overlayWork.webp";
-import LightningImg from "/public/assets/LightningImg.svg";
 import CardInOverlayAbout from "/src/app/components/cardInOverlayAbout";
 import Unlimited_Tasks from "/public/assets/Unlimited-Tasks.svg";
 import Fast_Results from "/public/assets/Fast-Results.svg";
@@ -39,9 +38,6 @@ import Create_WOW from "/public/assets/Create-WOW.svg";
 import Own_It from "/public/assets/Own-It.svg";
 import imgInOverlayAbout from "/public/assets/imgInOverlayAbout.svg";
 import starInOverlayAbout from "/public/assets/starInOverlayAbout.svg";
-import Info from "/public/assets/info.svg";
-import True from "/public/assets/true.svg";
-import Infenity from "/public/assets/infenity.svg";
 import card_work from "/public/assets/card_work.webp";
 import card_services from "/public/assets/card_services.webp";
 import card_about from "/public/assets/card_about.webp";
@@ -58,6 +54,7 @@ import Question from "../components/Question";
 import InfiniteScroll from "../components/InfiniteScroll";
 import JoinLYERZPlan from "../components/joinLYERZPlan";
 import Table from "../components/Table";
+import TowPlans from "../components/TowPlans";
 import LyerzSpace from "../components/LyerzSpace";
 import gsap from "gsap";
 import { getLangDir } from "rtl-detect";
@@ -275,64 +272,64 @@ function HomePage() {
       { opacity: 1, delay: 0.9, y: 0, duration: 1.25, ease: "power4.out" }
     );
     // ---------------- Click Choice ---------------- //
-    const plan_1 = document.querySelector(
-      `.${styles.twoPlan} .${styles.plan_1}`
-    );
-    const plan_2 = document.querySelector(
-      `.${styles.twoPlan} .${styles.plan_2}`
-    );
+    //   const plan_1 = document.querySelector(
+    //     `.${styles.twoPlan} .${styles.plan_1}`
+    //   );
+    //   const plan_2 = document.querySelector(
+    //     `.${styles.twoPlan} .${styles.plan_2}`
+    //   );
 
-    const fadeIn = anime({
-      targets: [plan_1, plan_2],
-      opacity: [0, 1],
-      duration: 250,
-      easing: "easeInOutQuad",
-      autoplay: false,
-    });
+    //   const fadeIn = anime({
+    //     targets: [plan_1, plan_2],
+    //     opacity: [0, 1],
+    //     duration: 250,
+    //     easing: "easeInOutQuad",
+    //     autoplay: false,
+    //   });
 
-    const fadeOut = anime({
-      targets: [plan_1, plan_2],
-      opacity: 0,
-      duration: 250,
-      easing: "easeInOutQuad",
-      autoplay: false,
-      complete: function (anim) {
-        if (anim.targets) {
-          anim.targets.forEach((target) => {
-            target.style.display = "none";
-          });
-        }
-      },
-    });
+    //   const fadeOut = anime({
+    //     targets: [plan_1, plan_2],
+    //     opacity: 0,
+    //     duration: 250,
+    //     easing: "easeInOutQuad",
+    //     autoplay: false,
+    //     complete: function (anim) {
+    //       if (anim.targets) {
+    //         anim.targets.forEach((target) => {
+    //           target.style.display = "none";
+    //         });
+    //       }
+    //     },
+    //   });
 
-    plan_1.style.display = "flex";
-    plan_2.style.display = "none";
-    fadeIn.play();
+    //   plan_1.style.display = "flex";
+    //   plan_2.style.display = "none";
+    //   fadeIn.play();
 
-    const handleChoice_1_Click = () => {
-      setIsChoice_1_Active(true);
-      setIsChoice_2_Active(false);
-      fadeOut.restart();
-      fadeOut.finished.then(() => {
-        plan_1.style.display = "flex";
-        plan_2.style.display = "none";
-        fadeIn.restart();
-      });
-    };
+    //   const handleChoice_1_Click = () => {
+    //     setIsChoice_1_Active(true);
+    //     setIsChoice_2_Active(false);
+    //     fadeOut.restart();
+    //     fadeOut.finished.then(() => {
+    //       plan_1.style.display = "flex";
+    //       plan_2.style.display = "none";
+    //       fadeIn.restart();
+    //     });
+    //   };
 
-    const handleChoice_2_Click = () => {
-      setIsChoice_1_Active(false);
-      setIsChoice_2_Active(true);
-      fadeOut.restart();
-      fadeOut.finished.then(() => {
-        plan_1.style.display = "none";
-        plan_2.style.display = "flex";
-        fadeIn.restart();
-      });
-    };
+    //   const handleChoice_2_Click = () => {
+    //     setIsChoice_1_Active(false);
+    //     setIsChoice_2_Active(true);
+    //     fadeOut.restart();
+    //     fadeOut.finished.then(() => {
+    //       plan_1.style.display = "none";
+    //       plan_2.style.display = "flex";
+    //       fadeIn.restart();
+    //     });
+    //   };
 
-    window.handleChoice_1_Click = handleChoice_1_Click;
-    window.handleChoice_2_Click = handleChoice_2_Click;
+    //   window.handleChoice_1_Click = handleChoice_1_Click;
+    //   window.handleChoice_2_Click = handleChoice_2_Click;
   }, []);
 
   // ---------------- Click Work Card ---------------- //
@@ -429,6 +426,7 @@ function HomePage() {
               </span>
               <div className={styles.ourPartners}>
                 <InfiniteScroll />
+                <div className={styles.plus}>+</div>
               </div>
             </div>
           </div>
@@ -851,182 +849,7 @@ function HomePage() {
                 <JoinLYERZPlan />
               </div>
               <div className={styles.twoPlan}>
-                <div className={styles.choose_plan}>
-                  <div
-                    className={`${styles.choice} ${
-                      isChoice_1_Active ? styles.active : ""
-                    }`}
-                    onClick={() => window.handleChoice_1_Click()}
-                  >
-                    {overlayPlansCard("plans-plan_2->pricingTag")}
-                  </div>
-                  <div
-                    className={`${styles.choice} ${
-                      isChoice_2_Active ? styles.active : ""
-                    }`}
-                    onClick={() => window.handleChoice_2_Click()}
-                  >
-                    <Image src={LightningImg} alt="LightningImg" />
-                    {overlayPlansCard("plans-plan_3->pricingTag")}
-                  </div>
-                </div>
-                <div
-                  className={`${styles.plan} ${styles.plan_1} ${
-                    isChoice_1_Active ? styles.active : ""
-                  }`}
-                >
-                  <div className={styles.head}>
-                    <p>
-                      {overlayPlansCard("plans-plan_1-pricingContent->p_1")}
-                      {/* <span>
-                        {overlayPlansCard(
-                          "plans-plan-pricingContent-p_2->span"
-                        )}
-                      </span> */}
-                    </p>
-                    <p>One request at a time. Pause or cancel anytime.</p>
-                  </div>
-                  <div className={styles.hr}></div>
-                  <div className={styles.content}>
-                    <p>What&#39;s included</p>
-                    <div className={styles.features}>
-                      <div className={styles.feature}>
-                        <Image src={Infenity} alt="Infenity" />
-                        <p>Unlimited Requests</p>
-                        <div className={styles.image}>
-                          <Image src={Info} alt="Info" />
-                          <div className={styles.hint}>
-                            One request at a time.
-                          </div>
-                        </div>
-                      </div>
-                      <div className={styles.feature}>
-                        <Image src={Infenity} alt="Infenity" />
-                        <p>Unlimited Revisions</p>
-                        <div className={styles.image}>
-                          <Image src={Info} alt="Info" />{" "}
-                          <div className={styles.hint}>
-                            We iterate until you are satisfied 100%
-                          </div>
-                        </div>
-                      </div>
-                      <div className={styles.feature}>
-                        <Image src={True} alt="True" />
-                        <p>48h Processing Time</p>
-                      </div>
-                      <div className={styles.feature}>
-                        <Image src={True} alt="True" />
-                        <p>In-House Designers</p>
-                      </div>
-                      <div className={styles.feature}>
-                        <Image src={True} alt="True" />
-                        <p>LYERZ Space Access</p>
-                      </div>
-                      <div className={styles.feature}>
-                        <Image src={True} alt="True" />
-                        <p>Dedicated Project Manager</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.btns}>
-                    <div
-                      className={styles.btn}
-                      data-cal-namespace=""
-                      data-cal-link="lyerz/space"
-                      data-cal-config='{"layout":"month_view"}'
-                    >
-                      Get started
-                    </div>
-                    <span>or</span>
-                    <p>
-                      <Link
-                        href=""
-                        data-cal-namespace=""
-                        data-cal-link="lyerz/space"
-                        data-cal-config='{"layout":"month_view"}'
-                      >
-                        book a call
-                      </Link>
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className={`${styles.plan} ${styles.plan_2} ${
-                    isChoice_2_Active ? styles.active : ""
-                  }`}
-                >
-                  <div className={styles.head}>
-                    <p>
-                      {overlayPlansCard("plans-plan_2-pricingContent->p_1")}
-                      {/* <span>
-                        {overlayPlansCard(
-                          "plans-plan-pricingContent-p_2->span"
-                        )}
-                      </span> */}
-                    </p>
-                    <p>Two request at a time. Pause or cancel anytime.</p>
-                  </div>
-                  <div className={styles.hr}></div>
-                  <div className={styles.content}>
-                    <p>What&#39;s included</p>
-                    <div className={styles.features}>
-                      <div className={styles.feature}>
-                        <Image src={Infenity} alt="Infenity" />
-                        <p>Unlimited Requests</p>
-                        <div className={styles.image}>
-                          <Image src={Info} alt="Info" />
-                          <div className={styles.hint}>
-                            Two request at a time.
-                          </div>
-                        </div>
-                      </div>
-                      <div className={styles.feature}>
-                        <Image src={Infenity} alt="Infenity" />
-                        <p>Unlimited Revisions</p>
-                        <div className={styles.image}>
-                          <Image src={Info} alt="Info" />
-                          <div className={styles.hint}>
-                            We iterate until you are satisfied 100%
-                          </div>
-                        </div>
-                      </div>
-                      <div className={styles.feature}>
-                        <Image src={True} alt="True" />
-                        <p>48h Processing Time</p>
-                      </div>
-                      <div className={styles.feature}>
-                        <Image src={True} alt="True" />
-                        <p>In-House Designers</p>
-                      </div>
-                      <div className={styles.feature}>
-                        <Image src={True} alt="True" />
-                        <p>LYERZ Space Access</p>
-                      </div>
-                      <div className={styles.feature}>
-                        <Image src={True} alt="True" />
-                        <p>Dedicated Project Manager</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.btns}>
-                    <div
-                      className={styles.btn}
-                      data-cal-namespace=""
-                      data-cal-link="lyerz/space"
-                      data-cal-config='{"layout":"month_view"}'
-                    >
-                      Get started
-                    </div>
-                    <span>or</span>
-                    <p
-                      data-cal-namespace=""
-                      data-cal-link="lyerz/space"
-                      data-cal-config='{"layout":"month_view"}'
-                    >
-                      <Link href="">book a call</Link>
-                    </p>
-                  </div>
-                </div>
+                <TowPlans />
               </div>
               <div className={styles.customPlan}>
                 <span className={styles.tag}>Project based</span>

@@ -231,14 +231,14 @@ function Footer() {
                 Riyadh 12354
               </p>
             </div>
-            <div className={styles.location}>
+            {/* <div className={styles.location}>
               <Image src={flagEgypt} alt="flagEgypt" />
               <p>
                 6, 5, 273,
                 <br />
                 Maadi, Cairo 11757
               </p>
-            </div>
+            </div> */}
           </div>
           <div className={styles.line}></div>
           <span className={styles.copyright}>{t("copyright")} </span>

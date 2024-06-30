@@ -1,5 +1,14 @@
+.infiniteScroll {
+  border: 2px solid #f1f1f1;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  direction: ltr;
+  pointer-events: none;
+}
 .scroller {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   direction: ltr;
   pointer-events: none;
@@ -59,20 +68,3 @@
     transform: translate(calc(-50% - 0.5rem));
   }
 }
-
-/* .tag-list {
-  margin: 0;
-  padding-inline: 0;
-  list-style: none;
-}
-
-.tag-list li {
-  padding: 1rem;
-  background: #f7f7f7;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem -0.25rem #f7f7f7;
-}
-
-.test {
-  background: red !important;
-} */
