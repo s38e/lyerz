@@ -21,7 +21,7 @@ const InfiniteScroll = () => {
       const newWidth = infiniteScrollWidth - ourPartnersPlus.offsetWidth;
       infiniteScroll.style.width = `${newWidth}px`;
       console.log(newWidth);
-    }, 1);
+    }, 10);
 
     // ---------------------------------------------------------------- //
 

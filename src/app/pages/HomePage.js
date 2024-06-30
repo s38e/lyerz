@@ -426,7 +426,7 @@ function HomePage() {
               </span>
               <div className={styles.ourPartners}>
                 <InfiniteScroll />
-                <div className={styles.plus}>+</div>
+                <div className={styles.plus}>YOU!</div>
               </div>
             </div>
           </div>
