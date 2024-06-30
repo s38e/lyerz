@@ -15,13 +15,9 @@ const InfiniteScroll = () => {
       `.${plusStyle.title} .${plusStyle.ourPartners} .${plusStyle.plus}`
     );
 
-    const infiniteScrollWidth = infiniteScroll.offsetWidth - 8;
-
-    setTimeout(() => {
-      const newWidth = infiniteScrollWidth - ourPartnersPlus.offsetWidth;
-      infiniteScroll.style.width = `${newWidth}px`;
-      console.log(newWidth);
-    }, 10);
+    const infiniteScrollWidth = 41.5 * 16 - 8;
+    const newWidth = infiniteScrollWidth - ourPartnersPlus.offsetWidth;
+    infiniteScroll.style.width = `${newWidth}px`;
 
     // ---------------------------------------------------------------- //
 
