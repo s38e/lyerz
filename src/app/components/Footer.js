@@ -151,7 +151,7 @@ function Footer() {
         }}
       >
         <menu className={styles.menu}>
-          <Link className={styles.link} href="https://space.lyerz.com/">
+          <Link className={styles.link} href="https://space.lyerz.com/sign-in">
             <span className={styles.span}>
               <LYERZText
                 font_size_LYERZ="16px"

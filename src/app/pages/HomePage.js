@@ -427,6 +427,13 @@ function HomePage() {
               <div className={styles.ourPartners}>
                 <InfiniteScroll />
                 <div className={styles.plus}>YOU!</div>
+                <div className={styles.hint}>
+                  <p>
+                    Extend your team with a<br />
+                    top designer today.
+                  </p>
+                  <Image src={Arrow} alt="Arrow" />
+                </div>
               </div>
             </div>
           </div>
