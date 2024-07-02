@@ -21,11 +21,12 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
 }
 .scroller__inner img {
-  height: 80%;
-  width: auto;
+  height: auto;
+  width: 50px;
+  vertical-align: middle;
 }
 
 .scroller[data-animated="true"] {

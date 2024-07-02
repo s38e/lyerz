@@ -7,39 +7,33 @@ import img_1_work from "/public/assets/img_1_work.webp";
 import img_2_work from "/public/assets/img_2_work.webp";
 import img_3_work from "/public/assets/img_3_work.webp";
 import img_4_work from "/public/assets/img_4_work.webp";
-//
 import SERVICES_Branding from "/public/assets/SERVICES-Branding.png";
 import SERVICES_Graphic from "/public/assets/SERVICES-Graphic.png";
 import SERVICES_Ui from "/public/assets/SERVICES-Ui.png";
-//
 import webflowIcon from "/public/assets/webflow-icon.webp";
 import img_1_about from "/public/assets/img_1_about.webp";
 import img_2_about from "/public/assets/img_2_about.webp";
 import img_3_about from "/public/assets/img_3_about.webp";
 import img_4_about from "/public/assets/img_4_about.webp";
 import img_5_about from "/public/assets/img_5_about.webp";
-import LYERZ_WORK_1 from "/public/assets/LYERZ -WORK_1.jpg";
-import LYERZ_WORK_2 from "/public/assets/LYERZ -WORK_2.jpg";
-import LYERZ_WORK_3 from "/public/assets/LYERZ -WORK_3.jpg";
-import LYERZ_WORK_4 from "/public/assets/LYERZ -WORK_4.jpg";
-import LYERZ_WORK_5 from "/public/assets/LYERZ -WORK_5.jpg";
-import LYERZ_WORK_6 from "/public/assets/LYERZ -WORK_6.jpg";
-import LYERZ_WORK_7 from "/public/assets/LYERZ -WORK_7.jpg";
-import LYERZ_WORK_8 from "/public/assets/LYERZ -WORK_8.jpg";
-import LYERZ_WORK_9 from "/public/assets/LYERZ -WORK_9.jpg";
-import LYERZ_WORK_10 from "/public/assets/LYERZ -WORK_10.jpg";
-import LYERZ_WORK_11 from "/public/assets/LYERZ -WORK_11.jpg";
-import LYERZ_WORK_12 from "/public/assets/LYERZ -WORK_12.jpg";
-import LYERZ_WORK_13 from "/public/assets/LYERZ -WORK_13.jpg";
-import LYERZ_WORK_14 from "/public/assets/LYERZ -WORK_14.jpg";
-import LYERZ_WORK_15 from "/public/assets/LYERZ -WORK_15.jpg";
-import LYERZ_WORK_16 from "/public/assets/LYERZ -WORK_16.jpg";
-import LYERZ_WORK_17 from "/public/assets/LYERZ -WORK_17.jpg";
-import LYERZ_WORK_18 from "/public/assets/LYERZ -WORK_18.jpg";
-import LYERZ_WORK_19 from "/public/assets/LYERZ -WORK_19.jpg";
-import LYERZ_WORK_20 from "/public/assets/LYERZ -WORK_20.jpg";
-import LYERZ_WORK_21 from "/public/assets/LYERZ -WORK_21.jpg";
-import LYERZ_WORK_LAST from "/public/assets/LYERZ -WORK_Last.jpg";
+import Work_01 from "/public/assets/1. Branding.png";
+import Work_02 from "/public/assets/2. Branding.png";
+import Work_03 from "/public/assets/9. Branding.png";
+import Work_04 from "/public/assets/10. Branding.png";
+import Work_05 from "/public/assets/11. Branding.png";
+import Work_06 from "/public/assets/17 .Branding.png";
+import Work_07 from "/public/assets/7. Branding - Stratgy.png";
+import Work_08 from "/public/assets/3. Branding - Social Media Design.png";
+import Work_09 from "/public/assets/12. User Interface.png";
+import Work_10 from "/public/assets/16. User Interface.png";
+import Work_11 from "/public/assets/13. User Interface - Branding.png";
+import Work_12 from "/public/assets/14. User Interface - Branding.png";
+import Work_13 from "/public/assets/15. User Interface - Branding.png";
+import Work_14 from "/public/assets/4. User Interface - Branding - Stratgy.png";
+import Work_15 from "/public/assets/5. User Interface - Branding - Stratgy.png";
+import Work_16 from "/public/assets/6. User Interface - Branding - Stratgy.png";
+import Work_17 from "/public/assets/8. Game Design - User Interface - Branding.png";
+import Work_LAST from "/public/assets/18. LAST.png";
 import CardInOverlayAbout from "/src/app/components/cardInOverlayAbout";
 import Unlimited_Tasks from "/public/assets/Unlimited-Tasks.svg";
 import Fast_Results from "/public/assets/Fast-Results.svg";
@@ -580,94 +574,48 @@ function HomePage() {
         >
           <CircleOverlayWorkCard />
           <div className={styles.container} onClick={handleContainerClick}>
+            <ImageWorkCardOverlay url={Work_01} tag="Branding" />
+            <ImageWorkCardOverlay url={Work_02} tag="Branding" />
+            <ImageWorkCardOverlay url={Work_03} tag="Branding" />
+            <ImageWorkCardOverlay url={Work_04} tag="Branding" />
+            <ImageWorkCardOverlay url={Work_05} tag="Branding" />
+            <ImageWorkCardOverlay url={Work_06} tag="Branding" />
+            <ImageWorkCardOverlay url={Work_07} tag="Branding - Stratgy" />
             <ImageWorkCardOverlay
-              url={LYERZ_WORK_1}
-              tag="Branding - Web Design"
+              url={Work_08}
+              tag="Branding - Social Media Design"
+            />
+            <ImageWorkCardOverlay url={Work_09} tag="User Interface" />
+            <ImageWorkCardOverlay url={Work_10} tag="User Interface" />
+            <ImageWorkCardOverlay
+              url={Work_11}
+              tag="User Interface - Branding"
             />
             <ImageWorkCardOverlay
-              url={LYERZ_WORK_2}
-              tag="Branding - Web Design"
+              url={Work_12}
+              tag="User Interface - Branding"
             />
             <ImageWorkCardOverlay
-              url={LYERZ_WORK_3}
-              tag="Branding - Web Design"
+              url={Work_13}
+              tag="User Interface - Branding"
             />
             <ImageWorkCardOverlay
-              url={LYERZ_WORK_4}
-              tag="Branding - Web Design"
+              url={Work_14}
+              tag="User Interface - Branding - Stratgy"
             />
             <ImageWorkCardOverlay
-              url={LYERZ_WORK_5}
-              tag="Branding - Web Design"
+              url={Work_15}
+              tag="User Interface - Branding - Stratgy"
             />
             <ImageWorkCardOverlay
-              url={LYERZ_WORK_6}
-              tag="Branding - Web Design"
+              url={Work_16}
+              tag="User Interface - Branding - Stratgy"
             />
             <ImageWorkCardOverlay
-              url={LYERZ_WORK_7}
-              tag="Branding - Web Design"
+              url={Work_17}
+              tag="Game Design - User Interface - Branding"
             />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_8}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_9}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_10}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_11}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_12}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_13}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_14}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_15}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_16}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_17}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_18}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_19}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_20}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_21}
-              tag="Branding - Web Design"
-            />
-            <ImageWorkCardOverlay
-              url={LYERZ_WORK_LAST}
-              tag="------ Finally ------"
-            />
+            <ImageWorkCardOverlay url={Work_LAST} tag="------ Finally ------" />
             <div></div>
           </div>
         </div>

@@ -35,6 +35,7 @@ const Question = ({ question, answer, initialActiveState = false }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isQuestionActive]);
 
   const toggleService = () => {
