@@ -7,28 +7,39 @@ import img_1_work from "/public/assets/img_1_work.webp";
 import img_2_work from "/public/assets/img_2_work.webp";
 import img_3_work from "/public/assets/img_3_work.webp";
 import img_4_work from "/public/assets/img_4_work.webp";
-import img_1_services from "/public/assets/img_1_services.webp";
-import img_2_services from "/public/assets/img_2_services.webp";
-import img_3_services from "/public/assets/img_3_services.webp";
+//
+import SERVICES_Branding from "/public/assets/SERVICES-Branding.png";
+import SERVICES_Graphic from "/public/assets/SERVICES-Graphic.png";
+import SERVICES_Ui from "/public/assets/SERVICES-Ui.png";
+//
 import webflowIcon from "/public/assets/webflow-icon.webp";
 import img_1_about from "/public/assets/img_1_about.webp";
 import img_2_about from "/public/assets/img_2_about.webp";
 import img_3_about from "/public/assets/img_3_about.webp";
 import img_4_about from "/public/assets/img_4_about.webp";
 import img_5_about from "/public/assets/img_5_about.webp";
-import img_1_overlayWork from "/public/assets/img_1_overlayWork.webp";
-import img_2_overlayWork from "/public/assets/img_2_overlayWork.webp";
-import img_3_overlayWork from "/public/assets/img_3_overlayWork.webp";
-import img_4_overlayWork from "/public/assets/img_4_overlayWork.webp";
-import img_5_overlayWork from "/public/assets/img_5_overlayWork.webp";
-import img_6_overlayWork from "/public/assets/img_6_overlayWork.webp";
-import img_7_overlayWork from "/public/assets/img_7_overlayWork.webp";
-import img_8_overlayWork from "/public/assets/img_8_overlayWork.webp";
-import img_9_overlayWork from "/public/assets/img_9_overlayWork.webp";
-import img_10_overlayWork from "/public/assets/img_10_overlayWork.webp";
-import img_11_overlayWork from "/public/assets/img_11_overlayWork.webp";
-import img_12_overlayWork from "/public/assets/img_12_overlayWork.webp";
-import img_13_overlayWork from "/public/assets/img_13_overlayWork.webp";
+import LYERZ_WORK_1 from "/public/assets/LYERZ -WORK_1.jpg";
+import LYERZ_WORK_2 from "/public/assets/LYERZ -WORK_2.jpg";
+import LYERZ_WORK_3 from "/public/assets/LYERZ -WORK_3.jpg";
+import LYERZ_WORK_4 from "/public/assets/LYERZ -WORK_4.jpg";
+import LYERZ_WORK_5 from "/public/assets/LYERZ -WORK_5.jpg";
+import LYERZ_WORK_6 from "/public/assets/LYERZ -WORK_6.jpg";
+import LYERZ_WORK_7 from "/public/assets/LYERZ -WORK_7.jpg";
+import LYERZ_WORK_8 from "/public/assets/LYERZ -WORK_8.jpg";
+import LYERZ_WORK_9 from "/public/assets/LYERZ -WORK_9.jpg";
+import LYERZ_WORK_10 from "/public/assets/LYERZ -WORK_10.jpg";
+import LYERZ_WORK_11 from "/public/assets/LYERZ -WORK_11.jpg";
+import LYERZ_WORK_12 from "/public/assets/LYERZ -WORK_12.jpg";
+import LYERZ_WORK_13 from "/public/assets/LYERZ -WORK_13.jpg";
+import LYERZ_WORK_14 from "/public/assets/LYERZ -WORK_14.jpg";
+import LYERZ_WORK_15 from "/public/assets/LYERZ -WORK_15.jpg";
+import LYERZ_WORK_16 from "/public/assets/LYERZ -WORK_16.jpg";
+import LYERZ_WORK_17 from "/public/assets/LYERZ -WORK_17.jpg";
+import LYERZ_WORK_18 from "/public/assets/LYERZ -WORK_18.jpg";
+import LYERZ_WORK_19 from "/public/assets/LYERZ -WORK_19.jpg";
+import LYERZ_WORK_20 from "/public/assets/LYERZ -WORK_20.jpg";
+import LYERZ_WORK_21 from "/public/assets/LYERZ -WORK_21.jpg";
+import LYERZ_WORK_LAST from "/public/assets/LYERZ -WORK_Last.jpg";
 import CardInOverlayAbout from "/src/app/components/cardInOverlayAbout";
 import Unlimited_Tasks from "/public/assets/Unlimited-Tasks.svg";
 import Fast_Results from "/public/assets/Fast-Results.svg";
@@ -56,6 +67,7 @@ import JoinLYERZPlan from "../components/joinLYERZPlan";
 import Table from "../components/Table";
 import TowPlans from "../components/TowPlans";
 import LyerzSpace from "../components/LyerzSpace";
+import ImageWorkCardOverlay from "../components/ImageWorkCardOverlay";
 import gsap from "gsap";
 import { getLangDir } from "rtl-detect";
 import FooterStyles from "../components/styles/Footer.module.css";
@@ -511,13 +523,14 @@ function HomePage() {
             isCardServicesHovered ? styles.active : ""
           }`}
         >
+          {/* SERVICES_Branding SERVICES_Graphic SERVICES_Ui */}
           <div className={styles.card}>
             <p>
               {ServicesCards("card_1_part1")}
               <br />
               {ServicesCards("card_1_part2")}
             </p>
-            <Image src={img_1_services} alt="Image Services Card" />
+            <Image src={SERVICES_Branding} alt="Image Services Card" />
           </div>
           <div className={styles.card}>
             <p>
@@ -525,14 +538,14 @@ function HomePage() {
               <br />
               {ServicesCards("card_2_part2")}
             </p>
-            <Image src={img_2_services} alt="Image Services Card" />
+            <Image src={SERVICES_Graphic} alt="Image Services Card" />
           </div>
           <div className={styles.card}>
             <p>
               {ServicesCards("card_3_part1")} <br />
               {ServicesCards("card_3_part2")}
             </p>
-            <Image src={img_3_services} alt="Image Services Card" />
+            <Image src={SERVICES_Ui} alt="Image Services Card" />
             <Image src={webflowIcon} alt="webflowIcon" />
           </div>
         </div>
@@ -567,19 +580,94 @@ function HomePage() {
         >
           <CircleOverlayWorkCard />
           <div className={styles.container} onClick={handleContainerClick}>
-            <Image src={img_1_overlayWork} alt="img_1_overlayWork" />
-            <Image src={img_2_overlayWork} alt="img_2_overlayWork" />
-            <Image src={img_3_overlayWork} alt="img_3_overlayWork" />
-            <Image src={img_4_overlayWork} alt="img_4_overlayWork" />
-            <Image src={img_5_overlayWork} alt="img_5_overlayWork" />
-            <Image src={img_6_overlayWork} alt="img_6_overlayWork" />
-            <Image src={img_7_overlayWork} alt="img_7_overlayWork" />
-            <Image src={img_8_overlayWork} alt="img_8_overlayWork" />
-            <Image src={img_9_overlayWork} alt="img_9_overlayWork" />
-            <Image src={img_10_overlayWork} alt="img_10_overlayWork" />
-            <Image src={img_11_overlayWork} alt="img_11_overlayWork" />
-            <Image src={img_12_overlayWork} alt="img_12_overlayWork" />
-            <Image src={img_13_overlayWork} alt="img_13_overlayWork" />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_1}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_2}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_3}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_4}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_5}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_6}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_7}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_8}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_9}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_10}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_11}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_12}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_13}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_14}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_15}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_16}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_17}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_18}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_19}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_20}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_21}
+              tag="Branding - Web Design"
+            />
+            <ImageWorkCardOverlay
+              url={LYERZ_WORK_LAST}
+              tag="------ Finally ------"
+            />
             <div></div>
           </div>
         </div>
@@ -601,24 +689,26 @@ function HomePage() {
               </ul>
             </div>
             <div className={styles.services}>
+              {/*  */}
               <Service
                 title={overlayServicesCard("Service_1_Title")}
                 description={overlayServicesCard("Service_1_Description")}
-                image={img_1_services}
+                image={SERVICES_Ui}
                 initialActiveState={true}
               />
               <Service
                 title={overlayServicesCard("Service_2_Title")}
                 description={overlayServicesCard("Service_2_Description")}
-                image={img_2_services}
+                image={SERVICES_Graphic}
                 initialActiveState={false}
               />
               <Service
                 title={overlayServicesCard("Service_3_Title")}
                 description={overlayServicesCard("Service_3_Description")}
-                image={img_3_services}
+                image={SERVICES_Branding}
                 initialActiveState={false}
               />
+              {/*  */}
             </div>
             <Table />
             <JoinLYERZPlan />

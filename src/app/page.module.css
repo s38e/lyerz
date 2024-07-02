@@ -641,7 +641,7 @@
   max-width: 62.5rem;
   min-height: 52rem;
   height: 46rem;
-  border-radius: 30px;
+  border-radius: 25px;
   overflow: auto;
   opacity: 0;
   transition: opacity 0.3s 0.2s linear;

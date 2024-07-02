@@ -2,9 +2,26 @@
   position: relative;
   width: 100%;
   height: auto;
+  aspect-ratio: 1/1;
 }
 .image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   vertical-align: top;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.image .tag {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  padding: 5px 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  border-radius: 10rem;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
