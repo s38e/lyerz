@@ -70,8 +70,6 @@ import { getCalApi } from "@calcom/embed-react";
 function HomePage() {
   const [isCloseAnyOverlayActive, setIsCloseAnyOverlayActive] = useState(false);
   const [isLyerzSpaceActive, setIsLyerzSpaceActive] = useState(false);
-  const [isChoice_1_Active, setIsChoice_1_Active] = useState(true);
-  const [isChoice_2_Active, setIsChoice_2_Active] = useState(false);
   // ---------------- Hovered ---------------- //
   const [isCardWorkHovered, setIsCardWorkHovered] = useState(false);
   const [isCardServicesHovered, setIsCardServicesHovered] = useState(false);
