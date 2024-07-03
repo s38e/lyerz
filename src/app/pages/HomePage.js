@@ -364,7 +364,6 @@ function HomePage() {
   const handleOverlayServicesClick = () => {
     setIsCardServicesClicked(false);
   };
-
   // ---------------- Click About Card ---------------- //
   const handleCardAboutClick = () => {
     setIsCardAboutClicked(true);
