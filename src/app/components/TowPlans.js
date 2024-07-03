@@ -1,7 +1,7 @@
 import { useSpring, animated } from "@react-spring/web";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./styles/TowPlans.module.css";
 import { useTranslations } from "next-intl";
 import LightningImg from "/public/assets/LightningImg.svg";
@@ -30,11 +30,25 @@ function TowPlans() {
     config: { duration: 1000 },
   });
 
+  useEffect(() => {
+    const backGround = document.querySelector(`.${styles.backGround}`);
+    const choice = document.querySelector(`.${styles.choice}`);
+
+    const choiceWidth = choice.offsetWidth;
+
+    backGround.style.width = `${choiceWidth}px`;
+  }, []);
+
   const overlayPlansCard = useTranslations("overlayPlansCard");
 
   return (
     <div className={styles.twoPlan}>
       <div className={styles.choose_plan}>
+        <div
+          className={`${styles.backGround} ${
+            isChoice_1_Active ? styles.left : ""
+          }`}
+        ></div>
         <div
           className={`${styles.choice} ${
             isChoice_1_Active ? styles.active : ""

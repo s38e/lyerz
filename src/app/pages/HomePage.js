@@ -496,11 +496,11 @@ function HomePage() {
         >
           <div className={styles.image}>
             <div className={styles.overlay}></div>
-            <Image src={img_1_work} alt="Image Work Card" />
+            <Image src={Work_13} alt="Image Work Card" />
           </div>
           <div className={styles.image}>
             <div className={styles.overlay}></div>
-            <Image src={img_2_work} alt="Image Work Card" />
+            <Image src={Work_03} alt="Image Work Card" />
           </div>
           <div className={styles.image}>
             <div className={styles.overlay}></div>
@@ -508,7 +508,7 @@ function HomePage() {
           </div>
           <div className={styles.image}>
             <div className={styles.overlay}></div>
-            <Image src={img_4_work} alt="Image Work Card" />
+            <Image src={Work_14} alt="Image Work Card" />
           </div>
         </div>
         {/* ---------------- Cards Services Card ---------------- */}
@@ -603,7 +603,7 @@ function HomePage() {
               url={Work_17}
               tag="Game Design - User Interface - Branding"
             />
-            <ImageWorkCardOverlay url={Work_LAST} tag="------ Finally ------" />
+            <ImageWorkCardOverlay url={Work_LAST} initialActiveState={true} />
             <div></div>
           </div>
         </div>

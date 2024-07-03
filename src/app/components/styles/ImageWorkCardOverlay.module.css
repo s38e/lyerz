@@ -25,3 +25,13 @@
   justify-content: center;
   gap: 0.5rem;
 }
+.image .tag.notAvailable {
+  display: none;
+}
+@media screen and (max-width: 640px) {
+  .image .tag {
+    font-size: 14px;
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+}

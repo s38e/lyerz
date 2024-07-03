@@ -10,6 +10,7 @@ import flagUSA from "/public/assets/flagUSA.svg";
 import flagSaudiArabia from "/public/assets/flagSaudiArabia.svg";
 import flagEgypt from "/public/assets/flagEgypt.svg";
 import InstagramIcon from "/public/assets/InstagramIcon.svg";
+import dribbbleIcon from "/public/assets/dribbbleIcon.svg";
 import { getLangDir } from "rtl-detect";
 import { isMobile } from "react-device-detect";
 import LYERZText from "./LYERZText";
@@ -196,7 +197,26 @@ function Footer() {
               </svg>
             </span>
           </div>
-          <Link href="">Apply as a Designer</Link>
+          <Link className={styles.link} href="">
+            <span className={styles.span}>
+              Apply as a Designer
+              <svg
+                className={styles.Arrow}
+                width="6"
+                height="10"
+                viewBox="0 0 6 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.24264 0.999974L5.48528 5.24261L1.24264 9.48526"
+                  stroke="#414141"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </Link>
           {/* <Link
             className={styles.link}
             href={direction === "rtl" ? "/en" : "/ar"}
@@ -205,15 +225,10 @@ function Footer() {
             <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
           </Link> */}
           <div className={styles.socialLinks}>
-            <Link href="">
-              <Image src={InstagramIcon} alt="Instagram" />
+            <Link href="https://www.instagram.com/lyerz/">
+              {t("socialInstagram")}
             </Link>
-            <Link href="">
-              <Image src={InstagramIcon} alt="Instagram" />
-            </Link>
-            <Link href="">
-              <Image src={InstagramIcon} alt="Instagram" />
-            </Link>
+            <Link href="https://dribbble.com/Lyerz">{t("socialDribbble")}</Link>
           </div>
           <div className={styles.line}></div>
           <span className={styles.copyright}>{t("copyright")} </span>

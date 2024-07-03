@@ -305,7 +305,7 @@
   transition: visibility 0s;
 }
 .HeroSection .imagesWorkCard .image:nth-child(1) {
-  width: 25vw;
+  width: 20vw;
   height: auto;
   position: absolute;
   top: 9%;
@@ -314,17 +314,21 @@
   right: auto;
   opacity: 0;
   transition: opacity 0.3s linear;
+  rotate: 8deg;
 }
 .HeroSection .imagesWorkCard .image:nth-child(2) {
   position: absolute;
   width: 20vw;
   height: auto;
-  top: 8%;
+  top: 5%;
   bottom: auto;
   left: auto;
   right: 5%;
   opacity: 0;
   transition: opacity 0.3s 0.05s linear;
+}
+.HeroSection .imagesWorkCard .image:nth-child(2) img {
+  border-radius: 30px;
 }
 .HeroSection .imagesWorkCard .image:nth-child(3) {
   width: 30vw;
@@ -338,7 +342,6 @@
   transition: opacity 0.3s 0.1s linear;
 }
 .HeroSection .imagesWorkCard .image:nth-child(4) {
-  width: 20vw;
   position: absolute;
   height: auto;
   top: auto;
@@ -348,6 +351,7 @@
   transform: rotate(4deg);
   opacity: 0;
   transition: opacity 0.3s 0.15s linear;
+  width: 20vw;
 }
 .HeroSection .imagesWorkCard.active .image:nth-child(1),
 .HeroSection .imagesWorkCard.active .image:nth-child(2),
