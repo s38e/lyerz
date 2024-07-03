@@ -472,10 +472,10 @@
 .HeroSection .cardsAboutCard .image:nth-child(1) {
   border-radius: 14px;
   width: 11.25rem;
-  height: 15rem;
+  height: 17rem;
   position: absolute;
   top: auto;
-  bottom: 0%;
+  bottom: 5%;
   left: 0%;
   right: auto;
   overflow: hidden;
@@ -486,11 +486,11 @@
 .HeroSection .cardsAboutCard .image:nth-child(2) {
   border-radius: 14px;
   width: 11.5rem;
-  height: 6rem;
+  height: 18rem;
   position: absolute;
   top: auto;
-  bottom: -3%;
-  left: 9%;
+  bottom: -15%;
+  left: 15%;
   right: auto;
   overflow: hidden;
   transform: translateY(50%);
@@ -503,9 +503,9 @@
   height: 15rem;
   position: absolute;
   top: auto;
-  bottom: 22%;
+  bottom: 19%;
   left: auto;
-  right: 11%;
+  right: 15%;
   overflow: hidden;
   transform: translateY(50%);
   transition: 1s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -514,7 +514,7 @@
 .HeroSection .cardsAboutCard .image:nth-child(4) {
   border-radius: 14px;
   width: 11.25rem;
-  height: 10rem;
+  height: 13rem;
   position: absolute;
   top: auto;
   bottom: -3%;
@@ -531,7 +531,7 @@
   position: absolute;
   top: auto;
   bottom: -3%;
-  left: 30%;
+  left: 37%;
   right: auto;
   overflow: hidden;
   transform: translateY(50%);
