@@ -8,11 +8,11 @@ import SERVICES_Branding from "/public/assets/SERVICES-Branding.png";
 import SERVICES_Graphic from "/public/assets/SERVICES-Graphic.png";
 import SERVICES_Ui from "/public/assets/SERVICES-Ui.png";
 import webflowIcon from "/public/assets/webflow-icon.webp";
-import img_1_about from "/public/assets/img_1_about.jpg";
-import img_2_about from "/public/assets/img_2_about.jpg";
-import img_3_about from "/public/assets/img_3_about.jpg";
-import img_4_about from "/public/assets/img_4_about.jpg";
-import img_5_about from "/public/assets/img_5_about.jpg";
+import About_1 from "/public/assets/About_1.jpg";
+import About_2 from "/public/assets/About_2.jpg";
+import About_3 from "/public/assets/About_3.jpg";
+import About_4 from "/public/assets/About_4.jpg";
+import About_5 from "/public/assets/About_5.jpg";
 import Work_01 from "/public/assets/1. Branding.png";
 import Work_02 from "/public/assets/2. Branding.png";
 import Work_03 from "/public/assets/9. Branding.png";
@@ -69,7 +69,6 @@ import { getCalApi } from "@calcom/embed-react";
 
 function HomePage() {
   const [isCloseAnyOverlayActive, setIsCloseAnyOverlayActive] = useState(false);
-  const [isLyerzSpaceActive, setIsLyerzSpaceActive] = useState(false);
   // ---------------- Hovered ---------------- //
   const [isCardWorkHovered, setIsCardWorkHovered] = useState(false);
   const [isCardServicesHovered, setIsCardServicesHovered] = useState(false);
@@ -532,19 +531,19 @@ function HomePage() {
           }`}
         >
           <div className={styles.image}>
-            <Image src={img_1_about} alt="Image About Card" />
+            <Image src={About_1} alt="Image About Card" />
           </div>
           <div className={styles.image}>
-            <Image src={img_2_about} alt="Image About Card" />
+            <Image src={About_2} alt="Image About Card" />
           </div>
           <div className={styles.image}>
-            <Image src={img_3_about} alt="Image About Card" />
+            <Image src={About_3} alt="Image About Card" />
           </div>
           <div className={styles.image}>
-            <Image src={img_4_about} alt="Image About Card" />
+            <Image src={About_4} alt="Image About Card" />
           </div>
           <div className={styles.image}>
-            <Image src={img_5_about} alt="Image About Card" />
+            <Image src={About_5} alt="Image About Card" />
           </div>
         </div>
         {/* ---------------- Overlay Work Card ---------------- */}
@@ -1111,19 +1110,6 @@ function HomePage() {
           </svg>
         </div>
       </section>
-      <div
-        className={`${styles.lyerzSpace} ${
-          isLyerzSpaceActive ? styles.active : ""
-        }`}
-      >
-        <div
-          className={styles.closeBtn}
-          onClick={() => setIsLyerzSpaceActive(false)}
-        >
-          Close
-        </div>
-        <LyerzSpace />
-      </div>
     </main>
   );
 }
