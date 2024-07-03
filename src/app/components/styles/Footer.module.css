@@ -262,41 +262,13 @@
   transform: translate(20px, -50%) scale(1);
   opacity: 1;
 }
-.Footer button .menu .socialLinks {
-  margin-top: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  width: 100%;
-}
-.Footer button .menu .socialLinks a {
+/*  */
+.Footer button .menu a:nth-child(4) {
   position: relative;
-  white-space: nowrap;
-  opacity: 0;
-  transform: translateY(50%);
-  font-family: "LufgaMedium";
-  font-size: 15px;
+  font-size: 1rem;
+  color: #414141;
 }
-.Footer button.active .menu .socialLinks a {
-  transform: translateY(0);
-  opacity: 1;
-}
-.Footer button .menu .socialLinks a:nth-child(1) {
-  color: #e5457e;
-  transition: transform 0.8s 0.4s, opacity 0.8s 0.35s;
-}
-.Footer button .menu .socialLinks a:nth-child(2) {
-  color: #4582f6;
-  transition: transform 0.8s 0.3s, opacity 0.8s 0.25s;
-}
-.Footer button.active .menu .socialLinks a:nth-child(1) {
-  transition: transform 0.8s 1.6s, opacity 0.8s 1.6s;
-}
-.Footer button.active .menu .socialLinks a:nth-child(2) {
-  transition: transform 0.8s 1.8s, opacity 0.8s 1.8s;
-}
-.Footer button .menu .socialLinks a::before {
+.Footer button .menu a:nth-child(4)::before {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -306,16 +278,12 @@
   transform-origin: right;
   transform: scaleX(1);
   transition: transform 0.8s;
+  background-color: #626262;
 }
-.Footer button .menu .socialLinks a:nth-child(1):before {
-  background-color: #e5457e;
-}
-.Footer button .menu .socialLinks a:nth-child(2):before {
-  background-color: #4582f6;
-}
-.Footer button .menu .socialLinks a:hover::before {
+.Footer button .menu a:nth-child(4):hover::before {
   animation: lineAnimation 0.8s forwards;
 }
+/*  */
 @keyframes lineAnimation {
   0% {
     transform: scaleX(1);
@@ -333,6 +301,22 @@
     transform: scaleX(1);
     transform-origin: left;
   }
+}
+
+.Footer button .menu .socialLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+.Footer button .menu .socialLinks a {
+  height: 30px;
+  width: 30px;
+}
+.Footer button .menu .socialLinks a img {
+  width: 100%;
+  height: auto;
 }
 .Footer button .menu .line {
   width: 100%;

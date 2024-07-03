@@ -37,6 +37,9 @@
   height: 100%;
   font-family: "LufgaRegular";
 }
+.page img {
+  pointer-events: none;
+}
 /* ---------------- HeroSection ---------------- */
 .HeroSection {
   height: calc(100dvh - 2rem);

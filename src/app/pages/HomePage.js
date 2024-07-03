@@ -517,28 +517,16 @@ function HomePage() {
             isCardServicesHovered ? styles.active : ""
           }`}
         >
-          {/* SERVICES_Branding SERVICES_Graphic SERVICES_Ui */}
           <div className={styles.card}>
-            <p>
-              {ServicesCards("card_1_part1")}
-              <br />
-              {ServicesCards("card_1_part2")}
-            </p>
+            <p>{ServicesCards("card_1")}</p>
             <Image src={SERVICES_Branding} alt="Image Services Card" />
           </div>
           <div className={styles.card}>
-            <p>
-              {ServicesCards("card_2_part1")}
-              <br />
-              {ServicesCards("card_2_part2")}
-            </p>
+            <p>{ServicesCards("card_2")}</p>
             <Image src={SERVICES_Graphic} alt="Image Services Card" />
           </div>
           <div className={styles.card}>
-            <p>
-              {ServicesCards("card_3_part1")} <br />
-              {ServicesCards("card_3_part2")}
-            </p>
+            <p>{ServicesCards("card_3")}</p>
             <Image src={SERVICES_Ui} alt="Image Services Card" />
             <Image src={webflowIcon} alt="webflowIcon" />
           </div>

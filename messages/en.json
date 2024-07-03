@@ -15,12 +15,9 @@
     "our_partners_span_2": "partners "
   },
   "servicesCards": {
-    "card_1_part1": "Mobile &",
-    "card_1_part2": "desktop design",
-    "card_2_part1": "Website &",
-    "card_2_part2": "landing page design",
-    "card_3_part1": "Webflow",
-    "card_3_part2": "development"
+    "card_1": "Branding & logos",
+    "card_2": "Graphic design",
+    "card_3": "Mobile & Web design"
   },
   "plan_tag": {
     "tag_1": "Project Based",
@@ -46,10 +43,10 @@
     "head->p": "We cover all of your design needs. We team up with founders and startups to bring their ideas to life—whether it's a simple landing page, a complete website, logo, branding, mobile and web apps design.",
     "head->li_1": "No template work",
     "head->li_2": "Deep-dive into your product and ideas",
-    "Service_1_Title": "Mobile & desktop design",
+    "Service_1_Title": "Mobile & Web design",
     "Service_1_Description": "Whether it's starting fresh or brushing up what you already have. We've worked on simple habit trackers to full-scale trading platforms.",
-    "Service_2_Title": "Website design",
-    "Service_2_Description": "Every page is purposefully designed with clear goals, whether it's raising awareness or driving conversions.",
+    "Service_2_Title": "Graphic design",
+    "Service_2_Description": "We are here to tell your story through design, building every shape and vector from scratch without relying on templates. We design everything you need, including graphics, social media, banners, cards, ads, etc.",
     "Service_3_Title": "Branding & logos",
     "Service_3_Description": "You need support with the implementation of your brand? Our experienced brand designers will help you develop a top brand."
   },

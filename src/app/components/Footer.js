@@ -9,6 +9,7 @@ import Arrow from "/public/assets/Arrow_2.svg";
 import flagUSA from "/public/assets/flagUSA.svg";
 import flagSaudiArabia from "/public/assets/flagSaudiArabia.svg";
 import flagEgypt from "/public/assets/flagEgypt.svg";
+import InstagramIcon from "/public/assets/InstagramIcon.svg";
 import { getLangDir } from "rtl-detect";
 import { isMobile } from "react-device-detect";
 import LYERZText from "./LYERZText";
@@ -195,6 +196,7 @@ function Footer() {
               </svg>
             </span>
           </div>
+          <Link href="">Apply as a Designer</Link>
           {/* <Link
             className={styles.link}
             href={direction === "rtl" ? "/en" : "/ar"}
@@ -203,8 +205,15 @@ function Footer() {
             <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
           </Link> */}
           <div className={styles.socialLinks}>
-            <Link href="">{t("socialInstagram")}</Link>
-            <Link href="">{t("socialLinkedin")}</Link>
+            <Link href="">
+              <Image src={InstagramIcon} alt="Instagram" />
+            </Link>
+            <Link href="">
+              <Image src={InstagramIcon} alt="Instagram" />
+            </Link>
+            <Link href="">
+              <Image src={InstagramIcon} alt="Instagram" />
+            </Link>
           </div>
           <div className={styles.line}></div>
           <span className={styles.copyright}>{t("copyright")} </span>
