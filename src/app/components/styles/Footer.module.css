@@ -34,9 +34,25 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  gap: 4rem;
+  gap: 2rem;
   font-family: "LufgaMedium" !important;
   transition: 0.5s;
+}
+.Footer .changeLanguage {
+  position: fixed;
+  top: 2.25rem;
+  right: 2.25rem;
+  backdrop-filter: blur(11px);
+  background-color: rgba(220, 220, 220, 0.4);
+  aspect-ratio: 1 / 1 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 5px; */
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  font-family: "TheYearofTheCamel-Regular";
 }
 .Footer button {
   display: flex;
@@ -472,6 +488,9 @@
   background-color: red;
 }
 /* --------------------- Arabic Styles --------------------- */
+.Footer.ar .changeLanguage {
+  font-family: "LufgaRegular";
+}
 .Footer.ar button .menu .link:nth-child(1) .span {
   font-family: "TerminaTest-Medium";
 }

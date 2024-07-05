@@ -217,13 +217,6 @@ function Footer() {
               </svg>
             </span>
           </Link>
-          {/* <Link
-            className={styles.link}
-            href={direction === "rtl" ? "/en" : "/ar"}
-          >
-            <span>{t("language")}</span>
-            <Image className={styles.Arrow} src={Arrow} alt="Arrow" />
-          </Link> */}
           <div className={styles.socialLinks}>
             <Link href="https://www.instagram.com/lyerz/">
               {t("socialInstagram")}
@@ -288,6 +281,10 @@ function Footer() {
           <span>{t("btnMenu")}</span>
         </div>
       </button>
+      <Link className={styles.changeLanguage} href={direction === "rtl" ? "/en" : "/ar"}>
+        <span>{t("language")}</span>
+      </Link>
+
       <p>{t("notePart1")}</p>
       <div
         className={styles.closeMenuIfOpen}
