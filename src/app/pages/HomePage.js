@@ -57,7 +57,6 @@ import InfiniteScroll from "../components/InfiniteScroll";
 import JoinLYERZPlan from "../components/joinLYERZPlan";
 import Table from "../components/Table";
 import TowPlans from "../components/TowPlans";
-import LyerzSpace from "../components/LyerzSpace";
 import ImageWorkCardOverlay from "../components/ImageWorkCardOverlay";
 import gsap from "gsap";
 import { getLangDir } from "rtl-detect";
@@ -385,9 +384,10 @@ function HomePage() {
   const direction = getLangDir(locale);
 
   // ---------------- translate ---------------- //
-  const t = useTranslations("Home");
+  const t = useTranslations("HomeCards");
   const tags = useTranslations("plan_tag");
   const ServicesCards = useTranslations("servicesCards");
+  const overlayWorkCard = useTranslations("overlayWorkCard");
   const overlayServicesCard = useTranslations("overlayServicesCard");
   const overlayAboutCard = useTranslations("overlayAboutCard");
   const overlayPlansCard = useTranslations("overlayPlansCard");
@@ -411,7 +411,7 @@ function HomePage() {
                 {t("our_partners_part_1")}{" "}
                 <span className={styles.lineThroughSpan}>
                   {t("our_partners_span_1")}
-                </span>
+                </span>{" "}
                 <br />
                 <span>{t("our_partners_span_2")}</span>{" "}
                 {t("our_partners_part_2")}
@@ -420,16 +420,17 @@ function HomePage() {
             <div className={styles.title}>
               <span>
                 {t("header_3")}
-                <p>{t("absoluteTitle")}</p>
+                <p>{t("absoluteTitle_1")}</p>
                 <Image src={Arrow} alt="Arrow" />
               </span>
               <div className={styles.ourPartners}>
                 <InfiniteScroll />
-                <div className={styles.plus}>YOU!</div>
+                <div className={styles.plus}>{t("you")}</div>
                 <div className={styles.hint}>
                   <p>
-                    Extend your team with a<br />
-                    top designer today.
+                    {t("absoluteTitle_2_part_1")}
+                    <br />
+                    {t("absoluteTitle_2_part_2")}
                   </p>
                   <Image src={Arrow} alt="Arrow" />
                 </div>
@@ -555,46 +556,73 @@ function HomePage() {
         >
           <CircleOverlayWorkCard />
           <div className={styles.container} onClick={handleContainerClick}>
-            <ImageWorkCardOverlay url={Work_01} tag="Branding" />
-            <ImageWorkCardOverlay url={Work_02} tag="Branding" />
-            <ImageWorkCardOverlay url={Work_03} tag="Branding" />
-            <ImageWorkCardOverlay url={Work_04} tag="Branding" />
-            <ImageWorkCardOverlay url={Work_05} tag="Branding" />
-            <ImageWorkCardOverlay url={Work_06} tag="Branding" />
-            <ImageWorkCardOverlay url={Work_07} tag="Branding - Stratgy" />
+            <ImageWorkCardOverlay
+              url={Work_01}
+              tag={overlayWorkCard("Branding")}
+            />
+            <ImageWorkCardOverlay
+              url={Work_02}
+              tag={overlayWorkCard("Branding")}
+            />
+            <ImageWorkCardOverlay
+              url={Work_03}
+              tag={overlayWorkCard("Branding")}
+            />
+            <ImageWorkCardOverlay
+              url={Work_04}
+              tag={overlayWorkCard("Branding")}
+            />
+            <ImageWorkCardOverlay
+              url={Work_05}
+              tag={overlayWorkCard("Branding")}
+            />
+            <ImageWorkCardOverlay
+              url={Work_06}
+              tag={overlayWorkCard("Branding")}
+            />
+            <ImageWorkCardOverlay
+              url={Work_07}
+              tag={overlayWorkCard("Branding_Stratgy")}
+            />
             <ImageWorkCardOverlay
               url={Work_08}
-              tag="Branding - Social Media Design"
+              tag={overlayWorkCard("Branding_Social")}
             />
-            <ImageWorkCardOverlay url={Work_09} tag="User Interface" />
-            <ImageWorkCardOverlay url={Work_10} tag="User Interface" />
+            <ImageWorkCardOverlay
+              url={Work_09}
+              tag={overlayWorkCard("User_Interface")}
+            />
+            <ImageWorkCardOverlay
+              url={Work_10}
+              tag={overlayWorkCard("User_Interface")}
+            />
             <ImageWorkCardOverlay
               url={Work_11}
-              tag="User Interface - Branding"
+              tag={overlayWorkCard("User_Interface_Branding")}
             />
             <ImageWorkCardOverlay
               url={Work_12}
-              tag="User Interface - Branding"
+              tag={overlayWorkCard("User_Interface_Branding")}
             />
             <ImageWorkCardOverlay
               url={Work_13}
-              tag="User Interface - Branding"
+              tag={overlayWorkCard("User_Interface_Branding")}
             />
             <ImageWorkCardOverlay
               url={Work_14}
-              tag="User Interface - Branding - Stratgy"
+              tag={overlayWorkCard("User_Interface_Branding_Stratgy")}
             />
             <ImageWorkCardOverlay
               url={Work_15}
-              tag="User Interface - Branding - Stratgy"
+              tag={overlayWorkCard("User_Interface_Branding_Stratgy")}
             />
             <ImageWorkCardOverlay
               url={Work_16}
-              tag="User Interface - Branding - Stratgy"
+              tag={overlayWorkCard("User_Interface_Branding_Stratgy")}
             />
             <ImageWorkCardOverlay
               url={Work_17}
-              tag="Game Design - User Interface - Branding"
+              tag={overlayWorkCard("Game_Design_User_Interface_Branding")}
             />
             <ImageWorkCardOverlay url={Work_LAST} initialActiveState={true} />
             <div></div>
@@ -691,34 +719,17 @@ function HomePage() {
               />
             </div>
             <div className={styles.mission}>
-              <h2>Our Mission</h2>
+              <h2>{overlayAboutCard("Our_Mission")}</h2>
               <p>
-                <span>
-                  Whether it&#39;s a landing page, a white paper, or a
-                  presentation - good design has become indispensable in various
-                  fields today.
-                </span>
+                <span>{overlayAboutCard("Our_Mission_p_1")}</span>
                 <br />
-                <span>
-                  Besides communicating a company&#39;s image & brand, appealing
-                  and user-friendly design ensures a positive customer journey.
-                </span>
+                <span>{overlayAboutCard("Our_Mission_p_2")}</span>
                 <br />
-                <span>
-                  We know from our own experience how time-consuming, costly and
-                  nerve-wracking it can be to build and sustainably scale a
-                  design team.
-                </span>
+                <span>{overlayAboutCard("Our_Mission_p_3")}</span>
                 <br />
-                <span>
-                  With LYERZ, we provide companies with a solution we have been
-                  dreaming of ourselves.
-                </span>
+                <span>{overlayAboutCard("Our_Mission_p_4")}</span>
                 <br />
-                <span>
-                  Unlimited Design, One Subscription: Effortless. Affordable.
-                  Magical.
-                </span>
+                <span>{overlayAboutCard("Our_Mission_p_5")}</span>
               </p>
             </div>
             <Image
@@ -823,15 +834,15 @@ function HomePage() {
           <div className={styles.container} onClick={handleContainerClick}>
             <div className={styles.headText}>
               <p>
-                One Subscription.
+                {overlayPlansCard("One_Subscription")}
                 <br />
-                All design needs
+                {overlayPlansCard("All_design_needs")}
               </p>
-              <p>Add a top designer to your team for a fixed monthly price.</p>
+              <p>{overlayPlansCard("headText_p")}</p>
             </div>
             <div className={styles.checkList}>
               <div className={styles.heading}>
-                <p>Checklist</p>
+                <p>{overlayPlansCard("Checklist")}</p>
               </div>
               <div className={styles.content}>
                 <div className={styles.item}>
@@ -840,10 +851,7 @@ function HomePage() {
                     src={starInOverlayAbout}
                     alt="starInOverlayAbout"
                   />
-                  <p>
-                    You genuinely care about your product and how it impacts
-                    your users
-                  </p>
+                  <p>{overlayPlansCard("Checklist_item_p_1")}</p>
                 </div>
                 <div className={styles.item}>
                   <Image
@@ -851,10 +859,7 @@ function HomePage() {
                     src={starInOverlayAbout}
                     alt="starInOverlayAbout"
                   />
-                  <p>
-                    You&#39;re in regular conversations with your users, and
-                    their feedback directly shapes your product
-                  </p>
+                  <p>{overlayPlansCard("Checklist_item_p_2")}</p>
                 </div>
                 <div className={styles.item}>
                   <Image
@@ -862,26 +867,23 @@ function HomePage() {
                     src={starInOverlayAbout}
                     alt="starInOverlayAbout"
                   />
-                  <p>
-                    Your goal isn&#39;t to mimic your competition, you&#39;re
-                    aiming for something uniquely yours
-                  </p>
+                  <p>{overlayPlansCard("Checklist_item_p_3")}</p>
                 </div>
               </div>
             </div>
-            <h2>{overlayPlansCard("h2")}</h2>
+            <h2>{overlayPlansCard("Membership")}</h2>
             <div className={styles.plans}>
               <div className={styles.joinLYERZPlan}>
                 <JoinLYERZPlan />
               </div>
-              <div className={styles.twoPlan}>
-                <TowPlans />
-              </div>
+              <TowPlans />
               <div className={styles.customPlan}>
-                <span className={styles.tag}>Project based</span>
+                <span className={styles.tag}>
+                  {overlayPlansCard("customPlan_tag")}
+                </span>
                 <div className={styles.head}>
-                  <h2>Custom</h2>
-                  <p>Perfect for a bigger one-time thing.</p>
+                  <h2>{overlayPlansCard("customPlan_Custom")}</h2>
+                  <p>{overlayPlansCard("customPlan_p")}</p>
                 </div>
                 <div
                   className={styles.btn}
@@ -889,7 +891,7 @@ function HomePage() {
                   data-cal-link="lyerz/space"
                   data-cal-config='{"layout":"month_view"}'
                 >
-                  Book a coll
+                  {overlayPlansCard("Book_a_coll")}
                 </div>
               </div>
             </div>
@@ -900,109 +902,91 @@ function HomePage() {
               <div className={styles.content}>
                 <Question
                   initialActiveState={true}
-                  question='What exactly does "Unlimited Design Tasks" mean?'
+                  question={overlayPlansCard("Question_1_question")}
                   answer={
                     <>
-                      At LYERZ, we do not charge by hours or projects.
+                      {overlayPlansCard("Question_1_answer_part_1")}
                       <br />
                       <br />
-                      Once you have chosen a design subscription, you can set as
-                      many tasks as you like. These will be processed by your
-                      personal designer one after the other.
+                      {overlayPlansCard("Question_1_answer_part_2")}
                     </>
                   }
                 />
                 <Question
-                  question="What counts as a Design Task?"
+                  question={overlayPlansCard("Question_2_question")}
                   answer={
                     <>
-                      Our team at LYERZ can handle any type of design job: big
-                      or small. So, you might be wondering: What counts as one
-                      design task? Need a presentation, flyer, landing page, or
-                      some ads? Just tell us what you want through your personal
-                      dashboard and we&#39;ll get it done in under 48 hours!
+                      {overlayPlansCard("Question_2_answer_part_1")}
                       <br />
                       <br />
-                      Have a bigger project, like a whole new website, an app,
-                      or branding guidelines? These typically take more time and
-                      planning, so we can break them down into smaller tasks and
-                      make sure everything looks great. For example if we&#39;re
-                      talking about Branding Guidelines, to achieve a result
-                      that truly represents your brand and fits with your
-                      vision, we deliver the guidelines step by step & one task
-                      at a time with a turnaround of 48 hours as usual ( Logo,
-                      Typography, Illustrations, etc. ).
+                      {overlayPlansCard("Question_2_answer_part_2")}
                       <br />
                       <br />
-                      Have more questions? Contact us at hi@lyerz.com. We can
-                      make your design ideas a reality, big or small. Let&#39;s
-                      put an end to design stress and create something magical
-                      together!
+                      {overlayPlansCard("Question_2_answer_part_3")}
                     </>
                   }
                 />
                 <Question
-                  question="I am not satisfied with the design. How many revisions can I request?"
+                  question={overlayPlansCard("Question_3_question")}
                   answer={
                     <>
-                      The first priority for us is that you are satisfied with
-                      the final design. Whether it&#39;s a display banner, an
-                      icon set or newsletter graphics.
+                      {overlayPlansCard("Question_3_answer_part_1")}
                       <br />
                       <br />
-                      Therefore, you can request unlimited revisions and always
-                      communicate your change requests to your designer.
+                      {overlayPlansCard("Question_3_answer_part_2")}
                     </>
                   }
                 />
                 <Question
-                  question="When do I receive the first drafts?"
-                  answer="Most designs will be delivered in under 48h. More complex tasks such as a landing page design we divide into partial deliverables. We will always keep you updated on the progress."
+                  question={overlayPlansCard("Question_4_question")}
+                  answer={overlayPlansCard("Question_4_answer")}
                 />
                 <Question
-                  question="What types of designs can you realize?"
+                  question={overlayPlansCard("Question_5_question")}
                   answer={
                     <>
-                      You can find the list of our design services{" "}
+                      {overlayPlansCard("Question_5_answer_part_1")}{" "}
                       <Link href="" className={styles.link}>
-                        here
+                        {overlayPlansCard("Question_5_answer_part_2")}
                       </Link>
-                      .
                     </>
                   }
                 />
                 <Question
-                  question="What types of designs are not part of my subscription?"
+                  question={overlayPlansCard("Question_6_question")}
                   answer={
                     <>
-                      We do not (yet) cover the following design services:
+                      {overlayPlansCard("Question_6_answer_part_1")}
                       <br />
                       <br />
-                      - 3D Visualizations
-                      <br />- Animations
+                      {overlayPlansCard("Question_6_answer_part_2")}
+                      <br />
+                      {overlayPlansCard("Question_6_answer_part_3")}
                     </>
                   }
                 />
                 <Question
-                  question="What tools do you use to create designs?"
+                  question={overlayPlansCard("Question_7_question")}
                   answer={
                     <>
-                      We use the following programs to create the designs:
+                      {overlayPlansCard("Question_7_answer_part_1")}
                       <br />
                       <br />
-                      - Figma
-                      <br />- Adobe Illustrator
-                      <br />- Adobe Photoshop
-                      <br />- Adobe Indesign
+                      {overlayPlansCard("Question_7_answer_part_2")}
+                      <br />
+                      {overlayPlansCard("Question_7_answer_part_3")}
+                      <br />
+                      {overlayPlansCard("Question_7_answer_part_4")}
+                      <br />
+                      {overlayPlansCard("Question_7_answer_part_5")}
                     </>
                   }
                 />
                 <Question
-                  question="In which formats do I receive the finished designs?"
+                  question={overlayPlansCard("Question_8_question")}
                   answer={
                     <>
-                      We usually provide the following formats of the final
-                      designs to download:
+                      {overlayPlansCard("Question_8_answer_part_1")}
                       <br />
                       <br />
                       - .jpg
@@ -1014,7 +998,7 @@ function HomePage() {
                       - .svg
                       <br />
                       <br />
-                      In addition, you can request the raw files:
+                      {overlayPlansCard("Question_8_answer_part_2")}
                       <br />
                       <br />
                       -.psd
@@ -1028,61 +1012,46 @@ function HomePage() {
                   }
                 />
                 <Question
-                  question="I would like to sign up for a subscription. How does the onboarding process work?"
+                  question={overlayPlansCard("Question_9_question")}
                   answer={
                     <>
-                      After you have decided to subscribe, we will conduct an
-                      onboarding call to better understand your business and
-                      your design needs. During the call, we&#39;ll also explain
-                      the design process and upload your brand assets together.
+                      {overlayPlansCard("Question_9_answer_part_1")}
                       <br />
                       <br />
-                      We&#39;ll then match you with a designer from our team and
-                      you&#39;ll be given access to your design dashboard, where
-                      you can get started right away with your first briefing.
+                      {overlayPlansCard("Question_9_answer_part_2")}
                     </>
                   }
                 />
                 <Question
-                  question="I am not satisfied with my designer. Can I switch to another designer?"
+                  question={overlayPlansCard("Question_10_question")}
+                  answer={overlayPlansCard("Question_10_answer")}
+                />
+                <Question
+                  question={overlayPlansCard("Question_11_question")}
+                  answer={overlayPlansCard("Question_11_answer")}
+                />
+                <Question
+                  question={overlayPlansCard("Question_12_question")}
                   answer={
                     <>
-                      Should it be the case that you&#39;re not happy with the
-                      style of your designer, you can always change your
-                      personal designer, without a hassle.
+                      {overlayPlansCard("Question_12_answer_part_1")}
+                      <br />
+                      <br />
+                      {overlayPlansCard("Question_12_answer_part_2")}
                     </>
                   }
                 />
                 <Question
-                  question="Is it possible to pause my subscription?"
-                  answer="Yes, you can pause your subscription at any time for the following month."
+                  question={overlayPlansCard("Question_13_question")}
+                  answer={overlayPlansCard("Question_13_answer")}
                 />
                 <Question
-                  question="Who creates the designs?"
-                  answer={
-                    <>
-                      Our remote design team is located worldwide, as good
-                      designers are not only found in the hot spots like Berlin,
-                      London and Paris.
-                      <br />
-                      <br />
-                      To ensure the highest quality standards, all designers
-                      complete a 4-stage selection process, with 3% of
-                      applicants being accepted at the end.
-                    </>
-                  }
+                  question={overlayPlansCard("Question_14_question")}
+                  answer={overlayPlansCard("Question_14_answer")}
                 />
                 <Question
-                  question="Can I invite multiple team members to use LYERZ at the same time?"
-                  answer="Yes, you can invite as many team members as you want. Team members can set individual tasks or work together on design tasks."
-                />
-                <Question
-                  question="Can I cancel my subscription monthly?"
-                  answer="Yes, we do not have long contract periods. Your subscription will be renewed every month and you can cancel it 7 days before the end of the payment cycle."
-                />
-                <Question
-                  question="Which payment options do you offer?"
-                  answer="You can pay LYERZ by credit card, PayPal, direct debit or bank transfer."
+                  question={overlayPlansCard("Question_15_question")}
+                  answer={overlayPlansCard("Question_15_answer")}
                 />
               </div>
             </div>

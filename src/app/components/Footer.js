@@ -199,7 +199,7 @@ function Footer() {
           </div>
           <Link className={styles.link} href="">
             <span className={styles.span}>
-              Apply as a Designer
+              {t("btn_4")}
               <svg
                 className={styles.Arrow}
                 width="6"

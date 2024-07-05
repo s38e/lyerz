@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./styles/Service.module.css";
 import { useEffect, useRef, useState } from "react";
+import { useLocale } from "next-intl";
+import { getLangDir } from "rtl-detect";
 
 const Service = ({ title, description, image, initialActiveState = false }) => {
   const [isServiceActive, setIsServiceActive] = useState(initialActiveState);
@@ -26,11 +28,16 @@ const Service = ({ title, description, image, initialActiveState = false }) => {
   const toggleService = () => {
     setIsServiceActive((prevState) => !prevState);
   };
+  // ---------------- Check the language to determine the style ---------------- //
+  const locale = useLocale();
+  const direction = getLangDir(locale);
 
   return (
     <div
       ref={serviceRef}
-      className={`${styles.service} ${isServiceActive ? styles.active : ""}`}
+      className={`${styles.service} ${isServiceActive ? styles.active : ""} ${
+        direction === "rtl" ? styles.ar : ""
+      }`}
       onClick={toggleService}
     >
       <div ref={topServiceRef} className={styles.top}>

@@ -1,9 +1,12 @@
 {
-  "Home": {
+  "HomeCards": {
     "header_1": "All your design tasks in",
     "header_2": "one monthly subscription",
     "header_3": "Empower your team with a top designer and scale your design capabilities.",
-    "absoluteTitle": "in days not months",
+    "absoluteTitle_1": "in days not months",
+    "absoluteTitle_2_part_1": "Extend your team with a",
+    "absoluteTitle_2_part_2": "top designer today.",
+    "you": "YOU!",
     "card_1": "work",
     "card_2": "services",
     "card_3": "about us",
@@ -14,21 +17,13 @@
     "our_partners_span_1": "clients",
     "our_partners_span_2": "partners "
   },
-  "servicesCards": {
-    "card_1": "Branding & logos",
-    "card_2": "Graphic design",
-    "card_3": "Mobile & Web design"
-  },
-  "plan_tag": {
-    "tag_1": "Project Based",
-    "tag_2": "Startup Plan: $2,199",
-    "tag_3": "Pro Plan: $3,999"
-  },
+
   "Footer": {
     "btnMenu": "Menu",
     "btn_1_part_1": "Space",
     "btn_2": "Book a Demo",
     "btn_3": "Contact",
+    "btn_4": "Apply as a Designer",
     "socialInstagram": "Instagram",
     "socialDribbble": "Dribbble",
     "copyright": "2024 © LYERZ LLC. All rights reserved",
@@ -38,6 +33,17 @@
   "movingCircle": {
     "title": "Close"
   },
+
+  "overlayWorkCard": {
+    "Branding": "Branding",
+    "Branding_Stratgy": "Branding - Stratgy",
+    "Branding_Social": "Branding - Social Media Design",
+    "User_Interface": "User Interface",
+    "User_Interface_Branding": "User Interface - Branding",
+    "User_Interface_Branding_Stratgy": "User Interface - Branding - Stratgy",
+    "Game_Design_User_Interface_Branding": "Game Design - User Interface - Branding"
+  },
+
   "overlayServicesCard": {
     "head->h2": "Services",
     "head->p": "We cover all of your design needs. We team up with founders and startups to bring their ideas to life—whether it's a simple landing page, a complete website, logo, branding, mobile and web apps design.",
@@ -50,6 +56,24 @@
     "Service_3_Title": "Branding & logos",
     "Service_3_Description": "You need support with the implementation of your brand? Our experienced brand designers will help you develop a top brand."
   },
+  "table": {
+    "Freelancer": "Freelancer",
+    "Agencies": "Agencies",
+    "Pricing": "Pricing",
+    "Unlimited_tasks": "Unlimited tasks",
+    "Unlimited_revisions": "Unlimited revisions",
+    "Pre_qualified_designers": "Pre-qualified designers",
+    "Time_to_start": "Time to start",
+    "Processing_time": "Processing time",
+    "row_monthly_price": "monthly price",
+    "row_Per_task": "Per task",
+    "row_2_days": "2 days",
+    "row_2+_weeks": "2+ weeks",
+    "row_4+_weeks": "4+ weeks",
+    "row_48h": "48h",
+    "row_Several_weeks": "Several weeks"
+  },
+
   "overlayAboutCard": {
     "headTexts->h2": "About",
     "headTexts->p": "LYERZ is the design service we always wanted. Unmatched quality, efficient processes & transparent pricing.",
@@ -76,25 +100,113 @@
     "about_summary-content-item_4-texts->p_1": "Quick revisions and final results",
     "about_summary-content-item_4-texts->p_2": "You can give direct feedback and request changes to your design. Once you have approved the final design, your designer will take care of the next design task.",
     "about_summary-content-item_5-texts->p_1": "Your finished designs - all in one place",
-    "about_summary-content-item_5-texts->p_2": "From your dashboard, you can access, download, and share all designs at any time. With our all-in-one solution, there is no need to send files via email, Google Drive, or WeTransfer."
+    "about_summary-content-item_5-texts->p_2": "From your dashboard, you can access, download, and share all designs at any time. With our all-in-one solution, there is no need to send files via email, Google Drive, or WeTransfer.",
+    "Our_Mission": "Our Mission",
+    "Our_Mission_p_1": "Whether it's a landing page, a white paper, or a presentation - good design has become indispensable in various fields today.",
+    "Our_Mission_p_2": "Besides communicating a company's image & brand, appealing and user-friendly design ensures a positive customer journey.",
+    "Our_Mission_p_3": "We know from our own experience how time-consuming, costly and nerve-wracking it can be to build and sustainably scale a design team.",
+    "Our_Mission_p_4": "With LYERZ, we provide companies with a solution we have been dreaming of ourselves.",
+    "Our_Mission_p_5": "Unlimited Design, One Subscription: Effortless. Affordable. Magical."
   },
+  "servicesCards": {
+    "card_1": "Branding & logos",
+    "card_2": "Graphic design",
+    "card_3": "Mobile & Web design"
+  },
+
   "overlayPlansCard": {
-    "h2": "Membership",
-    "plans-plan_1->pricingTag": "Slots available",
+    "One_Subscription": "One Subscription.",
+    "All_design_needs": "All design needs",
+    "headText_p": "Add a top designer to your team for a fixed monthly price.",
+    "Membership": "Membership",
+    "Checklist": "Checklist",
+    "Checklist_item_p_1": "You genuinely care about your product and how it impacts your users",
+    "Checklist_item_p_2": "You're in regular conversations with your users, and their feedback directly shapes your product",
+    "Checklist_item_p_3": "Your goal isn't to mimic your competition, you're aiming for something uniquely yours",
+    "customPlan_tag": "Project Based",
+    "customPlan_Custom": "Custom",
+    "customPlan_p": "Perfect for a bigger one-time thing.",
+    "Book_a_coll": "Book a coll",
+
+    "Slots_available": "Slots available",
+    "Join": "Join",
+    "button_h5": "Book a 30-min intro call",
+    "button_p": "Learn more about how LYERZ works and how it can help you.",
+    "Startup": "Startup",
+    "Pro": "Pro",
+    "Monthly": "/m",
+    "One": "One",
+    "Two": "Two",
+    "head_p": "request at a time. Pause or cancel anytime.",
+    "What_is_included": "What's included",
+    "Unlimited_Requests": "Unlimited Requests",
+    "hint_request": "request at a time.",
+    "Unlimited_Revisions": "Unlimited Revisions",
+    "hint_iterate": "We iterate until you are satisfied 100%",
+    "48h_Processing_Time": "48h Processing Time",
+    "In-House_Designers": "In-House Designers",
+    "LYERZ_Space_Access": "LYERZ Space Access",
+    "Dedicated_Project_Manager": "Dedicated Project Manager",
+    "Get_started": "Get Started",
+    "or": "or",
+    "book_a_call": "book a call",
+
     "plans-plan_1-pricingContent->p_1": "$2,199",
     "plans-plan_1-pricingContent->p_2": "Best if you're looking for steady and ongoing design work.",
-    "plans-plan_2->pricingTag": "Startup",
     "plans-plan_2-pricingContent->p_1": "$3,999",
     "plans-plan_2-pricingContent->p_2": "For ongoing support and consistent updates to your existing Webflow site.",
-    "plans-plan-pricingContent-p_2->span": "/m",
-    "plans-plan_3->pricingTag": "Pro",
     "plans-plan_3-pricingContent->p_1": "Custom",
     "plans-plan_3-pricingContent->p_2": "Perfect for a bigger one-time thing",
-    "plans-plan_3-button->p": "Get Started",
+
     "faq->heading": "FAQ",
-    "faq-content->p_part_1": "We're selective about our partnerships—rarely taking on more than 3-4 projects at once. Quality matters to us, and that means staying focused.",
-    "faq-content->p_part_2": "We're not just about executing ideas; we'll challenge them, push back, and ensure your users are as happy as you are.",
-    "faq-content->p_part_3": "If you're ready for a straightforward, collaborative approach, let's talk.",
-    "faq-content->p_part_4": "But if you're not open to a bit of pushback and prefer a more hands-off style, we might not be the right fit."
+    "Question_1_question": "What exactly does 'Unlimited Design Tasks' mean?",
+    "Question_1_answer_part_1": "At LYERZ, we do not charge by hours or projects.",
+    "Question_1_answer_part_2": "Once you have chosen a design subscription, you can set as many tasks as you like. These will be processed by your personal designer one after the other.",
+    "Question_2_question": "What counts as a Design Task?",
+    "Question_2_answer_part_1": "Our team at LYERZ can handle any type of design job: big or small. So, you might be wondering: What counts as one design task? Need a presentation, flyer, landing page, or some ads? Just tell us what you want through your personal dashboard and we'll get it done in under 48 hours!",
+    "Question_2_answer_part_2": "Have a bigger project, like a whole new website, an app, or branding guidelines? These typically take more time and planning, so we can break them down into smaller tasks and make sure everything looks great. For example if we're talking about Branding Guidelines, to achieve a result that truly represents your brand and fits with your vision, we deliver the guidelines step by step & one task at a time with a turnaround of 48 hours as usual ( Logo, Typography, Illustrations, etc. ).",
+    "Question_2_answer_part_3": "Have more questions? Contact us at hi@lyerz.com. We can make your design ideas a reality, big or small. Let's put an end to design stress and create something magical together!",
+    "Question_3_question": "I am not satisfied with the design. How many revisions can I request?",
+    "Question_3_answer_part_1": "The first priority for us is that you are satisfied with the final design. Whether it's a display banner, an icon set or newsletter graphics.",
+    "Question_3_answer_part_2": "Therefore, you can request unlimited revisions and always communicate your change requests to your designer.",
+    "Question_4_question": "When do I receive the first drafts?",
+    "Question_4_answer": "Most designs will be delivered in under 48h. More complex tasks such as a landing page design we divide into partial deliverables. We will always keep you updated on the progress.",
+    "Question_5_question": "What types of designs can you realize?",
+    "Question_5_answer_part_1": "You can find the list of our design services",
+    "Question_5_answer_part_2": "here.",
+    "Question_6_question": "What types of designs are not part of my subscription?",
+    "Question_6_answer_part_1": "We do not (yet) cover the following design services:",
+    "Question_6_answer_part_2": "- 3D Visualizations",
+    "Question_6_answer_part_3": "- Animations",
+    "Question_7_question": "What tools do you use to create designs?",
+    "Question_7_answer_part_1": "We use the following programs to create the designs:",
+    "Question_7_answer_part_2": "- Figma",
+    "Question_7_answer_part_3": "- Adobe Illustrator",
+    "Question_7_answer_part_4": "- Adobe Photoshop",
+    "Question_7_answer_part_5": "- Adobe Indesign",
+    "Question_8_question": "In which formats do I receive the finished designs?",
+    "Question_8_answer_part_1": "We usually provide the following formats of the final designs to download:",
+    "Question_8_answer_part_2": "In addition, you can request the raw files:",
+    "Question_9_question": "I would like to sign up for a subscription. How does the onboarding process work?",
+    "Question_9_answer_part_1": "After you have decided to subscribe, we will conduct an onboarding call to better understand your business and your design needs. During the call, we'll also explain the design process and upload your brand assets together.",
+    "Question_9_answer_part_2": "We'll then match you with a designer from our team and you'll be given access to your design dashboard, where you can get started right away with your first briefing.",
+    "Question_10_question": "I am not satisfied with my designer. Can I switch to another designer?",
+    "Question_10_answer": "Should it be the case that you're not happy with the style of your designer, you can always change your personal designer, without a hassle.",
+    "Question_11_question": "Is it possible to pause my subscription?",
+    "Question_11_answer": "Yes, you can pause your subscription at any time for the following month.",
+    "Question_12_question": "Who creates the designs?",
+    "Question_12_answer_part_1": "Our remote design team is located worldwide, as good designers are not only found in the hot spots like Berlin, London and Paris.",
+    "Question_12_answer_part_2": "To ensure the highest quality standards, all designers complete a 4-stage selection process, with 3% of applicants being accepted at the end.",
+    "Question_13_question": "Can I invite multiple team members to use LYERZ at the same time?",
+    "Question_13_answer": "Yes, you can invite as many team members as you want. Team members can set individual tasks or work together on design tasks.",
+    "Question_14_question": "Can I cancel my subscription monthly?",
+    "Question_14_answer": "Yes, we do not have long contract periods. Your subscription will be renewed every month and you can cancel it 7 days before the end of the payment cycle.",
+    "Question_15_question": "Which payment options do you offer?",
+    "Question_15_answer": "You can pay LYERZ by credit card, PayPal, direct debit or bank transfer."
+  },
+  "plan_tag": {
+    "tag_1": "Project Based",
+    "tag_2": "Startup Plan: $2,199",
+    "tag_3": "Pro Plan: $3,999"
   }
 }

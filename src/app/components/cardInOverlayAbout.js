@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./styles/cardInOverlayAbout.module.css";
 import { isMobile } from "react-device-detect";
+import { useLocale } from "next-intl";
+import { getLangDir } from "rtl-detect";
 
 const CardInOverlayAbout = ({
   image,
@@ -47,11 +49,16 @@ const CardInOverlayAbout = ({
       }
     }
   }, [isActive, mobile]);
+  // ---------------- Check the language to determine the style ---------------- //
+  const locale = useLocale();
+  const direction = getLangDir(locale);
 
   return (
     <div
       ref={cardRef}
-      className={`${styles.card} ${isActive ? styles.active : ""}`}
+      className={`${styles.card} ${isActive ? styles.active : ""} ${
+        direction === "rtl" ? styles.ar : ""
+      }`}
       onMouseEnter={!mobile ? handleMouseEnter : undefined}
       onMouseLeave={!mobile ? handleMouseLeave : undefined}
       style={{ height: `${cardHeight}px` }}

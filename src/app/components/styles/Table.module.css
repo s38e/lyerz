@@ -14,6 +14,18 @@
   src: url(/fonts/Lufga/LufgaRegular.ttf);
   font-display: swap;
 }
+/* ---------------- Arabic Fonts ---------------- */
+@font-face {
+  font-family: "IBMPlexSansArabic-Regular";
+  src: url(/fonts/arabic/IBMPlexSansArabic/IBMPlexSansArabic-Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheYearofTheCamel-ExtraBold";
+  src: url(/fonts/arabic/TheYearofTheCamel/TheYearofTheCamel-ExtraBold.otf);
+  font-display: swap;
+}
+
 /* ---------------- Table ---------------- */
 .table {
   background-color: #f7f7f7;
@@ -82,6 +94,7 @@
   text-align: left;
   margin-right: 1rem;
   font-weight: 600;
+  font-family: "LufgaRegular";
 }
 .table .row div:nth-child(2) {
   background-color: #dddddd;
@@ -89,6 +102,7 @@
 .table .row p,
 .table .row div {
   font-size: 14px;
+  font-family: "LufgaRegular";
   padding-block: 0.75rem;
 }
 .table .row div {
@@ -130,4 +144,17 @@
   .table .header .lyerz {
     font-size: 16px;
   }
+}
+/* --------------------- Arabic Styles --------------------- */
+
+.table.ar .header div:nth-child(1),
+.table.ar .row p:nth-child(1) {
+  text-align: right;
+}
+.table.ar .header h2,
+.table.ar .row p,
+.table.ar .header div:nth-child(1),
+.table.ar .row p:nth-child(1),
+.table.ar .row div {
+  font-family: "IBMPlexSansArabic-Regular";
 }

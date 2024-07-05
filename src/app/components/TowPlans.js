@@ -3,11 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "./styles/TowPlans.module.css";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import LightningImg from "/public/assets/LightningImg.svg";
 import Info from "/public/assets/info.svg";
 import True from "/public/assets/true.svg";
 import Infenity from "/public/assets/infenity.svg";
+import { getLangDir } from "rtl-detect";
 
 function TowPlans() {
   const [isChoice_1_Active, setIsChoice_1_Active] = useState(true);
@@ -40,9 +41,14 @@ function TowPlans() {
   }, []);
 
   const overlayPlansCard = useTranslations("overlayPlansCard");
+  // ---------------- Check the language to determine the style ---------------- //
+  const locale = useLocale();
+  const direction = getLangDir(locale);
 
   return (
-    <div className={styles.twoPlan}>
+    <div
+      className={`${styles.twoPlan} ${direction === "rtl" ? styles.ar : ""}`}
+    >
       <div className={styles.choose_plan}>
         <div
           className={`${styles.backGround} ${
@@ -60,7 +66,7 @@ function TowPlans() {
             toggleOne();
           }}
         >
-          {overlayPlansCard("plans-plan_2->pricingTag")}
+          {overlayPlansCard("Startup")}
         </div>
         <div
           className={`${styles.choice} ${
@@ -74,7 +80,7 @@ function TowPlans() {
           }}
         >
           <Image src={LightningImg} alt="LightningImg" />
-          {overlayPlansCard("plans-plan_3->pricingTag")}
+          {overlayPlansCard("Pro")}
         </div>
       </div>
       <div
@@ -85,65 +91,66 @@ function TowPlans() {
             <animated.div>
               {propsNum.number.to((n) => `$${n.toFixed(0)}`)}
             </animated.div>
-            <span>
-              {overlayPlansCard("plans-plan-pricingContent-p_2->span")}
-            </span>
+            <span>{overlayPlansCard("Monthly")}</span>
           </div>
           <p>
             <span>
               <span
                 className={`${styles.one} ${showText ? styles.active : ""}`}
               >
-                One
+                {overlayPlansCard("One")}
               </span>
               <span
                 className={`${styles.Two} ${!showText ? styles.active : ""}`}
               >
-                Two
+                {overlayPlansCard("Two")}
               </span>
             </span>{" "}
-            request at a time. Pause or cancel anytime.
+            {overlayPlansCard("head_p")}
           </p>
         </div>
         <div className={styles.hr}></div>
         <div className={styles.content}>
-          <p>What&#39;s included</p>
+          <p>{overlayPlansCard("What_is_included")}</p>
           <div className={styles.features}>
             <div className={styles.feature}>
               <Image src={Infenity} alt="Infenity" />
-              <p>Unlimited Requests</p>
+              <p>{overlayPlansCard("Unlimited_Requests")}</p>
               <div className={styles.image}>
                 <Image src={Info} alt="Info" />
                 <div className={styles.hint}>
-                  {showText ? "One" : "Two"} request at a time.
+                  {showText
+                    ? `${overlayPlansCard("One")}`
+                    : `${overlayPlansCard("Two")}`}{" "}
+                  {overlayPlansCard("hint_request")}
                 </div>
               </div>
             </div>
             <div className={styles.feature}>
               <Image src={Infenity} alt="Infenity" />
-              <p>Unlimited Revisions</p>
+              <p>{overlayPlansCard("Unlimited_Revisions")}</p>
               <div className={styles.image}>
                 <Image src={Info} alt="Info" />{" "}
                 <div className={styles.hint}>
-                  We iterate until you are satisfied 100%
+                  {overlayPlansCard("hint_iterate")}
                 </div>
               </div>
             </div>
             <div className={styles.feature}>
               <Image src={True} alt="True" />
-              <p>48h Processing Time</p>
+              <p>{overlayPlansCard("48h_Processing_Time")}</p>
             </div>
             <div className={styles.feature}>
               <Image src={True} alt="True" />
-              <p>In-House Designers</p>
+              <p>{overlayPlansCard("In-House_Designers")}</p>
             </div>
             <div className={styles.feature}>
               <Image src={True} alt="True" />
-              <p>LYERZ Space Access</p>
+              <p>{overlayPlansCard("LYERZ_Space_Access")}</p>
             </div>
             <div className={styles.feature}>
               <Image src={True} alt="True" />
-              <p>Dedicated Project Manager</p>
+              <p>{overlayPlansCard("Dedicated_Project_Manager")}</p>
             </div>
           </div>
         </div>
@@ -156,9 +163,9 @@ function TowPlans() {
                 : "https://breeew.com/api/stripe/checkout-session-link/space.lyerz.com?prices=price_1PTYXDDBePX8B1X6POKz7iPb"
             }
           >
-            Get started
+            {overlayPlansCard("Get_started")}
           </Link>
-          <span>or</span>
+          <span>{overlayPlansCard("or")}</span>
           <p>
             <Link
               href=""
@@ -166,7 +173,7 @@ function TowPlans() {
               data-cal-link="lyerz/space"
               data-cal-config='{"layout":"month_view"}'
             >
-              book a call
+              {overlayPlansCard("book_a_call")}
             </Link>
           </p>
         </div>

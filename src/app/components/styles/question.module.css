@@ -9,6 +9,14 @@
   src: url(/fonts/Lufga/LufgaRegular.ttf);
   font-display: swap;
 }
+/* ---------------- Arabic Fonts ---------------- */
+@font-face {
+  font-family: "IBMPlexSansArabic-Regular";
+  src: url(/fonts/arabic/IBMPlexSansArabic/IBMPlexSansArabic-Regular.ttf);
+  font-display: swap;
+}
+/* ---------------- Arabic Fonts ---------------- */
+
 /* ---------------- Question Styles ---------------- */
 .container {
   cursor: pointer;
@@ -81,4 +89,9 @@
   .container p {
     font-size: 11px;
   }
+}
+/* ---------------- Arabic Styles ---------------- */
+.container.ar .question h4,
+.container.ar p {
+  font-family: "IBMPlexSansArabic-Regular";
 }

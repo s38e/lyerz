@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./styles/question.module.css";
 import Arrow from "/public/assets/Arrow_4.svg";
 import Image from "next/image";
+import { useLocale } from "next-intl";
+import { getLangDir } from "rtl-detect";
 
 const Question = ({ question, answer, initialActiveState = false }) => {
   const [isQuestionActive, setIsQuestionActive] = useState(initialActiveState);
@@ -35,16 +37,21 @@ const Question = ({ question, answer, initialActiveState = false }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isQuestionActive]);
 
   const toggleService = () => {
     setIsQuestionActive((prevState) => !prevState);
   };
+  // ---------------- Check the language to determine the style ---------------- //
+  const locale = useLocale();
+  const direction = getLangDir(locale);
 
   return (
     <div
-      className={`${styles.container} ${isQuestionActive ? styles.active : ""}`}
+      className={`${styles.container} ${
+        isQuestionActive ? styles.active : ""
+      } ${direction === "rtl" ? styles.ar : ""}`}
       ref={questionRef}
       onClick={toggleService}
     >

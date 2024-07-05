@@ -9,6 +9,17 @@
   src: url(/fonts/Lufga/LufgaRegular.ttf);
   font-display: swap;
 }
+/* ---------------- Arabic Fonts ---------------- */
+@font-face {
+  font-family: "IBMPlexSansArabic-Regular";
+  src: url(/fonts/arabic/IBMPlexSansArabic/IBMPlexSansArabic-Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheYearofTheCamel-ExtraBold";
+  src: url(/fonts/arabic/TheYearofTheCamel/TheYearofTheCamel-ExtraBold.otf);
+  font-display: swap;
+}
 /* ---------------- Service ---------------- */
 .service {
   cursor: pointer;
@@ -83,4 +94,11 @@
   .service .bottom p {
     font-size: 11px;
   }
+}
+/* --------------------- Arabic Styles --------------------- */
+.service.ar .top p {
+  font-family: "TheYearofTheCamel-ExtraBold";
+}
+.service.ar .bottom p {
+  font-family: "IBMPlexSansArabic-Regular";
 }

@@ -3,7 +3,8 @@ import stylesPage from "../page.module.css";
 import { useEffect, useRef } from "react";
 import { isMobile } from "react-device-detect";
 import gsap from "gsap";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { getLangDir } from "rtl-detect";
 
 const CircleOverlayServicesCard = () => {
   const circleRef = useRef(null);
@@ -94,10 +95,19 @@ const CircleOverlayServicesCard = () => {
 
   const t = useTranslations("movingCircle");
 
+  // ---------------- Check the language to determine the style ---------------- //
+  const locale = useLocale();
+  const direction = getLangDir(locale);
+
   return (
     <>
       <div ref={circleRef} className={styles.circle}></div>
-      <div ref={textRef} className={styles.textInCircle}>
+      <div
+        ref={textRef}
+        className={`${styles.textInCircle} ${
+          direction === "rtl" ? styles.ar : ""
+        }`}
+      >
         {t("title")}
       </div>
     </>

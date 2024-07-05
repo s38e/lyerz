@@ -1,3 +1,26 @@
+/* ---------------- Font ---------------- */
+@font-face {
+  font-family: "TerminaTest-Demi";
+  src: url(/fonts/TerminaTest/TerminaTest-Demi.otf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "LufgaRegular";
+  src: url(/fonts/Lufga/LufgaRegular.ttf);
+  font-display: swap;
+}
+/* ---------------- Arabic Fonts ---------------- */
+@font-face {
+  font-family: "IBMPlexSansArabic-Regular";
+  src: url(/fonts/arabic/IBMPlexSansArabic/IBMPlexSansArabic-Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheYearofTheCamel-ExtraBold";
+  src: url(/fonts/arabic/TheYearofTheCamel/TheYearofTheCamel-ExtraBold.otf);
+  font-display: swap;
+}
+/* ---------------- twoPlan ---------------- */
 .twoPlan {
   display: flex;
   align-items: center;
@@ -76,7 +99,7 @@
 }
 .twoPlan .plan .head .p:nth-child(1) {
   font-size: 1.5rem;
-  font-family: TerminaTest-Demi;
+  font-family: "TerminaTest-Demi";
   line-height: 1.1;
 }
 .twoPlan .plan .head .p:nth-child(1) span {
@@ -267,4 +290,23 @@
 .twoPlan .plan_2.active,
 .twoPlan .plan_1.active {
   display: flex;
+}
+/* --------------------- Arabic Styles --------------------- */
+.twoPlan.ar .choose_plan .backGround {
+  left: unset;
+  right: 0.2rem;
+  transform: translateX(-100%);
+}
+.twoPlan.ar .choose_plan .backGround.left {
+  transform: translateX(0);
+}
+.twoPlan.ar .plan .content p,
+.twoPlan.ar .plan .head .p:nth-child(1) span {
+  font-family: "TheYearofTheCamel-ExtraBold";
+}
+.twoPlan.ar .plan .btns ,
+.twoPlan.ar .choose_plan .choice,
+.twoPlan.ar .plan .content .features .feature p,
+.twoPlan.ar .plan .head p {
+  font-family: "IBMPlexSansArabic-Regular";
 }
