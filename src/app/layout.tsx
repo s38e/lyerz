@@ -7,10 +7,12 @@ export const metadata: Metadata = {
     default: "LYERZ | Design Subscription for Scale-Ups",
     template: "%s | LYERZ | Design Subscription for Scale-Ups",
   },
-  description: "Dev with Lyerz by Saeed Khaled",
+  description:
+    "Experience the future of design with LYERZ! We bring a streamlined design service directly to your team, connecting you with elite designers and a dedicated project manager tailored to your needs. With LYERZ, enjoy the clarity of a fixed monthly subscription with no hidden fees or surprises. We are committed to enhancing your creative capabilities and delivering consistent, exceptional results with every project.",
   openGraph: {
     title: "LYERZ | Design Subscription for Scale-Ups",
-    description: "Dev with Lyerz by Saeed Khaled",
+    description:
+      "Experience the future of design with LYERZ! We bring a streamlined design service directly to your team, connecting you with elite designers and a dedicated project manager tailored to your needs. With LYERZ, enjoy the clarity of a fixed monthly subscription with no hidden fees or surprises. We are committed to enhancing your creative capabilities and delivering consistent, exceptional results with every project.",
     images: {
       url: "/assets/Opengraph-Image.png",
       width: 1200,
@@ -20,7 +22,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "LYERZ | Design Subscription for Scale-Ups",
-    description: "Dev with Lyerz by Saeed Khaled",
+    description:
+      "Experience the future of design with LYERZ! We bring a streamlined design service directly to your team, connecting you with elite designers and a dedicated project manager tailored to your needs. With LYERZ, enjoy the clarity of a fixed monthly subscription with no hidden fees or surprises. We are committed to enhancing your creative capabilities and delivering consistent, exceptional results with every project.",
   },
 };
 
