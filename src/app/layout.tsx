@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "LYERZ | Design Subscription for Scale-Ups",
     description: "Hire Your Whole Design Team With a Few Clicks.",
     images: {
-      url: "/assets/og.png",
+      url: "/assets/Opengraph-Image.jpg",
       width: 1200,
       height: 630,
     },
