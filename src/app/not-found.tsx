@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lyerz.vercel.app"),
+  metadataBase: new URL("https://lyerz.com/"),
   title: "404 - Page Not Found",
   description:
     "The page you are looking for might have been removed or is temporarily unavailable.",
