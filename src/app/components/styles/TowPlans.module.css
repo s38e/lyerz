@@ -220,8 +220,8 @@
 }
 .twoPlan .plan .btns .btn {
   padding: 10px 0;
-  background-color: #f1f1f1;
-  color: black;
+  background-color: #000000;
+  color: white;
   border-radius: 12px;
   flex: 1;
   display: flex;
