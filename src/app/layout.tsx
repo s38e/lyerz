@@ -2,7 +2,7 @@ import "./globals.css";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lyerz.vercel.app"),
+  metadataBase: new URL("https://lyerz.com/en"),
   title: {
     default: "LYERZ | Design Subscription for Scale-Ups",
     template: "%s | LYERZ | Design Subscription for Scale-Ups",
