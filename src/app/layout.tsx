@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     images: {
       url: "/assets/Opengraph-Image.png",
       width: 1200,
-      height: 630,
+      height: 630,  
     },
   },
   twitter: {

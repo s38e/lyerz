@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       url: "/assets/Opengraph-Image.png",
       width: 1200,
       height: 630,
-      alt: "Lyerz - Design Studio",
+      alt: "LYERZ | Design Subscription for Scale-Ups",
     },
   },
 };
