@@ -1,6 +1,5 @@
 import React from "react";
 import HomePage from "../pages/HomePage";
-import GoogleTag from "../components/google-tag";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,10 +21,5 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return (
-    <>
-      <GoogleTag />
-      <HomePage />;
-    </>
-  );
+  return <HomePage />;
 }

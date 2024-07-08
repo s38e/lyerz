@@ -65,6 +65,16 @@ import Link from "next/link";
 import { isMobile } from "react-device-detect";
 import anime from "animejs/lib/anime.es.js";
 import { getCalApi } from "@calcom/embed-react";
+import ReactGA from "react-ga";
+import { Router } from "next/router";
+
+// Initialize Google Analytics
+ReactGA.initialize("G-XPJJT6Z7QW");
+
+// Track page view on route change
+Router.events.on("routeChangeComplete", (path) => {
+  ReactGA.pageview(path);
+});
 
 function HomePage() {
   const [isCloseAnyOverlayActive, setIsCloseAnyOverlayActive] = useState(false);
@@ -79,6 +89,12 @@ function HomePage() {
   const [isCardAboutClicked, setIsCardAboutClicked] = useState(false);
   const [isCardPlansClicked, setIsCardPlansClicked] = useState(false);
   //
+
+  useEffect(() => {
+    // Track initial page view
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({});
