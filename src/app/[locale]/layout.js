@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import "../globals.css";
 import { getLangDir } from "rtl-detect";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 /**
  * @typedef {Object} LocaleLayoutProps
@@ -32,6 +33,7 @@ export default async function LocaleLayout(props) {
           {children}
         </NextIntlClientProvider>
       </body>
+      <GoogleAnalytics gaId="G-NHXTRMKDHL" />
     </html>
   );
 }
